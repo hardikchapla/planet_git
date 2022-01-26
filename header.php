@@ -4,7 +4,7 @@
     
     $cur_page = (basename($_SERVER['REQUEST_URI'], '?' . $_SERVER['QUERY_STRING']));
     $weAreLive = 0;
-    if($cur_page == 'planet' || $cur_page == 'index'){
+    if($cur_page == 'planet_git' || $cur_page == 'index'){
         $titleName = 'Home | Planet Hopper TV';
         $active_home = "active";
     }
