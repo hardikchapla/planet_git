@@ -3,9 +3,9 @@
 	date_default_timezone_set('UTC');
 
 	$servername = 'localhost';
-	$username = 'root';
-	$password = '';
-	$databaseName = 'planet';
+	$username = 'u269128924_planethopper';
+	$password = '3IfEmL;n';
+	$databaseName = 'u269128924_planethopper';
 	// Create connection
 	$db = new PDO( 'mysql:host='.$servername.';dbname='.$databaseName, $username, $password );
 	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
