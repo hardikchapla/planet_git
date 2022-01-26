@@ -1,7 +1,7 @@
 <?php
 
     // Defining base url
-    define("BASE_URL", "http://localhost/planet/");
+    define("BASE_URL", "https://uniformedtech.com/planethopper/");
 
     // Getting Admin url
     define("ADMIN_URL", BASE_URL . "admin" . "/");
