@@ -1,7 +1,12 @@
 <?php
 
     // Defining base url
-    define("BASE_URL", "https://uniformedtech.com/planethopper/");
+    if($_SERVER['HTTP_HOST'] == "localhost"){
+        define("BASE_URL", "http://localhost/planet_git/");
+    } else {
+        define("BASE_URL", "https://uniformedtech.com/planethopper/");
+    }
+    
 
     // Getting Admin url
     define("ADMIN_URL", BASE_URL . "admin" . "/");
