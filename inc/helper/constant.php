@@ -18,6 +18,8 @@
     define('PASSWORD_RECOVERY', 'Planet Hopper TV Password Recovery');
     define('QUERY_RESPONSE', 'Response about your query');
     define('RESET_LINK', ADMIN_URL.'admin_reset_password');
+    define('RESET_LINK_USER', BASE_URL.'reset_password');
+    define('ACTIVATION_LINK', BASE_URL.'activate');
     define('FAVICON', BASE_URL . 'images/Payload_logo2_3x.png');
     define('IMGURL', BASE_URL . 'images/');
 

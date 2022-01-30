@@ -89,6 +89,13 @@
     if($cur_page == 'supercoin-balance'){
         $titleName = 'Supercoin Balance';
     }
+    if($cur_page == 'forgot-password'){
+        $titleName = 'Forgot Password';
+    }
+    if($cur_page == 'activate'){
+        $titleName = 'Verify Account';
+    }
+
       
 
 ?>
@@ -107,6 +114,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
           type="text/css"/>
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/toastr.css" type="text/css">
     <link rel="stylesheet" href="css/media_query.css" type="text/css">
     <title> <?= $titleName ?> </title>
 </head>

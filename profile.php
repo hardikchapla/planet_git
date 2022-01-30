@@ -1,5 +1,14 @@
 <?php
    include('header.php');
+
+   if(!isset($_SESSION['userid'])){
+        header("Location: login.php"); 
+        exit();
+   }
+   $user_id = $_SESSION['userid'];
+   $user = $db->prepare("SELECT * FROM phtv_users WHERE id = '$user_id'");
+   $user->execute();
+   $feuser = $user->fetch(PDO::FETCH_ASSOC);
 ?>
 
 <div class="container-fluid ss_header_my_profies">
@@ -30,15 +39,15 @@
                         </div>
                         <div class="p-2 bd-highlight align-self-center ">
                            <div class="ss_profile_des">
-                              <h4>Dharshani Arumugam</h4>
-                              <p>dharshani@example.com</p>
+                              <h4><?= $feuser['full_name'] ?></h4>
+                              <p><?= $feuser['email'] ?></p>
                            </div>
                         </div>
                      </div>
                   </div>
                   <div class="p-2 flex-shrink-1 bd-highlight align-self-center">
                      <div class="episode_button">
-                        <a href="#">  <img src="images/logout.svg" alt="images"> Logout </a>
+                        <a href="resources/logout">  <img src="images/logout.svg" alt="images"> Logout </a>
                      </div>
                   </div>
                </div>
@@ -65,24 +74,24 @@
                <div class="tab-pane fade show active" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
                   <div class="ss_navbar_profiles_boxs">
                      <h1 class="ss_profiles_title"> Personal Information </h1>
-                     <form>
+                     <form id="updateProfile">
                         <div class="row">
                            <div class="col-lg-6 text-left">
                               <div class="form-group ss_textbox">
-                                 <label for="exampleInputEmail1"> Full Name </label>
-                                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Full Name " value="Dharshani Arumugam">
+                                 <label for="full_name"> Full Name </label>
+                                 <input type="text" class="form-control" id="full_name" name="full_name" aria-describedby="emailHelp" placeholder="Full Name " value="<?= $feuser['full_name'] ?>">
                               </div>
                            </div>
                            <div class="col-lg-6 text-left">
                               <div class="form-group ss_textbox">
-                                 <label for="exampleInputEmail2"> Email Address </label>
-                                 <input type="text" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Email Address " value="dharshani@example.com">
+                                 <label for="email"> Email Address </label>
+                                 <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Email Address " value="<?= $feuser['email'] ?>">
                               </div>
                            </div>
                            <div class="col-lg-6 text-left">
                               <div class="form-group ss_textbox">
-                                 <label for="exampleInputEmail2"> Mobile Number </label>
-                                 <input type="text" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder=" Mobile Number ">
+                                 <label for="mobile"> Mobile Number </label>
+                                 <input type="  " class="form-control" id="mobile" name="mobile" aria-describedby="emailHelp" placeholder=" Mobile Number " value="<?= $feuser['mobile'] ?>">
                               </div>
                            </div>
                            <div class="col-lg-12 pt-4 text-right">
@@ -112,6 +121,62 @@
 <?php
    include('footer.php');
 ?>
+
+<script>
+        $(document).ready(function () {
+
+            function showLoading(){
+                document.getElementById("page-loader").style = "visibility: visible";
+            }
+            function hideLoading(){
+                document.getElementById("page-loader").style = "visibility: hidden";
+            }
+            $("#updateProfile").validate({
+                rules: {
+                full_name: "required",
+                email: {
+                    required: true,
+                    email: true
+                },
+                mobile: {
+                    required: true,
+                    minlength:9,
+                    maxlength:10,
+                    number: true
+                }
+            },
+            messages: {
+                full_name: "Please enter your full name",
+                mobile: {
+                    required: "Please provide a mobile",
+                    minlength: "Your mobile number must be at least 10 digit long"
+                },
+                email: {
+                    required:"Please enter email address",
+                    email: "Please enter a valid email address"
+                }
+            },
+                submitHandler: function(form) {
+                    $.ajax({
+                        url: 'resources/updateProfile',
+                        type: 'POST',
+                        data: $('#updateProfile').serialize(),
+                        dataType : 'JSON',
+                        success: function (output) {
+                            if(output.success == 'success'){
+                                toastr.success(output.message).delay(1000).fadeOut(1000);
+                            } else {
+                                toastr.warning(output.message).delay(1000).fadeOut(1000);
+                            }
+                        },
+                        error: function(){
+                            toastr.warning('Update profile not successfully').delay(1000).fadeOut(1000);
+                        }
+                    });
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>

@@ -1,6 +1,7 @@
 <?php
    include('header.php');
 ?>
+
 <div class="container-fluid ss_login_section">
     <div class="container">
         <div class="row justify-content-center">
@@ -9,42 +10,25 @@
                     <div class="login_logo">
                         <img src="images/planethopper-TV-logo.png" alt="login-logo"/>
                     </div>
-                    <p>Already have an account? <a href="<?= BASE_URL.'login.php' ?>"> Login Here </a></p>
-                    <form id="register" method="post">
+                    <p>Reset your Password</p>
+                    <form id="reset-password-form" method="post">
+                        <input type="hidden" id="Email" name="Email" value="<?= base64_decode($_REQUEST['Email']) ?>" class="form-control"/>
+                        <input type="hidden" id="old_password" name="old_password" value="<?= $_REQUEST['Password'] ?>" class="form-control"/>
                         <div class="row">
-                            <div class="col-lg-12 text-left">
+                            <div class="col-lg-12 text-left align-self-center">
                                 <div class="form-group ss_textbox">
-                                    <label for="exampleInputEmail1"> Full Name </label>
-                                    <input type="text" class="form-control" name="fullname" id="fullname" aria-describedby="emailHelp" placeholder="Enter your fullname " value="" require>
+                                    <label for="password"> Password </label>
+                                    <input type="password" class="form-control" name="password" id="password" aria-describedby="emailHelp" placeholder="Password">
                                 </div>
                             </div>
-                            <div class="col-lg-12 text-left">
+                            <div class="col-lg-12 text-left align-self-center">
                                 <div class="form-group ss_textbox">
-                                    <label for="exampleInputEmail2"> E-mail </label>
-                                    <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="E mail " value="" require>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 text-left">
-                                <div class="form-group ss_textbox">
-                                    <label for="exampleInputEmail2"> Password </label>
-                                    <input type="password" class="form-control" name="password" id="password" aria-describedby="emailHelp" placeholder=" Password " require>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 text-left">
-                                <div class="form-group ss_textbox">
-                                    <label for="exampleInputEmail2"> Confirm Password </label>
-                                    <input type="password" class="form-control" name="confirm_password" id="confirm_password" aria-describedby="emailHelp" placeholder=" Confirm Password " require>
-                                </div>
-                            </div>
-                            <div class="col-lg-12 text-left">
-                                <div class="custom-control custom-checkbox mr-sm-2 ss_checkbox">
-                                    <input type="checkbox" name="agreetandc" class="custom-control-input" id="customControlAutosizing">
-                                    <label class="custom-control-label" for="customControlAutosizing">I agree to the <a href="#"> Terms of service </a> and <a href="#"> Privacy policy. </a>
-                                    </label>
+                                    <label for="confirm_password"> confirm_password </label>
+                                    <input type="password" class="form-control" name="confirm_password" id="confirm_password" aria-describedby="emailHelp" placeholder="Confirm Password">
                                 </div>
                             </div>
                             <div class="col-lg-12 pt-4">
-                                <button type="submit" id="button_register" class="button_register"> register now</button>
+                                <button type="submit" class="button_register"> Reset Password</button>
                             </div>
                         </div>
                     </form>
@@ -77,7 +61,6 @@
             }
         }
     });
-
     $(document).ready(function () {
 
         function showLoading(){
@@ -86,13 +69,8 @@
         function hideLoading(){
             document.getElementById("page-loader").style = "visibility: hidden";
         }
-        $("#register").validate({
+        $("#reset-password-form").validate({
             rules: {
-                fullname: "required",
-                email: {
-                    required: true,
-                    email: true
-                },
                 password: {
                     required: true,
                     minlength: 5
@@ -104,7 +82,6 @@
                 }
             },
             messages: {
-                fullname: "Please enter your full name",
                 password: {
                     required: "Please provide a password",
                     minlength: "Your password must be at least 5 characters long"
@@ -113,17 +90,13 @@
                     required: "Please provide a password",
                     minlength: "Your password must be at least 5 characters long",
                     equalTo:"Password and confirm password are not match"
-                },
-                email: {
-                    required:"Please enter email address",
-                    email: "Please enter a valid email address"
                 }
             },
             submitHandler: function(form) {
                 $.ajax({
-                    url: 'resources/register',
+                    url: 'resources/reset_password',
                     type: 'POST',
-                    data: $('#register').serialize(),
+                    data: $('#reset-password-form').serialize(),
                     dataType : 'JSON',
                     success: function (output) {
                         if(output.success == 'success'){

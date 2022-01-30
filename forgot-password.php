@@ -10,8 +10,8 @@
                     <div class="login_logo">
                         <img src="images/planethopper-TV-logo.png" alt="login-logo"/>
                     </div>
-                    <p>Didn't have an account yet? <a href="<?= BASE_URL.'register.php' ?>"> Register Here </a></p>
-                    <form id="login-form" method="post">
+                    <p>Already have an account? <a href="<?= BASE_URL.'login.php' ?>"> Login Here </a></p>
+                    <form id="forgort-form" method="post">
                         <div class="row">
                             <div class="col-lg-12 text-left align-self-center">
                                 <div class="form-group ss_textbox">
@@ -19,24 +19,8 @@
                                     <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="E-mail">
                                 </div>
                             </div>
-                            <div class="col-lg-12 text-left align-self-center">
-                                <div class="form-group ss_textbox">
-                                    <label for="password"> Password </label>
-                                    <input type="password" class="form-control" name="password" id="password" aria-describedby="emailHelp" placeholder="Password">
-                                </div>
-                            </div>
-                            <div class="col-lg-6 text-left align-self-center">
-                                <div class="custom-control custom-checkbox mr-sm-2 ss_checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
-                                    <label class="custom-control-label" for="customControlAutosizing"> Remember
-                                        Me </label>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 text-right align-self-center">
-                                <a href="forgot-password.php" class="forgot_password"> Forgot Password? </a>
-                            </div>
                             <div class="col-lg-12 pt-4">
-                                <button type="submit" class="button_register"> LOG IN</button>
+                                <button type="submit" class="button_register"> Forgot Password</button>
                             </div>
                         </div>
                     </form>
@@ -77,34 +61,28 @@
         function hideLoading(){
             document.getElementById("page-loader").style = "visibility: hidden";
         }
-        $("#login-form").validate({
+        $("#forgort-form").validate({
             rules: {
                 email: {
                     required: true,
                     email: true
-                },
-                password: {
-                    required: true
                 }
             },
             messages: {
                 email: {
                     required:"Please enter email address",
                     email: "Please enter a valid email address"
-                },
-                password: {
-                    required: "Please provide a password"
-                },
+                }
             },
             submitHandler: function(form) {
                 $.ajax({
-                    url: 'resources/login',
+                    url: 'resources/forgort_password',
                     type: 'POST',
-                    data: $('#login-form').serialize(),
+                    data: $('#forgort-form').serialize(),
                     dataType : 'JSON',
                     success: function (output) {
                         if(output.success == 'success'){
-                            toastr.options.onHidden = function() { window.location.href = 'index'; }
+                            toastr.options.onHidden = function() { window.location.href = 'login'; }
                             toastr.success(output.message).delay(1000).fadeOut(1000);
                         } else {
                             toastr.warning(output.message).delay(1000).fadeOut(1000);
