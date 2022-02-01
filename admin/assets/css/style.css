@@ -64,3 +64,9 @@
 .main-menu.menu-light .navigation {
     background: #292b2b;
 }
+
+/*chirag css*/
+
+form .error {
+    color: #ff0000;
+  }

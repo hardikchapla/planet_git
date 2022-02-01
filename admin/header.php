@@ -13,6 +13,9 @@
     if($cur_page == 'admin_profile'){
         $titleName = 'Profile';
     }
+    if($cur_page == 'users'){
+        $titleName = 'Users';
+    }
    
     $admin = $db->query("SELECT * FROM phtv_admin WHERE id = 1");
     $feadmin = $admin->fetch();
@@ -29,6 +32,7 @@
       <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,600%7CIBM+Plex+Sans:300,400,500,600,700" rel="stylesheet">
       <!-- BEGIN: Vendor CSS-->
       <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/vendors.min.css">
+      <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/tables/datatable/dataTables.bootstrap4.min.css">
       <!-- END: Vendor CSS-->
       <!-- BEGIN: Theme CSS-->
       <link rel="stylesheet" type="text/css" href="app-assets/css/bootstrap.min.css">
@@ -44,6 +48,7 @@
       
       <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/extensions/toastr.css">
       <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/extensions/toastr.min.css">
+      <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/extensions/sweetalert2.min.css">
       <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/tables/datatable/dataTables.bootstrap4.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="app-assets/css/pages/dashboard-ecommerce.min.css">
@@ -158,9 +163,11 @@
                             <span class="menu-title text-truncate" data-i18n="bxs-dashboard">Dashboard</span>
                         </a>
                     </li>
-                    
-                    <li class=" navigation-header text-truncate">
-                        <span data-i18n="Apps">Pages</span>
+                    <li class="nav-item <?php if($cur_page == 'users') {echo 'active';} ?>">
+                        <a href="users">
+                            <i class="fa fa-users" aria-hidden="true"></i>
+                            <span class="menu-title text-truncate" data-i18n="bxs-dashboard">Users</span>
+                        </a>
                     </li>
                 </ul>
             </div>

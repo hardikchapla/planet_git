@@ -17,15 +17,16 @@
 <script src="app-assets/js/scripts/customizer.min.js"></script>
 <script src="app-assets/vendors/js/tables/datatable/jquery.dataTables.min.js"></script>
 <script src="app-assets/vendors/js/tables/datatable/dataTables.bootstrap4.min.js"></script>
-<script src="app-assets/js/scripts/datatables/datatable.min.js"></script>
+<!-- <script src="app-assets/js/scripts/datatables/datatable.min.js"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
 <script src="app-assets/vendors/js/extensions/toastr.min.js"></script>
 <script src="app-assets/js/scripts/extensions/toastr.min.js"></script>
-<script src="assets/js/custom.js"></script>
+<script src="assets/js/users.js"></script>
 <script src="https://cdn.ckeditor.com/ckeditor5/10.0.1/classic/ckeditor.js"></script>
 <!-- BEGIN: Page Vendor JS-->
 <script src="app-assets/vendors/js/charts/apexcharts.min.js"></script>
     <script src="app-assets/vendors/js/extensions/swiper.min.js"></script>
+    <script src="app-assets/vendors/js/extensions/sweetalert2.all.min.js"></script>
     <!-- END: Page Vendor JS-->
 <script src="app-assets/js/scripts/pages/dashboard-ecommerce.min.js"></script>
 <!-- END: Theme JS-->
