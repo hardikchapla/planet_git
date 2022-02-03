@@ -131,7 +131,7 @@ $(document).ready(function(){
                     }
                 },
                 error: function(){
-                    toastr.warning('Signup not successfully').delay(1000).fadeOut(1000);
+                    toastr.warning('Something went wrong with ajax !').delay(1000).fadeOut(1000);
                 }
             });
         }

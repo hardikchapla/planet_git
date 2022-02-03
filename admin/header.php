@@ -16,6 +16,12 @@
     if($cur_page == 'users'){
         $titleName = 'Users';
     }
+    if($cur_page == 'product_category'){
+        $titleName = 'Product Category';
+    }
+    if($cur_page == 'product_color'){
+        $titleName = 'Product Color';
+    }
    
     $admin = $db->query("SELECT * FROM phtv_admin WHERE id = 1");
     $feadmin = $admin->fetch();
@@ -167,6 +173,18 @@
                         <a href="users">
                             <i class="fa fa-users" aria-hidden="true"></i>
                             <span class="menu-title text-truncate" data-i18n="bxs-dashboard">Users</span>
+                        </a>
+                    </li>
+                    <li class="nav-item <?php if($cur_page == 'product_category') {echo 'active';} ?>">
+                        <a href="product_category">
+                            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                            <span class="menu-title text-truncate" data-i18n="bxs-dashboard">Product Category</span>
+                        </a>
+                    </li>
+                    <li class="nav-item <?php if($cur_page == 'product_color') {echo 'active';} ?>">
+                        <a href="product_color">
+                            <i class="fa fa-paint-brush" aria-hidden="true"></i>
+                            <span class="menu-title text-truncate" data-i18n="bxs-dashboard">Product Color</span>
                         </a>
                     </li>
                 </ul>
