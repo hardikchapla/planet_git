@@ -119,7 +119,9 @@
     <title> <?= $titleName ?> </title>
 </head>
 <body>
-
+<div id="preloder">
+    <div class="loader"></div>
+</div>
 <div class="container-fluid header_ss">
     <div class="container">
         <div class="row">

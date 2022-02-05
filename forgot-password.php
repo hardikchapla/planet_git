@@ -5,7 +5,7 @@
 <div class="container-fluid ss_login_section">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-8 ">
+            <div class="col-lg-8">
                 <div class="ss_login_box">
                     <div class="login_logo">
                         <img src="images/planethopper-TV-logo.png" alt="login-logo"/>
@@ -55,12 +55,6 @@
     });
     $(document).ready(function () {
 
-        function showLoading(){
-            document.getElementById("page-loader").style = "visibility: visible";
-        }
-        function hideLoading(){
-            document.getElementById("page-loader").style = "visibility: hidden";
-        }
         $("#forgort-form").validate({
             rules: {
                 email: {
@@ -75,6 +69,7 @@
                 }
             },
             submitHandler: function(form) {
+                $("#preloder").fadeIn();
                 $.ajax({
                     url: 'resources/forgort_password',
                     type: 'POST',
@@ -85,10 +80,12 @@
                             toastr.options.onHidden = function() { window.location.href = 'login'; }
                             toastr.success(output.message).delay(1000).fadeOut(1000);
                         } else {
+                            $("#preloder").fadeOut();
                             toastr.warning(output.message).delay(1000).fadeOut(1000);
                         }
                     },
                     error: function(){
+                        $("#preloder").fadeOut();
                         toastr.warning('Signup not successfully').delay(1000).fadeOut(1000);
                     }
                 });
