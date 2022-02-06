@@ -124,13 +124,6 @@
 
 <script>
         $(document).ready(function () {
-
-            function showLoading(){
-                document.getElementById("page-loader").style = "visibility: visible";
-            }
-            function hideLoading(){
-                document.getElementById("page-loader").style = "visibility: hidden";
-            }
             $("#updateProfile").validate({
                 rules: {
                 full_name: "required",
@@ -157,6 +150,7 @@
                 }
             },
                 submitHandler: function(form) {
+                  $("#preloder").fadeIn();
                     $.ajax({
                         url: 'resources/updateProfile',
                         type: 'POST',
@@ -164,12 +158,15 @@
                         dataType : 'JSON',
                         success: function (output) {
                             if(output.success == 'success'){
+                              	$("#preloder").fadeOut();
                                 toastr.success(output.message).delay(1000).fadeOut(1000);
                             } else {
+                              	$("#preloder").fadeOut();
                                 toastr.warning(output.message).delay(1000).fadeOut(1000);
                             }
                         },
                         error: function(){
+							$("#preloder").fadeOut();
                             toastr.warning('Update profile not successfully').delay(1000).fadeOut(1000);
                         }
                     });

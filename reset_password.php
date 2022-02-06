@@ -93,6 +93,7 @@
                 }
             },
             submitHandler: function(form) {
+                $("#preloder").fadeIn();
                 $.ajax({
                     url: 'resources/reset_password',
                     type: 'POST',
@@ -103,11 +104,13 @@
                             toastr.options.onHidden = function() { window.location.href = 'login'; }
                             toastr.success(output.message).delay(1000).fadeOut(1000);
                         } else {
+                            $("#preloder").fadeOut();
                             toastr.warning(output.message).delay(1000).fadeOut(1000);
                         }
                     },
                     error: function(){
-                        toastr.warning('Signup not successfully').delay(1000).fadeOut(1000);
+                        $("#preloder").fadeOut();
+                        toastr.warning('Something wants wrong').delay(1000).fadeOut(1000);
                     }
                 });
             }

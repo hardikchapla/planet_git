@@ -108,7 +108,7 @@
                     },
                     error: function(){
                         $("#preloder").fadeOut();
-                        toastr.warning('Signup not successfully').delay(1000).fadeOut(1000);
+                        toastr.warning('Something wants wrong').delay(1000).fadeOut(1000);
                     }
                 });
             }

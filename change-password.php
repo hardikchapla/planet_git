@@ -136,13 +136,6 @@
     ?>
     <script>
         $(document).ready(function () {
-
-            function showLoading(){
-                document.getElementById("page-loader").style = "visibility: visible";
-            }
-            function hideLoading(){
-                document.getElementById("page-loader").style = "visibility: hidden";
-            }
             $("#changepassword").validate({
                 rules: {
                     current_password: "required",
@@ -169,6 +162,7 @@
                     }
                 },
                 submitHandler: function(form) {
+                    $("#preloder").fadeIn();
                     $.ajax({
                         url: 'resources/changepassword',
                         type: 'POST',
@@ -176,13 +170,16 @@
                         dataType : 'JSON',
                         success: function (output) {
                             if(output.success == 'success'){
+                                $("#preloder").fadeOut();
                                 toastr.success(output.message).delay(1000).fadeOut(1000);
                             } else {
+                                $("#preloder").fadeOut();
                                 toastr.warning(output.message).delay(1000).fadeOut(1000);
                             }
                         },
                         error: function(){
-                            toastr.warning('Signup not successfully').delay(1000).fadeOut(1000);
+                            $("#preloder").fadeOut();
+                            toastr.warning('Something wants wrong').delay(1000).fadeOut(1000);
                         }
                     });
                 }
