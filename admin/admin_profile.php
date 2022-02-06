@@ -40,10 +40,6 @@
                                             <input type="hidden" name="old_admin_avatar" value="<?= $feadmin['admin_avatar'] ?>" id="old_admin_avatar" class="form-control">
                                         </div>
                                         <div class="form-group text-right">
-                                            <button type="button" class="btn btn-light-secondary" data-dismiss="modal">
-                                                <i class="bx bx-x d-block d-sm-none"></i>
-                                                <span class="d-none d-sm-block">Close</span>
-                                            </button>
                                             <button type="submit" class="btn btn-primary ml-1">
                                                 <i class="bx bx-check d-block d-sm-none"></i>
                                                 <span class="d-none d-sm-block">Update</span>
@@ -67,10 +63,6 @@
                                             <input type="Password" id="confirm_password" name="confirm_password" placeholder="Confirm Password" class="form-control" required>
                                         </div>
                                         <div class="form-group text-right">
-                                            <button type="button" class="btn btn-light-secondary" data-dismiss="modal">
-                                                <i class="bx bx-x d-block d-sm-none"></i>
-                                                <span class="d-none d-sm-block">Close</span>
-                                            </button>
                                             <button type="submit" class="btn btn-primary ml-1">
                                                 <i class="bx bx-check d-block d-sm-none"></i>
                                                 <span class="d-none d-sm-block">Update</span>
