@@ -8,12 +8,12 @@
         <div class="content-header row">
             <div class="content-header-left col-12 mb-2 mt-1">
                 <div class="breadcrumbs-top">
-                    <h5 class="content-header-title float-left pr-1 mb-0">Product Color</h5>
+                    <h5 class="content-header-title float-left pr-1 mb-0">Product Size</h5>
                     <div class="breadcrumb-wrapper d-none d-sm-block">
                         <ol class="breadcrumb p-0 mb-0 pl-1">
                             <li class="breadcrumb-item"><a href="dashboard"><i class="bx bx-home-alt"></i></a>
                             </li>
-                            <li class="breadcrumb-item active">Product Color
+                            <li class="breadcrumb-item active">Product Size
                             </li>
                         </ol>
                     </div>
@@ -27,16 +27,15 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">Product Color List</h4>
-                                <div class="card-title"><button type="button" data-toggle="modal" data-target="#updateProductColor" class="btn btn-success text-white">Add New</button></div>
+                                <h4 class="card-title">Product Size List</h4>
+                                <div class="card-title"><button type="button" data-toggle="modal" data-target="#updateProductSize" class="btn btn-success text-white">Add New</button></div>
                             </div>
                             <div class="card-body card-dashboard">
                                 <div class="table-responsive">
-                                    <table id="productColorlist" class="table zero-configuration">
+                                    <table id="productSizelist" class="table zero-configuration">
                                         <thead>
                                             <tr>
                                                 <th>No.</th>
-                                                <th>Code</th>
                                                 <th>Name</th>
                                                 <th>Update</th>
                                                 <th>Delete</th>
@@ -45,7 +44,6 @@
                                         <tfoot>
                                             <tr>
                                                 <th>No.</th>
-                                                <th>Code</th>
                                                 <th>Name</th>
                                                 <th>Update</th>
                                                 <th>Delete</th>
@@ -63,25 +61,21 @@
     </div>
 </div>
 <!-- END: Content-->
-<div class="modal fade text-left" id="updateProductColor" tabindex="-1" role="dialog" aria-labelledby="myModalLabel33" aria-hidden="true">
+<div class="modal fade text-left" id="updateProductSize" tabindex="-1" role="dialog" aria-labelledby="myModalLabel33" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="product_color_title">Add Product Color</h4>
+                <h4 class="modal-title" id="product_size_title">Add Product Size</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <i class="bx bx-x"></i>
                 </button>
             </div>
-            <form id="updateProductColorForm" method="post" enctype="multipart/form-data">
+            <form id="updateProductSizeForm" method="post" enctype="multipart/form-data">
                 <div class="modal-body">
-                    <label>Color Code: </label>
+                    <label>Size Name: </label>
                     <div class="form-group">
-                        <input type="text" name="product_color_code" id="product_color_code" placeholder="Enter color code" class="form-control">
-                        <input type="hidden" name="product_color_id" id="product_color_id">
-                    </div>
-                    <label>Color Name: </label>
-                    <div class="form-group mb-0">
-                        <input type="text" name="product_color_name" id="product_color_name" placeholder="Enter color name" class="form-control">
+                        <input type="text" name="product_size_name" id="product_size_name" placeholder="Enter size name" class="form-control">
+                        <input type="hidden" name="product_size_id" id="product_size_id">
                     </div>
                 </div>
                 <div class="modal-footer">

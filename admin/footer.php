@@ -21,10 +21,15 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
 <script src="app-assets/vendors/js/extensions/toastr.min.js"></script>
 <script src="app-assets/js/scripts/extensions/toastr.min.js"></script>
+<script src="app-assets/vendors/js/file-uploaders/dropzone.min.js"></script>
 <script src="assets/js/users.js"></script>
 <script src="assets/js/product_category.js"></script>
 <script src="assets/js/product_color.js"></script>
+<script src="assets/js/product_brand.js"></script>
+<script src="assets/js/product_size.js"></script>
+<script src="assets/js/product_list.js"></script>
 <script src="https://cdn.ckeditor.com/ckeditor5/10.0.1/classic/ckeditor.js"></script>
+
 <!-- BEGIN: Page Vendor JS-->
 <script src="app-assets/vendors/js/charts/apexcharts.min.js"></script>
     <script src="app-assets/vendors/js/extensions/swiper.min.js"></script>

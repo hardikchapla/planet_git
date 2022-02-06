@@ -22,6 +22,15 @@
     if($cur_page == 'product_color'){
         $titleName = 'Product Color';
     }
+    if($cur_page == 'product_brand'){
+        $titleName = 'Product Brand';
+    }
+    if($cur_page == 'product_size'){
+        $titleName = 'Product Size';
+    }
+    if($cur_page == 'product_list'){
+        $titleName = 'Product List';
+    }
    
     $admin = $db->query("SELECT * FROM phtv_admin WHERE id = 1");
     $feadmin = $admin->fetch();
@@ -49,6 +58,7 @@
       <!-- END: Theme CSS-->
       <!-- BEGIN: Page CSS-->
       <link rel="stylesheet" type="text/css" href="app-assets/css/core/menu/menu-types/vertical-menu.min.css">
+      <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/file-uploaders/dropzone.min.css">
       <link rel="stylesheet" type="text/css" href="app-assets/css/pages/authentication.css">
       <!-- END: Page CSS-->
       
@@ -185,6 +195,24 @@
                         <a href="product_color">
                             <i class="fa fa-paint-brush" aria-hidden="true"></i>
                             <span class="menu-title text-truncate" data-i18n="bxs-dashboard">Product Color</span>
+                        </a>
+                    </li>
+                    <li class="nav-item <?php if($cur_page == 'product_brand') {echo 'active';} ?>">
+                        <a href="product_brand">
+                            <i class="fa fa-paint-brush" aria-hidden="true"></i>
+                            <span class="menu-title text-truncate" data-i18n="bxs-dashboard">Product Brand</span>
+                        </a>
+                    </li>
+                    <li class="nav-item <?php if($cur_page == 'product_size') {echo 'active';} ?>">
+                        <a href="product_size">
+                            <i class="fa fa-paint-brush" aria-hidden="true"></i>
+                            <span class="menu-title text-truncate" data-i18n="bxs-dashboard">Product Size</span>
+                        </a>
+                    </li>
+                    <li class="nav-item <?php if($cur_page == 'product_list') {echo 'active';} ?>">
+                        <a href="product_list">
+                            <i class="fa fa-paint-brush" aria-hidden="true"></i>
+                            <span class="menu-title text-truncate" data-i18n="bxs-dashboard">Product List</span>
                         </a>
                     </li>
                 </ul>
