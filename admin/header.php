@@ -185,35 +185,44 @@
                             <span class="menu-title text-truncate" data-i18n="bxs-dashboard">Users</span>
                         </a>
                     </li>
-                    <li class="nav-item <?php if($cur_page == 'product_category') {echo 'active';} ?>">
-                        <a href="product_category">
-                            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                            <span class="menu-title text-truncate" data-i18n="bxs-dashboard">Product Category</span>
+
+                    <li class=" nav-item <?php if($cur_page_main == 'product') {echo 'active';} ?>">
+                        <a href="#">
+                            <i class="fa fa-cube" aria-hidden="true"></i>
+                            <span class="menu-title text-truncate" data-i18n="Starter kit">Product</span>
                         </a>
-                    </li>
-                    <li class="nav-item <?php if($cur_page == 'product_color') {echo 'active';} ?>">
-                        <a href="product_color">
-                            <i class="fa fa-paint-brush" aria-hidden="true"></i>
-                            <span class="menu-title text-truncate" data-i18n="bxs-dashboard">Product Color</span>
-                        </a>
-                    </li>
-                    <li class="nav-item <?php if($cur_page == 'product_brand') {echo 'active';} ?>">
-                        <a href="product_brand">
-                            <i class="fa fa-paint-brush" aria-hidden="true"></i>
-                            <span class="menu-title text-truncate" data-i18n="bxs-dashboard">Product Brand</span>
-                        </a>
-                    </li>
-                    <li class="nav-item <?php if($cur_page == 'product_size') {echo 'active';} ?>">
-                        <a href="product_size">
-                            <i class="fa fa-paint-brush" aria-hidden="true"></i>
-                            <span class="menu-title text-truncate" data-i18n="bxs-dashboard">Product Size</span>
-                        </a>
-                    </li>
-                    <li class="nav-item <?php if($cur_page == 'product_list') {echo 'active';} ?>">
-                        <a href="product_list">
-                            <i class="fa fa-paint-brush" aria-hidden="true"></i>
-                            <span class="menu-title text-truncate" data-i18n="bxs-dashboard">Product List</span>
-                        </a>
+                        <ul class="menu-content">
+                            <li class="<?php if($cur_page == 'product_category') {echo 'active';} ?>">
+                                <a class="d-flex align-items-center" href="product_category">
+                                    <i class="bx bx-right-arrow-alt"></i>
+                                    <span class="menu-item text-truncate" data-i18n="1 column">Product Category</span>
+                                </a>
+                            </li>
+                            <li class="<?php if($cur_page == 'product_color') {echo 'active';} ?>">
+                                <a class="d-flex align-items-center" href="product_color">
+                                    <i class="bx bx-right-arrow-alt"></i>
+                                    <span class="menu-item text-truncate" data-i18n="1 column">Product Color</span>
+                                </a>
+                            </li>
+                            <li class="<?php if($cur_page == 'product_brand') {echo 'active';} ?>">
+                                <a class="d-flex align-items-center" href="product_brand">
+                                    <i class="bx bx-right-arrow-alt"></i>
+                                    <span class="menu-item text-truncate" data-i18n="1 column">Product Brand</span>
+                                </a>
+                            </li>
+                            <li class="<?php if($cur_page == 'product_size') {echo 'active';} ?>">
+                                <a class="d-flex align-items-center" href="product_size">
+                                    <i class="bx bx-right-arrow-alt"></i>
+                                    <span class="menu-item text-truncate" data-i18n="1 column">Product Size</span>
+                                </a>
+                            </li>
+                            <li class="<?php if($cur_page == 'product_list') {echo 'active';} ?>">
+                                <a class="d-flex align-items-center" href="product_list">
+                                    <i class="bx bx-right-arrow-alt"></i>
+                                    <span class="menu-item text-truncate" data-i18n="1 column">Product List</span>
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </div>
