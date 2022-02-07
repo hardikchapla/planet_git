@@ -116,3 +116,9 @@ form .error {
     background: white;
     color: black;
   }
+  .select2-container--default .select2-selection--single{
+    border: 1px solid #DFE3E7 !important;
+  }
+  .select2-container--default .select2-selection--multiple{
+    border: 1px solid #DFE3E7 !important;
+  }
