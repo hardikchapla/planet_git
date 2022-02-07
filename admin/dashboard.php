@@ -1013,3 +1013,7 @@
 <?php
   include('footer.php');
 ?>
+<link rel="stylesheet" type="text/css" href="app-assets/vendors/css/charts/apexcharts.css">
+<link rel="stylesheet" type="text/css" href="app-assets/css/pages/dashboard-ecommerce.min.css">
+<script src="app-assets/vendors/js/charts/apexcharts.min.js"></script>
+<script src="app-assets/js/scripts/pages/dashboard-ecommerce.min.js"></script>
