@@ -1,8 +1,8 @@
 <!-- BEGIN: Footer-->
 <footer class="footer footer-static footer-light">
-   <p class="clearfix mb-0 text-center">
-      <span class="d-inline-block">Copyright © 2022 <?= APP_NAME ?>. All rights reserved.</span>
-   </p>
+    <p class="clearfix mb-0 text-center">
+        <span class="d-inline-block">Copyright © 2022 <?= APP_NAME ?>. All rights reserved.</span>
+    </p>
 </footer>
 <!-- END: Footer-->
 <!-- BEGIN: Vendor JS-->
@@ -21,6 +21,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
 <script src="app-assets/vendors/js/extensions/toastr.min.js"></script>
 <script src="app-assets/js/scripts/extensions/toastr.min.js"></script>
+
+<script src="https://cdn.ckeditor.com/ckeditor5/10.0.1/classic/ckeditor.js"></script>
+<!-- END: Theme JS-->
+
 <script src="assets/js/users.js"></script>
 <script src="assets/js/product_category.js"></script>
 <script src="assets/js/product_color.js"></script>
@@ -34,9 +38,8 @@
 <script src="app-assets/vendors/js/extensions/swiper.min.js"></script>
 <script src="app-assets/vendors/js/extensions/sweetalert2.all.min.js"></script>
 <!-- END: Page Vendor JS-->
-<script src="https://cdn.ckeditor.com/ckeditor5/10.0.1/classic/ckeditor.js"></script>
 
-<!-- END: Theme JS-->
 </body>
 <!-- END: Body-->
+
 </html>

@@ -66,19 +66,13 @@ $(document).ready(function(){
     });
     $("#updateProductSizeForm").validate({
         rules: {
-            product_color_code: {
-                required: true,
-            },
-            product_color_name: {
+            product_size_name: {
                 required: true,
             }
         },
         messages: {
-            product_color_code: {
-                required: "Please provide a color code"
-            },
-            product_color_name: {
-                required: "Please provide a color name"
+            product_size_name: {
+                required: "Please provide a product size"
             }
         },
         submitHandler: function(form) {
