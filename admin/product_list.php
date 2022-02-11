@@ -85,7 +85,7 @@ $size = $db->query("SELECT * FROM phtv_product_size");
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title" id="product_list_title">Add Product</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close closeproduct" data-dismiss="modal" aria-label="Close">
                     <i class="bx bx-x"></i>
                 </button>
             </div>
@@ -206,7 +206,7 @@ $size = $db->query("SELECT * FROM phtv_product_size");
 
                 <div class="modal-footer">
                     <input type="hidden" name="product_id" id="product_id">
-                    <button type="button" class="btn btn-light-secondary" data-dismiss="modal">
+                    <button type="button" class="btn btn-light-secondary closeproduct" data-dismiss="modal">
                         <i class="bx bx-x d-block d-sm-none"></i>
                         <span class="d-none d-sm-block">Close</span>
                     </button>

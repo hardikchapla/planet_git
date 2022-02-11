@@ -35,6 +35,9 @@ $(document).ready(function () {
             type: "POST"
         }
     });
+    $(document).on('click', '.closeproduct', function () {
+        window.location.href = 'product_list';
+    });
     $(document).on('click', '.updateProduct', function () {
         var product_id = $(this).attr("id");
         $.ajax({
@@ -45,6 +48,7 @@ $(document).ready(function () {
             },
             dataType: "json",
             success: function (data) {
+                $('#addProductForm')[0].reset();
                 $("#productPreOrder").removeAttr('checked');
                 $('#productName').val(data.name);
                 $('#productPrice').val(data.price);
