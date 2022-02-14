@@ -14,7 +14,7 @@ while ($feproduct = $product->fetch()) {
                         <div class="images">
                             <img src="images/product/' . $fepimage['image'] . '" alt="images" />
                             <div class="ss_button">
-                                <a href="#"> Product Info </a>
+                                <a href="product-detail.php?item=' . $feproduct['id'] . '"> Product Info </a>
                             </div>
                         </div>
                         <div class="_ss_product_des">
