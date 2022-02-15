@@ -297,8 +297,8 @@ $product = $db->query("SELECT a.*, b.* FROM phtv_product a LEFT JOIN phtv_produc
                 <div class="tab-content" id="pills-tabContent">
                     <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
                         aria-labelledby="pills-home-tab">
-                        <div class="row">
-                            <div class="col-lg-3 col-sm-6">
+                        <div class="row" id="featured_products">
+                            <!-- <div class="col-lg-3 col-sm-6">
                                 <div class="ss_products_boxi">
                                     <div class="images">
                                         <img src="images/product-imagesA.png" alt="images" />
@@ -416,10 +416,12 @@ $product = $db->query("SELECT a.*, b.* FROM phtv_product a LEFT JOIN phtv_produc
 
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
+                        </div>
+                        <div class="row">
                             <div class="col-lg-12 pt-5 text-center">
                                 <div class="episode_button">
-                                    <a href="#"> Load More </a>
+                                    <button type="button" id="load_more_featured_products"> Load More </button>
                                 </div>
                             </div>
                         </div>
@@ -830,6 +832,8 @@ $(document).ready(function() {
     var limit = 8;
     var start1 = 0;
     var limit1 = 8;
+    var start2 = 0;
+    var limit2 = 8;
     $.ajax({
         url: "resources/get_new_product",
         method: "POST",
@@ -854,6 +858,19 @@ $(document).ready(function() {
             $('#preorder_products').html(data);
             start1 = start1 + limit1;
             limit1 = limit1;
+        }
+    })
+    $.ajax({
+        url: "resources/get_featured_products",
+        method: "POST",
+        data: {
+            start: start2,
+            limit: limit2
+        },
+        success: function(data) {
+            $('#featured_products').html(data);
+            start2 = start2 + limit2;
+            limit2 = limit2;
         }
     })
     $('#load_more_new_product').on('click', function() {
@@ -888,6 +905,26 @@ $(document).ready(function() {
                     $('#preorder_products').append(data);
                     start1 = start1 + limit1;
                     limit1 = limit1;
+                } else {
+                    toastr.warning("No Product Available").delay(1000).fadeOut(1000);
+                }
+
+            }
+        })
+    });
+    $('#load_more_featured_products').on('click', function() {
+        $.ajax({
+            url: "resources/get_featured_products",
+            method: "POST",
+            data: {
+                start: start2,
+                limit: limit2
+            },
+            success: function(data) {
+                if (data) {
+                    $('#featured_products').append(data);
+                    start2 = start2 + limit2;
+                    limit2 = limit2;
                 } else {
                     toastr.warning("No Product Available").delay(1000).fadeOut(1000);
                 }
