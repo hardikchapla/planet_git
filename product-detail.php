@@ -200,7 +200,8 @@ $fetured = $db->query("SELECT avg(a.rating) as review_rate, a.*, b.* FROM phtv_p
                                     ?>
                                     <div>
                                         <input id="radio-<?= $fecolor['id'] ?>" class="radio-custom radioD"
-                                            name="radio-group" type="radio" <?= ($a == 0) ? 'checked' : '' ?>>
+                                            name="radio-group" value="<?=$fecolor['color_id'] ?>" type="radio"
+                                            <?= ($a == 0) ? 'checked' : '' ?>>
                                         <label for="radio-<?= $fecolor['id'] ?>" class="radio-custom-label radioD-label"
                                             style="--product-colors: <?= $fecolor['color_code'] ?>;"></label>
                                     </div>
@@ -233,8 +234,8 @@ $fetured = $db->query("SELECT avg(a.rating) as review_rate, a.*, b.* FROM phtv_p
                                     $b = 0;
                                     while ($fesize = $size->fetch()) {
                                     ?>
-                                    <input type="radio" id="radio-size<?= $b ?>" name="switch-one" value="yes"
-                                        <?= ($b == 0) ? 'checked' : '' ?> />
+                                    <input type="radio" id="radio-size<?= $b ?>" value="<?= $fesize['size_id'] ?>"
+                                        name="switch-one" value="yes" <?= ($b == 0) ? 'checked' : '' ?> />
                                     <label for="radio-size<?= $b ?>"><?= $fesize['size_name'] ?></label>
                                     <?php
                                         $b++;
@@ -268,7 +269,8 @@ $fetured = $db->query("SELECT avg(a.rating) as review_rate, a.*, b.* FROM phtv_p
                                     <div class="input-group-prepend">
                                         <input type='button' value='-' class='minus' field='quantity' />
                                     </div>
-                                    <input class="form-control qty" type="text" name="quantity" value='1' />
+                                    <input class="form-control qty" type="text" id="product_quentity" name="quantity"
+                                        value='1' />
                                     <div class="input-group-append">
                                         <input type='button' value='+' class='plus' field='quantity' />
                                     </div>
@@ -276,7 +278,7 @@ $fetured = $db->query("SELECT avg(a.rating) as review_rate, a.*, b.* FROM phtv_p
                             </div>
                             <div class="pr-2 bd-highlight">
                                 <div class="episode_button">
-                                    <a href="#"> ADD TO CART </a>
+                                    <button type="button" id="add_to_cart"> ADD TO CART </button>
                                 </div>
                             </div>
                             <div class="pr-2 bd-highlight">
@@ -549,6 +551,41 @@ jQuery(document).ready(function() {
             $(field).val(currentVal - 1);
         }
 
+    });
+});
+</script>
+<script>
+$(document).ready(function() {
+    $(document).on('click', '#add_to_cart', function() {
+        var product_id = "<?= $product_id ?>";
+        var product_color_id = $('input[name="radio-group"]:checked').val();
+        var product_size_id = $('input[name="switch-one"]:checked').val();
+        var product_quentity = $('#product_quentity').val();
+        $.ajax({
+            url: "resources/add_to_cart_product",
+            method: "POST",
+            data: {
+                product_id: product_id,
+                product_color_id: product_color_id,
+                product_size_id: product_size_id,
+                product_quentity: product_quentity
+            },
+            dataType: "json",
+            success: function(data) {
+                if (data.success == 'login') {
+                    toastr.options.onHidden = function() {
+                        window.location.href = 'login';
+                    }
+                    toastr.warning(data.message).delay(1000).fadeOut(1000);
+                } else {
+                    if (data.success == 'success') {
+                        toastr.success(data.message).delay(1000).fadeOut(1000);
+                    } else {
+                        toastr.warning(data.message).delay(1000).fadeOut(1000);
+                    }
+                }
+            }
+        })
     });
 });
 </script>

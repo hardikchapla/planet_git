@@ -34,7 +34,7 @@
                             </div>
                             <div class="p-2  bd-highlight align-self-center ss_right_arrowss">
                                 <a href="#" class="">
-                                    <img src="images/right_arrow.svg" alt="images"/>
+                                    <img src="images/right_arrow.svg" alt="images" />
                                 </a>
                             </div>
                             <div class="p-2  bd-highlight align-self-center">
@@ -45,7 +45,7 @@
                             </div>
                             <div class="p-2  bd-highlight align-self-center ss_right_arrowss">
                                 <a href="#" class="">
-                                    <img src="images/right_arrow.svg" alt="images"/>
+                                    <img src="images/right_arrow.svg" alt="images" />
                                 </a>
                             </div>
                             <div class="p-2  bd-highlight align-self-center">
@@ -82,7 +82,7 @@
                                                 <h4> Balance : </h4>
                                             </div>
                                             <div class="bd-highlight">
-                                                <img src="images/coin.svg" alt="images"/>
+                                                <img src="images/coin.svg" alt="images" />
                                                 <span> 152 </span>
                                             </div>
                                         </div>
@@ -267,7 +267,7 @@
                 </div>
                 <div class="ss_save_order">
                     <p class=""> You will save $100 on this order </p>
-              
+
                 </div>
             </div>
         </div>
@@ -290,16 +290,17 @@
 ?>
 
 <script>
-    $('.add').click(function () {
-		if ($(this).prev().val() < 3) {
-    	$(this).prev().val(+$(this).prev().val() + 1);
-		}
-    });
-    $('.sub').click(function () {
-            if ($(this).next().val() > 1) {
-            if ($(this).next().val() > 1) $(this).next().val(+$(this).next().val() - 1);
-            }
-    });
+$('.add').click(function() {
+    if ($(this).prev().val() < 3) {
+        $(this).prev().val(+$(this).prev().val() + 1);
+    }
+});
+$('.sub').click(function() {
+    if ($(this).next().val() > 1) {
+        if ($(this).next().val() > 1) $(this).next().val(+$(this).next().val() - 1);
+    }
+});
 </script>
 </body>
+
 </html>
