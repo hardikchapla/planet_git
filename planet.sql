@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 27, 2022 at 06:23 PM
+-- Generation Time: Feb 18, 2022 at 06:59 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.4.23
 
@@ -43,7 +43,7 @@ CREATE TABLE `phtv_admin` (
 --
 
 INSERT INTO `phtv_admin` (`id`, `admin_name`, `admin_email`, `admin_avatar`, `admin_password`, `admin_phone_number`, `created`, `updated`) VALUES
-(1, 'PlanetTV', 'admin@gmail.com', '220431like.png', 'e10adc3949ba59abbe56e057f20f883e', '9876543211', '2022-01-06 10:13:09', '2022-01-06 10:52:47');
+(1, 'PlanetTV', 'admin@gmail.com', '220431like.png', 'e10adc3949ba59abbe56e057f20f883e', '9876543211', '2022-01-06 10:13:09', '2022-02-09 20:52:19');
 
 -- --------------------------------------------------------
 
@@ -493,6 +493,23 @@ CREATE TABLE `phtv_product` (
   `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `phtv_product`
+--
+
+INSERT INTO `phtv_product` (`id`, `product_brand_id`, `product_category_id`, `name`, `description`, `price`, `coin_price`, `stock`, `additional_info`, `avg_rating`, `coin`, `is_preorder`, `offer_price`, `created_at`, `updated_at`) VALUES
+(5, 2, 5, 'ASIAN Men\'s Bouncer-01 Sports Latest Stylish Casual Sneakers', '<p>For this special capsule, Common Ace co-founders and sneaker connoisseurs Sophia Chang and Romy Samuel curated a selection of women’s, men’s, and unisex sneakers from the Complex SHOP.</p>', '39.99', 30, 10, '<p>For this special capsule, Common Ace co-founders and sneaker connoisseurs Sophia Chang and Romy Samuel curated a selection of women’s, men’s, and unisex sneakers from the Complex SHOP.</p>', NULL, NULL, 0, NULL, '2022-02-09 21:18:33', '2022-02-18 22:47:52'),
+(6, 5, 5, 'ASIAN Men\'s Bouncer-01 Sports Latest Stylish Casual Sneakers', '<p>For this special capsule, Common Ace co-founders and sneaker connoisseurs Sophia Chang and Romy Samuel curated a selection of women’s, men’s, and unisex sneakers from the Complex SHOP.</p>', '39.99', 39, 10, '<p>For this special capsule, Common Ace co-founders and sneaker connoisseurs Sophia Chang and Romy Samuel curated a selection of women’s, men’s, and unisex sneakers from the Complex SHOP.</p>', NULL, NULL, 0, NULL, '2022-02-09 21:22:29', '2022-02-09 21:58:59'),
+(7, 6, 5, 'ASIAN Men\'s Bouncer-01 Sports Latest Stylish Casual Sneakers', '<p>For this special capsule, Common Ace co-founders and sneaker connoisseurs Sophia Chang and Romy Samuel curated a selection of women’s, men’s, and unisex sneakers from the Complex SHOP.</p>', '39.99', 39, 10, '<p>For this special capsule, Common Ace co-founders and sneaker connoisseurs Sophia Chang and Romy Samuel curated a selection of women’s, men’s, and unisex sneakers from the Complex SHOP.</p>', NULL, NULL, 1, NULL, '2022-02-09 21:35:03', '2022-02-09 21:59:11'),
+(8, 1, 10, 'Cuffed Beanie Planet Hopper TV', '<p>For this special capsule, Common Ace co-founders and sneaker connoisseurs Sophia Chang and Romy Samuel curated a selection of women’s, men’s, and unisex sneakers from the Complex SHOP.</p>', '42.00', 42, 10, '<p>For this special capsule, Common Ace co-founders and sneaker connoisseurs Sophia Chang and Romy Samuel curated a selection of women’s, men’s, and unisex sneakers from the Complex SHOP.</p>', NULL, NULL, 0, NULL, '2022-02-09 21:56:32', '2022-02-09 21:59:33'),
+(9, 1, 10, 'Cuffed Beanie Planet Hopper TV', '<p>For this special capsule, Common Ace co-founders and sneaker connoisseurs Sophia Chang and Romy Samuel curated a selection of women’s, men’s, and unisex sneakers from the Complex SHOP.</p>', '59.99', 59, 10, '<p>For this special capsule, Common Ace co-founders and sneaker connoisseurs Sophia Chang and Romy Samuel curated a selection of women’s, men’s, and unisex sneakers from the Complex SHOP.</p>', NULL, NULL, 0, NULL, '2022-02-09 22:03:15', NULL),
+(10, 1, 10, 'Cuffed Beanie Planet Hopper TV', '<p>For this special capsule, Common Ace co-founders and sneaker connoisseurs Sophia Chang and Romy Samuel curated a selection of women’s, men’s, and unisex sneakers from the Complex SHOP.</p>', '69.99', 60, 5, '<p>For this special capsule, Common Ace co-founders and sneaker connoisseurs Sophia Chang and Romy Samuel curated a selection of women’s, men’s, and unisex sneakers from the Complex SHOP.</p>', NULL, NULL, 1, NULL, '2022-02-09 22:05:01', '2022-02-18 22:29:01'),
+(11, 1, 9, 'Cuffed Beanie Planet Hopper TV', '<p>Sed id interdum urna. Nam ac elit a ante commodo tristique. condimentum vehicula a hendrerit ac nisi. hendrerit ac nisi Lorem ipsum dolor sit amet Vestibulum imperdiet nibh vel magna lacinia ultrices. Sed id interdum urna. Nullam lacinia faucibus risus, a euismod lorem tincidunt id. Donec maximus placerat tempor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse faucibus sed dolor eget posuere.Sed id interdum urna. Nam ac elit a ante commodo tristique. Duis lacus urna, condimentum a vehicula a, hendrerit ac nisi Lorem ipsum dolor sit amet.</p><h4>SIZE &amp; FIT</h4><ul><li>Our Model wears a UK 8/ EU 36/ Us 4</li><li>Model is 170/ 5’7” Tall</li><li>Shoulder seam to hem measures appox 58”/ 147 cm in lenght</li></ul><p>Sed id interdum urna. Nam ac elit a ante commodo tristique. condimentum vehicula a hendrerit ac nisi. hendrerit ac nisi Lorem ipsum dolor sit amet Vestibulum imperdiet nibh vel magna lacinia ultrices. Sed id interdum urna.</p><p>Nullam lacinia faucibus risus, a euismod lorem tincidunt id. Donec maximus placerat tempor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse faucibus sed dolor eget posuere.Sed id interdum urna. Nam ac elit a ante commodo tristique. Duis lacus urna, condimentum a vehicula a, hendrerit ac nisi Lorem ipsum dolor sit amet.</p>', '79.99', 70, 10, '<p>Sed id interdum urna. Nam ac elit a ante commodo tristique. condimentum vehicula a hendrerit ac nisi. hendrerit ac nisi Lorem ipsum dolor sit amet Vestibulum imperdiet nibh vel magna lacinia ultrices. Sed id interdum urna. Nullam lacinia faucibus risus, a euismod lorem tincidunt id. Donec maximus placerat tempor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse faucibus sed dolor eget posuere.Sed id interdum urna. Nam ac elit a ante commodo tristique. Duis lacus urna, condimentum a vehicula a, hendrerit ac nisi Lorem ipsum dolor sit amet.</p>', '4.50', NULL, 1, NULL, '2022-02-09 22:06:36', '2022-02-18 22:28:10'),
+(12, 1, 10, 'Cuffed Beanie Planet Hopper TV', '<p>For this special capsule, Common Ace co-founders and sneaker connoisseurs Sophia Chang and Romy Samuel curated a selection of women’s, men’s, and unisex sneakers from the Complex SHOP.</p>', '79.99', 79, 5, '<p>For this special capsule, Common Ace co-founders and sneaker connoisseurs Sophia Chang and Romy Samuel curated a selection of women’s, men’s, and unisex sneakers from the Complex SHOP.</p>', NULL, NULL, 0, NULL, '2022-02-09 22:08:43', NULL),
+(13, 1, 10, 'Cuffed Beanie Planet Hopper TV', '<p>For this special capsule, Common Ace co-founders and sneaker connoisseurs Sophia Chang and Romy Samuel curated a selection of women’s, men’s, and unisex sneakers from the Complex SHOP.</p>', '99.99', 99, 5, '<p>For this special capsule, Common Ace co-founders and sneaker connoisseurs Sophia Chang and Romy Samuel curated a selection of women’s, men’s, and unisex sneakers from the Complex SHOP.</p>', NULL, NULL, 0, NULL, '2022-02-09 22:11:10', NULL),
+(14, 5, 10, 'Cuffed Beanie Planet Hopper TV', '<p>For this special capsule, Common Ace co-founders and sneaker connoisseurs Sophia Chang and Romy Samuel curated a selection of women’s, men’s, and unisex sneakers from the Complex SHOP.</p>', '59.99', 59, 5, '<p>For this special capsule, Common Ace co-founders and sneaker connoisseurs Sophia Chang and Romy Samuel curated a selection of women’s, men’s, and unisex sneakers from the Complex SHOP.</p>', NULL, NULL, 0, NULL, '2022-02-09 22:13:02', NULL),
+(15, 6, 10, 'Cuffed Beanie Planet Hopper TV', '<p>For this special capsule, Common Ace co-founders and sneaker connoisseurs Sophia Chang and Romy Samuel curated a selection of women’s, men’s, and unisex sneakers from the Complex SHOP.</p>', '99.99', 99, 5, '<p>For this special capsule, Common Ace co-founders and sneaker connoisseurs Sophia Chang and Romy Samuel curated a selection of women’s, men’s, and unisex sneakers from the Complex SHOP.</p>', NULL, NULL, 0, NULL, '2022-02-09 22:15:33', NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -507,6 +524,20 @@ CREATE TABLE `phtv_product_brand` (
   `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `phtv_product_brand`
+--
+
+INSERT INTO `phtv_product_brand` (`id`, `name`, `logo`, `created_at`, `updated_at`) VALUES
+(1, 'Holiister', '533846holiister.svg', '2022-02-06 16:03:45', '2022-02-06 16:06:18'),
+(2, 'Nike', '132205nike.svg', '2022-02-06 16:06:59', NULL),
+(4, 'OLD NAVY', '353819681361.jpg', '2022-02-07 21:17:58', '2022-02-09 20:53:38'),
+(5, 'GAP', '442961wrc-logo.png', '2022-02-09 20:54:31', NULL),
+(6, 'VITTA', '641476vitta.svg', '2022-02-09 20:55:57', NULL),
+(7, 'ADIDAS', '314642vitta.svg', '2022-02-09 20:56:23', NULL),
+(8, 'WOODLAND', '916582vitta.svg', '2022-02-09 20:56:54', NULL),
+(9, 'NAVY BLUE', '51184vitta.svg', '2022-02-09 20:57:50', NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -517,13 +548,27 @@ CREATE TABLE `phtv_product_cart` (
   `id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
+  `color_id` int(11) NOT NULL,
+  `size_id` int(11) NOT NULL,
   `qty` int(11) DEFAULT NULL,
   `amount` decimal(10,2) DEFAULT NULL,
+  `coin_amount` decimal(10,2) DEFAULT NULL,
   `total_amount` decimal(10,2) DEFAULT NULL,
+  `total_coin_amount` decimal(10,2) DEFAULT NULL,
   `shipping_charge` decimal(10,2) NOT NULL DEFAULT 0.00,
   `created_at` datetime NOT NULL DEFAULT current_timestamp(),
   `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `phtv_product_cart`
+--
+
+INSERT INTO `phtv_product_cart` (`id`, `product_id`, `user_id`, `color_id`, `size_id`, `qty`, `amount`, `coin_amount`, `total_amount`, `total_coin_amount`, `shipping_charge`, `created_at`, `updated_at`) VALUES
+(1, 11, 10, 1, 1, 2, '79.99', '70.00', '159.98', '140.00', '0.00', '2022-02-16 23:15:24', '2022-02-18 22:47:13'),
+(3, 10, 10, 2, 2, 1, '69.99', '60.00', '69.99', '60.00', '0.00', '2022-02-16 23:28:36', '2022-02-18 22:48:18'),
+(4, 5, 10, 1, 11, 2, '39.99', '30.00', '79.98', '60.00', '0.00', '2022-02-16 23:47:06', '2022-02-18 22:51:57'),
+(5, 6, 10, 2, 14, 2, '39.99', '39.00', '79.98', '78.00', '0.00', '2022-02-16 23:47:34', '2022-02-18 23:09:35');
 
 -- --------------------------------------------------------
 
@@ -539,6 +584,19 @@ CREATE TABLE `phtv_product_category` (
   `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `phtv_product_category`
+--
+
+INSERT INTO `phtv_product_category` (`id`, `category_name`, `category_image`, `created_at`, `updated_at`) VALUES
+(5, 'Accessories', '823355ss_experiences_categoryA.png', '2022-02-09 21:03:12', NULL),
+(6, 'Art Gallery', '234959ss_experiences_categoryB.png', '2022-02-09 21:03:47', NULL),
+(7, 'T Shirts', '857187noun_t-shirt_2237575.svg', '2022-02-09 21:04:54', NULL),
+(8, 'Hoodies', '523864ss_experiences_categoryE.png', '2022-02-09 21:05:38', NULL),
+(9, 'Star Outpost Brand', '69056556_3x.png', '2022-02-09 21:06:11', NULL),
+(10, 'Hats', '209545noun_hat_2790985.svg', '2022-02-09 21:06:58', NULL),
+(11, 'Pins', '848793pin.svg', '2022-02-09 21:07:29', NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -552,6 +610,17 @@ CREATE TABLE `phtv_product_color` (
   `created_at` datetime NOT NULL DEFAULT current_timestamp(),
   `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `phtv_product_color`
+--
+
+INSERT INTO `phtv_product_color` (`id`, `color_code`, `color_name`, `created_at`, `updated_at`) VALUES
+(1, '#000000', 'Black', '2022-02-03 22:30:34', NULL),
+(2, '#ffffff', 'White', '2022-02-03 22:33:32', '2022-02-03 22:35:21'),
+(4, '#f9ad81', 'Broun', '2022-02-07 21:18:31', '2022-02-12 21:13:46'),
+(5, '#3fa9f5', 'Sky Blue', '2022-02-07 21:18:51', '2022-02-12 21:14:39'),
+(6, '#39DA8A', 'Green', '2022-02-07 21:19:16', '2022-02-12 21:16:21');
 
 -- --------------------------------------------------------
 
@@ -583,6 +652,26 @@ CREATE TABLE `phtv_product_images` (
   `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `phtv_product_images`
+--
+
+INSERT INTO `phtv_product_images` (`id`, `product_id`, `image`, `created_at`, `updated_at`) VALUES
+(19, 5, '669440banner_pro.png', '2022-02-09 21:20:40', NULL),
+(21, 7, '373315banner_pro.png', '2022-02-09 21:35:03', NULL),
+(22, 6, '177107product-imagesE.png', '2022-02-09 21:47:48', NULL),
+(23, 8, '458848product-imagesA.png', '2022-02-09 21:56:32', NULL),
+(24, 9, '799146product-imagesB.png', '2022-02-09 22:03:15', NULL),
+(25, 10, '572302product-imagesC.png', '2022-02-09 22:05:01', NULL),
+(26, 11, '281604product-imagesD.png', '2022-02-09 22:06:36', NULL),
+(27, 12, '452890product-imagesA.png', '2022-02-09 22:08:43', NULL),
+(28, 13, '782831product-imagesC.png', '2022-02-09 22:11:10', NULL),
+(29, 14, '197876product-imagesE.png', '2022-02-09 22:13:02', NULL),
+(30, 15, '92258product-imagesF.png', '2022-02-09 22:15:33', NULL),
+(31, 11, '386468product-imagesC.png', '2022-02-12 23:07:01', NULL),
+(32, 11, '225835product-imagesE.png', '2022-02-12 23:07:01', NULL),
+(33, 11, '109922product-imagesF.png', '2022-02-12 23:07:01', NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -597,6 +686,32 @@ CREATE TABLE `phtv_product_multi_color` (
   `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `phtv_product_multi_color`
+--
+
+INSERT INTO `phtv_product_multi_color` (`id`, `product_id`, `color_id`, `created_at`, `updated_at`) VALUES
+(41, 5, 1, '2022-02-09 21:58:46', NULL),
+(42, 5, 4, '2022-02-09 21:58:46', NULL),
+(43, 6, 1, '2022-02-09 21:58:59', NULL),
+(44, 6, 2, '2022-02-09 21:58:59', NULL),
+(45, 7, 1, '2022-02-09 21:59:11', NULL),
+(46, 7, 2, '2022-02-09 21:59:11', NULL),
+(47, 8, 2, '2022-02-09 21:59:33', NULL),
+(48, 9, 1, '2022-02-09 22:03:16', NULL),
+(49, 10, 1, '2022-02-09 22:05:01', NULL),
+(50, 10, 2, '2022-02-09 22:05:01', NULL),
+(51, 10, 4, '2022-02-09 22:05:01', NULL),
+(53, 12, 2, '2022-02-09 22:08:43', NULL),
+(54, 13, 2, '2022-02-09 22:11:10', NULL),
+(55, 14, 2, '2022-02-09 22:13:02', NULL),
+(56, 15, 2, '2022-02-09 22:15:33', NULL),
+(72, 11, 1, '2022-02-12 23:20:11', NULL),
+(73, 11, 2, '2022-02-12 23:20:11', NULL),
+(74, 11, 4, '2022-02-12 23:20:11', NULL),
+(75, 11, 5, '2022-02-12 23:20:11', NULL),
+(76, 11, 6, '2022-02-12 23:20:11', NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -610,6 +725,65 @@ CREATE TABLE `phtv_product_multi_size` (
   `created_at` datetime NOT NULL DEFAULT current_timestamp(),
   `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `phtv_product_multi_size`
+--
+
+INSERT INTO `phtv_product_multi_size` (`id`, `product_id`, `size_id`, `created_at`, `updated_at`) VALUES
+(79, 5, 11, '2022-02-09 21:58:46', NULL),
+(80, 5, 12, '2022-02-09 21:58:46', NULL),
+(81, 5, 13, '2022-02-09 21:58:46', NULL),
+(82, 5, 14, '2022-02-09 21:58:46', NULL),
+(83, 5, 15, '2022-02-09 21:58:46', NULL),
+(84, 5, 16, '2022-02-09 21:58:46', NULL),
+(85, 5, 17, '2022-02-09 21:58:46', NULL),
+(86, 5, 18, '2022-02-09 21:58:46', NULL),
+(87, 5, 19, '2022-02-09 21:58:46', NULL),
+(88, 6, 11, '2022-02-09 21:58:59', NULL),
+(89, 6, 12, '2022-02-09 21:58:59', NULL),
+(90, 6, 14, '2022-02-09 21:58:59', NULL),
+(91, 6, 16, '2022-02-09 21:58:59', NULL),
+(92, 6, 18, '2022-02-09 21:58:59', NULL),
+(93, 7, 14, '2022-02-09 21:59:11', NULL),
+(94, 7, 15, '2022-02-09 21:59:11', NULL),
+(95, 7, 17, '2022-02-09 21:59:11', NULL),
+(96, 7, 18, '2022-02-09 21:59:11', NULL),
+(97, 8, 1, '2022-02-09 21:59:33', NULL),
+(98, 8, 2, '2022-02-09 21:59:33', NULL),
+(99, 8, 3, '2022-02-09 21:59:33', NULL),
+(100, 8, 4, '2022-02-09 21:59:33', NULL),
+(101, 9, 1, '2022-02-09 22:03:16', NULL),
+(102, 9, 2, '2022-02-09 22:03:16', NULL),
+(103, 9, 3, '2022-02-09 22:03:16', NULL),
+(104, 9, 4, '2022-02-09 22:03:16', NULL),
+(105, 9, 5, '2022-02-09 22:03:16', NULL),
+(106, 10, 1, '2022-02-09 22:05:01', NULL),
+(107, 10, 2, '2022-02-09 22:05:01', NULL),
+(108, 10, 3, '2022-02-09 22:05:01', NULL),
+(109, 10, 4, '2022-02-09 22:05:01', NULL),
+(115, 12, 1, '2022-02-09 22:08:43', NULL),
+(116, 12, 2, '2022-02-09 22:08:43', NULL),
+(117, 12, 3, '2022-02-09 22:08:43', NULL),
+(118, 12, 4, '2022-02-09 22:08:43', NULL),
+(119, 12, 5, '2022-02-09 22:08:43', NULL),
+(120, 13, 2, '2022-02-09 22:11:10', NULL),
+(121, 13, 3, '2022-02-09 22:11:10', NULL),
+(122, 13, 4, '2022-02-09 22:11:10', NULL),
+(123, 14, 1, '2022-02-09 22:13:02', NULL),
+(124, 14, 2, '2022-02-09 22:13:02', NULL),
+(125, 14, 3, '2022-02-09 22:13:02', NULL),
+(126, 14, 4, '2022-02-09 22:13:02', NULL),
+(127, 15, 1, '2022-02-09 22:15:33', NULL),
+(128, 15, 2, '2022-02-09 22:15:33', NULL),
+(129, 15, 3, '2022-02-09 22:15:33', NULL),
+(130, 15, 4, '2022-02-09 22:15:33', NULL),
+(131, 15, 5, '2022-02-09 22:15:33', NULL),
+(147, 11, 1, '2022-02-12 23:20:11', NULL),
+(148, 11, 2, '2022-02-12 23:20:11', NULL),
+(149, 11, 3, '2022-02-12 23:20:11', NULL),
+(150, 11, 4, '2022-02-12 23:20:11', NULL),
+(151, 11, 5, '2022-02-12 23:20:11', NULL);
 
 -- --------------------------------------------------------
 
@@ -692,6 +866,20 @@ CREATE TABLE `phtv_product_review` (
   `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `phtv_product_review`
+--
+
+INSERT INTO `phtv_product_review` (`id`, `product_id`, `user_id`, `review`, `rating`, `created_at`, `updated_at`) VALUES
+(1, 11, 10, 'expected thick cloth T-Shirt and got it. Looks nice and hope will last longer. I bought slightly a bigger size to have more comfort.', 5.00, '2022-02-14 21:06:44', '2022-02-14 16:35:43'),
+(2, 11, 13, 'expected thick cloth T-Shirt and got it. Looks nice and hope will last longer. I bought slightly a bigger size to have more comfort.', 4.00, '2022-02-14 21:06:44', '2022-02-14 16:35:43'),
+(3, 5, 13, 'expected thick cloth T-Shirt and got it. Looks nice and hope will last longer. I bought slightly a bigger size to have more comfort.', 4.00, '2022-02-14 21:06:44', '2022-02-14 16:35:43'),
+(4, 6, 13, 'expected thick cloth T-Shirt and got it. Looks nice and hope will last longer. I bought slightly a bigger size to have more comfort.', 4.00, '2022-02-14 21:06:44', '2022-02-14 16:35:43'),
+(5, 8, 13, 'expected thick cloth T-Shirt and got it. Looks nice and hope will last longer. I bought slightly a bigger size to have more comfort.', 4.00, '2022-02-14 21:06:44', '2022-02-14 16:35:43'),
+(6, 9, 13, 'expected thick cloth T-Shirt and got it. Looks nice and hope will last longer. I bought slightly a bigger size to have more comfort.', 4.00, '2022-02-14 21:06:44', '2022-02-14 16:35:43'),
+(7, 12, 10, 'expected thick cloth T-Shirt and got it. Looks nice and hope will last longer. I bought slightly a bigger size to have more comfort.', 5.00, '2022-02-14 21:06:44', '2022-02-14 16:35:43'),
+(8, 10, 10, 'expected thick cloth T-Shirt and got it. Looks nice and hope will last longer. I bought slightly a bigger size to have more comfort.', 5.00, '2022-02-14 21:06:44', '2022-02-14 16:35:43');
+
 -- --------------------------------------------------------
 
 --
@@ -704,6 +892,27 @@ CREATE TABLE `phtv_product_size` (
   `created_at` datetime NOT NULL DEFAULT current_timestamp(),
   `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `phtv_product_size`
+--
+
+INSERT INTO `phtv_product_size` (`id`, `size_name`, `created_at`, `updated_at`) VALUES
+(1, 'XS', '2022-02-06 17:22:12', '2022-02-06 17:23:40'),
+(2, 'S', '2022-02-06 17:22:25', '2022-02-06 17:23:51'),
+(3, 'M', '2022-02-06 17:24:01', NULL),
+(4, 'L', '2022-02-06 17:24:10', NULL),
+(5, 'XL', '2022-02-06 17:24:23', NULL),
+(6, 'XXL', '2022-02-06 17:24:36', NULL),
+(11, '4', '2022-02-09 21:14:35', NULL),
+(12, '5', '2022-02-09 21:14:45', NULL),
+(13, '6', '2022-02-09 21:14:55', NULL),
+(14, '7', '2022-02-09 21:15:04', NULL),
+(15, '8', '2022-02-09 21:15:15', NULL),
+(16, '9', '2022-02-09 21:15:34', NULL),
+(17, '10', '2022-02-09 21:15:44', NULL),
+(18, '11', '2022-02-09 21:15:57', NULL),
+(19, '12', '2022-02-09 21:16:06', NULL);
 
 -- --------------------------------------------------------
 
@@ -786,6 +995,14 @@ CREATE TABLE `phtv_users` (
   `created_at` datetime NOT NULL DEFAULT current_timestamp(),
   `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `phtv_users`
+--
+
+INSERT INTO `phtv_users` (`id`, `full_name`, `email`, `mobile`, `image`, `password`, `coin_balance`, `is_active`, `is_verified`, `created_at`, `updated_at`) VALUES
+(10, 'Herry Terry', 'herry.terry@yopmail.com', '9874563211', '80039rbkckelxiyag63zowcbj.webp', 'e10adc3949ba59abbe56e057f20f883e', 55, 1, 1, '2022-01-30 20:24:47', '2022-02-18 22:54:18'),
+(13, 'John Dao', 'john.dao@yopmail.com', '7418529630', '142311profilesA.jpg', 'e10adc3949ba59abbe56e057f20f883e', 0, 1, 1, '2022-02-06 13:20:04', '2022-02-14 21:10:30');
 
 -- --------------------------------------------------------
 
@@ -1049,7 +1266,9 @@ ALTER TABLE `phtv_product_brand`
 ALTER TABLE `phtv_product_cart`
   ADD PRIMARY KEY (`id`),
   ADD KEY `user_id` (`user_id`),
-  ADD KEY `product_id` (`product_id`);
+  ADD KEY `product_id` (`product_id`),
+  ADD KEY `color_id` (`color_id`),
+  ADD KEY `size_id` (`size_id`);
 
 --
 -- Indexes for table `phtv_product_category`
@@ -1349,31 +1568,31 @@ ALTER TABLE `phtv_podcast_episoad`
 -- AUTO_INCREMENT for table `phtv_product`
 --
 ALTER TABLE `phtv_product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `phtv_product_brand`
 --
 ALTER TABLE `phtv_product_brand`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `phtv_product_cart`
 --
 ALTER TABLE `phtv_product_cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `phtv_product_category`
 --
 ALTER TABLE `phtv_product_category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `phtv_product_color`
 --
 ALTER TABLE `phtv_product_color`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `phtv_product_hot_deals`
@@ -1385,19 +1604,19 @@ ALTER TABLE `phtv_product_hot_deals`
 -- AUTO_INCREMENT for table `phtv_product_images`
 --
 ALTER TABLE `phtv_product_images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT for table `phtv_product_multi_color`
 --
 ALTER TABLE `phtv_product_multi_color`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
 
 --
 -- AUTO_INCREMENT for table `phtv_product_multi_size`
 --
 ALTER TABLE `phtv_product_multi_size`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=152;
 
 --
 -- AUTO_INCREMENT for table `phtv_product_order`
@@ -1421,13 +1640,13 @@ ALTER TABLE `phtv_product_order_payment`
 -- AUTO_INCREMENT for table `phtv_product_review`
 --
 ALTER TABLE `phtv_product_review`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `phtv_product_size`
 --
 ALTER TABLE `phtv_product_size`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `phtv_recommended_home`
@@ -1451,7 +1670,7 @@ ALTER TABLE `phtv_reword_faq`
 -- AUTO_INCREMENT for table `phtv_users`
 --
 ALTER TABLE `phtv_users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `phtv_voltage_category`
@@ -1552,7 +1771,9 @@ ALTER TABLE `phtv_product`
 --
 ALTER TABLE `phtv_product_cart`
   ADD CONSTRAINT `phtv_product_cart_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `phtv_users` (`id`) ON DELETE CASCADE,
-  ADD CONSTRAINT `phtv_product_cart_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `phtv_product` (`id`) ON DELETE CASCADE;
+  ADD CONSTRAINT `phtv_product_cart_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `phtv_product` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `phtv_product_cart_ibfk_3` FOREIGN KEY (`color_id`) REFERENCES `phtv_product_color` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `phtv_product_cart_ibfk_4` FOREIGN KEY (`size_id`) REFERENCES `phtv_product_size` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `phtv_product_images`

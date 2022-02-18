@@ -1,5 +1,14 @@
 <?php
-   include('header.php');
+    include('header.php');
+    if(!isset($_SESSION['userid'])){
+        header("Location: login.php"); 
+        exit();
+    }
+    $user_id = $_SESSION['userid'];
+    $user = $db->query("SELECT * FROM `phtv_users` WHERE id = '$user_id'");
+    $feuser = $user->fetch();
+    $coin_balance = $feuser['coin_balance'];
+    $cart = $db->query("SELECT a.*, b.*, c.color_name,d.size_name,e.image FROM phtv_product_cart a, phtv_product b, phtv_product_color c, phtv_product_size d, phtv_product_images = e WHERE a.product_id = b.id AND a.color_id = c.id AND a.size_id = d.id AND a.product_id = e.product_id AND a.user_id = '$user_id' GROUP BY a.id");
 ?>
 
 <div class="container-fluid ss_header_my_profies">
@@ -83,48 +92,68 @@
                                             </div>
                                             <div class="bd-highlight">
                                                 <img src="images/coin.svg" alt="images" />
-                                                <span> 152 </span>
+                                                <span> <?= $feuser['coin_balance'] ?> </span>
                                             </div>
                                         </div>
-                                        <p> Save $153 Using 153 SuperCoins </p>
+                                        <p> Save $<?= $feuser['coin_balance'] ?> Using <?= $feuser['coin_balance'] ?>
+                                            SuperCoins </p>
                                     </div>
                                 </div>
                                 <div class="p-2 bd-highlight align-self-center">
-                                    <a href="#" class="ss_apply"> Apply </a>
+                                    <button type="button" id="apply_savings" class="ss_apply"> Apply </button>
                                 </div>
                             </div>
                         </li>
+                        <?php 
+                            $total_amount = 0;
+                            $total_quentity = 0;
+                            $total_save = 0;
+                            while($fecart = $cart->fetch()){ 
+                                $image = ($fecart['image'] != '') ? 'images/product/'.$fecart['image']:'images/product-imagesE.png';
+                                $main_price = $fecart['total_amount'] - $fecart['total_coin_amount'];
+                                $total_amount = $total_amount + $fecart['total_amount'];
+                                $total_quentity = $total_quentity + $fecart['qty'];
+                                if($coin_balance >= $main_price){
+                                    $total_save = $total_save + $main_price;
+                                    $coin_balance = $coin_balance - $main_price;
+                                    $price = $fecart['total_coin_amount'];
+                                    $show_coin = $main_price;
+                                } else {
+                                    $price = $fecart['total_amount'];
+                                    $show_coin = 0;
+                                }
+                        ?>
                         <li>
                             <div class="d-flex bd-highlight ss_order_flexx">
                                 <div class="p-2 bd-highlight align-self-center">
                                     <div class="ss_order_products_images">
-                                        <img src="images/product-imagesE.png" alt="images">
+                                        <img src="<?= $image ?>" alt="images">
                                     </div>
                                 </div>
                                 <div class="p-2 bd-highlight align-self-center ">
                                     <div class="ss_order_products_des">
-                                        <h2> Cuffed Beanie Planet Hopper TV </h2>
-                                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-                                            praesentium voluptatum deleniti atque corrupti quos dolores et quas
-                                            molestias </p>
-                                        <h4> Size : <span> XS </span></h4>
+                                        <h2> <?= $fecart['name'] ?> </h2>
+                                        <p><?= $fecart['description'] ?></p>
+                                        <h4> Size : <span> <?= $fecart['size_name'] ?> </span></h4>
                                         <div class="ss_quantity">
-                                            <h3>Quantity : <span> 15 </span> </h3>
+                                            <h3>Quantity : <span> <?= $fecart['qty'] ?> </span> </h3>
                                         </div>
                                         <div class="d-flex bd-highlight ">
                                             <div class=" bd-highlight align-self-center">
-                                                <h3> $526 </h3>
+                                                <h3> $<?= $fecart['total_amount'] ?> </h3>
                                             </div>
                                             <div class=" px-3 bd-highlight align-self-center ss_coin_prices">
-                                                <p> Or Pay $506 <span>+</span> <img src="images/coin.svg" alt="images">
-                                                    20 </p>
+                                                <p> Or Pay $<?= $price ?> <span>+</span> <img src="images/coin.svg"
+                                                        alt="images">
+                                                    <?= $show_coin ?> </p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </li>
-                        <li>
+                        <?php } ?>
+                        <!-- <li>
                             <div class="d-flex bd-highlight ss_order_flexx">
                                 <div class="p-2 bd-highlight align-self-center">
                                     <div class="ss_order_products_images">
@@ -213,7 +242,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </div>
@@ -229,7 +258,7 @@
                                     <h3>Price (4 items)</h3>
                                 </div>
                                 <div class="p-2 bd-highlight">
-                                    <h4> $5263 </h4>
+                                    <h4 id="total_amount_data"> $<?= $total_amount ?> </h4>
                                 </div>
                             </div>
                         </li>
@@ -239,7 +268,7 @@
                                     <h3>Buy more & Save more</h3>
                                 </div>
                                 <div class="p-2 bd-highlight">
-                                    <h4> - $100 </h4>
+                                    <h4 id="total_save_data"> - $0 </h4>
                                 </div>
                             </div>
                         </li>
@@ -259,14 +288,14 @@
                                     <h3> order total </h3>
                                 </div>
                                 <div class="p-2 bd-highlight">
-                                    <h4> $904 </h4>
+                                    <h4 id="main_amount_data"> $<?= $total_amount ?> </h4>
                                 </div>
                             </div>
                         </li>
                     </ul>
                 </div>
                 <div class="ss_save_order">
-                    <p class=""> You will save $100 on this order </p>
+                    <p class="" id="save_text"> You will save $0 on this order </p>
 
                 </div>
             </div>
@@ -299,6 +328,16 @@ $('.sub').click(function() {
     if ($(this).next().val() > 1) {
         if ($(this).next().val() > 1) $(this).next().val(+$(this).next().val() - 1);
     }
+});
+$('#apply_savings').click(function() {
+    var total_amount = parseFloat("<?= $total_amount ?>");
+    var main_amount = total_amount;
+    var total_save = parseFloat("<?= $total_save ?>");
+    total_amount = total_amount - total_save;
+    $('#total_amount_data').html("$" + main_amount.toFixed(2));
+    $('#total_save_data').html("$" + total_save.toFixed(2));
+    $('#main_amount_data').html("$" + total_amount.toFixed(2));
+    $('#save_text').html("You will save $" + total_save + " on this order");
 });
 </script>
 </body>
