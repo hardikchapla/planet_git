@@ -8526,3 +8526,7 @@ form .error {
         border-left-color: transparent;
     }
 }
+
+.remove-cart {
+    align-self: end !important;
+}

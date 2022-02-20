@@ -27,29 +27,29 @@
                     <div class="ss_shopping_process">
                         <div class="d-flex bd-highlight justify-content-center">
                             <div class="p-2  bd-highlight align-self-center ">
-                                <a href="#" class="ss_Shopping_boxi">
+                                <a href="shopping-cart" class="ss_Shopping_boxi">
                                     Shopping Cart
                                     <div class="boxiA">1</div>
                                 </a>
                             </div>
                             <div class="p-2  bd-highlight align-self-center ss_right_arrowss">
-                                <a href="#" class="">
-                                    <img src="images/right_arrow.svg" alt="images"/>
+                                <a href="checkout" class="">
+                                    <img src="images/right_arrow.svg" alt="images" />
                                 </a>
                             </div>
                             <div class="p-2  bd-highlight align-self-center ">
-                                <a href="#" class="ss_Shopping_boxi">
+                                <a href="checkout" class="ss_Shopping_boxi">
                                     Checkout
                                     <div class="boxiA">2</div>
                                 </a>
                             </div>
                             <div class="p-2  bd-highlight align-self-center ss_right_arrowss">
-                                <a href="#" class="">
-                                    <img src="images/right_arrow.svg" alt="images"/>
+                                <a href="completed" class="">
+                                    <img src="images/right_arrow.svg" alt="images" />
                                 </a>
                             </div>
                             <div class="p-2  bd-highlight align-self-center active">
-                                <a href="#" class="ss_Shopping_boxi">
+                                <a href="completed" class="ss_Shopping_boxi">
                                     Completed
                                     <div class="boxiA">3</div>
                                 </a>
@@ -67,12 +67,13 @@
             <div class="col-lg-8">
                 <div class="ss_thanks_you">
                     <div class="ss_thnaks_images">
-                        <img src="images/Check_out_bot.png" alt="images"/>
+                        <img src="images/Check_out_bot.png" alt="images" />
                     </div>
                     <div class="">
                         <h2> Thanks for shopping with Us! </h2>
                         <div class="liness"></div>
-                        <p> Your items are being collected and you will receive e-mail confirmation shortly. have a great day!
+                        <p> Your items are being collected and you will receive e-mail confirmation shortly. have a
+                            great day!
                         </p>
                         <button type="submit" class="button_register"> Continue Shopping</button>
                     </div>
@@ -95,12 +96,12 @@
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-     aria-hidden="true">
+    aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content details_contents">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <img src="images/cancel.svg" alt="images"/>
+                    <img src="images/cancel.svg" alt="images" />
                 </button>
             </div>
             <div class="modal-body">
@@ -110,17 +111,17 @@
                             <div class="owl-carousel owl-theme" id="ss_slider_details">
                                 <div class="item">
                                     <div class="ss_model_images">
-                                        <img src="images/details_model.jpg" alt="details"/>
+                                        <img src="images/details_model.jpg" alt="details" />
                                     </div>
                                 </div>
                                 <div class="item">
                                     <div class="ss_model_images">
-                                        <img src="images/details_model.jpg" alt="details"/>
+                                        <img src="images/details_model.jpg" alt="details" />
                                     </div>
                                 </div>
                                 <div class="item">
                                     <div class="ss_model_images">
-                                        <img src="images/details_model.jpg" alt="details"/>
+                                        <img src="images/details_model.jpg" alt="details" />
                                     </div>
                                 </div>
                             </div>
@@ -137,7 +138,7 @@
                                 </p>
                                 <ul>
                                     <li>
-                                        <span> Sale ID	: </span>
+                                        <span> Sale ID : </span>
                                         <span> #5395761 </span>
                                     </li>
                                     <li>
@@ -174,4 +175,5 @@
 ?>
 
 </body>
+
 </html>

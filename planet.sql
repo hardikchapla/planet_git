@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 18, 2022 at 06:59 PM
+-- Generation Time: Feb 20, 2022 at 11:48 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.4.23
 
@@ -548,6 +548,7 @@ CREATE TABLE `phtv_product_cart` (
   `id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
+  `system_user_id` varchar(20) DEFAULT NULL,
   `color_id` int(11) NOT NULL,
   `size_id` int(11) NOT NULL,
   `qty` int(11) DEFAULT NULL,
@@ -564,11 +565,15 @@ CREATE TABLE `phtv_product_cart` (
 -- Dumping data for table `phtv_product_cart`
 --
 
-INSERT INTO `phtv_product_cart` (`id`, `product_id`, `user_id`, `color_id`, `size_id`, `qty`, `amount`, `coin_amount`, `total_amount`, `total_coin_amount`, `shipping_charge`, `created_at`, `updated_at`) VALUES
-(1, 11, 10, 1, 1, 2, '79.99', '70.00', '159.98', '140.00', '0.00', '2022-02-16 23:15:24', '2022-02-18 22:47:13'),
-(3, 10, 10, 2, 2, 1, '69.99', '60.00', '69.99', '60.00', '0.00', '2022-02-16 23:28:36', '2022-02-18 22:48:18'),
-(4, 5, 10, 1, 11, 2, '39.99', '30.00', '79.98', '60.00', '0.00', '2022-02-16 23:47:06', '2022-02-18 22:51:57'),
-(5, 6, 10, 2, 14, 2, '39.99', '39.00', '79.98', '78.00', '0.00', '2022-02-16 23:47:34', '2022-02-18 23:09:35');
+INSERT INTO `phtv_product_cart` (`id`, `product_id`, `user_id`, `system_user_id`, `color_id`, `size_id`, `qty`, `amount`, `coin_amount`, `total_amount`, `total_coin_amount`, `shipping_charge`, `created_at`, `updated_at`) VALUES
+(4, 5, 10, NULL, 1, 11, 2, '39.99', '30.00', '79.98', '60.00', '0.00', '2022-02-16 23:47:06', '2022-02-18 22:51:57'),
+(5, 6, 10, NULL, 2, 14, 2, '39.99', '39.00', '79.98', '78.00', '0.00', '2022-02-16 23:47:34', '2022-02-18 23:09:35'),
+(6, 11, 10, NULL, 1, 1, 1, '79.99', '70.00', '79.99', '70.00', '0.00', '2022-02-19 17:36:06', '2022-02-20 15:34:08'),
+(7, 9, 10, NULL, 1, 2, 1, '59.99', '59.00', '59.99', '59.00', '0.00', '2022-02-19 17:36:15', NULL),
+(9, 11, 13, NULL, 5, 3, 3, '79.99', '70.00', '239.97', '210.00', '0.00', '2022-02-20 15:36:44', '2022-02-20 16:01:46'),
+(10, 12, 13, NULL, 2, 1, 3, '79.99', '79.00', '239.97', '237.00', '0.00', '2022-02-20 15:38:53', '2022-02-20 16:01:46'),
+(11, 5, 13, NULL, 1, 11, 3, '39.99', '30.00', '119.97', '90.00', '0.00', '2022-02-20 15:39:00', '2022-02-20 16:01:46'),
+(12, 6, 13, NULL, 2, 12, 3, '39.99', '39.00', '119.97', '117.00', '0.00', '2022-02-20 15:39:09', '2022-02-20 16:01:46');
 
 -- --------------------------------------------------------
 
@@ -1002,7 +1007,7 @@ CREATE TABLE `phtv_users` (
 
 INSERT INTO `phtv_users` (`id`, `full_name`, `email`, `mobile`, `image`, `password`, `coin_balance`, `is_active`, `is_verified`, `created_at`, `updated_at`) VALUES
 (10, 'Herry Terry', 'herry.terry@yopmail.com', '9874563211', '80039rbkckelxiyag63zowcbj.webp', 'e10adc3949ba59abbe56e057f20f883e', 55, 1, 1, '2022-01-30 20:24:47', '2022-02-18 22:54:18'),
-(13, 'John Dao', 'john.dao@yopmail.com', '7418529630', '142311profilesA.jpg', 'e10adc3949ba59abbe56e057f20f883e', 0, 1, 1, '2022-02-06 13:20:04', '2022-02-14 21:10:30');
+(13, 'John Dao', 'john.dao@yopmail.com', '7418529630', '142311profilesA.jpg', 'e10adc3949ba59abbe56e057f20f883e', 100, 1, 1, '2022-02-06 13:20:04', '2022-02-20 16:01:38');
 
 -- --------------------------------------------------------
 
@@ -1580,7 +1585,7 @@ ALTER TABLE `phtv_product_brand`
 -- AUTO_INCREMENT for table `phtv_product_cart`
 --
 ALTER TABLE `phtv_product_cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `phtv_product_category`
@@ -1770,7 +1775,6 @@ ALTER TABLE `phtv_product`
 -- Constraints for table `phtv_product_cart`
 --
 ALTER TABLE `phtv_product_cart`
-  ADD CONSTRAINT `phtv_product_cart_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `phtv_users` (`id`) ON DELETE CASCADE,
   ADD CONSTRAINT `phtv_product_cart_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `phtv_product` (`id`) ON DELETE CASCADE,
   ADD CONSTRAINT `phtv_product_cart_ibfk_3` FOREIGN KEY (`color_id`) REFERENCES `phtv_product_color` (`id`) ON DELETE CASCADE,
   ADD CONSTRAINT `phtv_product_cart_ibfk_4` FOREIGN KEY (`size_id`) REFERENCES `phtv_product_size` (`id`) ON DELETE CASCADE;
