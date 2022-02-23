@@ -50,3 +50,17 @@
     else:
         error_reporting(0);    
     endif;
+
+    // Stripe API configuration  
+    define('STRIPE_API_KEY', 'sk_test_51KVe6iSGdtrVeakbfLVirwcazbF3fHDMz6OXCQQlUJ1DzbdJ9kSrPq4hOLMtr8XN9MscEMlmBICLIA4MwatPfCZb00L4rsud85'); 
+    define('STRIPE_PUBLISHABLE_KEY', 'pk_test_51KVe6iSGdtrVeakbERsEHC1zkUYkaAoKLQpsl6bYD6thUpmRuZ1kzrwc1yez5RCkJpF7tA0cPbKIaQP3Jd4zJtHv00E8nXhfoV'); 
+
+    // define('PAYPAL_ID', 'csanghani58@gmail.com'); 
+    define('PAYPAL_ID', 'sb-4xqyb14030685@business.example.com'); 
+    define('PAYPAL_SANDBOX', TRUE); //TRUE or FALSE 
+    
+    define('PAYPAL_RETURN_URL', 'http://localhost/planet_git/resources/success.php'); 
+    define('PAYPAL_CANCEL_URL', 'http://localhost/planet_git/resources/cancel.php'); 
+    define('PAYPAL_NOTIFY_URL', 'http://localhost/planet_git/resources/ipn.php'); 
+    define('PAYPAL_CURRENCY', 'USD'); 
+    define('PAYPAL_URL', (PAYPAL_SANDBOX == true)?"https://www.sandbox.paypal.com/cgi-bin/webscr":"https://www.paypal.com/cgi-bin/webscr");
