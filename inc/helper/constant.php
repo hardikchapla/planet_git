@@ -56,7 +56,7 @@
     define('STRIPE_PUBLISHABLE_KEY', 'pk_test_51KVe6iSGdtrVeakbERsEHC1zkUYkaAoKLQpsl6bYD6thUpmRuZ1kzrwc1yez5RCkJpF7tA0cPbKIaQP3Jd4zJtHv00E8nXhfoV'); 
 
     // define('PAYPAL_ID', 'csanghani58@gmail.com'); 
-    define('PAYPAL_ID', 'sb-4xqyb14030685@business.example.com'); 
+    define('PAYPAL_ID', 'sanghanichirag1412@gmail.com'); 
     define('PAYPAL_SANDBOX', TRUE); //TRUE or FALSE 
     
     define('PAYPAL_RETURN_URL', 'http://localhost/planet_git/resources/success.php'); 

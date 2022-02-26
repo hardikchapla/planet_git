@@ -261,7 +261,6 @@
                                         <input type="hidden" name="return" value="<?php echo PAYPAL_RETURN_URL; ?>">
                                         <input type="hidden" name="cancel_return"
                                             value="<?php echo PAYPAL_CANCEL_URL; ?>">
-                                        <input type="hidden" name="notify_url" value="<?php echo PAYPAL_NOTIFY_URL; ?>">
                                         <button type="image" name="submit" class="btn btn-warning"><img
                                                 src="images/download.svg"></button>
                                     </form>
