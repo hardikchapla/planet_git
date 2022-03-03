@@ -1,5 +1,38 @@
 <?php
     include('header.php');
+    $apply_coin = "false";
+    if(isset($_REQUEST['applycoin']) && !empty($_REQUEST['applycoin'])){
+        $apply_coin = $_REQUEST['applycoin'];
+    }
+    $feuser = array();
+    $coin_balance = 0;
+    if(!isset($_SESSION['userid']) && empty($_SESSION['userid'])){
+        $system_user_id = $_SESSION['system_user_id'];
+        $cart = $db->query("SELECT sum(total_amount) as cart_total_amount, sum(total_coin_amount) as total_coin_amount, sum(qty) as total_qty FROM phtv_product_cart WHERE system_user_id = '$system_user_id'");
+        $fecart = $cart->fetch(PDO::FETCH_ASSOC);
+    } else {
+        $user_id = $_SESSION['userid'];
+        $cart = $db->query("SELECT sum(total_amount) as cart_total_amount, sum(total_coin_amount) as total_coin_amount, sum(qty) as total_qty FROM phtv_product_cart WHERE user_id = '$user_id'");
+        $fecart = $cart->fetch(PDO::FETCH_ASSOC);
+        $user = $db->query("SELECT * FROM `phtv_users` WHERE id = '$user_id'");
+        $feuser = $user->fetch();
+        $coin_balance = $feuser['coin_balance'];
+    }
+    $total_amount = $fecart['cart_total_amount'];
+    $total_coin_amount = $fecart['total_coin_amount'];
+    $total_main = $total_amount - $total_coin_amount;
+    $total_paid_amount = $fecart['cart_total_amount'];
+    $total_coin_used = 0;
+    if($coin_balance >= $total_main && $apply_coin == 'true'){
+        $total_paid_amount = $total_paid_amount - $total_main;
+        $total_coin_used = $total_main;
+    } elseif ($coin_balance > 0 && $apply_coin == 'true') {
+        $total_paid_amount = $total_paid_amount - $coin_balance;
+        $total_coin_used = $coin_balance;
+    }
+    $total_paid_amount = number_format($total_paid_amount, 2);
+    $total_coin_used = number_format($total_coin_used,2);
+    $_SESSION['total_coin_used'] = $total_coin_used;
 ?>
 
 <div class="container-fluid ss_header_my_profies">
@@ -71,18 +104,13 @@
                             <div class=" mr-auto  bd-highlight ">
                                 <h2>Information</h2>
                             </div>
-                            <?php 
-                                $feuser = array();
+                            <?php
                                 if(!isset($_SESSION['userid']) && empty($_SESSION['userid'])){
                             ?>
                             <div class=" bd-highlight ">
                                 <h3>Returning User? <a href="login"> Log In here </a></h3>
                             </div>
                             <?php
-                                } else {
-                                    $user_id = $_SESSION['userid'];
-                                    $user = $db->query("SELECT * FROM `phtv_users` WHERE id = '$user_id'");
-                                    $feuser = $user->fetch();
                                 }
                             ?>
 
@@ -116,28 +144,28 @@
                         <div class="col-lg-6">
                             <div class="form-group ss_informationss">
                                 <label> address </label>
-                                <input type="text" name="address" class="form-control"
+                                <input type="text" id="main_address" name="address" class="form-control"
                                     placeholder="Please Enter address" required>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group ss_informationss">
                                 <label> City </label>
-                                <input type="text" name="city" class="form-control" placeholder="Please Enter City"
-                                    required>
+                                <input type="text" id="main_city" name="city" class="form-control"
+                                    placeholder="Please Enter City" required>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group ss_informationss">
                                 <label> State </label>
-                                <input type="text" name="state" class="form-control" placeholder="Please Enter State"
-                                    required>
+                                <input type="text" id="main_state" name="state" class="form-control"
+                                    placeholder="Please Enter State" required>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group ss_informationss">
                                 <label> Zip Code </label>
-                                <input type="text" name="zipcode" class="form-control"
+                                <input type="text" id="main_zipcode" name="zipcode" class="form-control"
                                     placeholder="Please Enter Zip Code" required>
                             </div>
                         </div>
@@ -250,11 +278,27 @@
                             <div class="row py-4">
                                 <div class="col-lg-12 text-center">
                                     <form action="<?php echo PAYPAL_URL; ?>" method="post">
+                                        <input type="hidden" name="first_name"
+                                            value="<?= isset($feuser['full_name']) ? $feuser['full_name'] :'' ?>">
+                                        <input type="hidden" name="last_name"
+                                            value="<?= isset($feuser['full_name']) ? $feuser['full_name'] :'' ?>">
+                                        <input type="hidden" name="email"
+                                            value="<?= isset($feuser['email']) ? $feuser['email'] :'' ?>">
+                                        <input type="hidden" name="night_phone_a"
+                                            value="<?= isset($feuser['mobile']) ? $feuser['mobile'] :'' ?>">
+                                        <input type="hidden" name="discount_amount_cart" id="discount_amount_cart"
+                                            value="<?= $total_coin_used ?>">
+                                        <input type="hidden" name="address1" id="paypal_address" value="">
+                                        <input type="hidden" name="city" id="paypal_city" value="">
+                                        <input type="hidden" name="state" id="paypal_state" value="">
+                                        <input type="hidden" name="zip" id="paypal_zipcode" value="">
                                         <input type="hidden" name="business" value="<?php echo PAYPAL_ID; ?>">
                                         <input type="hidden" name="cmd" value="_xclick">
                                         <input type="hidden" id="item_name" name="item_name" value="test">
-                                        <input type="hidden" id="item_number" name="item_number" value="1">
-                                        <input type="hidden" id="total_amount_paypal" name="amount" value="100">
+                                        <input type="hidden" id="item_number" name="item_number"
+                                            value="<?= $fecart['total_qty'] ?>">
+                                        <input type="hidden" id="total_amount_paypal" name="amount"
+                                            value="<?= $total_paid_amount ?>">
                                         <input type="hidden" name="rm" value="2">
                                         <input type="hidden" name="currency_code"
                                             value="<?php echo PAYPAL_CURRENCY; ?>">
@@ -332,85 +376,24 @@
 <?php
     include('footer.php');
 ?>
-<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
-<script type="text/javascript">
-Stripe.setPublishableKey("<?= STRIPE_PUBLISHABLE_KEY ?>");
-$(function() {
-    var $form = $('#payment-form');
-    $form.submit(function(event) {
-        // Disable the submit button to prevent repeated clicks:
-        $form.find('.submit').prop('disabled', true);
-
-        // Request a token from Stripe:
-        Stripe.card.createToken($form, stripeResponseHandler);
-
-        // Prevent the form from being submitted:
-        return false;
-    });
-});
-
-function stripeResponseHandler(status, response) {
-    // Grab the form:
-    var $form = $('#payment-form');
-
-    if (response.error) { // Problem!
-        // Show the errors on the form:
-        $form.find('.payment-errors').text(response.error.message);
-        $form.find('.submit').prop('disabled', false); // Re-enable submission
-    } else { // Token was created!
-        // Get the token ID:
-        var token = response.id;
-
-        // Insert the token ID into the form so it gets submitted to the server:
-        $form.append($('<input type="hidden" name="stripeToken">').val(token));
-        // Submit the form:
-        $form.get(0).submit();
-    }
-};
-</script>
-<!-- <script src="https://www.paypalobjects.com/api/checkout.js"></script>
 <script>
-paypal.Button.render({
-    // Configure environment
-    env: 'sandbox',
-    client: {
-        sandbox: 'Aao6G3UwmeqLLsNb3Pn1gTa5JSY2QGXgBm4wRyYKJGZMb8f1FiHQ6ZFFu0Jc9Zf8pFuqfaNcy3ZL1DIx',
-        production: 'Aao6G3UwmeqLLsNb3Pn1gTa5JSY2QGXgBm4wRyYKJGZMb8f1FiHQ6ZFFu0Jc9Zf8pFuqfaNcy3ZL1DIx'
-    },
-    // Customize button (optional)
-    locale: 'en_US',
-    style: {
-        size: 'small',
-        color: 'gold',
-        shape: 'pill',
-    },
-
-    // Enable Pay Now checkout flow (optional)
-    commit: true,
-
-    // Set up a payment
-    payment: function(data, actions) {
-        return actions.payment.create({
-            transactions: [{
-                amount: {
-                    total: '0.01',
-                    currency: 'USD'
-                }
-            }]
-        });
-    },
-    // Execute the payment
-    onAuthorize: function(data, actions) {
-        return actions.payment.execute().then(function() {
-            console.log(data);
-            console.log("--------------------");
-            console.log(actions);
-            // Show a confirmation message to the buyer
-            window.alert('Thank you for your purchase!');
-        });
-    }
-}, '#paypal-button');
-</script> -->
+$("#main_address").keyup(function() {
+    var main_address = $(this).val();
+    $('#paypal_address').val(main_address);
+});
+$("#main_city").keyup(function() {
+    var main_city = $(this).val();
+    $('#paypal_city').val(main_city);
+});
+$("#main_state").keyup(function() {
+    var main_state = $(this).val();
+    $('#paypal_state').val(main_state);
+});
+$("#main_zipcode").keyup(function() {
+    var main_zipcode = $(this).val();
+    $('#paypal_zipcode').val(main_zipcode);
+});
+</script>
 </body>
 
 </html>
