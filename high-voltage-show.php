@@ -4,22 +4,22 @@
 
 <div class="container-fluid ss_high_voltage_show ss_height100vh ">
     <div class="verticle_middle">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 text-center ss_high_voltage_sub">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center ss_high_voltage_sub">
 
-                <div class="images_sspatload">
-                    <img src="images/Hivo_3x.png" alt="images">
+                    <div class="images_sspatload">
+                        <img src="images/Hivo_3x.png" alt="images">
+                    </div>
+
+                    <h2> Check Out High Voltage Our Flagship show </h2>
+                    <div class="liness"></div>
+                    <p> Full Size Run is a weekly talk show about sneakers and style hosted by rapper Trinidad Jame$,
+                        Matt Welty, and Brendan Dunne. Each episode, the hosts discuss and debate the hottest topics in
+                        sneaker culture and streetwear. </p>
                 </div>
-
-                <h2> Check Out High Voltage Our Flagship show </h2>
-                <div class="liness"></div>
-                <p> Full Size Run is a weekly talk show about sneakers and style hosted by rapper Trinidad Jame$,
-                    Matt Welty, and Brendan Dunne. Each episode, the hosts discuss and debate the hottest topics in
-                    sneaker culture and streetwear. </p>
             </div>
         </div>
-    </div>
     </div>
 </div>
 
@@ -30,37 +30,37 @@
                 <div class="owl-carousel owl-theme" id="planet_logo_show">
                     <div class="item">
                         <div class="ss_logo_box">
-                            <img src="images/logoA.png" alt="logo"/>
+                            <img src="images/logoA.png" alt="logo" />
                         </div>
                     </div>
                     <div class="item">
                         <div class="ss_logo_box">
-                            <img src="images/logoB.png" alt="logo"/>
+                            <img src="images/logoB.png" alt="logo" />
                         </div>
                     </div>
                     <div class="item">
                         <div class="ss_logo_box">
-                            <img src="images/logoC.png" alt="logo"/>
+                            <img src="images/logoC.png" alt="logo" />
                         </div>
                     </div>
                     <div class="item">
                         <div class="ss_logo_box">
-                            <img src="images/logoD.png" alt="logo"/>
+                            <img src="images/logoD.png" alt="logo" />
                         </div>
                     </div>
                     <div class="item">
                         <div class="ss_logo_box">
-                            <img src="images/logoE.png" alt="logo"/>
+                            <img src="images/logoE.png" alt="logo" />
                         </div>
                     </div>
                     <div class="item">
                         <div class="ss_logo_box">
-                            <img src="images/logoF.png" alt="logo"/>
+                            <img src="images/logoF.png" alt="logo" />
                         </div>
                     </div>
                     <div class="item">
                         <div class="ss_logo_box">
-                            <img src="images/logoF.png" alt="logo"/>
+                            <img src="images/logoF.png" alt="logo" />
                         </div>
                     </div>
                 </div>
@@ -91,7 +91,7 @@
             <div class="col-lg-3 col-sm-6 col-md-6">
                 <div class="episodes_blogs">
                     <div class="images">
-                        <img src="images/episodesA.jpg" alt="episodes"/>
+                        <img src="images/episodesA.jpg" alt="episodes" />
                     </div>
                     <div class="des">
                         <h2> Melody Ehsani Explains Why Her Air Jordans </h2>
@@ -102,7 +102,7 @@
             <div class="col-lg-3 col-sm-6 col-md-6">
                 <div class="episodes_blogs">
                     <div class="images">
-                        <img src="images/episodesB.jpg" alt="episodes"/>
+                        <img src="images/episodesB.jpg" alt="episodes" />
                     </div>
                     <div class="des">
                         <h2> Melody Ehsani Explains Why Her Air Jordans </h2>
@@ -113,7 +113,7 @@
             <div class="col-lg-3 col-sm-6 col-md-6">
                 <div class="episodes_blogs">
                     <div class="images">
-                        <img src="images/episodesC.jpg" alt="episodes"/>
+                        <img src="images/episodesC.jpg" alt="episodes" />
                     </div>
                     <div class="des">
                         <h2> Melody Ehsani Explains Why Her Air Jordans </h2>
@@ -124,7 +124,7 @@
             <div class="col-lg-3 col-sm-6 col-md-6">
                 <div class="episodes_blogs margin-right0">
                     <div class="images">
-                        <img src="images/episodesD.jpg" alt="episodes"/>
+                        <img src="images/episodesD.jpg" alt="episodes" />
                     </div>
                     <div class="des">
                         <h2> Melody Ehsani Explains Why Her Air Jordans </h2>
@@ -153,7 +153,7 @@
             <div class="col-lg-3 col-sm-6 col-md-6">
                 <div class="stock_blogs">
                     <div class="images">
-                        <img src="images/stockA.jpg" alt="episodes"/>
+                        <img src="images/stockA.jpg" alt="episodes" />
                     </div>
                     <div class="des">
                         <p>Lifestyle</p>
@@ -164,7 +164,7 @@
             <div class="col-lg-3 col-sm-6 col-md-6">
                 <div class="stock_blogs">
                     <div class="images">
-                        <img src="images/stockB.jpg" alt="episodes"/>
+                        <img src="images/stockB.jpg" alt="episodes" />
                     </div>
                     <div class="des">
                         <p>Lifestyle</p>
@@ -175,7 +175,7 @@
             <div class="col-lg-3 col-sm-6 col-md-6">
                 <div class="stock_blogs">
                     <div class="images">
-                        <img src="images/stockC.jpg" alt="episodes"/>
+                        <img src="images/stockC.jpg" alt="episodes" />
                     </div>
                     <div class="des">
                         <p>Lifestyle</p>
@@ -186,7 +186,7 @@
             <div class="col-lg-3 col-sm-6 col-md-6">
                 <div class="stock_blogs margin-right0">
                     <div class="images">
-                        <img src="images/stockD.jpg" alt="episodes"/>
+                        <img src="images/stockD.jpg" alt="episodes" />
                     </div>
                     <div class="des">
                         <p>Lifestyle</p>
@@ -215,7 +215,7 @@
             <div class="col-lg-3 col-sm-6 col-md-6">
                 <div class="stock_blogs">
                     <div class="images">
-                        <img src="images/gamerA.jpg" alt="episodes"/>
+                        <img src="images/gamerA.jpg" alt="episodes" />
                     </div>
                     <div class="des">
                         <p>Lifestyle</p>
@@ -226,7 +226,7 @@
             <div class="col-lg-3 col-sm-6 col-md-6">
                 <div class="stock_blogs">
                     <div class="images">
-                        <img src="images/gamerB.jpg" alt="episodes"/>
+                        <img src="images/gamerB.jpg" alt="episodes" />
                     </div>
                     <div class="des">
                         <p>Lifestyle</p>
@@ -237,7 +237,7 @@
             <div class="col-lg-3 col-sm-6 col-md-6">
                 <div class="stock_blogs">
                     <div class="images">
-                        <img src="images/gamerC.jpg" alt="episodes"/>
+                        <img src="images/gamerC.jpg" alt="episodes" />
                     </div>
                     <div class="des">
                         <p>Lifestyle</p>
@@ -248,7 +248,7 @@
             <div class="col-lg-3 col-sm-6 col-md-6">
                 <div class="stock_blogs margin-right0">
                     <div class="images">
-                        <img src="images/gamerD.jpg" alt="episodes"/>
+                        <img src="images/gamerD.jpg" alt="episodes" />
                     </div>
                     <div class="des">
                         <p>Lifestyle</p>
@@ -277,7 +277,7 @@
             <div class="col-lg-3 col-sm-6 col-md-6">
                 <div class="stock_blogs">
                     <div class="images">
-                        <img src="images/kickingA.jpg" alt="episodes"/>
+                        <img src="images/kickingA.jpg" alt="episodes" />
                     </div>
                     <div class="des">
                         <p>Lifestyle</p>
@@ -288,7 +288,7 @@
             <div class="col-lg-3 col-sm-6 col-md-6">
                 <div class="stock_blogs">
                     <div class="images">
-                        <img src="images/kickingB.jpg" alt="episodes"/>
+                        <img src="images/kickingB.jpg" alt="episodes" />
                     </div>
                     <div class="des">
                         <p>Lifestyle</p>
@@ -299,7 +299,7 @@
             <div class="col-lg-3 col-sm-6 col-md-6">
                 <div class="stock_blogs">
                     <div class="images">
-                        <img src="images/kickingC.jpg" alt="episodes"/>
+                        <img src="images/kickingC.jpg" alt="episodes" />
                     </div>
                     <div class="des">
                         <p>Lifestyle</p>
@@ -310,7 +310,7 @@
             <div class="col-lg-3 col-sm-6 col-md-6">
                 <div class="stock_blogs margin-right0">
                     <div class="images">
-                        <img src="images/kickingD.jpg" alt="episodes"/>
+                        <img src="images/kickingD.jpg" alt="episodes" />
                     </div>
                     <div class="des">
                         <p>Lifestyle</p>
@@ -339,7 +339,7 @@
             <div class="col-lg-3 col-sm-6 col-md-6">
                 <div class="stock_blogs">
                     <div class="images">
-                        <img src="images/sportsA.jpg" alt="episodes"/>
+                        <img src="images/sportsA.jpg" alt="episodes" />
                     </div>
                     <div class="des">
                         <p>Lifestyle</p>
@@ -350,7 +350,7 @@
             <div class="col-lg-3 col-sm-6 col-md-6">
                 <div class="stock_blogs">
                     <div class="images">
-                        <img src="images/sportsB.jpg" alt="episodes"/>
+                        <img src="images/sportsB.jpg" alt="episodes" />
                     </div>
                     <div class="des">
                         <p>Lifestyle</p>
@@ -361,7 +361,7 @@
             <div class="col-lg-3 col-sm-6 col-md-6">
                 <div class="stock_blogs">
                     <div class="images">
-                        <img src="images/sportsC.jpg" alt="episodes"/>
+                        <img src="images/sportsC.jpg" alt="episodes" />
                     </div>
                     <div class="des">
                         <p>Lifestyle</p>
@@ -372,7 +372,7 @@
             <div class="col-lg-3 col-sm-6 col-md-6">
                 <div class="stock_blogs margin-right0">
                     <div class="images">
-                        <img src="images/sportsD.jpg" alt="episodes"/>
+                        <img src="images/sportsD.jpg" alt="episodes" />
                     </div>
                     <div class="des">
                         <p>Lifestyle</p>
@@ -401,7 +401,7 @@
             <div class="col-lg-3 col-sm-6 col-md-6">
                 <div class="stock_blogs">
                     <div class="images">
-                        <img src="images/4everFitA.jpg" alt="episodes"/>
+                        <img src="images/4everFitA.jpg" alt="episodes" />
                     </div>
                     <div class="des">
                         <p>Lifestyle</p>
@@ -412,7 +412,7 @@
             <div class="col-lg-3 col-sm-6 col-md-6">
                 <div class="stock_blogs">
                     <div class="images">
-                        <img src="images/4everFitB.jpg" alt="episodes"/>
+                        <img src="images/4everFitB.jpg" alt="episodes" />
                     </div>
                     <div class="des">
                         <p>Lifestyle</p>
@@ -423,7 +423,7 @@
             <div class="col-lg-3 col-sm-6 col-md-6">
                 <div class="stock_blogs">
                     <div class="images">
-                        <img src="images/4everFitC.jpg" alt="episodes"/>
+                        <img src="images/4everFitC.jpg" alt="episodes" />
                     </div>
                     <div class="des">
                         <p>Lifestyle</p>
@@ -434,7 +434,7 @@
             <div class="col-lg-3 col-sm-6 col-md-6">
                 <div class="stock_blogs margin-right0">
                     <div class="images">
-                        <img src="images/4everFitD.jpg" alt="episodes"/>
+                        <img src="images/4everFitD.jpg" alt="episodes" />
                     </div>
                     <div class="des">
                         <p>Lifestyle</p>
@@ -462,42 +462,43 @@
 ?>
 
 <script>
-    $('#planet_logo').owlCarousel({
-        loop: false,
-        margin: 10,
-        dots: false,
-        nav: true,
-        navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
-        responsive: {
-            0: {
-                items: 2
-            },
-            600: {
-                items: 3
-            },
-            1000: {
-                items: 6
-            }
+$('#planet_logo').owlCarousel({
+    loop: false,
+    margin: 10,
+    dots: false,
+    nav: true,
+    navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+    responsive: {
+        0: {
+            items: 2
+        },
+        600: {
+            items: 3
+        },
+        1000: {
+            items: 6
         }
-    });
-    $('#planet_logo_show').owlCarousel({
-        loop: false,
-        margin: 10,
-        dots: false,
-        nav: true,
-        navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
-        responsive: {
-            0: {
-                items: 2
-            },
-            600: {
-                items: 3
-            },
-            1000: {
-                items: 6
-            }
+    }
+});
+$('#planet_logo_show').owlCarousel({
+    loop: false,
+    margin: 10,
+    dots: false,
+    nav: true,
+    navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+    responsive: {
+        0: {
+            items: 2
+        },
+        600: {
+            items: 3
+        },
+        1000: {
+            items: 6
         }
-    });
+    }
+});
 </script>
 </body>
+
 </html>

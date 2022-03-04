@@ -17,10 +17,10 @@
                                         <img src="images/sci.png" alt="images">
                                     </div>
                                     <div class="ss_Plogo_new">
-                                        <img src="images/Payload_logo2_3x.png" alt="images"/>
+                                        <img src="images/Payload_logo2_3x.png" alt="images" />
                                     </div>
                                     <div class="ss_Plogo_new">
-                                        <img src="images/PHTV1.png" alt="images"/>
+                                        <img src="images/PHTV1.png" alt="images" />
                                     </div>
                                     <div class="login_register">
                                         <a href="">Register</a>
@@ -189,7 +189,7 @@
             <div class="col-lg-12">
                 <div class="d-flex bd-highlight ss_main_title">
                     <div class="p-2  bd-highlight align-self-center">
-                        <h1>Live Events</h1>
+                        <h1><a href="live-events">Live Events</a></h1>
                     </div>
                     <div class="p-2  bd-highlight align-self-center">
                         <div class="ss_main_title_img">
@@ -203,19 +203,19 @@
             <ul class="nav nav-tabs justify-content-start ss_navbar_live_events" id="myTab" role="tablist">
                 <li class="nav-item">
                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
-                       aria-controls="home" aria-selected="true">Gaming</a>
+                        aria-controls="home" aria-selected="true">Gaming</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
-                       aria-controls="profile" aria-selected="false">Concerts</a>
+                        aria-controls="profile" aria-selected="false">Concerts</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
-                       aria-controls="contact" aria-selected="false">Events</a>
+                        aria-controls="contact" aria-selected="false">Events</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" id="vidcasts-tab" data-toggle="tab" href="#vidcasts" role="tab"
-                       aria-controls="vidcasts" aria-selected="false">Vidcasts</a>
+                        aria-controls="vidcasts" aria-selected="false">Vidcasts</a>
                 </li>
             </ul>
             <div class="tab-content pt-4" id="myTabContent">
@@ -224,10 +224,10 @@
                         <div class="item">
                             <div class="ss_live_events_box">
                                 <div class="images">
-                                    <img src="images/uci-world-cup-lenzerheide-hero-art.jfif" alt="images"/>
+                                    <img src="images/uci-world-cup-lenzerheide-hero-art.jfif" alt="images" />
                                     <div class="ss_live_event_logo">
                                         <div class="verticle_middle">
-                                            <img src="images/uci-mtb-worldcup-logo.png" alt="images"/>
+                                            <img src="images/uci-mtb-worldcup-logo.png" alt="images" />
                                         </div>
                                     </div>
                                 </div>
@@ -235,7 +235,7 @@
                                     <h2> UCI Mountain Bike World Championships </h2>
                                     <p><i class="fa fa-calendar-check-o" aria-hidden="true"></i> 1 July – 1 November
                                         2021 </p>
-                                    <p><img src="images/Flag_of_Bosnia_and_Herzegovina.svg" alt="images"/> Zandvoort,
+                                    <p><img src="images/Flag_of_Bosnia_and_Herzegovina.svg" alt="images" /> Zandvoort,
                                         Netherlands </p>
                                     <p class="ss_uppercases">Kitesurfing</p>
                                 </div>
@@ -244,17 +244,17 @@
                         <div class="item">
                             <div class="ss_live_events_box">
                                 <div class="images">
-                                    <img src="images/super-formula-japan-round-5-motegi-hero-art.jfif" alt="images"/>
+                                    <img src="images/super-formula-japan-round-5-motegi-hero-art.jfif" alt="images" />
                                     <div class="ss_live_event_logo">
                                         <div class="verticle_middle">
-                                            <img src="images/superformulalive_titletreatment_logo.png" alt="images"/>
+                                            <img src="images/superformulalive_titletreatment_logo.png" alt="images" />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="ss_des">
                                     <h2> Red Bull Cliff Diving World Series </h2>
                                     <p><i class="fa fa-calendar-check-o" aria-hidden="true"></i> 28 August 2021 </p>
-                                    <p><img src="images/Zandvoort_vlag.svg" alt="images"/> Mostar, Bosnia & Herzegovina
+                                    <p><img src="images/Zandvoort_vlag.svg" alt="images" /> Mostar, Bosnia & Herzegovina
                                     </p>
                                     <p class="ss_uppercases">Kitesurfing</p>
                                 </div>
@@ -263,10 +263,10 @@
                         <div class="item">
                             <div class="ss_live_events_box">
                                 <div class="images">
-                                    <img src="images/megaloop.jfif" alt="images"/>
+                                    <img src="images/megaloop.jfif" alt="images" />
                                     <div class="ss_live_event_logo">
                                         <div class="verticle_middle">
-                                            <img src="images/megaloop-logo.png" alt="images"/>
+                                            <img src="images/megaloop-logo.png" alt="images" />
                                         </div>
                                     </div>
                                 </div>
@@ -274,7 +274,7 @@
                                     <h2> Red Bull Megaloop </h2>
                                     <p><i class="fa fa-calendar-check-o" aria-hidden="true"></i> 1 July – 1 November
                                         2021 </p>
-                                    <p><img src="images/Zandvoort_vlag.svg" alt="images"/> Zandvoort, Netherlands </p>
+                                    <p><img src="images/Zandvoort_vlag.svg" alt="images" /> Zandvoort, Netherlands </p>
                                     <p class="ss_uppercases">Kitesurfing</p>
                                 </div>
                             </div>
@@ -283,10 +283,10 @@
                             <div class="ss_live_events_box">
                                 <div class="images">
                                     <img src="images/fia-world-rally-championship-greece-2021-featured-image.jfif"
-                                         alt="images"/>
+                                        alt="images" />
                                     <div class="ss_live_event_logo">
                                         <div class="verticle_middle">
-                                            <img src="images/wrc-logo.png" alt="images"/>
+                                            <img src="images/wrc-logo.png" alt="images" />
                                         </div>
                                     </div>
                                 </div>
@@ -294,7 +294,7 @@
                                     <h2> FIA World Rally Championship </h2>
                                     <p><i class="fa fa-calendar-check-o" aria-hidden="true"></i> 10 – 12 September 2021
                                     </p>
-                                    <p><img src="images/Zandvoort_vlag.svg" alt="images"/> Zandvoort, Netherlands </p>
+                                    <p><img src="images/Zandvoort_vlag.svg" alt="images" /> Zandvoort, Netherlands </p>
                                     <p class="ss_uppercases">Kitesurfing</p>
                                 </div>
                             </div>
@@ -302,10 +302,10 @@
                         <div class="item">
                             <div class="ss_live_events_box">
                                 <div class="images">
-                                    <img src="images/uci-world-cup-lenzerheide-hero-art.jfif" alt="images"/>
+                                    <img src="images/uci-world-cup-lenzerheide-hero-art.jfif" alt="images" />
                                     <div class="ss_live_event_logo">
                                         <div class="verticle_middle">
-                                            <img src="images/uci-mtb-worldcup-logo.png" alt="images"/>
+                                            <img src="images/uci-mtb-worldcup-logo.png" alt="images" />
                                         </div>
                                     </div>
                                 </div>
@@ -313,7 +313,7 @@
                                     <h2> UCI Mountain Bike World Championships </h2>
                                     <p><i class="fa fa-calendar-check-o" aria-hidden="true"></i> 1 July – 1 November
                                         2021 </p>
-                                    <p><img src="images/Flag_of_Bosnia_and_Herzegovina.svg" alt="images"/> Zandvoort,
+                                    <p><img src="images/Flag_of_Bosnia_and_Herzegovina.svg" alt="images" /> Zandvoort,
                                         Netherlands </p>
                                     <p class="ss_uppercases">Kitesurfing</p>
                                 </div>
@@ -322,17 +322,17 @@
                         <div class="item">
                             <div class="ss_live_events_box">
                                 <div class="images">
-                                    <img src="images/super-formula-japan-round-5-motegi-hero-art.jfif" alt="images"/>
+                                    <img src="images/super-formula-japan-round-5-motegi-hero-art.jfif" alt="images" />
                                     <div class="ss_live_event_logo">
                                         <div class="verticle_middle">
-                                            <img src="images/superformulalive_titletreatment_logo.png" alt="images"/>
+                                            <img src="images/superformulalive_titletreatment_logo.png" alt="images" />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="ss_des">
                                     <h2> Red Bull Cliff Diving World Series </h2>
                                     <p><i class="fa fa-calendar-check-o" aria-hidden="true"></i> 28 August 2021 </p>
-                                    <p><img src="images/Zandvoort_vlag.svg" alt="images"/> Mostar, Bosnia & Herzegovina
+                                    <p><img src="images/Zandvoort_vlag.svg" alt="images" /> Mostar, Bosnia & Herzegovina
                                     </p>
                                     <p class="ss_uppercases">Kitesurfing</p>
                                 </div>
@@ -345,17 +345,17 @@
                         <div class="item">
                             <div class="ss_live_events_box">
                                 <div class="images">
-                                    <img src="images/super-formula-japan-round-5-motegi-hero-art.jfif" alt="images"/>
+                                    <img src="images/super-formula-japan-round-5-motegi-hero-art.jfif" alt="images" />
                                     <div class="ss_live_event_logo">
                                         <div class="verticle_middle">
-                                            <img src="images/superformulalive_titletreatment_logo.png" alt="images"/>
+                                            <img src="images/superformulalive_titletreatment_logo.png" alt="images" />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="ss_des">
                                     <h2> Red Bull Cliff Diving World Series </h2>
                                     <p><i class="fa fa-calendar-check-o" aria-hidden="true"></i> 28 August 2021 </p>
-                                    <p><img src="images/Zandvoort_vlag.svg" alt="images"/> Mostar, Bosnia & Herzegovina
+                                    <p><img src="images/Zandvoort_vlag.svg" alt="images" /> Mostar, Bosnia & Herzegovina
                                     </p>
                                     <p class="ss_uppercases">Kitesurfing</p>
                                 </div>
@@ -364,10 +364,10 @@
                         <div class="item">
                             <div class="ss_live_events_box">
                                 <div class="images">
-                                    <img src="images/megaloop.jfif" alt="images"/>
+                                    <img src="images/megaloop.jfif" alt="images" />
                                     <div class="ss_live_event_logo">
                                         <div class="verticle_middle">
-                                            <img src="images/megaloop-logo.png" alt="images"/>
+                                            <img src="images/megaloop-logo.png" alt="images" />
                                         </div>
                                     </div>
                                 </div>
@@ -375,7 +375,7 @@
                                     <h2> Red Bull Megaloop </h2>
                                     <p><i class="fa fa-calendar-check-o" aria-hidden="true"></i> 1 July – 1 November
                                         2021 </p>
-                                    <p><img src="images/Zandvoort_vlag.svg" alt="images"/> Zandvoort, Netherlands </p>
+                                    <p><img src="images/Zandvoort_vlag.svg" alt="images" /> Zandvoort, Netherlands </p>
                                     <p class="ss_uppercases">Kitesurfing</p>
                                 </div>
                             </div>
@@ -383,10 +383,10 @@
                         <div class="item">
                             <div class="ss_live_events_box">
                                 <div class="images">
-                                    <img src="images/uci-world-cup-lenzerheide-hero-art.jfif" alt="images"/>
+                                    <img src="images/uci-world-cup-lenzerheide-hero-art.jfif" alt="images" />
                                     <div class="ss_live_event_logo">
                                         <div class="verticle_middle">
-                                            <img src="images/uci-mtb-worldcup-logo.png" alt="images"/>
+                                            <img src="images/uci-mtb-worldcup-logo.png" alt="images" />
                                         </div>
                                     </div>
                                 </div>
@@ -394,7 +394,7 @@
                                     <h2> UCI Mountain Bike World Championships </h2>
                                     <p><i class="fa fa-calendar-check-o" aria-hidden="true"></i> 1 July – 1 November
                                         2021 </p>
-                                    <p><img src="images/Flag_of_Bosnia_and_Herzegovina.svg" alt="images"/> Zandvoort,
+                                    <p><img src="images/Flag_of_Bosnia_and_Herzegovina.svg" alt="images" /> Zandvoort,
                                         Netherlands </p>
                                     <p class="ss_uppercases">Kitesurfing</p>
                                 </div>
@@ -404,10 +404,10 @@
                             <div class="ss_live_events_box">
                                 <div class="images">
                                     <img src="images/fia-world-rally-championship-greece-2021-featured-image.jfif"
-                                         alt="images"/>
+                                        alt="images" />
                                     <div class="ss_live_event_logo">
                                         <div class="verticle_middle">
-                                            <img src="images/wrc-logo.png" alt="images"/>
+                                            <img src="images/wrc-logo.png" alt="images" />
                                         </div>
                                     </div>
                                 </div>
@@ -415,7 +415,7 @@
                                     <h2> FIA World Rally Championship </h2>
                                     <p><i class="fa fa-calendar-check-o" aria-hidden="true"></i> 10 – 12 September 2021
                                     </p>
-                                    <p><img src="images/Zandvoort_vlag.svg" alt="images"/> Zandvoort, Netherlands </p>
+                                    <p><img src="images/Zandvoort_vlag.svg" alt="images" /> Zandvoort, Netherlands </p>
                                     <p class="ss_uppercases">Kitesurfing</p>
                                 </div>
                             </div>
@@ -423,10 +423,10 @@
                         <div class="item">
                             <div class="ss_live_events_box">
                                 <div class="images">
-                                    <img src="images/uci-world-cup-lenzerheide-hero-art.jfif" alt="images"/>
+                                    <img src="images/uci-world-cup-lenzerheide-hero-art.jfif" alt="images" />
                                     <div class="ss_live_event_logo">
                                         <div class="verticle_middle">
-                                            <img src="images/uci-mtb-worldcup-logo.png" alt="images"/>
+                                            <img src="images/uci-mtb-worldcup-logo.png" alt="images" />
                                         </div>
                                     </div>
                                 </div>
@@ -434,7 +434,7 @@
                                     <h2> UCI Mountain Bike World Championships </h2>
                                     <p><i class="fa fa-calendar-check-o" aria-hidden="true"></i> 1 July – 1 November
                                         2021 </p>
-                                    <p><img src="images/Flag_of_Bosnia_and_Herzegovina.svg" alt="images"/> Zandvoort,
+                                    <p><img src="images/Flag_of_Bosnia_and_Herzegovina.svg" alt="images" /> Zandvoort,
                                         Netherlands </p>
                                     <p class="ss_uppercases">Kitesurfing</p>
                                 </div>
@@ -443,17 +443,17 @@
                         <div class="item">
                             <div class="ss_live_events_box">
                                 <div class="images">
-                                    <img src="images/super-formula-japan-round-5-motegi-hero-art.jfif" alt="images"/>
+                                    <img src="images/super-formula-japan-round-5-motegi-hero-art.jfif" alt="images" />
                                     <div class="ss_live_event_logo">
                                         <div class="verticle_middle">
-                                            <img src="images/superformulalive_titletreatment_logo.png" alt="images"/>
+                                            <img src="images/superformulalive_titletreatment_logo.png" alt="images" />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="ss_des">
                                     <h2> Red Bull Cliff Diving World Series </h2>
                                     <p><i class="fa fa-calendar-check-o" aria-hidden="true"></i> 28 August 2021 </p>
-                                    <p><img src="images/Zandvoort_vlag.svg" alt="images"/> Mostar, Bosnia & Herzegovina
+                                    <p><img src="images/Zandvoort_vlag.svg" alt="images" /> Mostar, Bosnia & Herzegovina
                                     </p>
                                     <p class="ss_uppercases">Kitesurfing</p>
                                 </div>
@@ -466,17 +466,17 @@
                         <div class="item">
                             <div class="ss_live_events_box">
                                 <div class="images">
-                                    <img src="images/super-formula-japan-round-5-motegi-hero-art.jfif" alt="images"/>
+                                    <img src="images/super-formula-japan-round-5-motegi-hero-art.jfif" alt="images" />
                                     <div class="ss_live_event_logo">
                                         <div class="verticle_middle">
-                                            <img src="images/superformulalive_titletreatment_logo.png" alt="images"/>
+                                            <img src="images/superformulalive_titletreatment_logo.png" alt="images" />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="ss_des">
                                     <h2> Red Bull Cliff Diving World Series </h2>
                                     <p><i class="fa fa-calendar-check-o" aria-hidden="true"></i> 28 August 2021 </p>
-                                    <p><img src="images/Zandvoort_vlag.svg" alt="images"/> Mostar, Bosnia & Herzegovina
+                                    <p><img src="images/Zandvoort_vlag.svg" alt="images" /> Mostar, Bosnia & Herzegovina
                                     </p>
                                     <p class="ss_uppercases">Kitesurfing</p>
                                 </div>
@@ -485,10 +485,10 @@
                         <div class="item">
                             <div class="ss_live_events_box">
                                 <div class="images">
-                                    <img src="images/megaloop.jfif" alt="images"/>
+                                    <img src="images/megaloop.jfif" alt="images" />
                                     <div class="ss_live_event_logo">
                                         <div class="verticle_middle">
-                                            <img src="images/megaloop-logo.png" alt="images"/>
+                                            <img src="images/megaloop-logo.png" alt="images" />
                                         </div>
                                     </div>
                                 </div>
@@ -496,7 +496,7 @@
                                     <h2> Red Bull Megaloop </h2>
                                     <p><i class="fa fa-calendar-check-o" aria-hidden="true"></i> 1 July – 1 November
                                         2021 </p>
-                                    <p><img src="images/Zandvoort_vlag.svg" alt="images"/> Zandvoort, Netherlands </p>
+                                    <p><img src="images/Zandvoort_vlag.svg" alt="images" /> Zandvoort, Netherlands </p>
                                     <p class="ss_uppercases">Kitesurfing</p>
                                 </div>
                             </div>
@@ -505,10 +505,10 @@
                             <div class="ss_live_events_box">
                                 <div class="images">
                                     <img src="images/fia-world-rally-championship-greece-2021-featured-image.jfif"
-                                         alt="images"/>
+                                        alt="images" />
                                     <div class="ss_live_event_logo">
                                         <div class="verticle_middle">
-                                            <img src="images/wrc-logo.png" alt="images"/>
+                                            <img src="images/wrc-logo.png" alt="images" />
                                         </div>
                                     </div>
                                 </div>
@@ -516,7 +516,7 @@
                                     <h2> FIA World Rally Championship </h2>
                                     <p><i class="fa fa-calendar-check-o" aria-hidden="true"></i> 10 – 12 September 2021
                                     </p>
-                                    <p><img src="images/Zandvoort_vlag.svg" alt="images"/> Zandvoort, Netherlands </p>
+                                    <p><img src="images/Zandvoort_vlag.svg" alt="images" /> Zandvoort, Netherlands </p>
                                     <p class="ss_uppercases">Kitesurfing</p>
                                 </div>
                             </div>
@@ -524,10 +524,10 @@
                         <div class="item">
                             <div class="ss_live_events_box">
                                 <div class="images">
-                                    <img src="images/uci-world-cup-lenzerheide-hero-art.jfif" alt="images"/>
+                                    <img src="images/uci-world-cup-lenzerheide-hero-art.jfif" alt="images" />
                                     <div class="ss_live_event_logo">
                                         <div class="verticle_middle">
-                                            <img src="images/uci-mtb-worldcup-logo.png" alt="images"/>
+                                            <img src="images/uci-mtb-worldcup-logo.png" alt="images" />
                                         </div>
                                     </div>
                                 </div>
@@ -535,7 +535,7 @@
                                     <h2> UCI Mountain Bike World Championships </h2>
                                     <p><i class="fa fa-calendar-check-o" aria-hidden="true"></i> 1 July – 1 November
                                         2021 </p>
-                                    <p><img src="images/Flag_of_Bosnia_and_Herzegovina.svg" alt="images"/> Zandvoort,
+                                    <p><img src="images/Flag_of_Bosnia_and_Herzegovina.svg" alt="images" /> Zandvoort,
                                         Netherlands </p>
                                     <p class="ss_uppercases">Kitesurfing</p>
                                 </div>
@@ -544,17 +544,17 @@
                         <div class="item">
                             <div class="ss_live_events_box">
                                 <div class="images">
-                                    <img src="images/super-formula-japan-round-5-motegi-hero-art.jfif" alt="images"/>
+                                    <img src="images/super-formula-japan-round-5-motegi-hero-art.jfif" alt="images" />
                                     <div class="ss_live_event_logo">
                                         <div class="verticle_middle">
-                                            <img src="images/superformulalive_titletreatment_logo.png" alt="images"/>
+                                            <img src="images/superformulalive_titletreatment_logo.png" alt="images" />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="ss_des">
                                     <h2> Red Bull Cliff Diving World Series </h2>
                                     <p><i class="fa fa-calendar-check-o" aria-hidden="true"></i> 28 August 2021 </p>
-                                    <p><img src="images/Zandvoort_vlag.svg" alt="images"/> Mostar, Bosnia & Herzegovina
+                                    <p><img src="images/Zandvoort_vlag.svg" alt="images" /> Mostar, Bosnia & Herzegovina
                                     </p>
                                     <p class="ss_uppercases">Kitesurfing</p>
                                 </div>
@@ -567,17 +567,17 @@
                         <div class="item">
                             <div class="ss_live_events_box">
                                 <div class="images">
-                                    <img src="images/super-formula-japan-round-5-motegi-hero-art.jfif" alt="images"/>
+                                    <img src="images/super-formula-japan-round-5-motegi-hero-art.jfif" alt="images" />
                                     <div class="ss_live_event_logo">
                                         <div class="verticle_middle">
-                                            <img src="images/superformulalive_titletreatment_logo.png" alt="images"/>
+                                            <img src="images/superformulalive_titletreatment_logo.png" alt="images" />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="ss_des">
                                     <h2> Red Bull Cliff Diving World Series </h2>
                                     <p><i class="fa fa-calendar-check-o" aria-hidden="true"></i> 28 August 2021 </p>
-                                    <p><img src="images/Zandvoort_vlag.svg" alt="images"/> Mostar, Bosnia & Herzegovina
+                                    <p><img src="images/Zandvoort_vlag.svg" alt="images" /> Mostar, Bosnia & Herzegovina
                                     </p>
                                     <p class="ss_uppercases">Kitesurfing</p>
                                 </div>
@@ -586,10 +586,10 @@
                         <div class="item">
                             <div class="ss_live_events_box">
                                 <div class="images">
-                                    <img src="images/megaloop.jfif" alt="images"/>
+                                    <img src="images/megaloop.jfif" alt="images" />
                                     <div class="ss_live_event_logo">
                                         <div class="verticle_middle">
-                                            <img src="images/megaloop-logo.png" alt="images"/>
+                                            <img src="images/megaloop-logo.png" alt="images" />
                                         </div>
                                     </div>
                                 </div>
@@ -597,7 +597,7 @@
                                     <h2> Red Bull Megaloop </h2>
                                     <p><i class="fa fa-calendar-check-o" aria-hidden="true"></i> 1 July – 1 November
                                         2021 </p>
-                                    <p><img src="images/Zandvoort_vlag.svg" alt="images"/> Zandvoort, Netherlands </p>
+                                    <p><img src="images/Zandvoort_vlag.svg" alt="images" /> Zandvoort, Netherlands </p>
                                     <p class="ss_uppercases">Kitesurfing</p>
                                 </div>
                             </div>
@@ -606,10 +606,10 @@
                             <div class="ss_live_events_box">
                                 <div class="images">
                                     <img src="images/fia-world-rally-championship-greece-2021-featured-image.jfif"
-                                         alt="images"/>
+                                        alt="images" />
                                     <div class="ss_live_event_logo">
                                         <div class="verticle_middle">
-                                            <img src="images/wrc-logo.png" alt="images"/>
+                                            <img src="images/wrc-logo.png" alt="images" />
                                         </div>
                                     </div>
                                 </div>
@@ -617,7 +617,7 @@
                                     <h2> FIA World Rally Championship </h2>
                                     <p><i class="fa fa-calendar-check-o" aria-hidden="true"></i> 10 – 12 September 2021
                                     </p>
-                                    <p><img src="images/Zandvoort_vlag.svg" alt="images"/> Zandvoort, Netherlands </p>
+                                    <p><img src="images/Zandvoort_vlag.svg" alt="images" /> Zandvoort, Netherlands </p>
                                     <p class="ss_uppercases">Kitesurfing</p>
                                 </div>
                             </div>
@@ -625,10 +625,10 @@
                         <div class="item">
                             <div class="ss_live_events_box">
                                 <div class="images">
-                                    <img src="images/uci-world-cup-lenzerheide-hero-art.jfif" alt="images"/>
+                                    <img src="images/uci-world-cup-lenzerheide-hero-art.jfif" alt="images" />
                                     <div class="ss_live_event_logo">
                                         <div class="verticle_middle">
-                                            <img src="images/uci-mtb-worldcup-logo.png" alt="images"/>
+                                            <img src="images/uci-mtb-worldcup-logo.png" alt="images" />
                                         </div>
                                     </div>
                                 </div>
@@ -636,7 +636,7 @@
                                     <h2> UCI Mountain Bike World Championships </h2>
                                     <p><i class="fa fa-calendar-check-o" aria-hidden="true"></i> 1 July – 1 November
                                         2021 </p>
-                                    <p><img src="images/Flag_of_Bosnia_and_Herzegovina.svg" alt="images"/> Zandvoort,
+                                    <p><img src="images/Flag_of_Bosnia_and_Herzegovina.svg" alt="images" /> Zandvoort,
                                         Netherlands </p>
                                     <p class="ss_uppercases">Kitesurfing</p>
                                 </div>
@@ -645,17 +645,17 @@
                         <div class="item">
                             <div class="ss_live_events_box">
                                 <div class="images">
-                                    <img src="images/super-formula-japan-round-5-motegi-hero-art.jfif" alt="images"/>
+                                    <img src="images/super-formula-japan-round-5-motegi-hero-art.jfif" alt="images" />
                                     <div class="ss_live_event_logo">
                                         <div class="verticle_middle">
-                                            <img src="images/superformulalive_titletreatment_logo.png" alt="images"/>
+                                            <img src="images/superformulalive_titletreatment_logo.png" alt="images" />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="ss_des">
                                     <h2> Red Bull Cliff Diving World Series </h2>
                                     <p><i class="fa fa-calendar-check-o" aria-hidden="true"></i> 28 August 2021 </p>
-                                    <p><img src="images/Zandvoort_vlag.svg" alt="images"/> Mostar, Bosnia & Herzegovina
+                                    <p><img src="images/Zandvoort_vlag.svg" alt="images" /> Mostar, Bosnia & Herzegovina
                                     </p>
                                     <p class="ss_uppercases">Kitesurfing</p>
                                 </div>
@@ -667,7 +667,7 @@
         </div>
         <div class="row">
             <div class="col-lg-12 text-center">
-                <a href="#" class="view_all_button">view all</a>
+                <a href="live-events" class="view_all_button">view all</a>
             </div>
         </div>
     </div>
@@ -789,7 +789,7 @@
                     <div class="d-flex bd-highlight align-self-center">
                         <div class="p-2 bd-highlight">
                             <div class="ss_drops_images">
-                                <img src="images/cinematicsA.jpg" alt="images"/>
+                                <img src="images/cinematicsA.jpg" alt="images" />
                             </div>
                         </div>
                         <div class="p-2 flex-fill bd-highlight align-self-center">
@@ -803,7 +803,7 @@
                     <div class="d-flex bd-highlight align-self-center">
                         <div class="p-2 bd-highlight">
                             <div class="ss_drops_images">
-                                <img src="images/cinematicsA.jpg" alt="images"/>
+                                <img src="images/cinematicsA.jpg" alt="images" />
                             </div>
                         </div>
                         <div class="p-2 flex-fill bd-highlight align-self-center">
@@ -817,7 +817,7 @@
                     <div class="d-flex bd-highlight align-self-center">
                         <div class="p-2 bd-highlight">
                             <div class="ss_drops_images">
-                                <img src="images/cinematicsA.jpg" alt="images"/>
+                                <img src="images/cinematicsA.jpg" alt="images" />
                             </div>
                         </div>
                         <div class="p-2 flex-fill bd-highlight align-self-center">
@@ -831,7 +831,7 @@
             <div class="col-lg-3 align-self-center"></div>
             <div class="col-lg-4 align-self-center">
                 <div class="ss_trend_images">
-                    <img src="images/wid.jpg" alt="images"/>
+                    <img src="images/wid.jpg" alt="images" />
                 </div>
             </div>
         </div>
@@ -916,7 +916,7 @@
             <div class="col-lg-3">
                 <div class="ss_recommended_images">
                     <div class="images">
-                        <img src="images/Sa.png" alt="images"/>
+                        <img src="images/Sa.png" alt="images" />
                     </div>
                     <div class="des">
                         <div class="verticle_middle">
@@ -929,7 +929,7 @@
             <div class="col-lg-3">
                 <div class="ss_recommended_images">
                     <div class="images">
-                        <img src="images/Sb.png" alt="images"/>
+                        <img src="images/Sb.png" alt="images" />
                     </div>
                     <div class="des">
                         <div class="verticle_middle">
@@ -942,7 +942,7 @@
             <div class="col-lg-3">
                 <div class="ss_recommended_images">
                     <div class="images">
-                        <img src="images/Sc.png" alt="images"/>
+                        <img src="images/Sc.png" alt="images" />
                     </div>
                     <div class="des">
                         <div class="verticle_middle">
@@ -955,7 +955,7 @@
             <div class="col-lg-3">
                 <div class="ss_recommended_images">
                     <div class="images">
-                        <img src="images/Sd.png" alt="images"/>
+                        <img src="images/Sd.png" alt="images" />
                     </div>
                     <div class="des">
                         <div class="verticle_middle">
@@ -974,24 +974,25 @@
 ?>
 
 <script>
-    $('#planet_logo').owlCarousel({
-        loop: false,
-        margin: 10,
-        dots: false,
-        nav: true,
-        navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
-        responsive: {
-            0: {
-                items: 2
-            },
-            600: {
-                items: 3
-            },
-            1000: {
-                items: 6
-            }
+$('#planet_logo').owlCarousel({
+    loop: false,
+    margin: 10,
+    dots: false,
+    nav: true,
+    navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+    responsive: {
+        0: {
+            items: 2
+        },
+        600: {
+            items: 3
+        },
+        1000: {
+            items: 6
         }
-    });
+    }
+});
 </script>
 </body>
+
 </html>
