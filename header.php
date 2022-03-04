@@ -98,7 +98,9 @@
     if($cur_page == 'live-events'){
         $titleName = 'Live Events';
     }
-
+    if($cur_page == 'all-high-voltage-show'){
+        $titleName = 'High Voltage Show';
+    }
       
 
 ?>

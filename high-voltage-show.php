@@ -77,13 +77,8 @@
                 </div>
             </div>
             <div class="col-lg-6 col-5 align-self-center text-right">
-                <div class="ss_seasons ">
-                    <select class="form-control ">
-                        <option value="0"> All Seasons</option>
-                        <option value="1"> Seasons 2</option>
-                        <option value="0"> Seasons 3</option>
-                        <option value="1"> Seasons 4</option>
-                    </select>
+                <div class="episode_button">
+                    <a href="all-high-voltage-show"> View All </a>
                 </div>
             </div>
         </div>
