@@ -4,8 +4,6 @@
     require_once '../inc/helper/core_function.php';
     
     $response = $_REQUEST;
-    echo "<pre>";
-    print_r($response);
     
     if($response['payment_status'] == 'Completed'){
         $user_id = $_SESSION['userid'];
@@ -16,7 +14,7 @@
         $total_coin_used = isset($_SESSION['total_coin_used']) ? $_SESSION['total_coin_used']:0;
         $payment_gross = $response['payment_gross'];
         $total_amount =  $payment_gross + $total_coin_used;
-        $invoice_no = $response['token'];
+        $invoice_no = date('Ymdhis').rand(1111, 9999);
         $full_name = $response['address_name'];
         $email = $response['payer_email'];
         $address_street = $response['address_street'];
@@ -51,10 +49,10 @@
                 }
             }
             $update_user_coin = $db->query("UPDATE phtv_users SET coin_balance = '$coin_balance' WHERE id ='$user_id'");
-            // $delete_cart = $db->query("DELETE FROM phtv_product_cart WHERE user_id = '$user_id'");
+            $delete_cart = $db->query("DELETE FROM phtv_product_cart WHERE user_id = '$user_id'");
             echo ("<script LANGUAGE='JavaScript'>
                 window.alert('Payment succesfully Updated');
-                window.location.href='../profile.php';
+                window.location.href='../completed.php';
                 </script>");
         } else {
             echo ("<script LANGUAGE='JavaScript'>
