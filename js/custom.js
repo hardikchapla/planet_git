@@ -941,3 +941,26 @@ $(document).ready(function () {
 $("#ss_message_close_emojo").click(function () {
     $(".ss_emoji_messages_box").hide();
 });
+
+
+$('#ss_stor_item_slider').owlCarousel({
+    loop: false,
+    margin: 30,
+    dots: false,
+    autoplay: true,
+    autoplayTimeout: 2000,
+    autoplayHoverPause: true,
+    nav: true,
+    navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 1
+        },
+        1000: {
+            items: 1
+        }
+    }
+});
