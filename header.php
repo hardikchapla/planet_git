@@ -1,8 +1,6 @@
 <?php
 include('inc/connection/connection.php');
 include('inc/helper/constant.php');
-ob_start();
-session_start();
 $cur_page = (basename($_SERVER['REQUEST_URI'], '?' . $_SERVER['QUERY_STRING']));
 $weAreLive = 0;
 if ($cur_page == 'planet_git' || $cur_page == 'index') {
@@ -101,9 +99,6 @@ if ($cur_page == 'live-events') {
 }
 if ($cur_page == 'all-high-voltage-show') {
     $titleName = 'High Voltage Show';
-}
-if ($cur_page == 'video-detail') {
-    $titleName = 'Video Detail';
 }
 ?>
 <!doctype html>
