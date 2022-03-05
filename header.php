@@ -102,6 +102,9 @@ if ($cur_page == 'live-events') {
 if ($cur_page == 'all-high-voltage-show') {
     $titleName = 'High Voltage Show';
 }
+if ($cur_page == 'video-detail') {
+    $titleName = 'Video Detail';
+}
 ?>
 <!doctype html>
 <html lang="en">
