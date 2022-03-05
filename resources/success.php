@@ -3,6 +3,8 @@
     require_once '../inc/helper/constant.php';
     require_once '../inc/helper/core_function.php';
     
+    $response = $_REQUEST;
+    
     if($response['payment_status'] == 'Completed'){
         $user_id = $_SESSION['userid'];
         $user = $db->query("SELECT * FROM `phtv_users` WHERE id = '$user_id'");
