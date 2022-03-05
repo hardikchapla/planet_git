@@ -54,7 +54,7 @@
             // $delete_cart = $db->query("DELETE FROM phtv_product_cart WHERE user_id = '$user_id'");
             echo ("<script LANGUAGE='JavaScript'>
                 window.alert('Payment succesfully Updated');
-                window.location.href='../profile.php';
+                window.location.href='../completed.php';
                 </script>");
         } else {
             echo ("<script LANGUAGE='JavaScript'>

@@ -59,8 +59,8 @@
     define('PAYPAL_ID', 'sanghanichirag1412@gmail.com'); 
     define('PAYPAL_SANDBOX', TRUE); //TRUE or FALSE 
     
-    define('PAYPAL_RETURN_URL', 'http://localhost/planet_git/resources/success.php'); 
-    define('PAYPAL_CANCEL_URL', 'http://localhost/planet_git/resources/cancel.php'); 
-    define('PAYPAL_NOTIFY_URL', 'http://localhost/planet_git/resources/ipn.php'); 
+    define('PAYPAL_RETURN_URL', BASE_URL.'resources/success.php'); 
+    define('PAYPAL_CANCEL_URL', BASE_URL.'resources/cancel.php'); 
+    define('PAYPAL_NOTIFY_URL', BASE_URL.'resources/ipn.php'); 
     define('PAYPAL_CURRENCY', 'USD'); 
     define('PAYPAL_URL', (PAYPAL_SANDBOX == true)?"https://www.sandbox.paypal.com/cgi-bin/webscr":"https://www.paypal.com/cgi-bin/webscr");
