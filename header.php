@@ -114,10 +114,17 @@
                                         </div>
                                     </div>
                                 </a>
+                                <?php if(empty($_SESSION['userid'])){ ?>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                    <a class="dropdown-item" href="#"> Login </a>
-                                    <a class="dropdown-item" href="#"> Register </a>
+                                    <a class="dropdown-item" href="login"> Login </a>
+                                    <a class="dropdown-item" href="register"> Register </a>
                                 </div>
+                                <?php } else { ?>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <a class="dropdown-item" href="profile"> Profile </a>
+                                    <a class="dropdown-item" href="resources/logout"> Logout </a>
+                                </div>
+                                <?php } ?>
                             </div>
                         </div>
 
