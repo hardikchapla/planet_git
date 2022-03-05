@@ -33,23 +33,14 @@ include('header.php');
                     </div>
                 </div>
             </div>
-
             <div class="col-lg-3">
-
-
                 <div class="ss_store_item ">
-
                     <div class="ss_headre_store">
                         <h2>Store Item </h2>
                     </div>
-
                 </div>
-
-
                 <div class="ss_store_item_slider">
-
                     <div class="owl-carousel owl-theme" id="ss_stor_item_slider">
-
                         <div class="item">
                             <div class="ss_product">
                                 <div class="images">
@@ -82,7 +73,6 @@ include('header.php');
                                 </div>
                             </div>
                         </div>
-
                         <div class="item">
                             <div class="ss_product">
                                 <div class="images">
@@ -115,8 +105,6 @@ include('header.php');
                                 </div>
                             </div>
                         </div>
-
-
                         <div class="item">
                             <div class="ss_product">
                                 <div class="images">
@@ -149,8 +137,6 @@ include('header.php');
                                 </div>
                             </div>
                         </div>
-
-
                         <div class="item">
                             <div class="ss_product">
                                 <div class="images">
@@ -183,16 +169,9 @@ include('header.php');
                                 </div>
                             </div>
                         </div>
-
-
-
                     </div>
-
                 </div>
-
-
             </div>
-
         </div>
     </div>
 </div>
