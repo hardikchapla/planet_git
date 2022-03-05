@@ -49,7 +49,7 @@
                 }
             }
             $update_user_coin = $db->query("UPDATE phtv_users SET coin_balance = '$coin_balance' WHERE id ='$user_id'");
-            // $delete_cart = $db->query("DELETE FROM phtv_product_cart WHERE user_id = '$user_id'");
+            $delete_cart = $db->query("DELETE FROM phtv_product_cart WHERE user_id = '$user_id'");
             echo ("<script LANGUAGE='JavaScript'>
                 window.alert('Payment succesfully Updated');
                 window.location.href='../completed.php';
