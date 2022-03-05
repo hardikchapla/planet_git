@@ -6,6 +6,7 @@
     $response = $_REQUEST;
     echo "<pre>";
     print_r($response);
+    die;
     
     if($response['payment_status'] == 'Completed'){
         $user_id = $_SESSION['userid'];
