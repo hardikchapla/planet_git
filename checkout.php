@@ -120,7 +120,7 @@
                         <div class="col-lg-6">
                             <div class="form-group ss_informationss">
                                 <label> Full Name </label>
-                                <input type="text" name="full_name" class="form-control"
+                                <input type="text" name="main_full_name" id="main_full_name" class="form-control"
                                     value="<?= isset($feuser['full_name']) ? $feuser['full_name'] :'' ?>"
                                     placeholder="Please Enter Name" required>
                             </div>
@@ -128,7 +128,7 @@
                         <div class="col-lg-6">
                             <div class="form-group ss_informationss">
                                 <label> Email </label>
-                                <input type="email" name="email"
+                                <input type="email" id="main_email" name="email"
                                     value="<?= isset($feuser['email']) ? $feuser['email'] :'' ?>" class="form-control"
                                     placeholder="Please Enter email" required>
                             </div>
@@ -136,7 +136,7 @@
                         <div class="col-lg-6">
                             <div class="form-group ss_informationss">
                                 <label> mobile number </label>
-                                <input type="text" name="mobile"
+                                <input type="text" id="main_mobile" name="mobile"
                                     value="<?= isset($feuser['mobile']) ? $feuser['mobile'] :'' ?>" class="form-control"
                                     placeholder="Please Enter mobile number">
                             </div>
@@ -313,7 +313,7 @@
                             </div>
                         </div>
                         <div class="tab-pane fade" id="nav-stripe" role="tabpanel" aria-labelledby="nav-stripe-tab">
-                            <form action="resources/stripesubmit.php" name="cardpayment" id="payment-form">
+                            <form name="cardpayment" id="payment-form">
                                 <div class="row py-4">
                                     <div class="col-lg-12">
                                         <div class="form-group ss_informationss">
@@ -392,6 +392,67 @@ $("#main_state").keyup(function() {
 $("#main_zipcode").keyup(function() {
     var main_zipcode = $(this).val();
     $('#paypal_zipcode').val(main_zipcode);
+});
+</script>
+<script>
+$(document).ready(function() {
+    $("#payment-form").submit(function(event) {
+        event.preventDefault();
+        $("#preloder").fadeIn();
+        var formData = new FormData(this);
+        var main_full_name = $('#main_full_name').val();
+        var main_email = $('#main_email').val();
+        var main_mobile = $('#main_mobile').val();
+        var main_address = $('#main_address').val();
+        var main_city = $('#main_city').val();
+        var main_state = $('#main_state').val();
+        var main_zipcode = $('#main_zipcode').val();
+        var applycoin = "<?= isset($_REQUEST['applycoin']) ? $_REQUEST['applycoin']:'false' ?>";
+        var total_paid_amount = "<?= $total_paid_amount ?>";
+        var total_coin_used = "<?= $total_coin_used ?>";
+        var total_qty = "<?= $fecart['total_qty'] ?>";
+        formData.append("full_name", main_full_name);
+        formData.append("email", main_email);
+        formData.append("mobile", main_mobile);
+        formData.append("address", main_address);
+        formData.append("city", main_city);
+        formData.append("state", main_state);
+        formData.append("zipcode", main_zipcode);
+        formData.append("applycoin", applycoin);
+        formData.append("total_paid_amount", total_paid_amount);
+        formData.append("total_coin_used", total_coin_used);
+        formData.append("total_qty", total_qty);
+        $.ajax({
+            url: 'resources/stripePayment',
+            type: 'POST',
+            data: formData,
+            async: false,
+            cache: false,
+            contentType: false,
+            processData: false,
+            success: function(output) {
+                $("#preloder").fadeOut();
+                var response = JSON.parse(output);
+                if (response.success == 'success') {
+                    toastr.options.onHidden = function() {
+                        window.location.href = 'completed';
+                    }
+                    toastr.success(response.message).delay(1000).fadeOut(
+                        1000);
+                } else {
+                    toastr.warning(response.message).delay(1000).fadeOut(
+                        1000);
+                }
+            },
+            error: function() {
+                $("#preloder").fadeOut();
+                toastr.warning('Something want wrong. Please try again later').delay(1000)
+                    .fadeOut(1000);
+            }
+        });
+
+        return false;
+    });
 });
 </script>
 </body>

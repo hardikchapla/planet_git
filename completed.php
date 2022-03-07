@@ -75,7 +75,7 @@
                         <p> Your items are being collected and you will receive e-mail confirmation shortly. have a
                             great day!
                         </p>
-                        <button type="submit" class="button_register"> Continue Shopping</button>
+                        <a class="button_register" href="product">Continue Shopping</a>
                     </div>
                 </div>
             </div>
