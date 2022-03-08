@@ -318,16 +318,15 @@
                                     <div class="col-lg-12">
                                         <div class="form-group ss_informationss">
                                             <label> Card Number </label>
-                                            <input type="text" name="cardnumber" id="card" maxlength="16"
-                                                data-stripe="number" required class="form-input form-control"
-                                                placeholder="Please Enter Card Number">
+                                            <input type="text" name="cardnumber" id="card" maxlength="16" required
+                                                class="form-input form-control" placeholder="Please Enter Card Number">
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form-group ss_informationss">
                                             <label> CVV </label>
                                             <input type="text" name="cvv" id="cvv" class="form-input2 form-control"
-                                                placeholder="Please Enter CVV" data-stripe="cvc" required>
+                                                placeholder="Please Enter CVV" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
@@ -336,12 +335,11 @@
                                             <div class="row">
                                                 <div class="col-6">
                                                     <input type="text" class="form-input2 form-control" name="month"
-                                                        id="month" data-stripe="exp_month" placeholder="MM">
+                                                        id="month" placeholder="MM">
                                                 </div>
                                                 <div class="col-6">
                                                     <input type="text" name="year" id="year"
-                                                        class="form-input2 form-control" data-stripe="exp_year"
-                                                        placeholder="YYYY" />
+                                                        class="form-input2 form-control" placeholder="YYYY" />
                                                 </div>
                                             </div>
                                         </div>
@@ -376,6 +374,7 @@
 <?php
     include('footer.php');
 ?>
+<script src="js/jquery.creditCardValidator.js"></script>
 <script>
 $("#main_address").keyup(function() {
     var main_address = $(this).val();
@@ -395,11 +394,64 @@ $("#main_zipcode").keyup(function() {
 });
 </script>
 <script>
+function cardFormValidate() {
+    var cardValid = 0;
+
+    //card number validation
+    $('#card').validateCreditCard(function(result) {
+        if (result.valid) {
+            $("#card").removeClass('required');
+            cardValid = 1;
+        } else {
+            $("#card").addClass('required');
+            cardValid = 0;
+        }
+    });
+
+    //card details validation
+    var expMonth = $("#month").val();
+    var expYear = $("#year").val();
+    var cvv = $("#cvv").val();
+    var regName = /^[a-z ,.'-]+$/i;
+    var regMonth = /^01|02|03|04|05|06|07|08|09|10|11|12$/;
+    var regYear = /^2017|2018|2019|2020|2021|2022|2023|2024|2025|2026|2027|2028|2029|2030|2031$/;
+    var regCVV = /^[0-9]{3,3}$/;
+    if (cardValid == 0) {
+        $("#card").addClass('required');
+        $("#card").focus();
+        return false;
+    } else if (!regCVV.test(cvv)) {
+        $("#card").removeClass('required');
+        $("#month").removeClass('required');
+        $("#year").removeClass('required');
+        $("#cvv").addClass('required');
+        $("#cvv").focus();
+        return false;
+    } else if (!regMonth.test(expMonth)) {
+        $("#card").removeClass('required');
+        $("#month").addClass('required');
+        $("#month").focus();
+        return false;
+    } else if (!regYear.test(expYear)) {
+        $("#card").removeClass('required');
+        $("#month").removeClass('required');
+        $("#year").addClass('required');
+        $("#year").focus();
+        return false;
+    } else {
+        $("#card").removeClass('required');
+        $("#month").removeClass('required');
+        $("#year").removeClass('required');
+        $("#cvv").removeClass('required');
+        return true;
+    }
+}
 $(document).ready(function() {
+    $('#payment-form input[type=text]').on('keyup', function() {
+        cardFormValidate();
+    });
     $("#payment-form").submit(function(event) {
         event.preventDefault();
-        $("#preloder").fadeIn();
-        var formData = new FormData(this);
         var main_full_name = $('#main_full_name').val();
         var main_email = $('#main_email').val();
         var main_mobile = $('#main_mobile').val();
@@ -411,47 +463,73 @@ $(document).ready(function() {
         var total_paid_amount = "<?= $total_paid_amount ?>";
         var total_coin_used = "<?= $total_coin_used ?>";
         var total_qty = "<?= $fecart['total_qty'] ?>";
-        formData.append("full_name", main_full_name);
-        formData.append("email", main_email);
-        formData.append("mobile", main_mobile);
-        formData.append("address", main_address);
-        formData.append("city", main_city);
-        formData.append("state", main_state);
-        formData.append("zipcode", main_zipcode);
-        formData.append("applycoin", applycoin);
-        formData.append("total_paid_amount", total_paid_amount);
-        formData.append("total_coin_used", total_coin_used);
-        formData.append("total_qty", total_qty);
-        $.ajax({
-            url: 'resources/stripePayment',
-            type: 'POST',
-            data: formData,
-            async: false,
-            cache: false,
-            contentType: false,
-            processData: false,
-            success: function(output) {
-                $("#preloder").fadeOut();
-                var response = JSON.parse(output);
-                if (response.success == 'success') {
-                    toastr.options.onHidden = function() {
-                        window.location.href = 'completed';
+        if (main_full_name == '') {
+            toastr.warning("Please enter full name").delay(1000).fadeOut(
+                1000);
+        } else if (main_email == '') {
+            toastr.warning("Please enter email address").delay(1000).fadeOut(
+                1000);
+        } else if (main_mobile == '') {
+            toastr.warning("Please enter mobile number").delay(1000).fadeOut(
+                1000);
+        } else if (main_address == '') {
+            toastr.warning("Please enter address").delay(1000).fadeOut(
+                1000);
+        } else if (main_city == '') {
+            toastr.warning("Please enter city").delay(1000).fadeOut(
+                1000);
+        } else if (main_state == '') {
+            toastr.warning("Please enter state").delay(1000).fadeOut(
+                1000);
+        } else if (main_zipcode == '') {
+            toastr.warning("Please enter zip code").delay(1000).fadeOut(
+                1000);
+        } else {
+            $("#preloder").fadeIn();
+            var formData = new FormData(this);
+            formData.append("full_name", main_full_name);
+            formData.append("email", main_email);
+            formData.append("mobile", main_mobile);
+            formData.append("address", main_address);
+            formData.append("city", main_city);
+            formData.append("state", main_state);
+            formData.append("zipcode", main_zipcode);
+            formData.append("applycoin", applycoin);
+            formData.append("total_paid_amount", total_paid_amount);
+            formData.append("total_coin_used", total_coin_used);
+            formData.append("total_qty", total_qty);
+            $.ajax({
+                url: 'resources/stripePayment',
+                type: 'POST',
+                data: formData,
+                async: false,
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function(output) {
+                    $("#preloder").fadeOut();
+                    var response = JSON.parse(output);
+                    if (response.success == 'success') {
+                        toastr.options.onHidden = function() {
+                            window.location.href = 'completed';
+                        }
+                        toastr.success(response.message).delay(1000).fadeOut(
+                            1000);
+                    } else {
+                        toastr.warning(response.message).delay(1000).fadeOut(
+                            1000);
                     }
-                    toastr.success(response.message).delay(1000).fadeOut(
-                        1000);
-                } else {
-                    toastr.warning(response.message).delay(1000).fadeOut(
-                        1000);
+                },
+                error: function() {
+                    $("#preloder").fadeOut();
+                    toastr.warning('Something want wrong. Please try again later')
+                        .delay(1000)
+                        .fadeOut(1000);
                 }
-            },
-            error: function() {
-                $("#preloder").fadeOut();
-                toastr.warning('Something want wrong. Please try again later').delay(1000)
-                    .fadeOut(1000);
-            }
-        });
+            });
 
-        return false;
+            return false;
+        }
     });
 });
 </script>

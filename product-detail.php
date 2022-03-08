@@ -561,31 +561,36 @@ $(document).ready(function() {
         var product_color_id = $('input[name="radio-group"]:checked').val();
         var product_size_id = $('input[name="switch-one"]:checked').val();
         var product_quentity = $('#product_quentity').val();
-        $.ajax({
-            url: "resources/add_to_cart_product",
-            method: "POST",
-            data: {
-                product_id: product_id,
-                product_color_id: product_color_id,
-                product_size_id: product_size_id,
-                product_quentity: product_quentity
-            },
-            dataType: "json",
-            success: function(data) {
-                if (data.success == 'login') {
-                    toastr.options.onHidden = function() {
-                        window.location.href = 'login';
-                    }
-                    toastr.warning(data.message).delay(1000).fadeOut(1000);
-                } else {
-                    if (data.success == 'success') {
-                        toastr.success(data.message).delay(1000).fadeOut(1000);
-                    } else {
+        var product_avail = "<?= $feproduct['stock'] ?>";
+        if (product_avail > product_quentity) {
+            toastr.warning("Available stock is " + product_avail).delay(1000).fadeOut(1000);
+        } else {
+            $.ajax({
+                url: "resources/add_to_cart_product",
+                method: "POST",
+                data: {
+                    product_id: product_id,
+                    product_color_id: product_color_id,
+                    product_size_id: product_size_id,
+                    product_quentity: product_quentity
+                },
+                dataType: "json",
+                success: function(data) {
+                    if (data.success == 'login') {
+                        toastr.options.onHidden = function() {
+                            window.location.href = 'login';
+                        }
                         toastr.warning(data.message).delay(1000).fadeOut(1000);
+                    } else {
+                        if (data.success == 'success') {
+                            toastr.success(data.message).delay(1000).fadeOut(1000);
+                        } else {
+                            toastr.warning(data.message).delay(1000).fadeOut(1000);
+                        }
                     }
                 }
-            }
-        })
+            })
+        }
     });
 });
 </script>

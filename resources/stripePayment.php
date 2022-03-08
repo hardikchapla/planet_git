@@ -65,6 +65,8 @@
                     $show_coin = 0;
                     $order_item_insert = $db->query("INSERT INTO phtv_product_order_items SET order_id = '$order_id', product_id = '$product_id', amount = '".$fecart['amount']."', qty = '".$fecart['qty']."', total_amount = '$price', couns_used = '$show_coin', is_preorder = '".$feproduct['is_preorder']."'");
                 }
+                $remaining_product = $feproduct['stock'] - $fecart['qty'];
+                $update_product = $db->query("UPDATE phtv_product SET stock = '$remaining_product' WHERE id = '$product_id'");
             }
             $update_user_coin = $db->query("UPDATE phtv_users SET coin_balance = '$coin_balance' WHERE id ='$user_id'");
             $delete_cart = $db->query("DELETE FROM phtv_product_cart WHERE user_id = '$user_id'");
