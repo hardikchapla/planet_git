@@ -155,7 +155,7 @@
                                         href="high-voltage-show">High
                                         Voltage</a></li>
                                 <li class="nav-item <?= $active_cinematics ?>"><a class="nav-link" href="cinematics">
-                                        Stellar Streams</a></li>
+                                        P.H. Cinema</a></li>
                                 <li class="nav-item <?= $active_blog ?>"><a class="nav-link" href="blog">Paraverse</a>
                                 </li>
                                 <li class="nav-item <?= $active_NFTMarketplace ?>"><a class="nav-link"

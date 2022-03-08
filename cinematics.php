@@ -15,7 +15,7 @@
                                 <div class="col-lg-12">
 
                                     <div class="ss_new_planet_stream">
-                                        <img src="images/stellar_streming.png" alt="images" />
+                                        <img src="images/P.H cinema.png" alt="images" />
                                     </div>
 
                                     <div class="d-flex bd-highlight">
@@ -26,7 +26,7 @@
                                         </div>
                                         <div class="p-2 bd-highlight align-self-center">
                                             <div class="ss_main_title_imagemlkm">
-                                                <img src="images/cosmic_comedy.png" alt="imges"/>
+                                                <img src="images/cosmic_comedy.png" alt="imges" />
                                             </div>
                                         </div>
                                     </div>
@@ -62,10 +62,10 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_1.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#" data-toggle="modal" data-target=".bd-example-modal-lg">Episodes &
-                                    info </a></h4>
+                                        info </a></h4>
                             </div>
                             <div class="main_al_con">
                                 <div class="album_con">
@@ -73,8 +73,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" data-toggle="modal" data-target="#myModal"
-                                                   class="album_btn"><i class="fa fa-play"
-                                                                        aria-hidden="true"></i></a>
+                                                    class="album_btn"><i class="fa fa-play" aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -123,7 +122,7 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_2.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#">Episodes & info </a>
                                 </h4>
@@ -134,7 +133,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" class="album_btn"><i class="fa fa-play"
-                                                                                 aria-hidden="true"></i></a>
+                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -183,7 +182,7 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_3.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#">Episodes & info </a>
                                 </h4>
@@ -194,7 +193,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" class="album_btn"><i class="fa fa-play"
-                                                                                 aria-hidden="true"></i></a>
+                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -243,7 +242,7 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_2.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#">Episodes & info </a>
                                 </h4>
@@ -254,7 +253,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" class="album_btn"><i class="fa fa-play"
-                                                                                 aria-hidden="true"></i></a>
+                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -318,7 +317,7 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_4.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#">Episodes & info </a></h4>
                             </div>
@@ -328,7 +327,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" class="album_btn"><i class="fa fa-play"
-                                                                                 aria-hidden="true"></i></a>
+                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -377,7 +376,7 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_5.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#">Episodes & info </a></h4>
                             </div>
@@ -387,7 +386,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" class="album_btn"><i class="fa fa-play"
-                                                                                 aria-hidden="true"></i></a>
+                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -436,7 +435,7 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_6.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#">Episodes & info </a></h4>
                             </div>
@@ -446,7 +445,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" class="album_btn"><i class="fa fa-play"
-                                                                                 aria-hidden="true"></i></a>
+                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -495,7 +494,7 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_2.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#">Episodes & info </a></h4>
                             </div>
@@ -505,7 +504,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" class="album_btn"><i class="fa fa-play"
-                                                                                 aria-hidden="true"></i></a>
+                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -569,7 +568,7 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_7.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#">Episodes & info </a></h4>
                             </div>
@@ -579,7 +578,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" class="album_btn"><i class="fa fa-play"
-                                                                                 aria-hidden="true"></i></a>
+                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -628,7 +627,7 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_8.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#">Episodes & info </a></h4>
                             </div>
@@ -638,7 +637,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" class="album_btn"><i class="fa fa-play"
-                                                                                 aria-hidden="true"></i></a>
+                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -687,7 +686,7 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_9.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#">Episodes & info </a></h4>
                             </div>
@@ -697,7 +696,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" class="album_btn"><i class="fa fa-play"
-                                                                                 aria-hidden="true"></i></a>
+                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -746,7 +745,7 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_2.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#">Episodes & info </a></h4>
                             </div>
@@ -756,7 +755,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" class="album_btn"><i class="fa fa-play"
-                                                                                 aria-hidden="true"></i></a>
+                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -820,7 +819,7 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_4.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#">Episodes & info </a></h4>
                             </div>
@@ -830,7 +829,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" class="album_btn"><i class="fa fa-play"
-                                                                                 aria-hidden="true"></i></a>
+                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -879,7 +878,7 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_5.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#">Episodes & info </a></h4>
                             </div>
@@ -889,7 +888,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" class="album_btn"><i class="fa fa-play"
-                                                                                 aria-hidden="true"></i></a>
+                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -938,7 +937,7 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_6.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#">Episodes & info </a></h4>
                             </div>
@@ -948,7 +947,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" class="album_btn"><i class="fa fa-play"
-                                                                                 aria-hidden="true"></i></a>
+                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -997,7 +996,7 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_2.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#">Episodes & info </a></h4>
                             </div>
@@ -1007,7 +1006,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" class="album_btn"><i class="fa fa-play"
-                                                                                 aria-hidden="true"></i></a>
+                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -1071,7 +1070,7 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_7.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#">Episodes & info </a></h4>
                             </div>
@@ -1081,7 +1080,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" class="album_btn"><i class="fa fa-play"
-                                                                                 aria-hidden="true"></i></a>
+                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -1130,7 +1129,7 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_8.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#">Episodes & info </a></h4>
                             </div>
@@ -1140,7 +1139,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" class="album_btn"><i class="fa fa-play"
-                                                                                 aria-hidden="true"></i></a>
+                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -1189,7 +1188,7 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_9.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#">Episodes & info </a></h4>
                             </div>
@@ -1199,7 +1198,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" class="album_btn"><i class="fa fa-play"
-                                                                                 aria-hidden="true"></i></a>
+                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -1248,7 +1247,7 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_2.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#">Episodes & info </a></h4>
                             </div>
@@ -1258,7 +1257,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" class="album_btn"><i class="fa fa-play"
-                                                                                 aria-hidden="true"></i></a>
+                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -1322,7 +1321,7 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_10.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#">Episodes & info </a></h4>
                             </div>
@@ -1332,7 +1331,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" class="album_btn"><i class="fa fa-play"
-                                                                                 aria-hidden="true"></i></a>
+                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -1392,7 +1391,7 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_11.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#">Episodes & info </a></h4>
                             </div>
@@ -1402,7 +1401,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" class="album_btn"><i class="fa fa-play"
-                                                                                 aria-hidden="true"></i></a>
+                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -1462,7 +1461,7 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_12.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#">Episodes & info </a></h4>
                             </div>
@@ -1472,7 +1471,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" class="album_btn"><i class="fa fa-play"
-                                                                                 aria-hidden="true"></i></a>
+                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -1532,7 +1531,7 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_2.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#">Episodes & info </a></h4>
                             </div>
@@ -1542,7 +1541,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" class="album_btn"><i class="fa fa-play"
-                                                                                 aria-hidden="true"></i></a>
+                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -1617,7 +1616,7 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_13.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#">Episodes & info </a></h4>
                             </div>
@@ -1627,7 +1626,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" class="album_btn"><i class="fa fa-play"
-                                                                                 aria-hidden="true"></i></a>
+                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -1676,7 +1675,7 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_14.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#">Episodes & info </a></h4>
                             </div>
@@ -1686,7 +1685,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" class="album_btn"><i class="fa fa-play"
-                                                                                 aria-hidden="true"></i></a>
+                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -1735,7 +1734,7 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_15.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#">Episodes & info </a></h4>
                             </div>
@@ -1745,7 +1744,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" class="album_btn"><i class="fa fa-play"
-                                                                                 aria-hidden="true"></i></a>
+                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -1794,7 +1793,7 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_2.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#">Episodes & info </a></h4>
                             </div>
@@ -1804,7 +1803,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" class="album_btn"><i class="fa fa-play"
-                                                                                 aria-hidden="true"></i></a>
+                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -1868,7 +1867,7 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_10.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#">Episodes & info </a></h4>
                             </div>
@@ -1878,7 +1877,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" class="album_btn"><i class="fa fa-play"
-                                                                                 aria-hidden="true"></i></a>
+                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -1927,7 +1926,7 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_11.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#">Episodes & info </a></h4>
                             </div>
@@ -1937,7 +1936,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" class="album_btn"><i class="fa fa-play"
-                                                                                 aria-hidden="true"></i></a>
+                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -1986,7 +1985,7 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_12.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#">Episodes & info </a></h4>
                             </div>
@@ -1996,7 +1995,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" class="album_btn"><i class="fa fa-play"
-                                                                                 aria-hidden="true"></i></a>
+                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -2045,7 +2044,7 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_2.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#">Episodes & info </a></h4>
                             </div>
@@ -2055,7 +2054,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" class="album_btn"><i class="fa fa-play"
-                                                                                 aria-hidden="true"></i></a>
+                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -2119,7 +2118,7 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_7.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#">Episodes & info </a></h4>
                             </div>
@@ -2129,7 +2128,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" class="album_btn"><i class="fa fa-play"
-                                                                                 aria-hidden="true"></i></a>
+                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -2178,7 +2177,7 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_8.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#">Episodes & info </a></h4>
                             </div>
@@ -2188,7 +2187,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" class="album_btn"><i class="fa fa-play"
-                                                                                 aria-hidden="true"></i></a>
+                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -2237,7 +2236,7 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_9.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#">Episodes & info </a></h4>
                             </div>
@@ -2247,7 +2246,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" class="album_btn"><i class="fa fa-play"
-                                                                                 aria-hidden="true"></i></a>
+                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -2296,7 +2295,7 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_2.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#">Episodes & info </a></h4>
                             </div>
@@ -2306,7 +2305,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" class="album_btn"><i class="fa fa-play"
-                                                                                 aria-hidden="true"></i></a>
+                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -2370,7 +2369,7 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_10.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#">Episodes & info </a></h4>
                             </div>
@@ -2380,7 +2379,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" class="album_btn"><i class="fa fa-play"
-                                                                                 aria-hidden="true"></i></a>
+                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -2429,7 +2428,7 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_11.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#">Episodes & info </a></h4>
                             </div>
@@ -2439,7 +2438,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" class="album_btn"><i class="fa fa-play"
-                                                                                 aria-hidden="true"></i></a>
+                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -2488,7 +2487,7 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_12.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#">Episodes & info </a></h4>
                             </div>
@@ -2498,7 +2497,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" class="album_btn"><i class="fa fa-play"
-                                                                                 aria-hidden="true"></i></a>
+                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -2547,7 +2546,7 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_2.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#">Episodes & info </a></h4>
                             </div>
@@ -2557,7 +2556,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" class="album_btn"><i class="fa fa-play"
-                                                                                 aria-hidden="true"></i></a>
+                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -2621,7 +2620,7 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_7.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#">Episodes & info </a></h4>
                             </div>
@@ -2631,7 +2630,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" class="album_btn"><i class="fa fa-play"
-                                                                                 aria-hidden="true"></i></a>
+                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -2680,7 +2679,7 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_8.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#">Episodes & info </a></h4>
                             </div>
@@ -2690,7 +2689,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" class="album_btn"><i class="fa fa-play"
-                                                                                 aria-hidden="true"></i></a>
+                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -2739,7 +2738,7 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_9.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#">Episodes & info </a></h4>
                             </div>
@@ -2749,7 +2748,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" class="album_btn"><i class="fa fa-play"
-                                                                                 aria-hidden="true"></i></a>
+                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -2798,7 +2797,7 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_2.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#">Episodes & info </a></h4>
                             </div>
@@ -2808,7 +2807,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" class="album_btn"><i class="fa fa-play"
-                                                                                 aria-hidden="true"></i></a>
+                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -2872,7 +2871,7 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_10.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#">Episodes & info </a></h4>
                             </div>
@@ -2882,7 +2881,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" class="album_btn"><i class="fa fa-play"
-                                                                                 aria-hidden="true"></i></a>
+                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -2931,7 +2930,7 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_11.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#">Episodes & info </a></h4>
                             </div>
@@ -2941,7 +2940,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" class="album_btn"><i class="fa fa-play"
-                                                                                 aria-hidden="true"></i></a>
+                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -2990,7 +2989,7 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_12.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#">Episodes & info </a></h4>
                             </div>
@@ -3000,7 +2999,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" class="album_btn"><i class="fa fa-play"
-                                                                                 aria-hidden="true"></i></a>
+                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -3049,7 +3048,7 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_2.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#">Episodes & info </a></h4>
                             </div>
@@ -3059,7 +3058,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" class="album_btn"><i class="fa fa-play"
-                                                                                 aria-hidden="true"></i></a>
+                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -3123,7 +3122,7 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_16.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#">Episodes & info </a></h4>
                             </div>
@@ -3133,7 +3132,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" class="album_btn"><i class="fa fa-play"
-                                                                                 aria-hidden="true"></i></a>
+                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -3182,7 +3181,7 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_17.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#">Episodes & info </a></h4>
                             </div>
@@ -3192,7 +3191,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" class="album_btn"><i class="fa fa-play"
-                                                                                 aria-hidden="true"></i></a>
+                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -3241,7 +3240,7 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_18.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#">Episodes & info </a></h4>
                             </div>
@@ -3251,7 +3250,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" class="album_btn"><i class="fa fa-play"
-                                                                                 aria-hidden="true"></i></a>
+                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -3300,7 +3299,7 @@
                     <div class="item">
                         <div class="album_img">
                             <img class="img-fluid" src="images/album_2.jpg">
-                            <div class="ss_album_simages"><img src="images/dss.png" alt=""/></div>
+                            <div class="ss_album_simages"><img src="images/dss.png" alt="" /></div>
                             <div class="album_info">
                                 <h4><a href="#">Episodes & info </a></h4>
                             </div>
@@ -3310,7 +3309,7 @@
                                         <div class=" bd-highlight align-self-end">
                                             <div class="album_video">
                                                 <a href="#" class="album_btn"><i class="fa fa-play"
-                                                                                 aria-hidden="true"></i></a>
+                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class=" bd-highlight align-self-end">
@@ -3363,14 +3362,14 @@
 </div>
 
 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-     aria-hidden="true">
+    aria-hidden="true">
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="epi_img">
                 <div class="model_imagesss">
                     <img class="img-fluid" src="images/modal_bg.jpg">
                     <div class="model_title_images">
-                        <img src="images/cosmic_comedy.png" alt="images"/>
+                        <img src="images/cosmic_comedy.png" alt="images" />
                     </div>
                 </div>
                 <div class="epi_modal_con">
@@ -3564,7 +3563,7 @@
                                                         <div class="match_text">Crew Picked <br><span>2020</span></div>
                                                         <div class="plus_p">16+</div>
                                                         <div class="add_box ml-auto">
-                                                            <img src="images/StashS_2x.png" alt="images"/>
+                                                            <img src="images/StashS_2x.png" alt="images" />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -3591,7 +3590,7 @@
                                                         <div class="match_text">Crew Picked <br><span>2020</span></div>
                                                         <div class="plus_p">16+</div>
                                                         <div class="add_box ml-auto">
-                                                            <img src="images/StashS_2x.png" alt="images"/>
+                                                            <img src="images/StashS_2x.png" alt="images" />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -3618,7 +3617,7 @@
                                                         <div class="match_text">Crew Picked <br><span>2020</span></div>
                                                         <div class="plus_p">16+</div>
                                                         <div class="add_box ml-auto">
-                                                            <img src="images/StashS_2x.png" alt="images"/>
+                                                            <img src="images/StashS_2x.png" alt="images" />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -3637,7 +3636,7 @@
                         <div class="modal_down">
                             <div class="modal_border">
                                 <div class="down_box_arrow"><a href="#"><i class="fa fa-angle-down"
-                                                                           aria-hidden="true"></i></a></div>
+                                            aria-hidden="true"></i></a></div>
                             </div>
                         </div>
                     </div>
@@ -3687,12 +3686,13 @@
 ?>
 
 <script>
-    $('#myModal').on('shown.bs.modal', function () {
-        $('#video1')[0].play();
-    })
-    $('#myModal').on('hidden.bs.modal', function () {
-        $('#video1')[0].pause();
-    })
+$('#myModal').on('shown.bs.modal', function() {
+    $('#video1')[0].play();
+})
+$('#myModal').on('hidden.bs.modal', function() {
+    $('#video1')[0].pause();
+})
 </script>
 </body>
+
 </html>
