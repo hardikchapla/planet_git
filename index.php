@@ -6,42 +6,19 @@ include('header.php');
         <div class="row">
             <div class="col-lg-9 text-center">
                 <div class="ss_main_slider" style='background-image: url("images/images_bg.jpg")'>
-                    <!--                    <div class="images_ss_position">-->
-                    <!--                        <img src="images/images_bg.jpg" alt="images"/>-->
-                    <!--                    </div>-->
                     <div class="ss_slider_contents_ab">
-                        <div class="verticle_middle">
-                            <div class="sci_images">
-                                <img src="images/sci.png" alt="images">
-                            </div>
-                            <div class="ss_Plogo_new">
-                                <img src="images/Payload_logo2_3x.png" alt="images"/>
-                            </div>
-                            <div class="ss_Plogo_new">
-                                <img src="images/PHTV1.png" alt="images"/>
-                            </div>
-                            <div class="login_register">
-                                <a href="">Register</a>
-                                <span> | </span>
-                                <a href=""> Login </a>
-                            </div>
-                            <h2> Welcome aboard Planet Hopper One </h2>
-                            <div class="liness"></div>
-                            <p> May your journey be free of atmospheric hazards
-                            </p>
-                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3">
-                <div class="ss_store_item ">
-                    <div class="ss_headre_store">
-                        <h2>Store Item </h2>
-                    </div>
-                </div>
+            <div class="col-lg-3 home-slider">
                 <div class="ss_store_item_slider">
                     <div class="owl-carousel owl-theme" id="ss_stor_item_slider">
                         <div class="item">
+                            <div class="ss_store_item pb-3">
+                                <div class="ss_headre_store">
+                                    <h2>NFT</h2>
+                                </div>
+                            </div>
                             <div class="ss_product">
                                 <div class="images">
                                     <img src="images/SAA.jpg" alt="images">
@@ -66,7 +43,7 @@ include('header.php');
                                         </div>
                                         <div class=" flex-fill bd-highlight">
                                             <a href="#" class="ss_buy" data-toggle="modal"
-                                               data-target="#exampleModalCenter">
+                                                data-target="#exampleModalCenter">
                                                 Buy </a>
                                         </div>
                                     </div>
@@ -74,38 +51,65 @@ include('header.php');
                             </div>
                         </div>
                         <div class="item">
+                            <div class="ss_store_item pb-3">
+                                <div class="ss_headre_store">
+                                    <h2>Game</h2>
+                                </div>
+                            </div>
                             <div class="ss_product">
                                 <div class="images">
                                     <img src="images/episodesE.jpg" alt="images">
-                                    <div class="ss_tabgs ss_tabgs_orange">
-                                        30 Days Left
-                                    </div>
                                 </div>
                                 <div class="ss_main_des">
-                                    <h5>Mona Loser <span>|</span> <span> The Studio </span></h5>
-                                    <div class="d-flex bd-highlight">
-                                        <div class=" flex-grow-1 bd-highlight">
-                                            <p> 200.00 PAY <span> ($58.64) </span></p>
-                                        </div>
-                                        <div class=" bd-highlight">
-                                            <p><span> M#154 | 200 </span></p>
-                                        </div>
-                                    </div>
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum has been the industry.
                                     <div class="d-flex bd-highlight ss_btn">
-                                        <div class=" flex-fill mr-4 bd-highlight">
-                                            <a href="nft-marketplace-details" class="ss_details">
-                                                Details </a>
-                                        </div>
                                         <div class=" flex-fill bd-highlight">
                                             <a href="#" class="ss_buy" data-toggle="modal"
-                                               data-target="#exampleModalCenter">
-                                                Buy </a>
+                                                data-target="#exampleModalCenter">
+                                                Play Game </a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="item">
+                            <div class="ss_store_item pb-3">
+                                <div class="ss_headre_store">
+                                    <h2>APP</h2>
+                                </div>
+                            </div>
+                            <div class="ss_product">
+                                <div class="images">
+                                    <img src="images/SAB.jpg" alt="images">
+                                    <div class="ss_tabgs ss_tabgs_orange">
+                                        30 Days Left
+                                    </div>
+                                </div>
+                                <div class="ss_main_des home_store_logo">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum has been the industry.
+                                    <div class="d-flex bd-highlight ss_btn">
+                                        <div class=" flex-fill mr-4 bd-highlight">
+                                            <a href="#">
+                                                <img src="images/play-store-logo.png" alt="play store">
+                                            </a>
+                                        </div>
+                                        <div class=" flex-fill bd-highlight">
+                                            <a href="#">
+                                                <img src="images/apple-logo.png" alt="play store">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="ss_store_item pb-3">
+                                <div class="ss_headre_store">
+                                    <h2>Store Item</h2>
+                                </div>
+                            </div>
                             <div class="ss_product">
                                 <div class="images">
                                     <img src="images/SAB.jpg" alt="images">
@@ -114,56 +118,13 @@ include('header.php');
                                     </div>
                                 </div>
                                 <div class="ss_main_des">
-                                    <h5>Mona Loser <span>|</span> <span> The Studio </span></h5>
-                                    <div class="d-flex bd-highlight">
-                                        <div class=" flex-grow-1 bd-highlight">
-                                            <p> 200.00 PAY <span> ($58.64) </span></p>
-                                        </div>
-                                        <div class=" bd-highlight">
-                                            <p><span> M#154 | 200 </span></p>
-                                        </div>
-                                    </div>
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum has been the industry.
                                     <div class="d-flex bd-highlight ss_btn">
-                                        <div class=" flex-fill mr-4 bd-highlight">
-                                            <a href="nft-marketplace-details" class="ss_details">
-                                                Details </a>
-                                        </div>
                                         <div class=" flex-fill bd-highlight">
                                             <a href="#" class="ss_buy" data-toggle="modal"
-                                               data-target="#exampleModalCenter">
-                                                Buy </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="ss_product">
-                                <div class="images">
-                                    <img src="images/SAB.jpg" alt="images">
-                                    <div class="ss_tabgs ss_tabgs_orange">
-                                        30 Days Left
-                                    </div>
-                                </div>
-                                <div class="ss_main_des">
-                                    <h5>Mona Loser <span>|</span> <span> The Studio </span></h5>
-                                    <div class="d-flex bd-highlight">
-                                        <div class=" flex-grow-1 bd-highlight">
-                                            <p> 200.00 PAY <span> ($58.64) </span></p>
-                                        </div>
-                                        <div class=" bd-highlight">
-                                            <p><span> M#154 | 200 </span></p>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex bd-highlight ss_btn">
-                                        <div class=" flex-fill mr-4 bd-highlight">
-                                            <a href="nft-marketplace-details" class="ss_details">
-                                                Details </a>
-                                        </div>
-                                        <div class=" flex-fill bd-highlight">
-                                            <a href="#" class="ss_buy" data-toggle="modal"
-                                               data-target="#exampleModalCenter">
-                                                Buy </a>
+                                                data-target="#exampleModalCenter">
+                                                Product Info </a>
                                         </div>
                                     </div>
                                 </div>
@@ -174,6 +135,7 @@ include('header.php');
             </div>
         </div>
     </div>
+</div>
 </div>
 <div class="container-fluid ss_featured">
     <div class="container">
@@ -419,10 +381,10 @@ include('header.php');
                         <div class="item">
                             <div class="ss_live_events_box">
                                 <div class="images">
-                                    <img src="images/uci-world-cup-lenzerheide-hero-art.jfif" alt="images"/>
+                                    <img src="images/uci-world-cup-lenzerheide-hero-art.jfif" alt="images" />
                                     <div class="ss_live_event_logo">
                                         <div class="verticle_middle">
-                                            <img src="images/uci-mtb-worldcup-logo.png" alt="images"/>
+                                            <img src="images/uci-mtb-worldcup-logo.png" alt="images" />
                                         </div>
                                     </div>
                                 </div>
@@ -430,7 +392,7 @@ include('header.php');
                                     <h2> UCI Mountain Bike World Championships </h2>
                                     <p><i class="fa fa-calendar-check-o" aria-hidden="true"></i> 1 July – 1 November
                                         2021 </p>
-                                    <p><img src="images/Flag_of_Bosnia_and_Herzegovina.svg" alt="images"/> Zandvoort,
+                                    <p><img src="images/Flag_of_Bosnia_and_Herzegovina.svg" alt="images" /> Zandvoort,
                                         Netherlands </p>
                                     <p class="ss_uppercases">Kitesurfing</p>
                                 </div>
@@ -439,17 +401,17 @@ include('header.php');
                         <div class="item">
                             <div class="ss_live_events_box">
                                 <div class="images">
-                                    <img src="images/super-formula-japan-round-5-motegi-hero-art.jfif" alt="images"/>
+                                    <img src="images/super-formula-japan-round-5-motegi-hero-art.jfif" alt="images" />
                                     <div class="ss_live_event_logo">
                                         <div class="verticle_middle">
-                                            <img src="images/superformulalive_titletreatment_logo.png" alt="images"/>
+                                            <img src="images/superformulalive_titletreatment_logo.png" alt="images" />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="ss_des">
                                     <h2> Red Bull Cliff Diving World Series </h2>
                                     <p><i class="fa fa-calendar-check-o" aria-hidden="true"></i> 28 August 2021 </p>
-                                    <p><img src="images/Zandvoort_vlag.svg" alt="images"/> Mostar, Bosnia & Herzegovina
+                                    <p><img src="images/Zandvoort_vlag.svg" alt="images" /> Mostar, Bosnia & Herzegovina
                                     </p>
                                     <p class="ss_uppercases">Kitesurfing</p>
                                 </div>
@@ -458,10 +420,10 @@ include('header.php');
                         <div class="item">
                             <div class="ss_live_events_box">
                                 <div class="images">
-                                    <img src="images/megaloop.jfif" alt="images"/>
+                                    <img src="images/megaloop.jfif" alt="images" />
                                     <div class="ss_live_event_logo">
                                         <div class="verticle_middle">
-                                            <img src="images/megaloop-logo.png" alt="images"/>
+                                            <img src="images/megaloop-logo.png" alt="images" />
                                         </div>
                                     </div>
                                 </div>
@@ -469,7 +431,7 @@ include('header.php');
                                     <h2> Red Bull Megaloop </h2>
                                     <p><i class="fa fa-calendar-check-o" aria-hidden="true"></i> 1 July – 1 November
                                         2021 </p>
-                                    <p><img src="images/Zandvoort_vlag.svg" alt="images"/> Zandvoort, Netherlands </p>
+                                    <p><img src="images/Zandvoort_vlag.svg" alt="images" /> Zandvoort, Netherlands </p>
                                     <p class="ss_uppercases">Kitesurfing</p>
                                 </div>
                             </div>
@@ -478,10 +440,10 @@ include('header.php');
                             <div class="ss_live_events_box">
                                 <div class="images">
                                     <img src="images/fia-world-rally-championship-greece-2021-featured-image.jfif"
-                                         alt="images"/>
+                                        alt="images" />
                                     <div class="ss_live_event_logo">
                                         <div class="verticle_middle">
-                                            <img src="images/wrc-logo.png" alt="images"/>
+                                            <img src="images/wrc-logo.png" alt="images" />
                                         </div>
                                     </div>
                                 </div>
@@ -489,7 +451,7 @@ include('header.php');
                                     <h2> FIA World Rally Championship </h2>
                                     <p><i class="fa fa-calendar-check-o" aria-hidden="true"></i> 10 – 12 September 2021
                                     </p>
-                                    <p><img src="images/Zandvoort_vlag.svg" alt="images"/> Zandvoort, Netherlands </p>
+                                    <p><img src="images/Zandvoort_vlag.svg" alt="images" /> Zandvoort, Netherlands </p>
                                     <p class="ss_uppercases">Kitesurfing</p>
                                 </div>
                             </div>
@@ -497,10 +459,10 @@ include('header.php');
                         <div class="item">
                             <div class="ss_live_events_box">
                                 <div class="images">
-                                    <img src="images/uci-world-cup-lenzerheide-hero-art.jfif" alt="images"/>
+                                    <img src="images/uci-world-cup-lenzerheide-hero-art.jfif" alt="images" />
                                     <div class="ss_live_event_logo">
                                         <div class="verticle_middle">
-                                            <img src="images/uci-mtb-worldcup-logo.png" alt="images"/>
+                                            <img src="images/uci-mtb-worldcup-logo.png" alt="images" />
                                         </div>
                                     </div>
                                 </div>
@@ -508,7 +470,7 @@ include('header.php');
                                     <h2> UCI Mountain Bike World Championships </h2>
                                     <p><i class="fa fa-calendar-check-o" aria-hidden="true"></i> 1 July – 1 November
                                         2021 </p>
-                                    <p><img src="images/Flag_of_Bosnia_and_Herzegovina.svg" alt="images"/> Zandvoort,
+                                    <p><img src="images/Flag_of_Bosnia_and_Herzegovina.svg" alt="images" /> Zandvoort,
                                         Netherlands </p>
                                     <p class="ss_uppercases">Kitesurfing</p>
                                 </div>
@@ -517,17 +479,17 @@ include('header.php');
                         <div class="item">
                             <div class="ss_live_events_box">
                                 <div class="images">
-                                    <img src="images/super-formula-japan-round-5-motegi-hero-art.jfif" alt="images"/>
+                                    <img src="images/super-formula-japan-round-5-motegi-hero-art.jfif" alt="images" />
                                     <div class="ss_live_event_logo">
                                         <div class="verticle_middle">
-                                            <img src="images/superformulalive_titletreatment_logo.png" alt="images"/>
+                                            <img src="images/superformulalive_titletreatment_logo.png" alt="images" />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="ss_des">
                                     <h2> Red Bull Cliff Diving World Series </h2>
                                     <p><i class="fa fa-calendar-check-o" aria-hidden="true"></i> 28 August 2021 </p>
-                                    <p><img src="images/Zandvoort_vlag.svg" alt="images"/> Mostar, Bosnia & Herzegovina
+                                    <p><img src="images/Zandvoort_vlag.svg" alt="images" /> Mostar, Bosnia & Herzegovina
                                     </p>
                                     <p class="ss_uppercases">Kitesurfing</p>
                                 </div>
@@ -661,7 +623,7 @@ include('header.php');
                     <div class="d-flex bd-highlight align-self-center">
                         <div class="p-2 bd-highlight">
                             <div class="ss_drops_images">
-                                <img src="images/cinematicsA.jpg" alt="images"/>
+                                <img src="images/cinematicsA.jpg" alt="images" />
                             </div>
                         </div>
                         <div class="p-2 flex-fill bd-highlight align-self-center">
@@ -675,7 +637,7 @@ include('header.php');
                     <div class="d-flex bd-highlight align-self-center">
                         <div class="p-2 bd-highlight">
                             <div class="ss_drops_images">
-                                <img src="images/cinematicsA.jpg" alt="images"/>
+                                <img src="images/cinematicsA.jpg" alt="images" />
                             </div>
                         </div>
                         <div class="p-2 flex-fill bd-highlight align-self-center">
@@ -689,7 +651,7 @@ include('header.php');
                     <div class="d-flex bd-highlight align-self-center">
                         <div class="p-2 bd-highlight">
                             <div class="ss_drops_images">
-                                <img src="images/cinematicsA.jpg" alt="images"/>
+                                <img src="images/cinematicsA.jpg" alt="images" />
                             </div>
                         </div>
                         <div class="p-2 flex-fill bd-highlight align-self-center">
@@ -703,7 +665,7 @@ include('header.php');
             <div class="col-lg-3 align-self-center"></div>
             <div class="col-lg-4 align-self-center">
                 <div class="ss_trend_images">
-                    <img src="images/wid.jpg" alt="images"/>
+                    <img src="images/wid.jpg" alt="images" />
                 </div>
             </div>
         </div>
@@ -788,7 +750,7 @@ include('header.php');
             <div class="col-lg-3">
                 <div class="ss_recommended_images">
                     <div class="images">
-                        <img src="images/Sa.png" alt="images"/>
+                        <img src="images/Sa.png" alt="images" />
                     </div>
                     <div class="des">
                         <div class="verticle_middle">
@@ -801,7 +763,7 @@ include('header.php');
             <div class="col-lg-3">
                 <div class="ss_recommended_images">
                     <div class="images">
-                        <img src="images/Sb.png" alt="images"/>
+                        <img src="images/Sb.png" alt="images" />
                     </div>
                     <div class="des">
                         <div class="verticle_middle">
@@ -814,7 +776,7 @@ include('header.php');
             <div class="col-lg-3">
                 <div class="ss_recommended_images">
                     <div class="images">
-                        <img src="images/Sc.png" alt="images"/>
+                        <img src="images/Sc.png" alt="images" />
                     </div>
                     <div class="des">
                         <div class="verticle_middle">
@@ -827,7 +789,7 @@ include('header.php');
             <div class="col-lg-3">
                 <div class="ss_recommended_images">
                     <div class="images">
-                        <img src="images/Sd.png" alt="images"/>
+                        <img src="images/Sd.png" alt="images" />
                     </div>
                     <div class="des">
                         <div class="verticle_middle">
@@ -844,24 +806,25 @@ include('header.php');
 include('footer.php');
 ?>
 <script>
-    $('#planet_logo').owlCarousel({
-        loop: false,
-        margin: 10,
-        dots: false,
-        nav: true,
-        navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
-        responsive: {
-            0: {
-                items: 2
-            },
-            600: {
-                items: 3
-            },
-            1000: {
-                items: 6
-            }
+$('#planet_logo').owlCarousel({
+    loop: false,
+    margin: 10,
+    dots: false,
+    nav: true,
+    navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+    responsive: {
+        0: {
+            items: 2
+        },
+        600: {
+            items: 3
+        },
+        1000: {
+            items: 6
         }
-    });
+    }
+});
 </script>
 </body>
+
 </html>

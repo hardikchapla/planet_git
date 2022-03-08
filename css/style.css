@@ -8673,10 +8673,6 @@ form .error {
     border-radius: 50px;
 }
 
-.ss_store_item_slider{
-    padding: 30px 0 0 0;
-}
-
 #ss_stor_item_slider .owl-prev {
     position: absolute;
     top: -90px;
@@ -8782,4 +8778,16 @@ form .error {
 
 .ss_video_play_button_sesson:hover {
     color: #ffffff;
+}
+.home-slider #ss_stor_item_slider .owl-next{
+    top:0;
+}
+.home-slider #ss_stor_item_slider .owl-prev{
+    top:0;
+}
+.home-slider .ss_product .images img{
+    height: 500px;
+}
+.home_store_logo img{
+    width: 100%;
 }

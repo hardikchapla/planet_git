@@ -876,6 +876,12 @@
     .ss_store_item {
         padding-top: 50px;
     }
+    .home-slider #ss_stor_item_slider .owl-next{
+        top:50px;
+    }
+    .home-slider #ss_stor_item_slider .owl-prev{
+        top:50px;
+    }
     .ss_slider_contents_ab h2 {
         font-size: 24px;
         padding: 10px 0;
@@ -1631,6 +1637,12 @@
     .ss_store_item {
         padding-top: 50px;
     }
+    .home-slider #ss_stor_item_slider .owl-next{
+        top:50px;
+    }
+    .home-slider #ss_stor_item_slider .owl-prev{
+        top:50px;
+    }
     .ss_slider_contents_ab h2 {
         font-size: 24px;
         padding: 10px 0;
@@ -2092,6 +2104,12 @@
     }
     .ss_store_item {
         padding-top: 50px;
+    }
+    .home-slider #ss_stor_item_slider .owl-next{
+        top:50px;
+    }
+    .home-slider #ss_stor_item_slider .owl-prev{
+        top:50px;
     }
     .ss_slider_contents_ab h2 {
         font-size: 24px;
