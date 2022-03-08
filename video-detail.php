@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="css/media_query.css" type="text/css">
     <title> Video detail </title>
 </head>
-<div class="ss_padding_live_events">
+<div class="container-fluid ss_padding_live_events">
     <div class="">
         <div class="row">
             <div class="col-lg-12 ss_mobile_padd_0">
