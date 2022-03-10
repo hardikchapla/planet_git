@@ -31,6 +31,7 @@
 <script src="assets/js/product_brand.js"></script>
 <script src="assets/js/product_size.js"></script>
 <script src="assets/js/product_list.js"></script>
+<script src="assets/js/order_list.js"></script>
 <script src="app-assets/vendors/js/forms/select/select2.full.min.js"></script>
 <script src="app-assets/js/scripts/forms/select/form-select2.min.js"></script>
 

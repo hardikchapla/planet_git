@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 20, 2022 at 11:48 AM
+-- Generation Time: Mar 10, 2022 at 05:27 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.4.23
 
@@ -498,13 +498,13 @@ CREATE TABLE `phtv_product` (
 --
 
 INSERT INTO `phtv_product` (`id`, `product_brand_id`, `product_category_id`, `name`, `description`, `price`, `coin_price`, `stock`, `additional_info`, `avg_rating`, `coin`, `is_preorder`, `offer_price`, `created_at`, `updated_at`) VALUES
-(5, 2, 5, 'ASIAN Men\'s Bouncer-01 Sports Latest Stylish Casual Sneakers', '<p>For this special capsule, Common Ace co-founders and sneaker connoisseurs Sophia Chang and Romy Samuel curated a selection of women’s, men’s, and unisex sneakers from the Complex SHOP.</p>', '39.99', 30, 10, '<p>For this special capsule, Common Ace co-founders and sneaker connoisseurs Sophia Chang and Romy Samuel curated a selection of women’s, men’s, and unisex sneakers from the Complex SHOP.</p>', NULL, NULL, 0, NULL, '2022-02-09 21:18:33', '2022-02-18 22:47:52'),
+(5, 2, 5, 'ASIAN Men\'s Bouncer-01 Sports Latest Stylish Casual Sneakers', '<p>For this special capsule, Common Ace co-founders and sneaker connoisseurs Sophia Chang and Romy Samuel curated a selection of women’s, men’s, and unisex sneakers from the Complex SHOP.</p>', '39.99', 30, 8, '<p>For this special capsule, Common Ace co-founders and sneaker connoisseurs Sophia Chang and Romy Samuel curated a selection of women’s, men’s, and unisex sneakers from the Complex SHOP.</p>', NULL, NULL, 0, NULL, '2022-02-09 21:18:33', '2022-03-08 22:20:39'),
 (6, 5, 5, 'ASIAN Men\'s Bouncer-01 Sports Latest Stylish Casual Sneakers', '<p>For this special capsule, Common Ace co-founders and sneaker connoisseurs Sophia Chang and Romy Samuel curated a selection of women’s, men’s, and unisex sneakers from the Complex SHOP.</p>', '39.99', 39, 10, '<p>For this special capsule, Common Ace co-founders and sneaker connoisseurs Sophia Chang and Romy Samuel curated a selection of women’s, men’s, and unisex sneakers from the Complex SHOP.</p>', NULL, NULL, 0, NULL, '2022-02-09 21:22:29', '2022-02-09 21:58:59'),
 (7, 6, 5, 'ASIAN Men\'s Bouncer-01 Sports Latest Stylish Casual Sneakers', '<p>For this special capsule, Common Ace co-founders and sneaker connoisseurs Sophia Chang and Romy Samuel curated a selection of women’s, men’s, and unisex sneakers from the Complex SHOP.</p>', '39.99', 39, 10, '<p>For this special capsule, Common Ace co-founders and sneaker connoisseurs Sophia Chang and Romy Samuel curated a selection of women’s, men’s, and unisex sneakers from the Complex SHOP.</p>', NULL, NULL, 1, NULL, '2022-02-09 21:35:03', '2022-02-09 21:59:11'),
 (8, 1, 10, 'Cuffed Beanie Planet Hopper TV', '<p>For this special capsule, Common Ace co-founders and sneaker connoisseurs Sophia Chang and Romy Samuel curated a selection of women’s, men’s, and unisex sneakers from the Complex SHOP.</p>', '42.00', 42, 10, '<p>For this special capsule, Common Ace co-founders and sneaker connoisseurs Sophia Chang and Romy Samuel curated a selection of women’s, men’s, and unisex sneakers from the Complex SHOP.</p>', NULL, NULL, 0, NULL, '2022-02-09 21:56:32', '2022-02-09 21:59:33'),
 (9, 1, 10, 'Cuffed Beanie Planet Hopper TV', '<p>For this special capsule, Common Ace co-founders and sneaker connoisseurs Sophia Chang and Romy Samuel curated a selection of women’s, men’s, and unisex sneakers from the Complex SHOP.</p>', '59.99', 59, 10, '<p>For this special capsule, Common Ace co-founders and sneaker connoisseurs Sophia Chang and Romy Samuel curated a selection of women’s, men’s, and unisex sneakers from the Complex SHOP.</p>', NULL, NULL, 0, NULL, '2022-02-09 22:03:15', NULL),
 (10, 1, 10, 'Cuffed Beanie Planet Hopper TV', '<p>For this special capsule, Common Ace co-founders and sneaker connoisseurs Sophia Chang and Romy Samuel curated a selection of women’s, men’s, and unisex sneakers from the Complex SHOP.</p>', '69.99', 60, 5, '<p>For this special capsule, Common Ace co-founders and sneaker connoisseurs Sophia Chang and Romy Samuel curated a selection of women’s, men’s, and unisex sneakers from the Complex SHOP.</p>', NULL, NULL, 1, NULL, '2022-02-09 22:05:01', '2022-02-18 22:29:01'),
-(11, 1, 9, 'Cuffed Beanie Planet Hopper TV', '<p>Sed id interdum urna. Nam ac elit a ante commodo tristique. condimentum vehicula a hendrerit ac nisi. hendrerit ac nisi Lorem ipsum dolor sit amet Vestibulum imperdiet nibh vel magna lacinia ultrices. Sed id interdum urna. Nullam lacinia faucibus risus, a euismod lorem tincidunt id. Donec maximus placerat tempor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse faucibus sed dolor eget posuere.Sed id interdum urna. Nam ac elit a ante commodo tristique. Duis lacus urna, condimentum a vehicula a, hendrerit ac nisi Lorem ipsum dolor sit amet.</p><h4>SIZE &amp; FIT</h4><ul><li>Our Model wears a UK 8/ EU 36/ Us 4</li><li>Model is 170/ 5’7” Tall</li><li>Shoulder seam to hem measures appox 58”/ 147 cm in lenght</li></ul><p>Sed id interdum urna. Nam ac elit a ante commodo tristique. condimentum vehicula a hendrerit ac nisi. hendrerit ac nisi Lorem ipsum dolor sit amet Vestibulum imperdiet nibh vel magna lacinia ultrices. Sed id interdum urna.</p><p>Nullam lacinia faucibus risus, a euismod lorem tincidunt id. Donec maximus placerat tempor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse faucibus sed dolor eget posuere.Sed id interdum urna. Nam ac elit a ante commodo tristique. Duis lacus urna, condimentum a vehicula a, hendrerit ac nisi Lorem ipsum dolor sit amet.</p>', '79.99', 70, 10, '<p>Sed id interdum urna. Nam ac elit a ante commodo tristique. condimentum vehicula a hendrerit ac nisi. hendrerit ac nisi Lorem ipsum dolor sit amet Vestibulum imperdiet nibh vel magna lacinia ultrices. Sed id interdum urna. Nullam lacinia faucibus risus, a euismod lorem tincidunt id. Donec maximus placerat tempor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse faucibus sed dolor eget posuere.Sed id interdum urna. Nam ac elit a ante commodo tristique. Duis lacus urna, condimentum a vehicula a, hendrerit ac nisi Lorem ipsum dolor sit amet.</p>', '4.50', NULL, 1, NULL, '2022-02-09 22:06:36', '2022-02-18 22:28:10'),
+(11, 1, 9, 'Cuffed Beanie Planet Hopper TV', '<p>Sed id interdum urna. Nam ac elit a ante commodo tristique. condimentum vehicula a hendrerit ac nisi. hendrerit ac nisi Lorem ipsum dolor sit amet Vestibulum imperdiet nibh vel magna lacinia ultrices. Sed id interdum urna. Nullam lacinia faucibus risus, a euismod lorem tincidunt id. Donec maximus placerat tempor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse faucibus sed dolor eget posuere.Sed id interdum urna. Nam ac elit a ante commodo tristique. Duis lacus urna, condimentum a vehicula a, hendrerit ac nisi Lorem ipsum dolor sit amet.</p><h4>SIZE &amp; FIT</h4><ul><li>Our Model wears a UK 8/ EU 36/ Us 4</li><li>Model is 170/ 5’7” Tall</li><li>Shoulder seam to hem measures appox 58”/ 147 cm in lenght</li></ul><p>Sed id interdum urna. Nam ac elit a ante commodo tristique. condimentum vehicula a hendrerit ac nisi. hendrerit ac nisi Lorem ipsum dolor sit amet Vestibulum imperdiet nibh vel magna lacinia ultrices. Sed id interdum urna.</p><p>Nullam lacinia faucibus risus, a euismod lorem tincidunt id. Donec maximus placerat tempor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse faucibus sed dolor eget posuere.Sed id interdum urna. Nam ac elit a ante commodo tristique. Duis lacus urna, condimentum a vehicula a, hendrerit ac nisi Lorem ipsum dolor sit amet.</p>', '79.99', 70, 8, '<p>Sed id interdum urna. Nam ac elit a ante commodo tristique. condimentum vehicula a hendrerit ac nisi. hendrerit ac nisi Lorem ipsum dolor sit amet Vestibulum imperdiet nibh vel magna lacinia ultrices. Sed id interdum urna. Nullam lacinia faucibus risus, a euismod lorem tincidunt id. Donec maximus placerat tempor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse faucibus sed dolor eget posuere.Sed id interdum urna. Nam ac elit a ante commodo tristique. Duis lacus urna, condimentum a vehicula a, hendrerit ac nisi Lorem ipsum dolor sit amet.</p>', '4.50', NULL, 1, NULL, '2022-02-09 22:06:36', '2022-03-08 22:20:38'),
 (12, 1, 10, 'Cuffed Beanie Planet Hopper TV', '<p>For this special capsule, Common Ace co-founders and sneaker connoisseurs Sophia Chang and Romy Samuel curated a selection of women’s, men’s, and unisex sneakers from the Complex SHOP.</p>', '79.99', 79, 5, '<p>For this special capsule, Common Ace co-founders and sneaker connoisseurs Sophia Chang and Romy Samuel curated a selection of women’s, men’s, and unisex sneakers from the Complex SHOP.</p>', NULL, NULL, 0, NULL, '2022-02-09 22:08:43', NULL),
 (13, 1, 10, 'Cuffed Beanie Planet Hopper TV', '<p>For this special capsule, Common Ace co-founders and sneaker connoisseurs Sophia Chang and Romy Samuel curated a selection of women’s, men’s, and unisex sneakers from the Complex SHOP.</p>', '99.99', 99, 5, '<p>For this special capsule, Common Ace co-founders and sneaker connoisseurs Sophia Chang and Romy Samuel curated a selection of women’s, men’s, and unisex sneakers from the Complex SHOP.</p>', NULL, NULL, 0, NULL, '2022-02-09 22:11:10', NULL),
 (14, 5, 10, 'Cuffed Beanie Planet Hopper TV', '<p>For this special capsule, Common Ace co-founders and sneaker connoisseurs Sophia Chang and Romy Samuel curated a selection of women’s, men’s, and unisex sneakers from the Complex SHOP.</p>', '59.99', 59, 5, '<p>For this special capsule, Common Ace co-founders and sneaker connoisseurs Sophia Chang and Romy Samuel curated a selection of women’s, men’s, and unisex sneakers from the Complex SHOP.</p>', NULL, NULL, 0, NULL, '2022-02-09 22:13:02', NULL),
@@ -569,11 +569,7 @@ INSERT INTO `phtv_product_cart` (`id`, `product_id`, `user_id`, `system_user_id`
 (4, 5, 10, NULL, 1, 11, 2, '39.99', '30.00', '79.98', '60.00', '0.00', '2022-02-16 23:47:06', '2022-02-18 22:51:57'),
 (5, 6, 10, NULL, 2, 14, 2, '39.99', '39.00', '79.98', '78.00', '0.00', '2022-02-16 23:47:34', '2022-02-18 23:09:35'),
 (6, 11, 10, NULL, 1, 1, 1, '79.99', '70.00', '79.99', '70.00', '0.00', '2022-02-19 17:36:06', '2022-02-20 15:34:08'),
-(7, 9, 10, NULL, 1, 2, 1, '59.99', '59.00', '59.99', '59.00', '0.00', '2022-02-19 17:36:15', NULL),
-(9, 11, 13, NULL, 5, 3, 3, '79.99', '70.00', '239.97', '210.00', '0.00', '2022-02-20 15:36:44', '2022-02-20 16:01:46'),
-(10, 12, 13, NULL, 2, 1, 3, '79.99', '79.00', '239.97', '237.00', '0.00', '2022-02-20 15:38:53', '2022-02-20 16:01:46'),
-(11, 5, 13, NULL, 1, 11, 3, '39.99', '30.00', '119.97', '90.00', '0.00', '2022-02-20 15:39:00', '2022-02-20 16:01:46'),
-(12, 6, 13, NULL, 2, 12, 3, '39.99', '39.00', '119.97', '117.00', '0.00', '2022-02-20 15:39:09', '2022-02-20 16:01:46');
+(7, 9, 10, NULL, 1, 2, 1, '59.99', '59.00', '59.99', '59.00', '0.00', '2022-02-19 17:36:15', NULL);
 
 -- --------------------------------------------------------
 
@@ -696,8 +692,6 @@ CREATE TABLE `phtv_product_multi_color` (
 --
 
 INSERT INTO `phtv_product_multi_color` (`id`, `product_id`, `color_id`, `created_at`, `updated_at`) VALUES
-(41, 5, 1, '2022-02-09 21:58:46', NULL),
-(42, 5, 4, '2022-02-09 21:58:46', NULL),
 (43, 6, 1, '2022-02-09 21:58:59', NULL),
 (44, 6, 2, '2022-02-09 21:58:59', NULL),
 (45, 7, 1, '2022-02-09 21:59:11', NULL),
@@ -715,7 +709,9 @@ INSERT INTO `phtv_product_multi_color` (`id`, `product_id`, `color_id`, `created
 (73, 11, 2, '2022-02-12 23:20:11', NULL),
 (74, 11, 4, '2022-02-12 23:20:11', NULL),
 (75, 11, 5, '2022-02-12 23:20:11', NULL),
-(76, 11, 6, '2022-02-12 23:20:11', NULL);
+(76, 11, 6, '2022-02-12 23:20:11', NULL),
+(79, 5, 1, '2022-02-22 21:08:58', NULL),
+(80, 5, 4, '2022-02-22 21:08:58', NULL);
 
 -- --------------------------------------------------------
 
@@ -736,15 +732,6 @@ CREATE TABLE `phtv_product_multi_size` (
 --
 
 INSERT INTO `phtv_product_multi_size` (`id`, `product_id`, `size_id`, `created_at`, `updated_at`) VALUES
-(79, 5, 11, '2022-02-09 21:58:46', NULL),
-(80, 5, 12, '2022-02-09 21:58:46', NULL),
-(81, 5, 13, '2022-02-09 21:58:46', NULL),
-(82, 5, 14, '2022-02-09 21:58:46', NULL),
-(83, 5, 15, '2022-02-09 21:58:46', NULL),
-(84, 5, 16, '2022-02-09 21:58:46', NULL),
-(85, 5, 17, '2022-02-09 21:58:46', NULL),
-(86, 5, 18, '2022-02-09 21:58:46', NULL),
-(87, 5, 19, '2022-02-09 21:58:46', NULL),
 (88, 6, 11, '2022-02-09 21:58:59', NULL),
 (89, 6, 12, '2022-02-09 21:58:59', NULL),
 (90, 6, 14, '2022-02-09 21:58:59', NULL),
@@ -788,7 +775,16 @@ INSERT INTO `phtv_product_multi_size` (`id`, `product_id`, `size_id`, `created_a
 (148, 11, 2, '2022-02-12 23:20:11', NULL),
 (149, 11, 3, '2022-02-12 23:20:11', NULL),
 (150, 11, 4, '2022-02-12 23:20:11', NULL),
-(151, 11, 5, '2022-02-12 23:20:11', NULL);
+(151, 11, 5, '2022-02-12 23:20:11', NULL),
+(161, 5, 11, '2022-02-22 21:08:58', NULL),
+(162, 5, 12, '2022-02-22 21:08:58', NULL),
+(163, 5, 13, '2022-02-22 21:08:58', NULL),
+(164, 5, 14, '2022-02-22 21:08:58', NULL),
+(165, 5, 15, '2022-02-22 21:08:58', NULL),
+(166, 5, 16, '2022-02-22 21:08:58', NULL),
+(167, 5, 17, '2022-02-22 21:08:58', NULL),
+(168, 5, 18, '2022-02-22 21:08:58', NULL),
+(169, 5, 19, '2022-02-22 21:08:58', NULL);
 
 -- --------------------------------------------------------
 
@@ -818,6 +814,26 @@ CREATE TABLE `phtv_product_order` (
   `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `phtv_product_order`
+--
+
+INSERT INTO `phtv_product_order` (`id`, `invoice_no`, `user_id`, `full_name`, `email`, `mobile`, `address`, `city`, `zip`, `state`, `payment_type`, `transaction_id`, `total_amount`, `total_product`, `total_used_coin`, `final_amount`, `status`, `created_at`, `updated_at`) VALUES
+(3, '6RU66218TX1930616', 13, 'Marcia Fields', 'john.dao@yopmail.com', NULL, '1515, Hunters Creek Dr', 'Inglewood', 43001, 'OH', 'PayPal', '2PM55797T6212763H', '584.00', 11, 56, '639.89', 0, '2022-03-03 23:06:52', NULL),
+(4, '1WN377079M726933S', 13, 'Marcia Fields', 'john.dao@yopmail.com', NULL, '1515, Hunters Creek Dr', 'Inglewood', 43001, 'OH', 'PayPal', '4LS250755D147045N', '584.00', 11, 56, '639.89', 0, '2022-03-04 22:08:18', NULL),
+(5, '99F4491646338060X', 13, 'Marcia Fields', 'john.dao@yopmail.com', NULL, '1515, Hunters Creek Dr', 'Inglewood', 43001, 'OH', 'PayPal', '3EN26476YV9031517', '584.00', 11, 56, '639.89', 0, '2022-03-04 22:11:02', NULL),
+(6, '4MS593721E5463417', 13, 'Marcia Fields', 'john.dao@yopmail.com', NULL, '1515, Hunters Creek Dr', 'Inglewood', 43001, 'OH', 'PayPal', '3LR22671T9841260B', '199.97', 3, 56, '255.86', 0, '2022-03-05 20:48:18', NULL),
+(7, '5UL77421D0322345N', 13, 'Marcia Fields', 'john.dao@yopmail.com', NULL, '1515, Hunters Creek Dr', 'Inglewood', 43001, 'OH', 'PayPal', '4DR9959807798434L', '763.00', 14, 56, '818.89', 0, '2022-03-05 21:19:26', NULL),
+(8, '202203070456049129', 13, 'Marcia Fields', 'john.dao@yopmail.com', NULL, '1515, Hunters Creek Dr', 'Inglewood', 43001, 'Ohio', 'Stripe', 'txn_3KajqpHxLeXMwQtE0Qx8Tdp7', '454.00', 0, 26, '479.92', 0, '2022-03-07 22:26:04', NULL),
+(9, '202203070507493464', 13, 'Marcia Fields', 'john.dao@yopmail.com', NULL, '1515, Hunters Creek Dr', 'Inglewood', 43001, 'Ohio', 'Stripe', 'txn_3Kak2DHxLeXMwQtE0ewdzYOs', '0.00', 0, 0, '0.00', 0, '2022-03-07 22:37:49', NULL),
+(10, '202203070512471638', 13, 'Marcia Fields', 'john.dao@yopmail.com', NULL, '1515, Hunters Creek Dr', 'Inglewood', 43001, 'Ohio', 'Stripe', 'txn_3Kak70HxLeXMwQtE0uPki6zw', '60.00', 2, 20, '79.98', 0, '2022-03-07 22:42:47', NULL),
+(11, '202203070515532980', 13, 'Marcia Fields', 'john.dao@yopmail.com', NULL, '1515, Hunters Creek Dr', 'Inglewood', 43001, 'Ohio', 'Stripe', 'txn_3KakA0HxLeXMwQtE1rSBP8pi', '200.00', 3, 30, '229.97', 0, '2022-03-07 22:45:53', NULL),
+(12, '202203070518178121', 13, 'Marcia Fields', 'sanghanichirag1412@gmail.com', NULL, '1515, Hunters Creek Dr', 'Inglewood', 43001, 'Ohio', 'Stripe', 'txn_3KakCKHxLeXMwQtE0XgcSgGQ', '129.00', 3, 21, '149.97', 0, '2022-03-07 22:48:17', NULL),
+(13, '202203080359333909', 13, 'Marcia Fields', 'john.dao@yopmail.com', NULL, '1515, Hunters Creek Dr', 'Inglewood', 43001, 'Ohio', 'Stripe', 'txn_3Kb5RgHxLeXMwQtE1lAhRw4q', '100.00', 2, 20, '119.98', 0, '2022-03-08 21:29:33', NULL),
+(14, '202203080421465889', 13, 'Marcia Fields', 'john.dao@yopmail.com', NULL, '1515, Hunters Creek Dr', 'Inglewood', 43001, 'Ohio', 'Stripe', 'txn_3Kb5nAHxLeXMwQtE1bIGvwib', '100.00', 2, 20, '119.98', 0, '2022-03-08 21:51:46', NULL),
+(15, '202203080447449030', 13, 'Marcia Fields', 'john.dao@yopmail.com', NULL, '1515, Hunters Creek Dr', 'Inglewood', 43001, 'Ohio', 'Stripe', 'txn_3Kb6CJHxLeXMwQtE1xqLLdOF', '170.00', 3, 30, '199.97', 0, '2022-03-08 22:17:44', NULL),
+(16, '202203080450381247', 13, 'Marcia Fields', 'john.dao@yopmail.com', NULL, '1515, Hunters Creek Dr', 'Inglewood', 43001, 'Ohio', 'Stripe', 'txn_3Kb6F7HxLeXMwQtE1WYChiwh', '200.00', 4, 40, '239.96', 0, '2022-03-08 22:20:38', NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -836,6 +852,50 @@ CREATE TABLE `phtv_product_order_items` (
   `created_at` datetime NOT NULL DEFAULT current_timestamp(),
   `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `phtv_product_order_items`
+--
+
+INSERT INTO `phtv_product_order_items` (`id`, `order_id`, `product_id`, `amount`, `qty`, `total_amount`, `couns_used`, `is_preorder`, `created_at`, `updated_at`) VALUES
+(1, 3, 11, '70.00', 2, '140.00', 20, 1, '2022-03-03 23:06:52', NULL),
+(2, 3, 12, '79.00', 3, '237.00', 3, 0, '2022-03-03 23:06:52', NULL),
+(3, 3, 5, '30.00', 3, '90.00', 30, 0, '2022-03-03 23:06:52', NULL),
+(4, 3, 6, '39.00', 3, '117.00', 3, 0, '2022-03-03 23:06:52', NULL),
+(5, 4, 11, '70.00', 2, '140.00', 20, 1, '2022-03-04 22:08:18', NULL),
+(6, 4, 12, '79.00', 3, '237.00', 3, 0, '2022-03-04 22:08:19', NULL),
+(7, 4, 5, '30.00', 3, '90.00', 30, 0, '2022-03-04 22:08:19', NULL),
+(8, 4, 6, '39.00', 3, '117.00', 3, 0, '2022-03-04 22:08:19', NULL),
+(9, 5, 11, '70.00', 2, '140.00', 20, 1, '2022-03-04 22:11:02', NULL),
+(10, 5, 12, '79.00', 3, '237.00', 3, 0, '2022-03-04 22:11:02', NULL),
+(11, 5, 5, '30.00', 3, '90.00', 30, 0, '2022-03-04 22:11:02', NULL),
+(12, 5, 6, '39.00', 3, '117.00', 3, 0, '2022-03-04 22:11:02', NULL),
+(13, 6, 11, '70.00', 2, '140.00', 20, 1, '2022-03-05 20:48:18', NULL),
+(14, 6, 12, '79.00', 3, '237.00', 3, 0, '2022-03-05 20:48:18', NULL),
+(15, 6, 5, '30.00', 3, '90.00', 30, 0, '2022-03-05 20:48:18', NULL),
+(16, 6, 6, '39.00', 3, '117.00', 3, 0, '2022-03-05 20:48:18', NULL),
+(17, 7, 11, '70.00', 2, '140.00', 20, 1, '2022-03-05 21:19:27', NULL),
+(18, 7, 12, '79.00', 3, '237.00', 3, 0, '2022-03-05 21:19:27', NULL),
+(19, 7, 5, '30.00', 3, '90.00', 30, 0, '2022-03-05 21:19:27', NULL),
+(20, 7, 6, '39.00', 3, '117.00', 3, 0, '2022-03-05 21:19:27', NULL),
+(21, 8, 11, '70.00', 1, '70.00', 10, 1, '2022-03-07 22:26:04', NULL),
+(22, 8, 12, '79.00', 3, '237.00', 3, 0, '2022-03-07 22:26:04', NULL),
+(23, 8, 5, '30.00', 1, '30.00', 10, 0, '2022-03-07 22:26:04', NULL),
+(24, 8, 6, '39.00', 3, '117.00', 3, 0, '2022-03-07 22:26:04', NULL),
+(25, 10, 5, '30.00', 2, '60.00', 20, 0, '2022-03-07 22:42:47', NULL),
+(26, 11, 11, '70.00', 2, '140.00', 20, 1, '2022-03-07 22:45:53', NULL),
+(27, 11, 10, '60.00', 1, '60.00', 10, 1, '2022-03-07 22:45:53', NULL),
+(28, 12, 10, '60.00', 1, '60.00', 10, 1, '2022-03-07 22:48:17', NULL),
+(29, 12, 5, '30.00', 1, '30.00', 10, 0, '2022-03-07 22:48:17', NULL),
+(30, 12, 6, '39.00', 1, '39.00', 1, 0, '2022-03-07 22:48:17', NULL),
+(31, 13, 5, '30.00', 1, '30.00', 10, 0, '2022-03-08 21:29:34', NULL),
+(32, 13, 11, '70.00', 1, '70.00', 10, 1, '2022-03-08 21:29:34', NULL),
+(33, 14, 11, '70.00', 1, '70.00', 10, 1, '2022-03-08 21:51:46', NULL),
+(34, 14, 5, '30.00', 1, '30.00', 10, 0, '2022-03-08 21:51:46', NULL),
+(35, 15, 5, '30.00', 1, '30.00', 10, 0, '2022-03-08 22:17:44', NULL),
+(36, 15, 11, '70.00', 2, '140.00', 20, 1, '2022-03-08 22:17:44', NULL),
+(37, 16, 11, '70.00', 2, '140.00', 20, 1, '2022-03-08 22:20:38', NULL),
+(38, 16, 5, '30.00', 2, '60.00', 20, 0, '2022-03-08 22:20:38', NULL);
 
 -- --------------------------------------------------------
 
@@ -1007,7 +1067,7 @@ CREATE TABLE `phtv_users` (
 
 INSERT INTO `phtv_users` (`id`, `full_name`, `email`, `mobile`, `image`, `password`, `coin_balance`, `is_active`, `is_verified`, `created_at`, `updated_at`) VALUES
 (10, 'Herry Terry', 'herry.terry@yopmail.com', '9874563211', '80039rbkckelxiyag63zowcbj.webp', 'e10adc3949ba59abbe56e057f20f883e', 55, 1, 1, '2022-01-30 20:24:47', '2022-02-18 22:54:18'),
-(13, 'John Dao', 'john.dao@yopmail.com', '7418529630', '142311profilesA.jpg', 'e10adc3949ba59abbe56e057f20f883e', 100, 1, 1, '2022-02-06 13:20:04', '2022-02-20 16:01:38');
+(13, 'John Dao', 'john.dao@yopmail.com', '7418529630', '142311profilesA.jpg', 'e10adc3949ba59abbe56e057f20f883e', 513, 1, 1, '2022-02-06 13:20:04', '2022-03-08 22:20:39');
 
 -- --------------------------------------------------------
 
@@ -1585,7 +1645,7 @@ ALTER TABLE `phtv_product_brand`
 -- AUTO_INCREMENT for table `phtv_product_cart`
 --
 ALTER TABLE `phtv_product_cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `phtv_product_category`
@@ -1609,31 +1669,31 @@ ALTER TABLE `phtv_product_hot_deals`
 -- AUTO_INCREMENT for table `phtv_product_images`
 --
 ALTER TABLE `phtv_product_images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `phtv_product_multi_color`
 --
 ALTER TABLE `phtv_product_multi_color`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
 
 --
 -- AUTO_INCREMENT for table `phtv_product_multi_size`
 --
 ALTER TABLE `phtv_product_multi_size`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=152;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=170;
 
 --
 -- AUTO_INCREMENT for table `phtv_product_order`
 --
 ALTER TABLE `phtv_product_order`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `phtv_product_order_items`
 --
 ALTER TABLE `phtv_product_order_items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT for table `phtv_product_order_payment`
