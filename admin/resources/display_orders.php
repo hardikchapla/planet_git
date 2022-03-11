@@ -12,11 +12,11 @@ foreach ($result as $row) {
     $sub_array[] = $row["invoice_no"];
     $sub_array[] = $row["full_name"];
     $sub_array[] = $row["email"];
-    $sub_array[] = $row["mobile"];
-    $sub_array[] = $row["address"];
+    // $sub_array[] = $row["mobile"];
+    // $sub_array[] = $row["address"];
     $sub_array[] = $row["payment_type"];
     $sub_array[] = $row["total_amount"];
-    $sub_array[] = $row["total_used_coin"];
+    // $sub_array[] = $row["total_used_coin"];
     $sub_array[] = $row["final_amount"];
     $aa = '<select name="order_status" class="form-control order_status" id="'.$row['id'].'">';
     if($row['status'] == 0){
@@ -46,7 +46,8 @@ foreach ($result as $row) {
     }
     $aa .= '</select>';
     $sub_array[] = $aa;
-    $sub_array[] = '<button class="btn btn-primary fa fa-pencil view_order_details" data-toggle="modal" data-target="#view_order_details" type="button" id="'.$row['id'].'"></button>';
+    $eqURLID = base64_encode($row['id']);
+    $sub_array[] = '<a href="order-invoice?id='.$eqURLID.'" class="btn btn-success fa fa-eye view_order_details" type="button" id="'.$row['id'].'"></a>';
     $data[] = $sub_array;
     $i++;
 }

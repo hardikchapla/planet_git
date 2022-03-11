@@ -38,11 +38,11 @@ include('header.php');
                                                 <th>Invoice No</th>
                                                 <th>Full name</th>
                                                 <th>Email</th>
-                                                <th>Mobile</th>
-                                                <th>Address</th>
+                                                <!-- <th>Mobile</th> -->
+                                                <!-- <th>Address</th> -->
                                                 <th>Payment Type</th>
                                                 <th>Total Amount</th>
-                                                <th>Total used coin</th>
+                                                <!-- <th>Total used coin</th> -->
                                                 <th>Final amount</th>
                                                 <th>Status</th>
                                                 <th>View</th>
@@ -54,11 +54,11 @@ include('header.php');
                                                 <th>Invoice No</th>
                                                 <th>Full name</th>
                                                 <th>Email</th>
-                                                <th>Mobile</th>
-                                                <th>Address</th>
+                                                <!-- <th>Mobile</th> -->
+                                                <!-- <th>Address</th> -->
                                                 <th>Payment Type</th>
                                                 <th>Total Amount</th>
-                                                <th>Total used coin</th>
+                                                <!-- <th>Total used coin</th> -->
                                                 <th>Final amount</th>
                                                 <th>Status</th>
                                                 <th>View</th>
@@ -76,28 +76,6 @@ include('header.php');
     </div>
 </div>
 <!-- END: Content-->
-<div class="modal fade text-left" id="view_order_details" tabindex="-1" role="dialog" aria-labelledby="myModalLabel33"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="product_category_title">Order Details</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <i class="bx bx-x"></i>
-                </button>
-            </div>
-            <div class="modal-body">
-
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-light-secondary" data-dismiss="modal">
-                    <i class="bx bx-x d-block d-sm-none"></i>
-                    <span class="d-none d-sm-block">Close</span>
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
 <?php
 include('footer.php');
 ?>

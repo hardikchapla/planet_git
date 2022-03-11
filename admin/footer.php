@@ -39,7 +39,7 @@
 <script src="app-assets/vendors/js/extensions/swiper.min.js"></script>
 <script src="app-assets/vendors/js/extensions/sweetalert2.all.min.js"></script>
 <!-- END: Page Vendor JS-->
-
+<script src="app-assets/js/scripts/pages/app-invoice.min.js"></script>
 </body>
 <!-- END: Body-->
 
