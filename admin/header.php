@@ -245,7 +245,7 @@
                 <li class="nav-item <?php if($cur_page == 'orders') {echo 'active';} ?>">
                     <a href="orders">
                         <i class="fa fa-first-order" aria-hidden="true"></i>
-                        <span class="menu-title text-truncate" data-i18n="bxs-dashboard">orders</span>
+                        <span class="menu-title text-truncate" data-i18n="bxs-dashboard">Orders</span>
                     </a>
                 </li>
             </ul>

@@ -17,7 +17,7 @@ $order_item = $db->query("SELECT a.*,b.name  FROM phtv_product_order_items a, ph
             <section class="invoice-view-wrapper">
                 <div class="row">
                     <!-- invoice view page -->
-                    <div class="col-xl-9 col-md-8 col-12">
+                    <div class="col-xl-12 col-md-12 col-12">
                         <div class="card invoice-print-area">
                             <div class="card-body pb-0 mx-25">
                                 <!-- header section -->
@@ -38,7 +38,7 @@ $order_item = $db->query("SELECT a.*,b.name  FROM phtv_product_order_items a, ph
                                 <!-- logo and title -->
                                 <div class="row my-2 my-sm-3">
                                     <div class="col-sm-12 col-12 text-center order-2 order-sm-1">
-                                        <h4 class="text-primary">Invoice</h4>
+                                        <h4 class="text-primary">Order Details</h4>
                                     </div>
                                 </div>
                                 <hr>
@@ -83,6 +83,7 @@ $order_item = $db->query("SELECT a.*,b.name  FROM phtv_product_order_items a, ph
                                 <table class="table table-borderless mb-0">
                                     <thead>
                                         <tr class="border-0">
+                                            <th scope="col">Image</th>
                                             <th scope="col">Product</th>
                                             <th scope="col">Price</th>
                                             <th scope="col">Qty</th>
@@ -92,8 +93,14 @@ $order_item = $db->query("SELECT a.*,b.name  FROM phtv_product_order_items a, ph
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php while ($feitems = $order_item->fetch(PDO::FETCH_ASSOC)) { ?>
+                                        <?php while ($feitems = $order_item->fetch(PDO::FETCH_ASSOC)) { 
+                                            $product_id = $feitems['product_id'];
+                                            $image = $db->query("SELECT * FROM phtv_product_images WHERE product_id = '$product_id' LIMIT 0,1");  
+                                            $feimage = $image->fetch(PDO::FETCH_ASSOC);  
+                                        ?>
                                         <tr>
+                                            <td><img style="border-radius: 40px" width="40" height="40"
+                                                    src="<?= IMGURL.'product/'.$feimage['image'] ?>"></td>
                                             <td><?= $feitems['name'] ?></td>
                                             <td><?= $feitems['amount'] ?></td>
                                             <td><?= $feitems['qty'] ?></td>
@@ -136,19 +143,6 @@ $order_item = $db->query("SELECT a.*,b.name  FROM phtv_product_order_items a, ph
 
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- invoice action  -->
-                    <div class="col-xl-3 col-md-4 col-12">
-                        <div class="card invoice-action-wrapper shadow-none border">
-                            <div class="card-body">
-                                <div class="invoice-action-btn">
-                                    <button class="btn btn-light-primary btn-block invoice-print">
-                                        <i class='bx bx-printer'></i>
-                                        <span>Print</span>
-                                    </button>
                                 </div>
                             </div>
                         </div>
