@@ -252,6 +252,66 @@ include('header.php');
                     </div>
                 </div>
             </div>
+            <div class="col-lg-6">
+                <div class="featured_blogs">
+                    <div class="images ss_cinematics_images">
+                        <img src="images/cinematicsA.jpg" alt="FeaturedA">
+                        <div class="ss_cinematics_des">
+                            <h2> HIST<span>O</span>RY </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="featured_blogs">
+                    <div class="images ss_cinematics_images ss_cinematics_imagesB ">
+                        <img src="images/cinematicsB.jpg" alt="FeaturedA">
+                        <div class="ss_cinematics_des">
+                            <h2>100+</h2>
+                            <h2> Modern </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="featured_blogs">
+                    <div class="images ss_cinematics_images">
+                        <img src="images/cinematicsA.jpg" alt="FeaturedA">
+                        <div class="ss_cinematics_des">
+                            <h2> HIST<span>O</span>RY </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="featured_blogs">
+                    <div class="images ss_cinematics_images ss_cinematics_imagesB ">
+                        <img src="images/cinematicsB.jpg" alt="FeaturedA">
+                        <div class="ss_cinematics_des">
+                            <h2>100+</h2>
+                            <h2> Modern </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid ss_featured">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="d-flex bd-highlight ss_main_title">
+                    <div class="p-2  bd-highlight align-self-center">
+                        <h1><a href="podcasts"> Audiocasts </a></h1>
+                    </div>
+                    <div class="p-2  bd-highlight align-self-center">
+                        <div class="ss_main_title_img">
+                            <img src="images/h1title.png" alt="title">
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="col-lg-3">
                 <div class="featured_blogs">
                     <div class="images">
@@ -312,45 +372,6 @@ include('header.php');
                                     <h2> Begining To See The Light </h2>
                                 </a>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="container-fluid ss_featured">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="d-flex bd-highlight ss_main_title">
-                    <div class="p-2  bd-highlight align-self-center">
-                        <h1><a href="podcasts"> Audiocasts </a></h1>
-                    </div>
-                    <div class="p-2  bd-highlight align-self-center">
-                        <div class="ss_main_title_img">
-                            <img src="images/h1title.png" alt="title">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="featured_blogs">
-                    <div class="images ss_cinematics_images">
-                        <img src="images/cinematicsA.jpg" alt="FeaturedA">
-                        <div class="ss_cinematics_des">
-                            <h2> HIST<span>O</span>RY </h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="featured_blogs">
-                    <div class="images ss_cinematics_images ss_cinematics_imagesB ">
-                        <img src="images/cinematicsB.jpg" alt="FeaturedA">
-                        <div class="ss_cinematics_des">
-                            <h2>100+</h2>
-                            <h2> Modern </h2>
                         </div>
                     </div>
                 </div>
