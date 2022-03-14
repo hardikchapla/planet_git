@@ -47,7 +47,7 @@ foreach ($result as $row) {
     $aa .= '</select>';
     $sub_array[] = $aa;
     $eqURLID = base64_encode($row['id']);
-    $sub_array[] = '<a href="order-invoice?id='.$eqURLID.'" class="text-white btn btn-success fa fa-file view_order_details" type="button" id="'.$row['id'].'"></a><a href="order-details?id='.$eqURLID.'" class="text-white btn btn-success fa fa-eye" type="button" id="'.$row['id'].'"></a>';
+    $sub_array[] = '<div style="display: flex;"><a href="order-invoice?id='.$eqURLID.'" style="padding: 10px;" class="text-white btn btn-success fa fa-file view_order_details" type="button" id="'.$row['id'].'"></a>&nbsp;<a href="order-details?id='.$eqURLID.'" style="padding: 10px;" class="text-white btn btn-success fa fa-eye" type="button" id="'.$row['id'].'"></a></div>';
     $data[] = $sub_array;
     $i++;
 }

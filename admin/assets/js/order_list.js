@@ -7,7 +7,20 @@ function hideLoading() {
 }
 
 $(document).ready(function() {
-    var dataTable = $('#orderslist').DataTable({
+    var orderslist = $("#orderslist").DataTable({
+        dom: "Bfrtip",
+        buttons: [
+            { extend: "copyHtml5", exportOptions: { columns: [0, ":visible"] } },
+            { extend: "pdfHtml5", exportOptions: { columns: ":visible" } },
+            {
+                text: "JSON",
+                action: function(a, o, t, r) {
+                    var e = o.buttons.exportData();
+                    $.fn.dataTable.fileSave(new Blob([JSON.stringify(e)]), "Export.json");
+                },
+            },
+            { extend: "print", exportOptions: { columns: ":visible" } },
+        ],
         "ajax": {
             url: "resources/display_orders",
             type: "POST"
@@ -24,7 +37,6 @@ $(document).ready(function() {
             })
             .done(function(response) {
                 if (response.success == 'success') {
-                    $('#orderslist').DataTable().ajax.reload();
                     toastr.success(response.message).delay(1000).fadeOut(1000);
                 } else {
                     toastr.warning(output.message).delay(1000).fadeOut(1000);
@@ -33,20 +45,5 @@ $(document).ready(function() {
             .fail(function() {
                 swal('Oops...', 'Something went wrong with ajax !', 'error');
             });
-
     });
-    // $(document).on('click', '.view_order_details', function() {
-    //     var order_id = $(this).attr("id");
-    //     $.ajax({
-    //         url: "resources/get_order_details",
-    //         method: "POST",
-    //         data: {
-    //             order_id: order_id
-    //         },
-    //         dataType: "json",
-    //         success: function(data) {
-
-    //         }
-    //     })
-    // });
 });
