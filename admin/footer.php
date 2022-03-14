@@ -39,6 +39,19 @@
 <script src="app-assets/vendors/js/extensions/swiper.min.js"></script>
 <script src="app-assets/vendors/js/extensions/sweetalert2.all.min.js"></script>
 <!-- END: Page Vendor JS-->
+<!-- BEGIN: Page Vendor JS-->
+<script src="app-assets/vendors/js/tables/datatable/jquery.dataTables.min.js"></script>
+<script src="app-assets/vendors/js/tables/datatable/dataTables.bootstrap4.min.js"></script>
+<script src="app-assets/vendors/js/tables/datatable/dataTables.buttons.min.js"></script>
+<script src="app-assets/vendors/js/tables/datatable/buttons.html5.min.js"></script>
+<script src="app-assets/vendors/js/tables/datatable/buttons.print.min.js"></script>
+<script src="app-assets/vendors/js/tables/datatable/buttons.bootstrap4.min.js"></script>
+<script src="app-assets/vendors/js/tables/datatable/pdfmake.min.js"></script>
+<script src="app-assets/vendors/js/tables/datatable/vfs_fonts.js"></script>
+<!-- END: Page Vendor JS-->
+<!-- BEGIN: Page JS-->
+<script src="app-assets/js/scripts/datatables/datatable.min.js"></script>
+<!-- END: Page JS-->
 <script src="app-assets/js/scripts/pages/app-invoice.min.js"></script>
 </body>
 <!-- END: Body-->
