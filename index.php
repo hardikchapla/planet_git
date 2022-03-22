@@ -7,7 +7,7 @@ include('header.php');
             <div class="col-lg-9 text-center">
                 <div class="ss_main_slider" style='background-image: url("images/images_bg.jpg")'>
                     <div class="ss_slider_contents_ab">
-                        <h2>Michael jordan, Virgil Abloh. Time to change. Virtual Product, etc. Time 100</h2>
+                        <h2>Michael jordan, Virgil Abloh, Time to change. etc Time 10, 200,300.Planet Hopper TV 2023 and beyond</h2>
                     </div>
                 </div>
             </div>

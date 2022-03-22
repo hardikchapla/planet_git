@@ -1,13 +1,12 @@
 <?php
-    include('inc/connection/connection.php');
-    include('inc/helper/constant.php');
-    ob_start();
-    session_start();
-    include('page-title.php');
+include('inc/connection/connection.php');
+include('inc/helper/constant.php');
+ob_start();
+session_start();
+include('page-title.php');
 ?>
 <!doctype html>
 <html lang="en">
-
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -15,11 +14,11 @@
     <link rel="icon" type="image/x-icon" href="<?= FAVICON ?>">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="slider-plugin/owl.carousel.css" type="text/css" />
-    <link rel="stylesheet" href="slider-plugin/owl.theme.default.css" type="text/css" />
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="slider-plugin/owl.carousel.css" type="text/css"/>
+    <link rel="stylesheet" href="slider-plugin/owl.theme.default.css" type="text/css"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-        type="text/css" />
+          type="text/css"/>
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="css/toastr.css" type="text/css">
     <link rel="stylesheet" href="css/media_query.css" type="text/css">
@@ -40,7 +39,7 @@
                             <div class="p-2 flex-fill bd-highlight">
                                 <div class="d-flex bd-highlight ss_volume ">
                                     <div class=" bd-highlight ss_volume_icons align-self-center"><a href="#"><i
-                                                class="fa fa-volume-up" aria-hidden="true"></i></a></div>
+                                                    class="fa fa-volume-up" aria-hidden="true"></i></a></div>
                                     <div class=" bd-highlight align-self-center">
                                         <div class="rSlider ss_rslider">
                                             <span class="Vslide"></span>
@@ -63,54 +62,7 @@
                     </div>
                 </div>
             </div>
-            <div class="ss_video_des ss_button_right pt-5">
 
-                <div class="d-flex bd-highlight ss_mobiles_block">
-                    <div class="p-2 flex-fill bd-highlight align-self-center">
-                        <div class="model_title_images_store">
-                            <img src="images/cosmic_comedy.png" alt="images">
-                        </div>
-                    </div>
-                    <div class="p-2 flex-fill bd-highlight align-self-center">
-                        <div class="modal_des">
-                            <div class="match">
-                                <h5><span>2020</span></h5>
-                                <h6>16+</h6>
-                                <h5><span>2 Seasons</span></h5>
-                            </div>
-                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-                                praesentium
-                                voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
-                                occaecati cupiditate non provident Years after they rose to fame as young
-                                crime-fighting superheroes, the estranged Hargreeves sibling .com together to
-                                make their father’s death </p>
-                        </div>
-                    </div>
-
-                    <div class="p-2 flex-fill bd-highlight align-self-center">
-
-                        <div class="tool_epi mb-4 mt-0">
-                            <div class="epi_t_box">
-                                <div class="epi_tool_box">
-                                    <a href="#"> <img src="images/StashS_2x.png" alt="">
-                                    </a>
-                                </div>
-                                <a href="#">
-                                </a>
-                                <div class="epi_tool_box"><a href="#">
-                                    </a><a href="#"><img class="img-fluid" src="images/like.png"></a>
-                                </div>
-                                <div class="epi_tool_box">
-                                    <a href="#"><img class="img-fluid" src="images/dislike.png"></a>
-                                </div>
-                                <div class="epi_tool_box">
-                                    <a href="#"><i class="fa fa-volume-up" aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </div>
@@ -435,10 +387,10 @@
 </div> -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
 </script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
 </script>
 <script src="slider-plugin/owl.carousel.js"></script>
 <script src="js/jquery.validate.min.js"></script>
@@ -446,34 +398,33 @@
 <script src="js/toastr.min.js"></script>
 <script src="js/custom.js"></script>
 <script>
-function myFunction(x) {
-    x.classList.toggle("change");
-}
+    function myFunction(x) {
+        x.classList.toggle("change");
+    }
 </script>
 <script>
-$(window).on("load", function() {
-    var range = $("#range").attr("value");
-    $("#demo")(range);
-    $(".slide").css("width", "50%");
-    $(document).on('input change', '#range', function() {
-        $('#demo')($(this).val());
-        var slideWidth = $(this).val() * 100 / 50000;
-        $(".slide").css("width", slideWidth + "%");
+    $(window).on("load", function () {
+        var range = $("#range").attr("value");
+        $("#demo")(range);
+        $(".slide").css("width", "50%");
+        $(document).on('input change', '#range', function () {
+            $('#demo')($(this).val());
+            var slideWidth = $(this).val() * 100 / 50000;
+            $(".slide").css("width", slideWidth + "%");
+        });
     });
-});
 </script>
 <script>
-$(window).on("load", function() {
-    var range = $("#volume").attr("value");
-    $("#demo")(range);
-    $(".Vslide").css("width", "50%");
-    $(document).on('input change', '#volume', function() {
-        $('#demo')($(this).val());
-        var slideWidth = $(this).val() * 100 / 50000;
-        $(".Vslide").css("width", slideWidth + "%");
+    $(window).on("load", function () {
+        var range = $("#volume").attr("value");
+        $("#demo")(range);
+        $(".Vslide").css("width", "50%");
+        $(document).on('input change', '#volume', function () {
+            $('#demo')($(this).val());
+            var slideWidth = $(this).val() * 100 / 50000;
+            $(".Vslide").css("width", slideWidth + "%");
+        });
     });
-});
 </script>
 </body>
-
 </html>
