@@ -89,6 +89,9 @@
     data-menu="vertical-menu-modern" data-col="2-columns">
     <!-- BEGIN: Header-->
     <div class="header-navbar-shadow"></div>
+    <div class="page-loader" id="page-loader">
+        <img id='loading' src='../images/loader.gif'>
+    </div>
     <nav class="header-navbar main-header-navbar navbar-expand-lg navbar navbar-with-menu fixed-top ">
         <div class="navbar-wrapper">
             <div class="navbar-container content">
