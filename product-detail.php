@@ -562,7 +562,7 @@ $(document).ready(function() {
         var product_size_id = $('input[name="switch-one"]:checked').val();
         var product_quentity = $('#product_quentity').val();
         var product_avail = "<?= $feproduct['stock'] ?>";
-        if (product_avail > product_quentity) {
+        if (product_quentity > product_avail) {
             toastr.warning("Available stock is " + product_avail).delay(1000).fadeOut(1000);
         } else {
             $.ajax({
@@ -583,6 +583,7 @@ $(document).ready(function() {
                         toastr.warning(data.message).delay(1000).fadeOut(1000);
                     } else {
                         if (data.success == 'success') {
+                            $("#lblCartCount").html(data.cart_count);
                             toastr.success(data.message).delay(1000).fadeOut(1000);
                         } else {
                             toastr.warning(data.message).delay(1000).fadeOut(1000);

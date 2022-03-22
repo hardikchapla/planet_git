@@ -63,6 +63,24 @@
                                 <a href="#"> <img src="images/instagram.svg" alt="youtube"> </a>
                                 <a href="#"> <img src="images/soundcloud.svg" alt="youtube"> </a>
                                 <a href="#"> <img src="images/tik-tok.svg" alt="youtube"> </a>
+                                <a href="shopping-cart" class="text-white"><i class="fa fa-shopping-cart"></i></a>
+                                <span class='badge badge-info' id='lblCartCount'>
+                                    <?php  
+                                        $cart_items = 0;
+                                        if(!empty($_SESSION['userid'])){
+                                            $user_id = $_SESSION['userid'];
+                                            $cart = $db->query("SELECT * FROM phtv_product_cart WHERE user_id = '$user_id'");
+                                            $cart_items = $cart->rowCount();
+                                        } else {
+                                            if(isset($_SESSION['system_user_id']) && !empty($_SESSION['system_user_id'])){
+                                                $system_user_id = $_SESSION['system_user_id'];
+                                                $cart = $db->query("SELECT * FROM phtv_product_cart WHERE system_user_id = '$system_user_id'");
+                                                $cart_items = $cart->rowCount();
+                                            }
+                                        }
+                                        echo $cart_items;
+                                    ?>
+                                </span>
                             </div>
                         </div>
                         <!--                    <div class="p-2 bd-highlight ">-->

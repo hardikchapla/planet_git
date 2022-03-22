@@ -25,8 +25,21 @@
                 $total_coin_amount = $product_coin_price * $product_quentity;
                 $update = $db->query("UPDATE phtv_product_cart SET qty = '$product_quentity', coin_amount = '$product_coin_price', amount = '$product_price', total_amount = '$total_amount', total_coin_amount = '$total_coin_amount' WHERE id = '$cart_id'");
                 if($update){
+                    $cart_items = 0;
+                    if(!empty($_SESSION['userid'])){
+                        $user_id = $_SESSION['userid'];
+                        $cart = $db->query("SELECT * FROM phtv_product_cart WHERE user_id = '$user_id'");
+                        $cart_items = $cart->rowCount();
+                    } else {
+                        if(isset($_SESSION['system_user_id']) && !empty($_SESSION['system_user_id'])){
+                            $system_user_id = $_SESSION['system_user_id'];
+                            $cart = $db->query("SELECT * FROM phtv_product_cart WHERE system_user_id = '$system_user_id'");
+                            $cart_items = $cart->rowCount();
+                        }
+                    }
                     $success['success'] = "success";
                     $success['message'] = "Cart updated successfully";
+                    $success['cart_count'] = $cart_items;
                 } else {
                     $success['success'] = "fail";
                     $success['message'] = "Cart not updated. please try again later";
@@ -45,8 +58,21 @@
                 $total_coin_amount = $product_coin_price * $product_quentity;
                 $update = $db->query("INSERT INTO phtv_product_cart SET product_id = '$product_id', system_user_id = '$system_user_id', color_id = '$product_color_id', size_id = '$product_size_id', qty = '$product_quentity', coin_amount = '$product_coin_price', amount = '$product_price', total_amount = '$total_amount', total_coin_amount = '$total_coin_amount'");
                 if($update){
+                    $cart_items = 0;
+                    if(!empty($_SESSION['userid'])){
+                        $user_id = $_SESSION['userid'];
+                        $cart = $db->query("SELECT * FROM phtv_product_cart WHERE user_id = '$user_id'");
+                        $cart_items = $cart->rowCount();
+                    } else {
+                        if(isset($_SESSION['system_user_id']) && !empty($_SESSION['system_user_id'])){
+                            $system_user_id = $_SESSION['system_user_id'];
+                            $cart = $db->query("SELECT * FROM phtv_product_cart WHERE system_user_id = '$system_user_id'");
+                            $cart_items = $cart->rowCount();
+                        }
+                    }
                     $success['success'] = "success";
                     $success['message'] = "Add to cart successfully";
+                    $success['cart_count'] = $cart_items;
                 } else {
                     $success['success'] = "fail";
                     $success['message'] = "Add to cart not successfully. please try again later";
@@ -75,8 +101,21 @@
                 $total_coin_amount = $product_coin_price * $product_quentity;
                 $update = $db->query("UPDATE phtv_product_cart SET qty = '$product_quentity', coin_amount = '$product_coin_price', amount = '$product_price', total_amount = '$total_amount', total_coin_amount = '$total_coin_amount' WHERE id = '$cart_id'");
                 if($update){
+                    $cart_items = 0;
+                    if(!empty($_SESSION['userid'])){
+                        $user_id = $_SESSION['userid'];
+                        $cart = $db->query("SELECT * FROM phtv_product_cart WHERE user_id = '$user_id'");
+                        $cart_items = $cart->rowCount();
+                    } else {
+                        if(isset($_SESSION['system_user_id']) && !empty($_SESSION['system_user_id'])){
+                            $system_user_id = $_SESSION['system_user_id'];
+                            $cart = $db->query("SELECT * FROM phtv_product_cart WHERE system_user_id = '$system_user_id'");
+                            $cart_items = $cart->rowCount();
+                        }
+                    }
                     $success['success'] = "success";
                     $success['message'] = "Cart updated successfully";
+                    $success['cart_count'] = $cart_items;
                 } else {
                     $success['success'] = "fail";
                     $success['message'] = "Cart not updated. please try again later";
@@ -95,8 +134,21 @@
                 $total_coin_amount = $product_coin_price * $product_quentity;
                 $update = $db->query("INSERT INTO phtv_product_cart SET product_id = '$product_id', user_id = '$user_id', color_id = '$product_color_id', size_id = '$product_size_id', qty = '$product_quentity', coin_amount = '$product_coin_price', amount = '$product_price', total_amount = '$total_amount', total_coin_amount = '$total_coin_amount'");
                 if($update){
+                    $cart_items = 0;
+                    if(!empty($_SESSION['userid'])){
+                        $user_id = $_SESSION['userid'];
+                        $cart = $db->query("SELECT * FROM phtv_product_cart WHERE user_id = '$user_id'");
+                        $cart_items = $cart->rowCount();
+                    } else {
+                        if(isset($_SESSION['system_user_id']) && !empty($_SESSION['system_user_id'])){
+                            $system_user_id = $_SESSION['system_user_id'];
+                            $cart = $db->query("SELECT * FROM phtv_product_cart WHERE system_user_id = '$system_user_id'");
+                            $cart_items = $cart->rowCount();
+                        }
+                    }
                     $success['success'] = "success";
                     $success['message'] = "Add to cart successfully";
+                    $success['cart_count'] = $cart_items;
                 } else {
                     $success['success'] = "fail";
                     $success['message'] = "Add to cart not successfully. please try again later";
