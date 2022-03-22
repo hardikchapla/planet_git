@@ -20,34 +20,20 @@ foreach ($result as $row) {
     $sub_array[] = $row["final_amount"];
     $aa = '<select name="order_status" class="form-control order_status" id="'.$row['id'].'">';
     if($row['status'] == 0){
-        $aa .= '<option selected value="0">Panding</option>';
+        $aa .= '<option selected value="0">Panding</option><option value="1">Confirm</option><option value="2">Shipped</option><option value="3">Delivered</option><option value="4">Completed</option>';
+    } elseif ($row['status'] == 1) {
+        $aa .= '<option selected value="1">Confirm</option><option value="2">Shipped</option><option value="3">Delivered</option><option value="4">Completed</option>';
+    } elseif ($row['status'] == 2) {
+        $aa .= '<option selected value="2">Shipped</option><option value="3">Delivered</option><option value="4">Completed</option>';
+    } elseif ($row['status'] == 3) {
+        $aa .= '<option selected value="3">Delivered</option><option value="4">Completed</option>';
     } else {
-        $aa .= '<option value="0">Panding</option>';
-    }
-    if($row['status'] == 1){
-        $aa .= '<option selected value="1">Confirm</option>';
-    } else {
-        $aa .= '<option value="1">Confirm</option>';
-    }
-    if($row['status'] == 2){
-        $aa .= '<option selected value="2">Shipped</option>';
-    } else {
-        $aa .= '<option value="2">Shipped</option>';
-    }
-    if($row['status'] == 3){
-        $aa .= '<option selected value="3">Delivered</option>';
-    } else {
-        $aa .= '<option value="3">Delivered</option>';
-    }
-    if($row['status'] == 4){
         $aa .= '<option selected value="4">Completed</option>';
-    } else {
-        $aa .= '<option value="4">Completed</option>';
     }
     $aa .= '</select>';
     $sub_array[] = $aa;
     $eqURLID = base64_encode($row['id']);
-    $sub_array[] = '<div style="display: flex;"><a href="order-invoice?id='.$eqURLID.'" style="padding: 10px;" class="text-white btn btn-success fa fa-file view_order_details" type="button" id="'.$row['id'].'"></a>&nbsp;<a href="order-details?id='.$eqURLID.'" style="padding: 10px;" class="text-white btn btn-success fa fa-eye" type="button" id="'.$row['id'].'"></a></div>';
+    $sub_array[] = '<div style="display: flex;"><a href="order-invoice?id='.$eqURLID.'" style="padding: 10px;" class="text-white btn btn-success fa fa-file view_order_details" type="button" id="'.$row['id'].'"></a>&nbsp;<a href="order-details?id='.$eqURLID.'" style="padding: 10px;" class="text-white btn btn-info fa fa-eye" type="button" id="'.$row['id'].'"></a></div>';
     $data[] = $sub_array;
     $i++;
 }
