@@ -8,7 +8,7 @@
             <div class="carousel-inner">
 
                 <div class="carousel-item active">
-                    <img class="d-block img-fluid" src="images/slider_img.jpg" alt="">
+                    <img class="d-block img-fluid ss_slider_images_planet" src="images/slider_img.jpg" alt="">
                     <div class="carousel-caption d-md-block ss_bottom_snbjkb ">
                         <div class="container">
                             <div class="row">
@@ -48,7 +48,7 @@
 
 
 
-
+<section class="ss_section_paddibg">
 <div class="album_box">
     <div class="container">
         <div class="row">
@@ -3360,6 +3360,8 @@
         </div>
     </div>
 </div>
+</section>
+
 
 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
     aria-hidden="true">
