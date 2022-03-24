@@ -138,7 +138,7 @@ include('header.php');
     </div>
 </div>
 </div>
-<div class="container-fluid ss_featured">
+<div class="container-fluid ss_featured ss_slider_bottom_section_padd">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">

@@ -3487,9 +3487,9 @@ a:hover {
     padding: 20px 0;
 }
 
-.ss_video_des {
-    padding-bottom: 40px;
-}
+/*.ss_video_des {*/
+/*    padding-bottom: 40px;*/
+/*}*/
 
 .profiles_images {
     height: 65px;
@@ -8630,7 +8630,7 @@ form .error {
 }
 
 .ss_main_slider_index {
-    padding: 40px 0;
+    padding: 40px 0 0 0;
 }
 
 .ss_slider_contents_ab {
@@ -8649,7 +8649,7 @@ form .error {
     font-weight: 800;
     text-align: center;
     width: 100%;
-    padding: 20px 30px;
+    padding: 20px 30px 0 30px;
     line-height: 70px!important;
 
 }
@@ -8658,7 +8658,7 @@ form .error {
     font-size: 30px;
     position: absolute;
     left: 0;
-    bottom: 150px;
+    bottom: 50px;
 }
 
 .login_register a {
@@ -8874,3 +8874,10 @@ form .error {
     height: 20px;
 }
 
+.ss_slider_bottom_section_padd{
+    margin-top: -80px;
+}
+
+.ss_padding_lives_model_padd{
+    padding: 50px 0;
+}

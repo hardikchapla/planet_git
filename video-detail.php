@@ -96,7 +96,7 @@ include('page-title.php');
             <div class="modal-body">
 
 
-                <div class="ss_video_des ss_button_right pt-5">
+                <div class="ss_video_des ss_button_right ss_padding_lives_model_padd ">
                     <div class="d-flex bd-highlight ss_mobiles_block">
                         <div class="p-2 flex-fill bd-highlight align-self-center">
                             <div class="model_title_images_store">
