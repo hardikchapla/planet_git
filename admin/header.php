@@ -43,6 +43,9 @@
     if($cur_page == 'blog_category'){
         $titleName = 'Blog Category';
     }
+    if($cur_page == 'blogs'){
+        $titleName = 'Blogs';
+    }
    
     $admin = $db->query("SELECT * FROM phtv_admin WHERE id = 1");
     $feadmin = $admin->fetch();
@@ -275,6 +278,12 @@
                             <a class="d-flex align-items-center" href="blog_category">
                                 <i class="bx bx-right-arrow-alt"></i>
                                 <span class="menu-item text-truncate" data-i18n="1 column">Blog Category</span>
+                            </a>
+                        </li>
+                        <li class="<?php if($cur_page == 'blogs') {echo 'active';} ?>">
+                            <a class="d-flex align-items-center" href="blogs">
+                                <i class="bx bx-right-arrow-alt"></i>
+                                <span class="menu-item text-truncate" data-i18n="1 column">Blogs</span>
                             </a>
                         </li>
                     </ul>

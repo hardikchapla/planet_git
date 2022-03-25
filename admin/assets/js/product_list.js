@@ -21,24 +21,26 @@ ClassicEditor
     .catch(error => {
         console.error(error);
     });
+
 function showLoading() {
     document.getElementById("page-loader").style = "visibility: visible";
 }
+
 function hideLoading() {
     document.getElementById("page-loader").style = "visibility: hidden";
 }
 
-$(document).ready(function () {
+$(document).ready(function() {
     var dataTable = $('#productlist').DataTable({
         "ajax": {
             url: "resources/display_product",
             type: "POST"
         }
     });
-    $(document).on('click', '.closeproduct', function () {
+    $(document).on('click', '.closeproduct', function() {
         window.location.href = 'product_list';
     });
-    $(document).on('click', '.updateProduct', function () {
+    $(document).on('click', '.updateProduct', function() {
         var product_id = $(this).attr("id");
         $.ajax({
             url: "resources/update_product",
@@ -47,7 +49,7 @@ $(document).ready(function () {
                 product_id: product_id
             },
             dataType: "json",
-            success: function (data) {
+            success: function(data) {
                 $('#addProductForm')[0].reset();
                 $("#productPreOrder").removeAttr('checked');
                 $('#productName').val(data.name);
@@ -66,7 +68,7 @@ $(document).ready(function () {
                 appEditor.setData(data.description);
                 appEditor1.setData(data.additional_info);
                 $('#editImages').html('');
-                $.each(data.images, function (key, value) {
+                $.each(data.images, function(key, value) {
                     $('#editImages').append('<span id="removeImage' + value.id + '" class="pip"><img class="imageThumb" src="../images/product/' + value.image + '" title="undefined"><br><span class="remove removeimage" id="' + value.id + '">Remove image</span></span>');
                 });
                 $('#product_id').val(product_id);
@@ -75,15 +77,15 @@ $(document).ready(function () {
             }
         })
     });
-    $(document).on('click', '.removeimage', function (e) {
+    $(document).on('click', '.removeimage', function(e) {
         var product_image_id = $(this).attr("id");
         $.ajax({
-            url: 'resources/delete_product_image',
-            type: 'POST',
-            data: 'product_image_id=' + product_image_id,
-            dataType: 'json'
-        })
-            .done(function (response) {
+                url: 'resources/delete_product_image',
+                type: 'POST',
+                data: 'product_image_id=' + product_image_id,
+                dataType: 'json'
+            })
+            .done(function(response) {
                 if (response.success == 'success') {
                     $('#removeImage' + product_image_id).remove();
                     toastr.success(response.message).delay(1000).fadeOut(1000);
@@ -91,12 +93,12 @@ $(document).ready(function () {
                     toastr.warning(output.message).delay(1000).fadeOut(1000);
                 }
             })
-            .fail(function () {
+            .fail(function() {
                 swal('Oops...', 'Something went wrong with ajax !', 'error');
             });
 
     });
-    $(document).on('click', '.deleteProduct', function (e) {
+    $(document).on('click', '.deleteProduct', function(e) {
         var product_id = $(this).attr("id");
         e.preventDefault();
         Swal.fire({
@@ -110,21 +112,21 @@ $(document).ready(function () {
         }).then((result) => {
             if (result.isConfirmed) {
                 $.ajax({
-                    url: 'resources/delete_product',
-                    type: 'POST',
-                    data: 'product_id=' + product_id,
-                    dataType: 'json'
-                })
-                    .done(function (response) {
+                        url: 'resources/delete_product',
+                        type: 'POST',
+                        data: 'product_id=' + product_id,
+                        dataType: 'json'
+                    })
+                    .done(function(response) {
                         if (response.success == 'success') {
-                            toastr.options.onHidden = function () { window.location.href = 'product_list'; }
+                            toastr.options.onHidden = function() { window.location.href = 'product_list'; }
                             toastr.success(response.message).delay(1000).fadeOut(1000);
                         } else {
                             toastr.warning(output.message).delay(1000).fadeOut(1000);
                         }
 
                     })
-                    .fail(function () {
+                    .fail(function() {
                         swal('Oops...', 'Something went wrong with ajax !', 'error');
                     });
             }
@@ -193,7 +195,7 @@ $(document).ready(function () {
             "selectColor[]": "Please select color",
             "selectSize[]": "Please select size"
         },
-        submitHandler: function (form) {
+        submitHandler: function(form) {
             var formdata = new FormData(document.getElementById('addProductForm'));
             // var product_images = $('#files').get(0).files[0];
             // formdata.append('product_image', product_images);
@@ -203,16 +205,16 @@ $(document).ready(function () {
                 data: formdata,
                 contentType: false,
                 processData: false,
-                success: function (output) {
+                success: function(output) {
                     output = jQuery.parseJSON(output);
                     if (output.success == 'success') {
-                        toastr.options.onHidden = function () { window.location.href = 'product_list'; }
+                        toastr.options.onHidden = function() { window.location.href = 'product_list'; }
                         toastr.success(output.message).delay(1000).fadeOut(1000);
                     } else {
                         toastr.warning(output.message).delay(1000).fadeOut(1000);
                     }
                 },
-                error: function () {
+                error: function() {
                     toastr.warning('Something went wrong with ajax !').delay(1000).fadeOut(1000);
                 }
             });
