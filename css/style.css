@@ -8881,3 +8881,53 @@ form .error {
 .ss_padding_lives_model_padd{
     padding: 50px 0;
 }
+
+
+.ss_social_media_mobiles a {
+    height: 35px;
+    width: 35px;
+    background: rgba(255, 255, 255, 0.2);
+    display: inline-block;
+    border-radius: 30px;
+    text-align: center;
+    line-height: 35px;
+    margin: 3px 0;
+    position: relative;
+}
+
+.ss_social_media_mobiles a img {
+    width: 13px;
+}
+
+.ss_social_media_mobiles .badge{
+    position: absolute;
+    top: -0px;
+    right: -3px;
+    height: 10px;
+    display: inline-block;
+    width: 10px;
+    font-size: 6px;
+    line-height: 10px;
+    padding: 0;
+    text-align: center;
+
+}
+
+.ss_social_media_mobiles{
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.ss_profiles_images_mobilesA {
+    height: 35px;
+    width: 35px;
+    border-radius: 45px;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    line-height: 35px;
+}
+
+.ss_profiles_images_mobilesA i {
+   color: #0099ff;
+    font-size: 14px;
+}
