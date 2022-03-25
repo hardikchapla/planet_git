@@ -968,9 +968,6 @@
   .ss_padding_lives_model_padd {
     padding: 20px 0;
   }
-  .ss_live_video {
-    padding: 0 0;
-  }
 }
 @media (min-width: 480px) and (max-width: 767px) {
   .ss_height100vh {
@@ -2248,9 +2245,6 @@
   .ss_slider_contents_ab {
     min-height: auto;
     padding: 50px 15px 30px 15px;
-  }
-  .ss_live_video {
-    padding: 0 0;
   }
 }
 @media (min-width: 1025px) and (max-width: 1170px) {
