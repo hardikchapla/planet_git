@@ -643,7 +643,7 @@
     padding: 20px 15px;
   }
   .ss_profile_imges {
-    margin: 0 auto;
+    margin: 0 0;
   }
   .ss_navbar_profiles_boxs h5 {
     font-size: 18px;
@@ -1008,6 +1008,24 @@
     overflow: hidden;
     background: #090909;
     margin-top: 30px;
+  }
+  .ss_order_tables {
+    width: 100%;
+    display: inline-block!important;
+  }
+
+  .ss_order_tables {
+    overflow: hidden;
+    min-width: auto;
+  }
+
+  .ss_winth_controll {
+    width: 100%;
+  }
+
+  .ss_subtotal p {
+    font-size: 12px;
+    margin-bottom: 5px;
   }
 
 }

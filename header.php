@@ -210,15 +210,12 @@ include('page-title.php');
                         <a href="#"> <img src="images/soundcloud.svg" alt="youtube"> </a>
                         <a href="#"> <img src="images/tik-tok.svg" alt="youtube"> </a>
                         <a href="shopping-cart" class="text-white"><i class="fa fa-shopping-cart"></i>
-
                             <span class="badge badge-info" id="lblCartCount">
                                     0                                </span>
                         </a>
                         <a href="#" class="ss_profiles_images_mobilesA">
                             <i class="fa fa-user" aria-hidden="true"></i>
                         </a>
-
-
                     </div>
 
                     <ul class="sidebarMenuInner">
