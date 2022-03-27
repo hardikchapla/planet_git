@@ -2690,6 +2690,7 @@ a:hover {
   position: relative;
   overflow: hidden;
   border-radius: 5px;
+  height: 100vh !important;
 }
 .ss_live_video .video_images img {
   width: 100%;
@@ -6658,9 +6659,9 @@ a:hover {
     height: 70px;
     width: 83px;
   }
-  .ss_live_video {
+  /* .ss_live_video {
     padding: 20px 0;
-  }
+  } */
   .ss_profile_des h4 {
     font-size: 14px;
   }

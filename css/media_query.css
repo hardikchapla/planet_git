@@ -954,9 +954,9 @@
     padding: 150px 15px 150px 15px;
   }
 
-  /* .ss_live_video .video_images {
+  .ss_live_video .video_images {
     height: 100vh !important;
-  } */
+  }
 
   .rSlider input[type="range"] {
     position: relative;
@@ -972,9 +972,9 @@
     position: relative;
     margin-bottom: 0px;
   }
-  .ss_live_video {
+  /* .ss_live_video {
     padding: 0 0 20px 0;
-  }
+  } */
   .ss_live_video .video_images .ss_back_arrow img {
     height: 20px;
     width: auto;
