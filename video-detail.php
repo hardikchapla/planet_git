@@ -35,7 +35,7 @@ include('page-title.php');
                     type="video/mp4" />
 
             </video>
-            <!-- <div class="ss_video_player">
+            <div class="ss_video_player">
 
                 <div class="d-flex bd-highlight justify-content-center">
 
@@ -47,7 +47,7 @@ include('page-title.php');
                     </div>
 
                 </div>
-            </div> -->
+            </div>
 
             <div class="ss_video_back_info">
 
