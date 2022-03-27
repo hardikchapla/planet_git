@@ -18,6 +18,7 @@
 		$sub_array[] = $i;
 		$sub_array[] = $image;
 		$sub_array[] = $row["title"];
+		$sub_array[] = $row["sub_title"];
 		$sub_array[] = $row["description"];
 		$sub_array[] = $row["name"];
 		$sub_array[] = $row["category_name"];

@@ -42,6 +42,7 @@
                                                 <th>No.</th>
                                                 <th>Image</th>
                                                 <th>Title</th>
+                                                <th>Subtitle</th>
                                                 <th>Description</th>
                                                 <th>Auther</th>
                                                 <th>Category</th>
@@ -54,6 +55,7 @@
                                                 <th>No.</th>
                                                 <th>Image</th>
                                                 <th>Title</th>
+                                                <th>Subtitle</th>
                                                 <th>Description</th>
                                                 <th>Auther</th>
                                                 <th>Category</th>
@@ -102,6 +104,15 @@
                             <div class="form-group mb-0">
                                 <input type="text" name="blog_title" id="blog_title" placeholder="Enter blog title"
                                     class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-1">
+                        <div class="col">
+                            <label>Blog Subtitle: </label>
+                            <div class="form-group mb-0">
+                                <input type="text" name="blog_sub_title" id="blog_sub_title"
+                                    placeholder="Enter blog subtitle" class="form-control">
                             </div>
                         </div>
                     </div>

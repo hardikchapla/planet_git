@@ -26,30 +26,34 @@ $(document).ready(function() {
             type: "POST"
         }
     });
-    $(document).on('click', '.updateBlogAuther', function() {
-        var blog_auther_id = $(this).attr("id");
+    $(document).on('click', '.updateBlog', function() {
+        var blog_id = $(this).attr("id");
         $.ajax({
-            url: "resources/update_blog_auther",
+            url: "resources/update_blog",
             method: "POST",
             data: {
-                blog_auther_id: blog_auther_id
+                blog_id: blog_id
             },
             dataType: "json",
             success: function(data) {
-                $('#old_blog_auther_image').val(data.blog_auther_image);
-                $('#blog_auther_name').val(data.blog_auther_name);
-                $('#blog_auther_id').val(blog_auther_id);
+                $('#old_blog_image').val(data.blog_image);
+                $('#blog_title').val(data.blog_title);
+                $('#blog_description').val(data.blog_description);
+                blog_description.setData(data.blog_description);
+                $('#selectCategory').select2("val", data.category_id);
+                $('#selectAuter').select2("val", data.auther_id);
+                $('#blog_id').val(blog_id);
                 $('#action').val("Edit");
-                $('#blog_auther_form_title').html("Update Blog Auther");
+                $('#blog_form_title').html("Update Blog");
             }
         })
     });
-    $(document).on('click', '.deleteBlogAuther', function(e) {
-        var blog_auther_id = $(this).attr("id");
+    $(document).on('click', '.deleteBlog', function(e) {
+        var blog_id = $(this).attr("id");
         e.preventDefault();
         Swal.fire({
             title: 'Are you sure?',
-            text: 'You will not be able to recover this blog auther!',
+            text: 'You will not be able to recover this blog!',
             type: "warning",
             showCancelButton: true,
             confirmButtonClass: 'btn-danger',
@@ -58,14 +62,14 @@ $(document).ready(function() {
         }).then((result) => {
             if (result.isConfirmed) {
                 $.ajax({
-                        url: 'resources/delete_blog_auther',
+                        url: 'resources/delete_blog',
                         type: 'POST',
-                        data: 'blog_auther_id=' + blog_auther_id,
+                        data: 'blog_id=' + blog_id,
                         dataType: 'json'
                     })
                     .done(function(response) {
                         if (response.success == 'success') {
-                            toastr.options.onHidden = function() { window.location.href = 'blog_auther'; }
+                            toastr.options.onHidden = function() { window.location.href = 'blogs'; }
                             toastr.success(response.message).delay(1000).fadeOut(1000);
                         } else {
                             toastr.warning(output.message).delay(1000).fadeOut(1000);
@@ -78,23 +82,43 @@ $(document).ready(function() {
             }
         });
     });
-    $("#updateBlogAutherForm").validate({
+    $("#updateBlogForm").validate({
         rules: {
-            blog_auther_name: {
+            blog_title: {
+                required: true,
+            },
+            blog_description: {
+                required: true,
+                minlength: 10
+            },
+            selectCategory: {
+                required: true,
+            },
+            selectAuter: {
                 required: true,
             }
         },
         messages: {
-            blog_auther_name: {
-                required: "Please provide a auther name"
+            blog_title: {
+                required: "Please provide a blog title"
+            },
+            blog_description: {
+                required: "Please enter blog description",
+                minlength: "Please enter minimum 10 characters"
+            },
+            selectCategory: {
+                required: "Please select category"
+            },
+            selectAuter: {
+                required: "Please select auther"
             }
         },
         submitHandler: function(form) {
-            var formdata = new FormData(document.getElementById('updateBlogAutherForm'));
-            var blog_auther_image = $('#blog_auther_image').get(0).files[0];
-            formdata.append('blog_auther_image', blog_auther_image);
+            var formdata = new FormData(document.getElementById('updateBlogForm'));
+            var blog_image = $('#blog_image').get(0).files[0];
+            formdata.append('blog_image', blog_image);
             $.ajax({
-                url: 'resources/add_blog_auther_submit',
+                url: 'resources/add_blogs_submit',
                 type: 'POST',
                 data: formdata,
                 contentType: false,
@@ -102,7 +126,7 @@ $(document).ready(function() {
                 success: function(output) {
                     output = jQuery.parseJSON(output);
                     if (output.success == 'success') {
-                        toastr.options.onHidden = function() { window.location.href = 'blog_auther'; }
+                        toastr.options.onHidden = function() { window.location.href = 'blogs'; }
                         toastr.success(output.message).delay(1000).fadeOut(1000);
                     } else {
                         toastr.warning(output.message).delay(1000).fadeOut(1000);
