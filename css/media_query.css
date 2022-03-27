@@ -263,7 +263,7 @@
     margin-bottom: 15px;
   }
   .ss_featured {
-    padding: 30px 0 40px 0;
+    padding: 00px 0 40px 0;
   }
   .ss_new_listings .title,
   .ss_main_title h1,
@@ -316,7 +316,7 @@
     font-size: 24px;
     font-weight: 700;
     position: relative;
-    padding: 25px 100px 25px 0;
+    padding: 0px 100px 0px 0;
   }
   .episodes_blogs .des h2 {
     font-size: 18px;
@@ -643,7 +643,7 @@
     padding: 20px 15px;
   }
   .ss_profile_imges {
-    margin: 0 auto;
+    margin: 0 0;
   }
   .ss_navbar_profiles_boxs h5 {
     font-size: 18px;
@@ -914,16 +914,45 @@
     top: 50px;
   }
   .ss_slider_contents_ab h2 {
-    font-size: 24px;
-    padding: 10px 0;
+    font-size: 20px!important;
+    padding: 10px 20px;
+    line-height: 30px!important;
     font-weight: 600;
   }
+  .ss_main_slider_index .container{
+    padding: 0;
+  }
+
+  .ss_main_slider_index .container .row{
+    margin: 0;
+  }
+  .ss_main_slider_index .container .row .col-lg-9{
+    padding: 0;
+  }
+
+  .ss_plannet_mobiles_logo>img {
+    height: 60px;
+  }
+  .ss_mobiles_menuss .header{
+    padding: 20px 0;
+  }
+
+  .ss_store_item .ss_headre_store h2 {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+
+  .ss_slider_contents_ab h2 {
+    bottom: 0;
+  }
+
   .ss_main_slider_index {
     padding: 0px 0;
   }
   .ss_slider_contents_ab {
     min-height: auto;
-    padding: 50px 15px 30px 15px;
+    padding: 150px 15px 150px 15px;
   }
 
   .ss_live_video .video_images {
@@ -968,6 +997,37 @@
   .ss_padding_lives_model_padd {
     padding: 20px 0;
   }
+
+  .ss_slider_bottom_section_padd {
+    margin-top: -50px;
+  }
+
+  .featured_blogs {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    background: #090909;
+    margin-top: 30px;
+  }
+  .ss_order_tables {
+    width: 100%;
+    display: inline-block!important;
+  }
+
+  .ss_order_tables {
+    overflow: hidden;
+    min-width: auto;
+  }
+
+  .ss_winth_controll {
+    width: 100%;
+  }
+
+  .ss_subtotal p {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+
 }
 @media (min-width: 480px) and (max-width: 767px) {
   .ss_height100vh {
