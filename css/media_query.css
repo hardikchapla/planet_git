@@ -914,26 +914,26 @@
     top: 50px;
   }
   .ss_slider_contents_ab h2 {
-    font-size: 20px!important;
+    font-size: 20px !important;
     padding: 10px 20px;
-    line-height: 30px!important;
+    line-height: 30px !important;
     font-weight: 600;
   }
-  .ss_main_slider_index .container{
+  .ss_main_slider_index .container {
     padding: 0;
   }
 
-  .ss_main_slider_index .container .row{
+  .ss_main_slider_index .container .row {
     margin: 0;
   }
-  .ss_main_slider_index .container .row .col-lg-9{
+  .ss_main_slider_index .container .row .col-lg-9 {
     padding: 0;
   }
 
-  .ss_plannet_mobiles_logo>img {
+  .ss_plannet_mobiles_logo > img {
     height: 60px;
   }
-  .ss_mobiles_menuss .header{
+  .ss_mobiles_menuss .header {
     padding: 20px 0;
   }
 
@@ -941,7 +941,6 @@
     font-size: 24px;
     font-weight: 700;
   }
-
 
   .ss_slider_contents_ab h2 {
     bottom: 0;
@@ -955,9 +954,9 @@
     padding: 150px 15px 150px 15px;
   }
 
-  .ss_live_video .video_images {
+  /* .ss_live_video .video_images {
     height: 100vh !important;
-  }
+  } */
 
   .rSlider input[type="range"] {
     position: relative;
@@ -1011,7 +1010,7 @@
   }
   .ss_order_tables {
     width: 100%;
-    display: inline-block!important;
+    display: inline-block !important;
   }
 
   .ss_order_tables {
@@ -1027,7 +1026,6 @@
     font-size: 12px;
     margin-bottom: 5px;
   }
-
 }
 @media (min-width: 480px) and (max-width: 767px) {
   .ss_height100vh {

@@ -132,12 +132,7 @@ include('page-title.php');
                         </div>
                     </div>
                 </div>
-
-
             </div>
-
-
-
         </div>
     </div>
 </div>
@@ -149,8 +144,6 @@ include('page-title.php');
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
 </script>
-<script src="slider-plugin/owl.carousel.js"></script>
-<script src="js/jquery.validate.min.js"></script>
 <script src="js/float-panel.js"></script>
 <script src="js/toastr.min.js"></script>
 <script src="js/custom.js"></script>
@@ -159,30 +152,7 @@ function myFunction(x) {
     x.classList.toggle("change");
 }
 </script>
-<script>
-$(window).on("load", function() {
-    var range = $("#range").attr("value");
-    $("#demo")(range);
-    $(".slide").css("width", "50%");
-    $(document).on('input change', '#range', function() {
-        $('#demo')($(this).val());
-        var slideWidth = $(this).val() * 100 / 50000;
-        $(".slide").css("width", slideWidth + "%");
-    });
-});
-</script>
-<script>
-$(window).on("load", function() {
-    var range = $("#volume").attr("value");
-    $("#demo")(range);
-    $(".Vslide").css("width", "50%");
-    $(document).on('input change', '#volume', function() {
-        $('#demo')($(this).val());
-        var slideWidth = $(this).val() * 100 / 50000;
-        $(".Vslide").css("width", slideWidth + "%");
-    });
-});
-</script>
+
 </body>
 
 </html>
