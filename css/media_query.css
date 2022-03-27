@@ -955,7 +955,7 @@
   }
 
   .ss_live_video .video_images {
-    height: 100vh !important;
+    height: 90vh !important;
   }
 
   .rSlider input[type="range"] {
