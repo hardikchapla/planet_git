@@ -1,6 +1,6 @@
 <?php
     session_start();
-	date_default_timezone_set('UTC');
+	date_default_timezone_set('Asia/Kolkata');
 
 	if($_SERVER['HTTP_HOST'] == "localhost"){
 		$servername = 'localhost';
