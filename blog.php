@@ -78,14 +78,14 @@
                         <div class="d-flex bd-highlight ss_mobile_flex">
                             <div class="p-2 flex-grow-1 bd-highlight align-self-center">
                                 <div class="ss_blog_user">
-                                    <a href="#"> Comments <?= $fecomments['comments'] ?> </a>
+                                    <span> Comments <?= $fecomments['comments'] ?> </span>
                                     <span>|</span>
-                                    <a href="#"> Likes <?= $feblog['likes'] ?> </a>
+                                    <span> Likes <?= $feblog['likes'] ?> </span>
                                 </div>
                             </div>
                             <div class="p-2 bd-highlight align-self-center">
                                 <div class="ss_button_blog">
-                                    <a href="blog-details?id=<?= base64_encode($feblog['id']) ?>"> Check It Out! </a>
+                                    <a href="blog-details?id=<?= base64_encode($feblog['id']) ?>"> View </a>
                                 </div>
                             </div>
                         </div>

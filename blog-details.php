@@ -25,13 +25,14 @@
                             <h1><?= $feblog['title'] ?></h1>
                         </div>
                         <div class="p-2 bd-highlight">
-                            <a href="resources/blog_like?id=<?= base64_encode($blog_id) ?>" class="like_and_dislike">
-                                <img src="images/like.png" /> <span><?= $feblog['likes'] ?> Liked</span>
+                            <a id="<?= $blog_id ?>" class="like_and_dislike like_user">
+                                <img src="images/like.png" /> <span id="blog_likes"><?= $feblog['likes'] ?> Liked</span>
                             </a>
                         </div>
                         <div class="p-2 bd-highlight">
-                            <a href="resources/blog_dislike?id=<?= base64_encode($blog_id) ?>" class="like_and_dislike">
-                                <img src="images/dislike.png" /> <span><?= $feblog['dislikes'] ?> Dislike</span>
+                            <a id="<?= $blog_id ?>" class="like_and_dislike dislike_user">
+                                <img src="images/dislike.png" /> <span id="blog_dislikes"><?= $feblog['dislikes'] ?>
+                                    Dislike</span>
                             </a>
                         </div>
                     </div>
@@ -209,6 +210,52 @@ $(document).ready(function() {
                 }
             });
         }
+    });
+    $(document).on('click', '.like_user', function() {
+        var blog_id = $(this).attr('id');
+        $.ajax({
+            url: 'resources/blog_like',
+            type: 'POST',
+            data: {
+                blog_id: blog_id
+            },
+            dataType: 'JSON',
+            success: function(output) {
+                if (output.success == 'success') {
+                    $('#blog_likes').html(output.likes + ' Liked');
+                    $('#blog_dislikes').html(output.dislike + ' Dislike');
+                    // toastr.success(output.message).delay(1000).fadeOut(1000);
+                } else {
+                    toastr.warning(output.message).delay(1000).fadeOut(1000);
+                }
+            },
+            error: function() {
+                toastr.warning('Signup not successfully').delay(1000).fadeOut(1000);
+            }
+        });
+    });
+    $(document).on('click', '.dislike_user', function() {
+        var blog_id = $(this).attr('id');
+        $.ajax({
+            url: 'resources/blog_dislike',
+            type: 'POST',
+            data: {
+                blog_id: blog_id
+            },
+            dataType: 'JSON',
+            success: function(output) {
+                if (output.success == 'success') {
+                    $('#blog_likes').html(output.likes + ' Liked');
+                    $('#blog_dislikes').html(output.dislike + ' Dislike');
+                    // toastr.success(output.message).delay(1000).fadeOut(1000);
+                } else {
+                    toastr.warning(output.message).delay(1000).fadeOut(1000);
+                }
+            },
+            error: function() {
+                toastr.warning('Signup not successfully').delay(1000).fadeOut(1000);
+            }
+        });
     });
 });
 </script>
