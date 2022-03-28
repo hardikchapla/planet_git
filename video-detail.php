@@ -35,19 +35,15 @@ include('page-title.php');
                     type="video/mp4" />
 
             </video>
-            <div class="ss_video_player">
 
-                <div class="d-flex bd-highlight justify-content-center">
 
-                    <div class="p-2 flex-fill bd-highlight text-center">
-                        <div class="ss_play_button">
-                            <a href="#"><i class="fa fa-backward" aria-hidden="true"></i> </a>
-                            <a href="#"> <i class="fa fa-forward" aria-hidden="true"></i> </a>
-                        </div>
-                    </div>
-
+            <div class="ss_button_play_puch">
+                <div class="ss_play_button">
+                    <a href="#"><i class="fa fa-backward" aria-hidden="true"></i> </a>
+                    <a href="#"> <i class="fa fa-forward" aria-hidden="true"></i> </a>
                 </div>
             </div>
+
 
             <div class="ss_video_back_info">
 
