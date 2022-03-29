@@ -8976,3 +8976,7 @@ form .error {
 .ss_winth_controll {
     width: 15%;
 }
+
+.like_and_dislike {
+    cursor: pointer;
+}

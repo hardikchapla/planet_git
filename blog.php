@@ -85,7 +85,7 @@
                             </div>
                             <div class="p-2 bd-highlight align-self-center">
                                 <div class="ss_button_blog">
-                                    <a href="blog-details?id=<?= base64_encode($feblog['id']) ?>"> View </a>
+                                    <a href="blog-details?id=<?= base64_encode($feblog['id']) ?>"> View More </a>
                                 </div>
                             </div>
                         </div>
