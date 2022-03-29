@@ -46,6 +46,9 @@
     if($cur_page == 'blogs'){
         $titleName = 'Blogs';
     }
+    if($cur_page == 'podcast'){
+        $titleName = 'Podcast';
+    }
    
     $admin = $db->query("SELECT * FROM phtv_admin WHERE id = 1");
     $feadmin = $admin->fetch();
@@ -284,6 +287,20 @@
                             <a class="d-flex align-items-center" href="blogs">
                                 <i class="bx bx-right-arrow-alt"></i>
                                 <span class="menu-item text-truncate" data-i18n="1 column">Blogs</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" nav-item <?php if($cur_page_main == 'Podcast') {echo 'active';} ?>">
+                    <a href="#">
+                        <i class="fa fa-cube" aria-hidden="true"></i>
+                        <span class="menu-title text-truncate" data-i18n="Starter kit">Podcast</span>
+                    </a>
+                    <ul class="menu-content">
+                        <li class="<?php if($cur_page == 'podcast') {echo 'active';} ?>">
+                            <a class="d-flex align-items-center" href="podcast">
+                                <i class="bx bx-right-arrow-alt"></i>
+                                <span class="menu-item text-truncate" data-i18n="1 column">Podcast</span>
                             </a>
                         </li>
                     </ul>
