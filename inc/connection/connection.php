@@ -1,7 +1,15 @@
 <?php
     session_start();
-	date_default_timezone_set('Asia/Kolkata');
-
+	$ip = $_SERVER['REMOTE_ADDR'];
+	$ipInfo = file_get_contents('http://ip-api.com/json/' . $ip);
+	$ipInfo = json_decode($ipInfo);
+	if(isset($ipInfo->timezone)){
+		$timezone = $ipInfo->timezone;
+		date_default_timezone_set($timezone);
+	} else {
+		date_default_timezone_set('Asia/Kolkata');
+	}
+	
 	if($_SERVER['HTTP_HOST'] == "localhost"){
 		$servername = 'localhost';
 		$username = 'root';
