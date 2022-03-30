@@ -149,6 +149,9 @@ $product = $db->query("SELECT a.*, b.* FROM phtv_product a LEFT JOIN phtv_produc
                 <div class="item">
                     <a href="#" class="ss_experiences_brand">
                         <div class="ss_heght_center">
+                            <div class="ss_brand_logo">
+                                <img src="images/nike.svg" alt="nike-logo" />
+                            </div>
                             <h2> <?= $febrand['name'] ?> </h2>
                         </div>
                     </a>

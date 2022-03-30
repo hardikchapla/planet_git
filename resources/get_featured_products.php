@@ -12,7 +12,9 @@ while ($feproduct = $product->fetch()) {
     $response .= '<div class="col-lg-3 col-sm-6">
                     <div class="ss_products_boxi">
                         <div class="images">
-                            <img src="images/product/' . $fepimage['image'] . '" alt="images" />
+                            <div class="ss_vertical_align_middle">
+                                <img src="images/product/' . $fepimage['image'] . '" alt="images" />
+                            </div>
                             <div class="ss_button">
                                 <a href="product-detail.php?item=' . $feproduct['product_id'] . '"> Product Info </a>
                             </div>
