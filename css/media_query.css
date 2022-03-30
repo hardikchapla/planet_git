@@ -1095,11 +1095,36 @@
     z-index: 2112;
   }
 
+  .ss_start_ouputmksams img {
+    height: 47px !important;
+    width: auto !important;
+  }
+
+  .ss_products_boxi .images {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0px 30px;
+    position: relative;
+    min-height: 250px;
+    display: table;
+    width: 100%;
+  }
 }
 @media (min-width: 480px) and (max-width: 767px) {
   .ss_height100vh {
     height: calc(100vh - 90px);
     display: table;
+  }
+  .ss_start_ouputmksams img {
+    height: 47px !important;
+    width: auto !important;
+  }
+  .ss_products_boxi .images {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0px 30px;
+    position: relative;
+    min-height: 250px;
+    display: table;
+    width: 100%;
   }
   .aa_main_header {
     display: none;

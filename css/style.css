@@ -4376,6 +4376,9 @@ a:hover {
     border: 1px solid rgba(255, 255, 255, 0.2);
     padding: 0px 30px;
     position: relative;
+    min-height: 419px;
+    display: table;
+    width: 100%;
 }
 
 .ss_products_boxi h3 {
@@ -9059,12 +9062,15 @@ form .error {
   z-index: 2112;
 }
 
-
-
 .ss_winth_controll {
     width: 15%;
 }
 
 .like_and_dislike {
     cursor: pointer;
+}
+
+.ss_vertical_align_middle{
+    vertical-align: middle;
+    display: table-cell;
 }

@@ -150,7 +150,7 @@ $product = $db->query("SELECT a.*, b.* FROM phtv_product a LEFT JOIN phtv_produc
                     <a href="#" class="ss_experiences_brand">
                         <div class="ss_heght_center">
                             <div class="ss_brand_logo">
-                                <img src="images/nike.svg" alt="nike-logo" />
+                                <img src="images/shop_by_brand/adidas.svg" alt="nike-logo" />
                             </div>
                             <h2> <?= $febrand['name'] ?> </h2>
                         </div>
@@ -258,7 +258,7 @@ $product = $db->query("SELECT a.*, b.* FROM phtv_product a LEFT JOIN phtv_produc
                 </div>
                 <div class="item">
                     <a href="#" class="ss_experiences_category">
-                        <div class="images">
+                        <div class="images">ss_experiences_brand
                             <img src="images/noun_hat_2790985.svg" alt="images" />
                         </div>
                         <h2> Hats </h2>
