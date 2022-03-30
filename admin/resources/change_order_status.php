@@ -72,16 +72,24 @@
         $order_status = 'Pending';
     } elseif ($status == 1) {
         $order_status = 'Confirm';
+        $order_date_field = 'confirm_date';
     } elseif ($status == 2) {
         $order_status = 'Shipped';
+        $order_date_field = 'shipped_date';
     } elseif ($status == 3) {
         $order_status = 'Delivered';
+        $order_date_field = 'delivered_date';
+    } elseif ($status == 5) {
+        $order_status = 'Cancelled';
+        $order_date_field = 'cancelled_date';
     } else {
         $order_status = 'Completed';
+        $order_date_field = 'completed_date';
     }
     $email = $feorder['email'];
     $invoice_no = $feorder['invoice_no'];
-    $update = $db->query("UPDATE phtv_product_order SET status = '$status' WHERE id = '$order_id'");	
+    $today = date('Y-m-d H:i:s');
+    $update = $db->query("UPDATE phtv_product_order SET status = '$status',".$order_date_field." = '$today'  WHERE id = '$order_id'");	
     $send = sendOrderStatusChange($email, $order_status, $invoice_no);
     if($update && $send){
         $success['success'] = "success";
