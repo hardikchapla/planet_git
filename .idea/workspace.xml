@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="74e60629-36cb-4d14-8858-03c7682d2a8f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/media_query.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/media_query.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-tracking.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-detail.php" beforeDir="false" afterPath="$PROJECT_DIR$/video-detail.php" afterDir="false" />
-    </list>
+    <list default="true" id="74e60629-36cb-4d14-8858-03c7682d2a8f" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,6 +52,7 @@
       <workItem from="1648383134650" duration="4334000" />
       <workItem from="1648478185744" duration="5831000" />
       <workItem from="1648487680755" duration="629000" />
+      <workItem from="1648567085982" duration="15000" />
     </task>
     <servers />
   </component>

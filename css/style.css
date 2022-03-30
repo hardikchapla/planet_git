@@ -8974,6 +8974,94 @@ form .error {
 }
 
 .ss_winth_controll {
+  width: 15%;
+}
+
+.ss_order_produvts_list{
+  border-right: 1px solid rgba(255,255,255,0.2);
+}
+
+.ss_coin_images{
+  height: 35px;
+  width: 35px;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.ss_coin_images img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ss_reward_points h4{
+  font-size: 16px;
+  margin-bottom: 3px;
+  font-weight: 600;
+}
+
+.ss_dowload_invoces{
+  height: 45px;
+  padding: 0 20px;
+  border: 1px solid rgba(255,255,255,0.5);
+  line-height: 45px;
+  color: #FFFFFF;
+  display: inline-block;
+
+}
+
+.ss_more_cation{
+  height: 30px;
+  width: 30px;
+  border-radius: 3px;
+  background: #0099ff;
+  line-height: 30px;
+  text-align: center;
+}
+
+.ss_more_cation img{
+  height: 15px;
+  display: inline-block;
+}
+
+.ss_last_order_right{
+
+  text-align: right;
+
+}
+
+.ss_last_order_right .ss_tracking_points .ss_line_tracking:before{
+  right: 0;
+  left: auto;
+}
+
+.ss_money_heights img{
+  height: 20px;
+}
+
+.ss_prices_coin span{
+  font-size: 16px;
+  padding: 0 5px;
+  font-weight: 700;
+}
+
+.video_images{
+  height: 100vh;
+  object-fit: cover;
+  position: relative;
+}
+
+.ss_button_play_puch{
+  position: absolute;
+  right: 15%;
+  bottom: 3%;
+  z-index: 2112;
+}
+
+
+
+.ss_winth_controll {
     width: 15%;
 }
 
