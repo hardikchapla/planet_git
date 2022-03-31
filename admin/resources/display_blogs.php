@@ -9,7 +9,7 @@
 	foreach($result as $row)
 	{
 		$image = "";	
-		if(empty($row['image'])){
+		if(empty($row['image']) || $row['type'] == 1){
 			$image = '<img src="../images/blog/default.svg" style = "border-radius: 40px" width="40" height="40" />';
 		} else {
 			$image = '<img src="../images/blog/'.$row["image"].'" style = "border-radius: 40px" width="40" height="40" />';
@@ -17,6 +17,11 @@
 		$sub_array = array();
 		$sub_array[] = $i;
 		$sub_array[] = $image;
+		if($row['type'] == 1){
+			$sub_array[] = "Video";
+		} else {
+			$sub_array[] = "Image";
+		}
 		$sub_array[] = $row["title"];
 		$sub_array[] = $row["sub_title"];
 		$sub_array[] = $row["description"];

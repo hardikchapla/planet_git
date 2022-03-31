@@ -13,6 +13,7 @@
 		$result = $statement->fetchAll();
 		foreach($result as $row)
 		{
+			$reoutput["blog_type"] = $row["type"];
 			$reoutput["blog_title"] = $row["title"];
 			$reoutput["blog_sub_title"] = $row["sub_title"];
 			$reoutput["blog_description"] = $row["description"];

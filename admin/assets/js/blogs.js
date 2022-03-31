@@ -38,11 +38,17 @@ $(document).ready(function() {
             success: function(data) {
                 $('#old_blog_image').val(data.blog_image);
                 $('#blog_title').val(data.blog_title);
+                $('#blog_sub_title').val(data.blog_sub_title);
                 $('#blog_description').val(data.blog_description);
                 blog_description.setData(data.blog_description);
                 $('#selectCategory').select2("val", data.category_id);
                 $('#selectAuter').select2("val", data.auther_id);
                 $('#blog_id').val(blog_id);
+                if (data.blog_type == 1) {
+                    $('#blog_type2').attr('checked', true);
+                } else {
+                    $('#blog_type1').attr('checked', true);
+                }
                 $('#action').val("Edit");
                 $('#blog_form_title').html("Update Blog");
             }
@@ -96,6 +102,9 @@ $(document).ready(function() {
             },
             selectAuter: {
                 required: true,
+            },
+            blog_type: {
+                required: true,
             }
         },
         messages: {
@@ -111,6 +120,9 @@ $(document).ready(function() {
             },
             selectAuter: {
                 required: "Please select auther"
+            },
+            blog_type: {
+                required: "Please select type",
             }
         },
         submitHandler: function(form) {

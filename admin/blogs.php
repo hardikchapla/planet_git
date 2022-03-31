@@ -41,6 +41,7 @@
                                             <tr>
                                                 <th>No.</th>
                                                 <th>Image</th>
+                                                <th>Type</th>
                                                 <th>Title</th>
                                                 <th>Subtitle</th>
                                                 <th>Description</th>
@@ -54,6 +55,7 @@
                                             <tr>
                                                 <th>No.</th>
                                                 <th>Image</th>
+                                                <th>Type</th>
                                                 <th>Title</th>
                                                 <th>Subtitle</th>
                                                 <th>Description</th>
@@ -89,7 +91,7 @@
                 <div class="modal-body">
                     <div class="row mb-1">
                         <div class="col">
-                            <label>Blog Image: </label>
+                            <label>Blog Image/Video: </label>
                             <div class="form-group">
                                 <input type="file" name="blog_image" id="blog_image" placeholder="select file"
                                     class="form-control">
@@ -113,6 +115,23 @@
                             <div class="form-group mb-0">
                                 <input type="text" name="blog_sub_title" id="blog_sub_title"
                                     placeholder="Enter blog subtitle" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-1">
+                        <div class="col">
+                            <label>Blog Type: </label>
+                            <div class="form-group mb-0">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" checked name="blog_type"
+                                        id="blog_type1" value="0">
+                                    <label class="form-check-label" for="blog_type1">Image</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="blog_type" id="blog_type2"
+                                        value="1">
+                                    <label class="form-check-label" for="blog_type2">Video</label>
+                                </div>
                             </div>
                         </div>
                     </div>
