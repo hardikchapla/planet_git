@@ -82,6 +82,9 @@
     } elseif ($status == 5) {
         $order_status = 'Cancelled';
         $order_date_field = 'cancelled_date';
+    } elseif ($status == 6) {
+        $order_status = 'Out For Delivery';
+        $order_date_field = 'out_for_delivery_date';
     } else {
         $order_status = 'Completed';
         $order_date_field = 'completed_date';

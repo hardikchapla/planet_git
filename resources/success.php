@@ -41,11 +41,11 @@
                     $coin_balance = $coin_balance - $main_price;
                     $price = $fecart['total_coin_amount'];
                     $show_coin = $main_price;
-                    $order_item_insert = $db->query("INSERT INTO phtv_product_order_items SET order_id = '$order_id', product_id = '$product_id', amount = '".$fecart['coin_amount']."', qty = '".$fecart['qty']."', total_amount = '$price', couns_used = '$show_coin', is_preorder = '".$feproduct['is_preorder']."'");
+                    $order_item_insert = $db->query("INSERT INTO phtv_product_order_items SET order_id = '$order_id', product_id = '$product_id', amount = '".$fecart['coin_amount']."', qty = '".$fecart['qty']."', total_amount = '$price', color_id = '".$fecart['color_id']."', size_id = '".$fecart['size_id']."', couns_used = '$show_coin', is_preorder = '".$feproduct['is_preorder']."'");
                 } else {
                     $price = $fecart['total_amount'];
                     $show_coin = 0;
-                    $order_item_insert = $db->query("INSERT INTO phtv_product_order_items SET order_id = '$order_id', product_id = '$product_id', amount = '".$fecart['amount']."', qty = '".$fecart['qty']."', total_amount = '$price', couns_used = '$show_coin', is_preorder = '".$feproduct['is_preorder']."'");
+                    $order_item_insert = $db->query("INSERT INTO phtv_product_order_items SET order_id = '$order_id', product_id = '$product_id', amount = '".$fecart['amount']."', qty = '".$fecart['qty']."', total_amount = '$price', color_id = '".$fecart['color_id']."', size_id = '".$fecart['size_id']."', couns_used = '$show_coin', is_preorder = '".$feproduct['is_preorder']."'");
                 }
                 $remaining_product = $feproduct['stock'] - $fecart['qty'];
                 $update_product = $db->query("UPDATE phtv_product SET stock = '$remaining_product' WHERE id = '$product_id'");

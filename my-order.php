@@ -37,7 +37,8 @@ $order = $db->query("SELECT * FROM phtv_product_order WHERE user_id = '$user_id'
                                 </div>
                                 <div class="p-2 flex-fill bd-highlight align-self-center">
                                     <div class="ss_profile_des">
-                                        <h4> <?= $feorder['invoice_no'] ?> </h4>
+                                        <h4> <a href="order-detail?id=<?= base64_encode($feorder['id']) ?>"><?= $feorder['invoice_no'] ?>
+                                            </a></h4>
                                         <div class="d-flex bd-highlight ss_order_sub_details">
                                             <div class="  bd-highlight align-self-center"> Total Product : <span>
                                                     <?= $feorder['total_product'] ?>
@@ -52,8 +53,8 @@ $order = $db->query("SELECT * FROM phtv_product_order WHERE user_id = '$user_id'
                                 <?php if($feorder['status'] == 0){ ?>
                                 <div class="p-2 flex-fill bd-highlight align-self-center ss_winth_controll">
                                     <div class="ss_subtotal">
-                                        <h2> Pending on <?= date('M d, Y', strtotime($feorder['created_at'])) ?> </h2>
-                                        <p class="ss_delivered_des"> Your item has been pending list </p>
+                                        <h2> Ordered on <?= date('M d, Y', strtotime($feorder['created_at'])) ?> </h2>
+                                        <p class="ss_delivered_des"> Your item has been ordered </p>
                                         <a href="#"> <i class="fa fa-star" aria-hidden="true"></i> Rate & Review
                                             Product</a>
                                     </div>
@@ -92,6 +93,17 @@ $order = $db->query("SELECT * FROM phtv_product_order WHERE user_id = '$user_id'
                                     <div class="ss_subtotal ss_subtotal_red">
                                         <h2> Cancelled on <?= date('M d, Y', strtotime($feorder['cancelled_date'])) ?>
                                         </h2>
+                                    </div>
+                                </div>
+                                <?php } else if($feorder['status'] == 6){ ?>
+                                <div class="p-2 flex-fill bd-highlight align-self-center ss_winth_controll">
+                                    <div class="ss_subtotal">
+                                        <h2> Out For Delivery on
+                                            <?= date('M d, Y', strtotime($feorder['out_for_delivery_date'])) ?>
+                                        </h2>
+                                        <p class="ss_delivered_des"> Your item has been out for delivery </p>
+                                        <a href="#"> <i class="fa fa-star" aria-hidden="true"></i> Rate & Review
+                                            Product</a>
                                     </div>
                                 </div>
                                 <?php } else { ?>
