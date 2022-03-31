@@ -355,12 +355,15 @@ $order_product = $db->query("SELECT * FROM phtv_product_order_items  WHERE order
 
                 $size = $db->query("SELECT * FROM phtv_product_size WHERE id = '".$feorder_product['size_id']."'");
                 $fesize = $size->fetch(PDO::FETCH_ASSOC);
+
+                $image = $db->query("SELECT * FROM phtv_product_images WHERE product_id = '$product_id' LIMIT 0,1");
+                $feimage = $image->fetch(PDO::FETCH_ASSOC);
         ?>
         <div class="ss_navbar_profiles_boxs ss_table_scroll">
             <div class="d-flex bd-highlight ss_order_tables">
                 <div class="p-2 bd-highlight align-self-center">
                     <div class="ss_profile_imges">
-                        <img src="images/product-imagesB.png" alt="images">
+                        <img src="images/product/<?= $feimage['image'] ?>" alt="images">
                     </div>
                 </div>
                 <div class="p-2 flex-fill bd-highlight align-self-center">
