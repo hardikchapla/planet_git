@@ -1030,11 +1030,10 @@
   }
 
   .ss_tracking_points h3 {
-
     font-size: 13px;
     word-break: break-word;
   }
-  .ss_tracking_points p{
+  .ss_tracking_points p {
     font-size: 12px;
     word-break: break-word;
   }
@@ -1054,9 +1053,9 @@
     font-size: 12px;
   }
 
-    .ss_media_padd{
-      padding-top: 30px;
-    }
+  .ss_media_padd {
+    padding-top: 30px;
+  }
 
   .ss_reward_points h4 {
     font-size: 14px;
@@ -1084,7 +1083,7 @@
     margin: 20px 0;
   }
 
-  .ss_tracking_progress_bar h2{
+  .ss_tracking_progress_bar h2 {
     padding: 0 15px;
   }
 
@@ -1107,6 +1106,9 @@
     min-height: 250px;
     display: table;
     width: 100%;
+  }
+  .ss_live_video video {
+    object-fit: contain;
   }
 }
 @media (min-width: 480px) and (max-width: 767px) {
@@ -1914,7 +1916,9 @@
     bottom: 5%;
     z-index: 2112;
   }
-
+  .ss_live_video video {
+    object-fit: contain;
+  }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .modal_about h3 {
