@@ -18,6 +18,7 @@
 			$reoutput["blog_sub_title"] = $row["sub_title"];
 			$reoutput["blog_description"] = $row["description"];
 			$reoutput["blog_image"] = $row["image"];
+			$reoutput["blog_video"] = $row["video"];
 			$reoutput["auther_id"] = $row["auther_id"];
 			$reoutput["category_id"] = $row["category_id"];
 		}

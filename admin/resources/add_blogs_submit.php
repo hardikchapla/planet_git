@@ -20,8 +20,20 @@
             $photo = rand(1000,1000000).$file; 
             $path = '../../images/blog/'.$photo;
             move_uploaded_file($tmp,$path);
+            if(!empty($_FILES['blog_video']['name']))
+            {
+                $file1 = $_FILES['blog_video']['name'];
+                $tmp1 = $_FILES['blog_video']['tmp_name'];
+                $ext1 = pathinfo($file1, PATHINFO_EXTENSION);
+                $video = rand(1000,1000000).$file1; 
+                $path1 = '../../images/blog/'.$video;
+                move_uploaded_file($tmp1,$path1);
+                
+                $statement = $db->query("INSERT INTO phtv_blog SET `title` = '$blog_title',`sub_title` = '$blog_sub_title', `description` = '$blog_description', `image` = '$photo', `video` = '$video', `auther_id` = '$selectAuter', `category_id` = '$selectCategory', `type` = '$blog_type', `created_at` = '$created'");
+            } else {
+                $statement = $db->query("INSERT INTO phtv_blog SET `title` = '$blog_title',`sub_title` = '$blog_sub_title', `description` = '$blog_description', `image` = '$photo', `auther_id` = '$selectAuter', `category_id` = '$selectCategory', `type` = '$blog_type', `created_at` = '$created'");
+            }
             
-            $statement = $db->query("INSERT INTO phtv_blog SET `title` = '$blog_title',`sub_title` = '$blog_sub_title', `description` = '$blog_description', `image` = '$photo', `auther_id` = '$selectAuter', `category_id` = '$selectCategory', `type` = '$blog_type', `created_at` = '$created'");
             if(!empty($statement))
             {
                 $reoutput['success'] = 'success';
@@ -64,7 +76,23 @@
         {
             $photo = $_REQUEST['old_blog_image'];
         }
-        $statement = $db->query("UPDATE phtv_blog SET `title` = '$blog_title',`sub_title` = '$blog_sub_title', `description` = '$blog_description', `image` = '$photo', `auther_id` = '$selectAuter', `category_id` = '$selectCategory', `type` = '$blog_type' WHERE id = '$blog_id'");
+        if(!empty($_FILES['blog_video']['name']))
+            {
+                $file1 = $_FILES['blog_video']['name'];
+                $tmp1 = $_FILES['blog_video']['tmp_name'];
+                $ext1 = pathinfo($file1, PATHINFO_EXTENSION);
+                $video = rand(1000,1000000).$file1; 
+                $path1 = '../../images/blog/'.$video;
+                move_uploaded_file($tmp1,$path1);
+                
+                if(file_exists('../../images/blog/'.$_REQUEST['old_blog_video'])){
+                    unlink('../../images/blog/'.$_REQUEST['old_blog_video']);
+                }
+                
+            } else {
+                $video = $_REQUEST['old_blog_video'];
+            }
+        $statement = $db->query("UPDATE phtv_blog SET `title` = '$blog_title',`sub_title` = '$blog_sub_title', `description` = '$blog_description', `image` = '$photo',`video` = '$video', `auther_id` = '$selectAuter', `category_id` = '$selectCategory', `type` = '$blog_type' WHERE id = '$blog_id'");
         if(!empty($statement))
         {
             $reoutput['success'] = 'success';

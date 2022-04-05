@@ -4,7 +4,17 @@ require_once '../inc/helper/constant.php';
 require_once '../inc/helper/core_function.php';
 $start = $_REQUEST['start'];
 $limit = $_REQUEST['limit'];
-$product = $db->query("SELECT * FROM phtv_product ORDER BY id DESC LIMIT $start,$limit");
+$category_id = $_REQUEST['category_id'];
+$brand_id = $_REQUEST['brand_id'];
+if(!empty($category_id) && !empty($brand_id)){
+    $product = $db->query("SELECT * FROM phtv_product WHERE product_brand_id = '$brand_id' AND product_category_id = '$category_id' ORDER BY id DESC LIMIT $start,$limit");
+} elseif(!empty($category_id)){
+    $product = $db->query("SELECT * FROM phtv_product WHERE product_category_id = '$category_id' ORDER BY id DESC LIMIT $start,$limit");
+} elseif(!empty($brand_id)){
+    $product = $db->query("SELECT * FROM phtv_product WHERE product_brand_id = '$brand_id' ORDER BY id DESC LIMIT $start,$limit");
+} else {
+    $product = $db->query("SELECT * FROM phtv_product ORDER BY id DESC LIMIT $start,$limit");
+}
 $response = '';
 while ($feproduct = $product->fetch()) {
     $pimage = $db->query("SELECT * FROM phtv_product_images WHERE product_id = '" . $feproduct['id'] . "' LIMIT 1");

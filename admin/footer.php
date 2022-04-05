@@ -22,7 +22,7 @@
 <script src="app-assets/vendors/js/extensions/toastr.min.js"></script>
 <script src="app-assets/js/scripts/extensions/toastr.min.js"></script>
 
-<script src="https://cdn.ckeditor.com/ckeditor5/10.0.1/classic/ckeditor.js"></script>
+<script src="https://cdn.ckeditor.com/ckeditor5/33.0.0/classic/ckeditor.js"></script>
 <!-- END: Theme JS-->
 
 <script src="assets/js/users.js"></script>

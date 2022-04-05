@@ -37,6 +37,7 @@ $(document).ready(function() {
             dataType: "json",
             success: function(data) {
                 $('#old_blog_image').val(data.blog_image);
+                $('#old_blog_video').val(data.blog_video);
                 $('#blog_title').val(data.blog_title);
                 $('#blog_sub_title').val(data.blog_sub_title);
                 $('#blog_description').val(data.blog_description);

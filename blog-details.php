@@ -12,14 +12,7 @@
 
 <div class="container-fluid ss_blog_details_images">
     <div class="images">
-        <?php if($feblog['type'] == '0'){ ?>
         <img src="images/blog/<?= $feblog['image'] ?>" alt=" blog_images" />
-        <?php } else { ?>
-        <video controls>
-            <source src="images/blog/<?= $feblog['image'] ?>" type="video/mp4">
-            <source src="images/blog/<?= $feblog['image'] ?>" type="video/ogg">
-        </video>
-        <?php } ?>
     </div>
 </div>
 <div class="container-fluid">
@@ -59,6 +52,40 @@
         </div>
     </div>
 </div>
+<?php if($feblog['video'] != ''){ ?>
+<div class="container-fluid ss_blog_detailsss">
+    <div class="container">
+        <div class="container-fluid ss_padding_live_events">
+            <div class="ss_live_video">
+                <div class="video_images">
+                    <!-- <img src="images/slider_img.jpg" alt="video"> -->
+                    <video id="my-video" class="video-js vjs-theme-fantasy" controls preload="auto" width="100%"
+                        height="100%" poster="images/blog/<?= $feblog['image'] ?>" data-setup="{}">
+                        <source src="images/blog/<?= $feblog['video'] ?>" type="video/mp4" />
+                    </video>
+                    <div class="ss_video_back_info">
+                        <div class="d-flex bd-highlight">
+                            <div class="p-2 flex-grow-1 bd-highlight">
+                                <a href="#" class="ss_back_arrow">
+                                    <img src="images/left_arrow.svg" alt="images" />
+                                </a>
+                            </div>
+                            <div class="p-2 bd-highlight">
+                                <a href=" #" class="ss_info_icons" data-toggle="modal"
+                                    data-target="#exampleModalCenter">
+                                    <i class="fa fa-info" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<?php } ?>
 <div class="container-fluid ss_blog_detailsss">
     <div class="container">
         <div class="row">

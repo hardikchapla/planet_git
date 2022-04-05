@@ -79,7 +79,7 @@
 <!-- END: Content-->
 <div class="modal fade text-left" id="updateBlog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel33"
     aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title" id="blog_form_title">Add Blog</h4>
@@ -91,12 +91,22 @@
                 <div class="modal-body">
                     <div class="row mb-1">
                         <div class="col">
-                            <label>Blog Image/Video: </label>
+                            <label>Blog Image: </label>
                             <div class="form-group">
                                 <input type="file" name="blog_image" id="blog_image" placeholder="select file"
                                     class="form-control">
                                 <input type="hidden" name="old_blog_image" id="old_blog_image">
                                 <input type="hidden" name="blog_id" id="blog_id">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-1">
+                        <div class="col">
+                            <label>Blog Video: </label>
+                            <div class="form-group">
+                                <input type="file" name="blog_video" id="blog_video" placeholder="select file"
+                                    class="form-control">
+                                <input type="hidden" name="old_blog_video" id="old_blog_video">
                             </div>
                         </div>
                     </div>

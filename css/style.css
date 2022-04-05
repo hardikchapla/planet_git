@@ -8752,3 +8752,7 @@ form .error {
 .ss_experiences_brand .ss_heght_center .ss_brand_logo {
     padding: 20px 0;
 }
+
+.selected_category {
+    color: #007bff
+}

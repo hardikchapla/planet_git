@@ -1,5 +1,7 @@
 <?php
 include('header.php');
+$category_id = (isset($_REQUEST['category_id']) && !empty($_REQUEST['category_id'])) ? base64_decode($_REQUEST['category_id']):'';
+$brand_id = (isset($_REQUEST['brand_id']) && !empty($_REQUEST['brand_id'])) ? base64_decode($_REQUEST['brand_id']):'';
 $brand = $db->query("SELECT * FROM phtv_product_brand");
 $category = $db->query("SELECT * FROM phtv_product_category");
 $product = $db->query("SELECT a.*, b.* FROM phtv_product a LEFT JOIN phtv_product_images b ON a.id=b.product_id GROUP BY a.id LIMIT 0,3");
@@ -147,12 +149,14 @@ $product = $db->query("SELECT a.*, b.* FROM phtv_product a LEFT JOIN phtv_produc
             <div class="owl-carousel owl-theme" id="ss_brand">
                 <?php while ($febrand = $brand->fetch()) { ?>
                 <div class="item">
-                    <a href="#" class="ss_experiences_brand">
+                    <a href="product?brand_id=<?= base64_encode($febrand['id']) ?>&category_id=<?= (isset($_REQUEST['category_id']) && !empty($_REQUEST['category_id'])) ? $_REQUEST['category_id']:'' ?>"
+                        class="ss_experiences_brand">
                         <div class="ss_heght_center">
                             <div class="ss_brand_logo">
                                 <img src="images/product_brand/<?= $febrand['logo'] ?>" alt="nike-logo" />
                             </div>
-                            <h2> <?= $febrand['name'] ?> </h2>
+                            <h2 class="<?= ($brand_id == $febrand['id']) ? 'selected_category':''?>">
+                                <?= $febrand['name'] ?> </h2>
                         </div>
                     </a>
                 </div>
@@ -216,11 +220,13 @@ $product = $db->query("SELECT a.*, b.* FROM phtv_product a LEFT JOIN phtv_produc
             <div class="owl-carousel owl-theme" id="ss_category">
                 <?php while ($fecategory = $category->fetch()) { ?>
                 <div class="item">
-                    <a href="#" class="ss_experiences_category">
+                    <a href="product?category_id=<?= base64_encode($fecategory['id']) ?>&brand_id=<?= (isset($_REQUEST['brand_id']) && !empty($_REQUEST['brand_id'])) ? $_REQUEST['brand_id']:''; ?>"
+                        class="ss_experiences_category">
                         <div class="images">
                             <img src="images/product_category/<?= $fecategory['category_image'] ?>" alt="images" />
                         </div>
-                        <h2> <?= $fecategory['category_name'] ?> </h2>
+                        <h2 class="<?= ($category_id == $fecategory['id']) ? 'selected_category':''?>">
+                            <?= $fecategory['category_name'] ?> </h2>
                     </a>
                 </div>
                 <?php } ?>
@@ -301,6 +307,13 @@ $product = $db->query("SELECT a.*, b.* FROM phtv_product a LEFT JOIN phtv_produc
                     <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
                         aria-labelledby="pills-home-tab">
                         <div class="row" id="featured_products">
+                            <div class="col-lg-12 col-sm-12">
+                                <div class="ss_products_boxi">
+                                    <div class="_ss_product_des text-center">
+                                        <h3>No Product Available</h3>
+                                    </div>
+                                </div>
+                            </div>
                             <!-- <div class="col-lg-3 col-sm-6">
                                 <div class="ss_products_boxi">
                                     <div class="images">
@@ -421,7 +434,7 @@ $product = $db->query("SELECT a.*, b.* FROM phtv_product a LEFT JOIN phtv_produc
                                 </div>
                             </div> -->
                         </div>
-                        <div class="row">
+                        <div class="row load_more_featured_products">
                             <div class="col-lg-12 pt-5 text-center">
                                 <div class="episode_button">
                                     <button type="button" id="load_more_featured_products"> Load More </button>
@@ -431,6 +444,13 @@ $product = $db->query("SELECT a.*, b.* FROM phtv_product a LEFT JOIN phtv_produc
                     </div>
                     <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
                         <div class="row" id="new_products">
+                            <div class="col-lg-12 col-sm-12">
+                                <div class="ss_products_boxi">
+                                    <div class="_ss_product_des text-center">
+                                        <h3>No Product Available</h3>
+                                    </div>
+                                </div>
+                            </div>
                             <!-- <div class="col-lg-3 col-sm-6">
                                 <div class="ss_products_boxi">
                                     <div class="images">
@@ -537,7 +557,7 @@ $product = $db->query("SELECT a.*, b.* FROM phtv_product a LEFT JOIN phtv_produc
                                 </div>
                             </div> -->
                         </div>
-                        <div class="row">
+                        <div class="row load_more_new_product">
                             <div class="col-lg-12 pt-5 text-center">
                                 <div class="episode_button">
                                     <button type="button" id="load_more_new_product"> Load More </button>
@@ -547,6 +567,13 @@ $product = $db->query("SELECT a.*, b.* FROM phtv_product a LEFT JOIN phtv_produc
                     </div>
                     <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
                         <div class="row" id="preorder_products">
+                            <div class="col-lg-12 col-sm-12">
+                                <div class="ss_products_boxi">
+                                    <div class="_ss_product_des text-center">
+                                        <h3>No Product Available</h3>
+                                    </div>
+                                </div>
+                            </div>
                             <!-- <div class="col-lg-3 col-sm-6">
                                 <div class="ss_products_boxi">
                                     <div class="images">
@@ -668,7 +695,7 @@ $product = $db->query("SELECT a.*, b.* FROM phtv_product a LEFT JOIN phtv_produc
                                 </div>
                             </div> -->
                         </div>
-                        <div class="row">
+                        <div class="row load_more_preorder_products">
                             <div class="col-lg-12 pt-5 text-center">
                                 <div class="episode_button">
                                     <button type="button" id="load_more_preorder_products"> Load More </button>
@@ -837,15 +864,23 @@ $(document).ready(function() {
     var limit1 = 8;
     var start2 = 0;
     var limit2 = 8;
+    var category_id = "<?= $category_id ?>";
+    var brand_id = "<?= $brand_id ?>";
     $.ajax({
         url: "resources/get_new_product",
         method: "POST",
         data: {
             start: start,
-            limit: limit
+            limit: limit,
+            category_id: category_id,
+            brand_id: brand_id
         },
         success: function(data) {
-            $('#new_products').html(data);
+            if (data) {
+                $('#new_products').html(data);
+            } else {
+                $('.load_more_new_product').hide();
+            }
             start = start + limit;
             limit = limit;
         }
@@ -855,10 +890,16 @@ $(document).ready(function() {
         method: "POST",
         data: {
             start: start1,
-            limit: limit1
+            limit: limit1,
+            category_id: category_id,
+            brand_id: brand_id
         },
         success: function(data) {
-            $('#preorder_products').html(data);
+            if (data) {
+                $('#preorder_products').html(data);
+            } else {
+                $('.load_more_preorder_products').hide();
+            }
             start1 = start1 + limit1;
             limit1 = limit1;
         }
@@ -868,10 +909,17 @@ $(document).ready(function() {
         method: "POST",
         data: {
             start: start2,
-            limit: limit2
+            limit: limit2,
+            category_id: category_id,
+            brand_id: brand_id
         },
         success: function(data) {
-            $('#featured_products').html(data);
+            if (data) {
+                $('#featured_products').html(data);
+            } else {
+                $('.load_more_featured_products').hide();
+                $('#featured_products').html();
+            }
             start2 = start2 + limit2;
             limit2 = limit2;
         }
@@ -882,7 +930,9 @@ $(document).ready(function() {
             method: "POST",
             data: {
                 start: start,
-                limit: limit
+                limit: limit,
+                category_id: category_id,
+                brand_id: brand_id
             },
             success: function(data) {
                 if (data) {
@@ -901,7 +951,9 @@ $(document).ready(function() {
             method: "POST",
             data: {
                 start: start1,
-                limit: limit1
+                limit: limit1,
+                category_id: category_id,
+                brand_id: brand_id
             },
             success: function(data) {
                 if (data) {
@@ -921,7 +973,9 @@ $(document).ready(function() {
             method: "POST",
             data: {
                 start: start2,
-                limit: limit2
+                limit: limit2,
+                category_id: category_id,
+                brand_id: brand_id
             },
             success: function(data) {
                 if (data) {
