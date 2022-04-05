@@ -29,9 +29,9 @@
                 $path1 = '../../images/blog/'.$video;
                 move_uploaded_file($tmp1,$path1);
                 
-                $statement = $db->query("INSERT INTO phtv_blog SET `title` = '$blog_title',`sub_title` = '$blog_sub_title', `description` = '$blog_description', `image` = '$photo', `video` = '$video', `auther_id` = '$selectAuter', `category_id` = '$selectCategory', `type` = '$blog_type', `created_at` = '$created'");
+                $statement = $db->query("INSERT INTO phtv_blog SET `title` = '$blog_title',`sub_title` = '$blog_sub_title', `description` = '$blog_description', `image` = '$photo', `video` = '$video', `auther_id` = '$selectAuter', `category_id` = '$selectCategory', `created_at` = '$created'");
             } else {
-                $statement = $db->query("INSERT INTO phtv_blog SET `title` = '$blog_title',`sub_title` = '$blog_sub_title', `description` = '$blog_description', `image` = '$photo', `auther_id` = '$selectAuter', `category_id` = '$selectCategory', `type` = '$blog_type', `created_at` = '$created'");
+                $statement = $db->query("INSERT INTO phtv_blog SET `title` = '$blog_title',`sub_title` = '$blog_sub_title', `description` = '$blog_description', `image` = '$photo', `auther_id` = '$selectAuter', `category_id` = '$selectCategory', `created_at` = '$created'");
             }
             
             if(!empty($statement))
@@ -92,7 +92,7 @@
             } else {
                 $video = $_REQUEST['old_blog_video'];
             }
-        $statement = $db->query("UPDATE phtv_blog SET `title` = '$blog_title',`sub_title` = '$blog_sub_title', `description` = '$blog_description', `image` = '$photo',`video` = '$video', `auther_id` = '$selectAuter', `category_id` = '$selectCategory', `type` = '$blog_type' WHERE id = '$blog_id'");
+        $statement = $db->query("UPDATE phtv_blog SET `title` = '$blog_title',`sub_title` = '$blog_sub_title', `description` = '$blog_description', `image` = '$photo',`video` = '$video', `auther_id` = '$selectAuter', `category_id` = '$selectCategory' WHERE id = '$blog_id'");
         if(!empty($statement))
         {
             $reoutput['success'] = 'success';
