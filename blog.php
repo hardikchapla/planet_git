@@ -59,14 +59,7 @@
                 <div class="row blog_images">
                     <div class="col-lg-6 align-self-center">
                         <div class="images">
-                            <?php if($feblog['type'] == '0'){ ?>
                             <img src="images/blog/<?= $feblog['image'] ?>" alt="blog_images" />
-                            <?php } else { ?>
-                            <video controls>
-                                <source src="images/blog/<?= $feblog['image'] ?>" type="video/mp4">
-                                <source src="images/blog/<?= $feblog['image'] ?>" type="video/ogg">
-                            </video>
-                            <?php } ?>
                         </div>
                     </div>
                     <div class="col-lg-6 align-self-center">
