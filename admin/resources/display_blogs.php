@@ -17,11 +17,11 @@
 		$sub_array = array();
 		$sub_array[] = $i;
 		$sub_array[] = $image;
-		if($row['type'] == 1){
-			$sub_array[] = "Video";
-		} else {
-			$sub_array[] = "Image";
-		}
+		// if($row['type'] == 1){
+		// 	$sub_array[] = "Video";
+		// } else {
+		// 	$sub_array[] = "Image";
+		// }
 		$sub_array[] = $row["title"];
 		$sub_array[] = $row["sub_title"];
 		$sub_array[] = $row["description"];

@@ -41,7 +41,7 @@
                                             <tr>
                                                 <th>No.</th>
                                                 <th>Image</th>
-                                                <th>Type</th>
+                                                <!-- <th>Type</th> -->
                                                 <th>Title</th>
                                                 <th>Subtitle</th>
                                                 <th>Description</th>
@@ -55,7 +55,7 @@
                                             <tr>
                                                 <th>No.</th>
                                                 <th>Image</th>
-                                                <th>Type</th>
+                                                <!-- <th>Type</th> -->
                                                 <th>Title</th>
                                                 <th>Subtitle</th>
                                                 <th>Description</th>
@@ -128,7 +128,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row mb-1">
+                    <!-- <div class="row mb-1">
                         <div class="col">
                             <label>Blog Type: </label>
                             <div class="form-group mb-0">
@@ -144,7 +144,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="row mb-1">
                         <div class="col">
                             <label for="blog_description" class="form-label">Blog Description:</label>
