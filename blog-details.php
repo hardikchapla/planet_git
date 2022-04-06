@@ -65,17 +65,17 @@
                     </video>
                     <div class="ss_video_back_info">
                         <div class="d-flex bd-highlight">
-                            <div class="p-2 flex-grow-1 bd-highlight">
+                            <!-- <div class="p-2 flex-grow-1 bd-highlight">
                                 <a href="#" class="ss_back_arrow">
                                     <img src="images/left_arrow.svg" alt="images" />
                                 </a>
-                            </div>
-                            <div class="p-2 bd-highlight">
+                            </div> -->
+                            <!-- <div class="p-2 bd-highlight">
                                 <a href=" #" class="ss_info_icons" data-toggle="modal"
                                     data-target="#exampleModalCenter">
                                     <i class="fa fa-info" aria-hidden="true"></i>
                                 </a>
-                            </div>
+                            </div> -->
                         </div>
 
                     </div>

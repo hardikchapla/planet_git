@@ -49,6 +49,9 @@
     if($cur_page == 'podcast'){
         $titleName = 'Podcast';
     }
+    if($cur_page == 'podcast_episode'){
+        $titleName = 'Podcast Episode';
+    }
    
     $admin = $db->query("SELECT * FROM phtv_admin WHERE id = 1");
     $feadmin = $admin->fetch();
@@ -301,6 +304,12 @@
                             <a class="d-flex align-items-center" href="podcast">
                                 <i class="bx bx-right-arrow-alt"></i>
                                 <span class="menu-item text-truncate" data-i18n="1 column">Podcast</span>
+                            </a>
+                        </li>
+                        <li class="<?php if($cur_page == 'podcast_episode') {echo 'active';} ?>">
+                            <a class="d-flex align-items-center" href="podcast_episode">
+                                <i class="bx bx-right-arrow-alt"></i>
+                                <span class="menu-item text-truncate" data-i18n="1 column">Podcast Episode</span>
                             </a>
                         </li>
                     </ul>

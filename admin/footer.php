@@ -36,6 +36,7 @@
 <script src="assets/js/blog_category.js"></script>
 <script src="assets/js/blogs.js"></script>
 <script src="assets/js/podcast.js"></script>
+<script src="assets/js/podcast_episode.js"></script>
 <script src="app-assets/vendors/js/forms/select/select2.full.min.js"></script>
 <script src="app-assets/js/scripts/forms/select/form-select2.min.js"></script>
 
