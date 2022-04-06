@@ -85,6 +85,7 @@ $(document).ready(function() {
             }
         },
         submitHandler: function(form) {
+            showLoading();
             var formdata = new FormData(document.getElementById('updatePodcastEpisoadForm'));
             var podcast_episode_mp3_file = $('#podcast_episode_mp3_file').get(0).files[0];
             formdata.append('podcast_episode_mp3_file', podcast_episode_mp3_file);
@@ -97,13 +98,16 @@ $(document).ready(function() {
                 success: function(output) {
                     output = jQuery.parseJSON(output);
                     if (output.success == 'success') {
+                        hideLoading();
                         toastr.options.onHidden = function() { window.location.href = 'podcast_episode'; }
                         toastr.success(output.message).delay(1000).fadeOut(1000);
                     } else {
+                        hideLoading();
                         toastr.warning(output.message).delay(1000).fadeOut(1000);
                     }
                 },
                 error: function() {
+                    hideLoading();
                     toastr.warning('Something went wrong with ajax !').delay(1000).fadeOut(1000);
                 }
             });
