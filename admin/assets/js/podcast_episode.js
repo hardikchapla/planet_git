@@ -85,6 +85,13 @@ $(document).ready(function() {
                 required: "Please select a podcast",
             },
         },
+        errorPlacement: function(error, element) {
+            if (element.attr("name") == "selectPodcast") {
+                error.insertAfter(".selection");
+            } else {
+                error.insertAfter(element);
+            }
+        },
         submitHandler: function(form) {
             showLoading();
             $("#updatePodcastEpisode").modal("hide");
