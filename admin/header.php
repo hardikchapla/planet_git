@@ -52,6 +52,12 @@
     if($cur_page == 'podcast_episode'){
         $titleName = 'Podcast Episode';
     }
+    if($cur_page == 'nft_category'){
+        $titleName = 'NFT Category';
+    }
+    if($cur_page == 'nft_collection'){
+        $titleName = 'NFT Collection';
+    }
    
     $admin = $db->query("SELECT * FROM phtv_admin WHERE id = 1");
     $feadmin = $admin->fetch();
@@ -310,6 +316,26 @@
                             <a class="d-flex align-items-center" href="podcast_episode">
                                 <i class="bx bx-right-arrow-alt"></i>
                                 <span class="menu-item text-truncate" data-i18n="1 column">Podcast Episode</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" nav-item <?php if($cur_page_main == 'NFT') {echo 'active';} ?>">
+                    <a href="#">
+                        <i class="fa fa-cube" aria-hidden="true"></i>
+                        <span class="menu-title text-truncate" data-i18n="Starter kit">NFT Market Place</span>
+                    </a>
+                    <ul class="menu-content">
+                        <li class="<?php if($cur_page == 'nft_category') {echo 'active';} ?>">
+                            <a class="d-flex align-items-center" href="nft_category">
+                                <i class="bx bx-right-arrow-alt"></i>
+                                <span class="menu-item text-truncate" data-i18n="1 column">NFT Category</span>
+                            </a>
+                        </li>
+                        <li class="<?php if($cur_page == 'nft_collection') {echo 'active';} ?>">
+                            <a class="d-flex align-items-center" href="nft_collection">
+                                <i class="bx bx-right-arrow-alt"></i>
+                                <span class="menu-item text-truncate" data-i18n="1 column">NFT Collection</span>
                             </a>
                         </li>
                     </ul>

@@ -85,7 +85,9 @@
                             </div>
                             <div class="p-2 bd-highlight align-self-center">
                                 <div class="ss_button_blog">
-                                    <a href="blog-details?id=<?= base64_encode($feblog['id']) ?>"> View More </a>
+                                    <a
+                                        href="blog-details?id=<?= base64_encode($feblog['id']) ?>&title=<?php $title = explode(' ',$feblog['title']); $title = implode('-', $title); echo $title; ?>">
+                                        View More </a>
                                 </div>
                             </div>
                         </div>
