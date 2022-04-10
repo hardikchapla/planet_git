@@ -58,6 +58,12 @@
     if($cur_page == 'nft_collection'){
         $titleName = 'NFT Collection';
     }
+    if($cur_page == 'nft_listing'){
+        $titleName = 'NFT Listing';
+    }
+    if($cur_page == 'nft_logos'){
+        $titleName = 'NFT Logos';
+    }
    
     $admin = $db->query("SELECT * FROM phtv_admin WHERE id = 1");
     $feadmin = $admin->fetch();
@@ -336,6 +342,18 @@
                             <a class="d-flex align-items-center" href="nft_collection">
                                 <i class="bx bx-right-arrow-alt"></i>
                                 <span class="menu-item text-truncate" data-i18n="1 column">NFT Collection</span>
+                            </a>
+                        </li>
+                        <li class="<?php if($cur_page == 'nft_listing') {echo 'active';} ?>">
+                            <a class="d-flex align-items-center" href="nft_listing">
+                                <i class="bx bx-right-arrow-alt"></i>
+                                <span class="menu-item text-truncate" data-i18n="1 column">NFT Listing</span>
+                            </a>
+                        </li>
+                        <li class="<?php if($cur_page == 'nft_logos') {echo 'active';} ?>">
+                            <a class="d-flex align-items-center" href="nft_logos">
+                                <i class="bx bx-right-arrow-alt"></i>
+                                <span class="menu-item text-truncate" data-i18n="1 column">NFT Logos</span>
                             </a>
                         </li>
                     </ul>
