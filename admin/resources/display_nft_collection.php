@@ -17,6 +17,7 @@
 		$sub_array = array();
 		$sub_array[] = $i;
 		$sub_array[] = $image;
+		$sub_array[] = $row['name'];
 		$sub_array[] = '<button class="btn btn-primary fa fa-pencil updateNFTCollection" data-toggle="modal" data-target="#updateNFTCollection" type="button" id="'.$row["id"].'"></button>';
 		$sub_array[] = '<button class="btn btn-danger fa fa-trash deleteNFTCollection" type="button" id="'.$row["id"].'" ></button>';
 		$data[] = $sub_array;

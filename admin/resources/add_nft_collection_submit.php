@@ -6,6 +6,7 @@
     if($_REQUEST['action'] == 'Add'){
         $reoutput = array();
         $created = date("Y-m-d H:i:s");
+        $nft_collection_name = addslashes($_REQUEST['nft_collection_name']);
         if(!empty($_FILES['nft_collection_image']['name']))
         {
             $file = $_FILES['nft_collection_image']['name'];
@@ -15,7 +16,7 @@
             $path = '../../images/nft_collection/'.$photo;
             move_uploaded_file($tmp,$path);
 
-            $statement = $db->query("INSERT INTO phtv_nft_collection SET `logo` = '$photo'");
+            $statement = $db->query("INSERT INTO phtv_nft_collection SET `name` = '$nft_collection_name', `logo` = '$photo'");
             if(!empty($statement))
             {
                 $reoutput['success'] = 'success';
@@ -35,6 +36,7 @@
     if($_REQUEST['action'] == 'Edit'){
         $reoutput = array();
         $nft_collection_id = $_REQUEST['nft_collection_id'];
+        $nft_collection_name = addslashes($_REQUEST['nft_collection_name']);
         if(!empty($_FILES['nft_collection_image']['name']))
         {
             $file = $_FILES['nft_collection_image']['name'];
@@ -52,7 +54,7 @@
         {
             $photo = $_REQUEST['old_nft_collection_image'];
         }
-        $statement = $db->query("UPDATE phtv_nft_collection SET `logo` = '$photo' WHERE id = '$nft_collection_id'");
+        $statement = $db->query("UPDATE phtv_nft_collection SET `name` = '$nft_collection_name',`logo` = '$photo' WHERE id = '$nft_collection_id'");
         if(!empty($statement))
         {
             $reoutput['success'] = 'success';

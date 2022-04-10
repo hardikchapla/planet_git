@@ -14,6 +14,7 @@
 		foreach($result as $row)
 		{
 			$reoutput["nft_collection_logo"] = $row["logo"];
+			$reoutput["nft_collection_name"] = $row["name"];
 		}
 		echo json_encode($reoutput);
 	}

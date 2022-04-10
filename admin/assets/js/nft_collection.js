@@ -25,6 +25,7 @@ $(document).ready(function() {
             dataType: "json",
             success: function(data) {
                 $('#old_nft_collection_image').val(data.nft_collection_logo);
+                $('#nft_collection_name').val(data.nft_collection_name);
                 $('#nft_collection_id').val(nft_collection_id);
                 $('#action').val("Edit");
                 $('#nft_collection_title').html("Update NFT Collection");
@@ -66,6 +67,16 @@ $(document).ready(function() {
         });
     });
     $("#updateNFTCollectionForm").validate({
+        rules: {
+            nft_collection_name: {
+                required: true,
+            }
+        },
+        messages: {
+            nft_collection_name: {
+                required: "Please provide a NFT collection name"
+            }
+        },
         submitHandler: function(form) {
             showLoading();
             $("#updateNFTCollection").modal("hide");

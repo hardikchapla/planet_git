@@ -39,6 +39,7 @@
                                             <tr>
                                                 <th>No.</th>
                                                 <th>Image</th>
+                                                <th>Name</th>
                                                 <th>Update</th>
                                                 <th>Delete</th>
                                             </tr>
@@ -47,6 +48,7 @@
                                             <tr>
                                                 <th>No.</th>
                                                 <th>Image</th>
+                                                <th>Name</th>
                                                 <th>Update</th>
                                                 <th>Delete</th>
                                             </tr>
@@ -81,6 +83,13 @@
                             placeholder="select file" class="form-control">
                         <input type="hidden" name="old_nft_collection_image" id="old_nft_collection_image">
                         <input type="hidden" name="nft_collection_id" id="nft_collection_id">
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <label>Collection name: </label>
+                    <div class="form-group mb-0">
+                        <input type="text" name="nft_collection_name" id="nft_collection_name"
+                            placeholder="Enter collection name" class="form-control">
                     </div>
                 </div>
                 <div class="modal-footer">
