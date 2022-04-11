@@ -14,7 +14,7 @@
 		foreach($result as $row)
 		{
 			$reoutput["nft_info_id"] = $row["id"];
-			$reoutput["old_nft_info_image"] = $row["image"];
+			$reoutput["nft_info_image"] = $row["image"];
 			$reoutput["selectCollections"] = $row["collection_id"];
 			$reoutput["selectCategory"] = $row["category_id"];
 			$reoutput["nft_info_name"] = $row["name"];
@@ -32,7 +32,7 @@
 			$reoutput["nft_info_attribute_object_collection"] = $row["attribute_object_collection"];
 			$reoutput["nft_info_attribute_object_no"] = $row["attribute_object_no"];
 			$reoutput["nft_info_attribute_border_color"] = $row["attribute_border_color"];
-			$reoutput["nft_info_attribute_border_type"] = $row["nft_info_attribute_border_type"];
+			$reoutput["nft_info_attribute_border_type"] = $row["attribute_border_type"];
 		}
 		echo json_encode($reoutput);
 	}

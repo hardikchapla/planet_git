@@ -35,22 +35,38 @@ $(document).ready(function() {
             },
             dataType: "json",
             success: function(data) {
-                $('#old_nft_listing_thumbnail').val(data.nft_listing_thumbnail);
-                $('#nft_listing_title').val(data.nft_listing_title);
-                $('#nft_listing_description').val(data.nft_listing_description);
-                nft_listing_description.setData(data.nft_listing_description);
-                $('#nft_listing_id').val(nft_listing_id);
+                $('#old_nft_info_image').val(data.nft_info_image);
+                $('#selectCollections').select2("val", data.selectCollections);
+                $('#selectCategory').select2("val", data.selectCategory);
+                $('#nft_info_description').val(data.nft_info_description);
+                nft_info_description.setData(data.nft_info_description);
+                $('#nft_info_name').val(data.nft_info_name);
+                $('#nft_info_price').val(data.nft_info_price);
+                $('#nft_info_sale_id').val(data.nft_info_sale_id);
+                $('#nft_info_assets_name').val(data.nft_info_assets_name);
+                $('#nft_info_assets_id').val(data.nft_info_assets_id);
+                $('#nft_info_meant_no').val(data.nft_info_meant_no);
+                $('#nft_info_duration').val(data.nft_info_duration);
+                $('#nft_info_attribute_name').val(data.nft_info_attribute_name);
+                $('#nft_info_attribute_image').val(data.nft_info_attribute_image);
+                $('#nft_info_attribute_bg_image').val(data.nft_info_attribute_bg_image);
+                $('#nft_info_attribute_object').val(data.nft_info_attribute_object);
+                $('#nft_info_attribute_object_collection').val(data.nft_info_attribute_object_collection);
+                $('#nft_info_attribute_object_no').val(data.nft_info_attribute_object_no);
+                $('#nft_info_attribute_border_color').val(data.nft_info_attribute_border_color);
+                $('#nft_info_attribute_border_type').val(data.nft_info_attribute_border_type);
+                $('#nft_info_id').val(nft_info_id);
                 $('#action').val("Edit");
-                $('#nft_listing_form_title').html("Update NFT Listing");
+                $('#nft_info_form_title').html("Update NFT Info");
             }
         })
     });
-    $(document).on('click', '.deleteNFTListing', function(e) {
-        var nft_listing_id = $(this).attr("id");
+    $(document).on('click', '.deleteNFTInfo', function(e) {
+        var nft_info_id = $(this).attr("id");
         e.preventDefault();
         Swal.fire({
             title: 'Are you sure?',
-            text: 'You will not be able to recover this nft listing!',
+            text: 'You will not be able to recover this nft info!',
             type: "warning",
             showCancelButton: true,
             confirmButtonClass: 'btn-danger',
@@ -59,14 +75,14 @@ $(document).ready(function() {
         }).then((result) => {
             if (result.isConfirmed) {
                 $.ajax({
-                        url: 'resources/delete_nft_listing',
+                        url: 'resources/delete_nft_info',
                         type: 'POST',
-                        data: 'nft_listing_id=' + nft_listing_id,
+                        data: 'nft_info_id=' + nft_info_id,
                         dataType: 'json'
                     })
                     .done(function(response) {
                         if (response.success == 'success') {
-                            toastr.options.onHidden = function() { window.location.href = 'nft_listing'; }
+                            toastr.options.onHidden = function() { window.location.href = 'nft_info'; }
                             toastr.success(response.message).delay(1000).fadeOut(1000);
                         } else {
                             toastr.warning(output.message).delay(1000).fadeOut(1000);

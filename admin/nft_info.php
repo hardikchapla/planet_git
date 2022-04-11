@@ -84,7 +84,7 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="nft_listing_form_title">Add NFT Info</h4>
+                <h4 class="modal-title" id="nft_info_form_title">Add NFT Info</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <i class="bx bx-x"></i>
                 </button>

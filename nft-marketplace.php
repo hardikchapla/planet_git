@@ -1,5 +1,9 @@
 <?php
    include('header.php');
+   $category = $db->query("SELECT * FROM phtv_nft_categories");
+   $collection = $db->query("SELECT * FROM phtv_nft_collection");
+   $listing = $db->query("SELECT * FROM phtv_nft_listing");
+   $logos = $db->query("SELECT * FROM phtv_nft_logos");
 ?>
 
 <div class="container-fluid ss_header_sub ss_height100vh">
@@ -24,30 +28,31 @@
 
     </div>
 </div>
-<div class="container-fluid ss_drops_sections">
+<div class="container-fluid ss_drops_sectionsdescription">
     <div class="container">
         <div class="row">
+            <?php while ($felogos = $logos->fetch(PDO::FETCH_ASSOC)) { ?>
             <div class="col-lg-3">
                 <div class="ss_drops_blogs">
                     <div class="d-flex bd-highlight align-self-center">
                         <div class="p-2 bd-highlight">
                             <div class="ss_drops_images">
-                                <img src="images/ss_drops_blogsA.png" alt="images"/>
+                                <img src="images/nft_logos/<?= $felogos['image'] ?>" alt="images" />
                             </div>
                         </div>
                         <div class="p-2 flex-fill bd-highlight align-self-center">
-                            <h2> All NFTs, New Artists, and Content is carefully Critiqued and Cur8td by the PHTV Crew
-                            </h2>
+                            <h2><?= $felogos['name'] ?></h2>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3">
+            <?php } ?>
+            <!-- <div class="col-lg-3">
                 <div class="ss_drops_blogs">
                     <div class="d-flex bd-highlight align-self-center">
                         <div class="p-2 bd-highlight">
                             <div class="ss_drops_images">
-                                <img src="images/ss_drops_blogsB.png" alt="images"/>
+                                <img src="images/ss_drops_blogsB.png" alt="images" />
                             </div>
                         </div>
                         <div class="p-2 flex-fill bd-highlight align-self-center">
@@ -63,7 +68,7 @@
                     <div class="d-flex bd-highlight align-self-center">
                         <div class="p-2 bd-highlight">
                             <div class="ss_drops_images">
-                                <img src="images/ss_drops_blogsC.png" alt="images"/>
+                                <img src="images/ss_drops_blogsC.png" alt="images" />
                             </div>
                         </div>
                         <div class="p-2 flex-fill bd-highlight align-self-center">
@@ -79,7 +84,7 @@
                     <div class="d-flex bd-highlight align-self-center">
                         <div class="p-2 bd-highlight">
                             <div class="ss_drops_images">
-                                <img src="images/ss_drops_blogsD.png" alt="images"/>
+                                <img src="images/ss_drops_blogsD.png" alt="images" />
                             </div>
                         </div>
                         <div class="p-2 flex-fill bd-highlight align-self-center">
@@ -89,7 +94,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>
@@ -103,22 +108,24 @@
             </div>
         </div>
         <div class="row pt-5">
+            <?php while ($felisting = $listing->fetch(PDO::FETCH_ASSOC)) { ?>
             <div class="col-lg-6">
-                <div class="nss_new_chinema ">
+                <div class="nss_new_chinema"
+                    style="background-image:url(images/nft_listing_thumbnail/<?= $felisting['thumbnail'] ?>)">
                     <div class="ss_des">
-                        <h2> World's Chinema Movie Scene NFTs </h2>
-                        <p> Daily Auctions of our unique Movie </p>
+                        <h2> <?= $felisting['title'] ?> </h2>
+                        <?= ($felisting['description'] != '') ? $felisting['description']:'' ?>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6">
+            <?php } ?>
+            <!-- <div class="col-lg-6">
                 <div class="nss_new_chinemaB ">
                     <div class="ss_des">
-                        <h2> The Payload
-                            Marketplace </h2>
+                        <h2> The Payload Marketplace </h2>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>
@@ -133,12 +140,14 @@
         </div>
         <div class=" pt-4">
             <div class="owl-carousel owl-theme" id="ss_categories">
+                <?php while ($fecategory = $category->fetch(PDO::FETCH_ASSOC)) { ?>
                 <div class="item">
                     <a href="#" class="ss_experiences">
-                        <h2>NTFX (Experiences)</h2>
+                        <h2><?= $fecategory['name'] ?></h2>
                     </a>
                 </div>
-                <div class="item">
+                <?php } ?>
+                <!-- <div class="item">
                     <a href="#" class="ss_experiences">
                         <h2>Music</h2>
                     </a>
@@ -182,7 +191,7 @@
                     <a href="#" class="ss_experiences">
                         <h2> NFTP (Physical) </h2>
                     </a>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -198,69 +207,71 @@
         </div>
         <div class=" pt-4">
             <div class="owl-carousel owl-theme" id="ss_collections">
+                <?php while ($fecollecton = $collection->fetch(PDO::FETCH_ASSOC)) { ?>
                 <div class="item">
                     <a href="#" class="ss_experiences">
                         <div class="verticle_middle">
-                            <img src="images/logo-studio.svg" alt="images"/>
+                            <img src="images/nft_collection/<?= $fecollecton['logo'] ?>" alt="images" />
+                        </div>
+                    </a>
+                </div>
+                <?php } ?>
+                <!-- <div class="item">
+                    <a href="#" class="ss_experiences">
+                        <div class="verticle_middle">
+                            <img src="images/logo-studioA.svg" alt="images" />
                         </div>
                     </a>
                 </div>
                 <div class="item">
                     <a href="#" class="ss_experiences">
                         <div class="verticle_middle">
-                            <img src="images/logo-studioA.svg" alt="images"/>
+                            <img src="images/logo-studioB.svg" alt="images" />
                         </div>
                     </a>
                 </div>
                 <div class="item">
                     <a href="#" class="ss_experiences">
                         <div class="verticle_middle">
-                            <img src="images/logo-studioB.svg" alt="images"/>
+                            <img src="images/logo-studioC.svg" alt="images" />
                         </div>
                     </a>
                 </div>
                 <div class="item">
                     <a href="#" class="ss_experiences">
                         <div class="verticle_middle">
-                            <img src="images/logo-studioC.svg" alt="images"/>
+                            <img src="images/logo-studioD.svg" alt="images" />
                         </div>
                     </a>
                 </div>
                 <div class="item">
                     <a href="#" class="ss_experiences">
                         <div class="verticle_middle">
-                            <img src="images/logo-studioD.svg" alt="images"/>
+                            <img src="images/logo-studioE.svg" alt="images" />
                         </div>
                     </a>
                 </div>
                 <div class="item">
                     <a href="#" class="ss_experiences">
                         <div class="verticle_middle">
-                            <img src="images/logo-studioE.svg" alt="images"/>
+                            <img src="images/logo-studioF.svg" alt="images" />
                         </div>
                     </a>
                 </div>
                 <div class="item">
                     <a href="#" class="ss_experiences">
                         <div class="verticle_middle">
-                            <img src="images/logo-studioF.svg" alt="images"/>
+                            <img src="images/logo-studioG.svg" alt="images" />
                         </div>
                     </a>
                 </div>
                 <div class="item">
                     <a href="#" class="ss_experiences">
                         <div class="verticle_middle">
-                            <img src="images/logo-studioG.svg" alt="images"/>
+                            <img src="images/logo-studioC.svg" alt="images" />
                         </div>
                     </a>
-                </div>
-                <div class="item">
-                    <a href="#" class="ss_experiences">
-                        <div class="verticle_middle">
-                            <img src="images/logo-studioC.svg" alt="images"/>
-                        </div>
-                    </a>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -271,7 +282,7 @@
             <div class="item">
                 <div class="ss_product">
                     <div class="images">
-                        <img src="images/SAA.jpg" alt="images"/>
+                        <img src="images/SAA.jpg" alt="images" />
                         <div class="ss_tabgs ss_tabgs_orange">
                             30 Days Left
                         </div>
@@ -302,7 +313,7 @@
             <div class="item">
                 <div class="ss_product">
                     <div class="images">
-                        <img src="images/episodesE.jpg" alt="images"/>
+                        <img src="images/episodesE.jpg" alt="images" />
                         <div class="ss_tabgs ss_tabgs_yellow">
                             90 Days Left
                         </div>
@@ -331,7 +342,7 @@
             <div class="item">
                 <div class="ss_product">
                     <div class="images">
-                        <img src="images/episodesC.jpg" alt="images"/>
+                        <img src="images/episodesC.jpg" alt="images" />
                         <div class="ss_tabgs ss_tabgs_red">
                             Ended
                         </div>
@@ -360,7 +371,7 @@
             <div class="item">
                 <div class="ss_product">
                     <div class="images">
-                        <img src="images/SAB.jpg" alt="images"/>
+                        <img src="images/SAB.jpg" alt="images" />
                         <div class="ss_tabgs ss_tabgs_green">
                             New Drop
                         </div>
@@ -389,7 +400,7 @@
             <div class="item">
                 <div class="ss_product">
                     <div class="images">
-                        <img src="images/episodesA.jpg" alt="images"/>
+                        <img src="images/episodesA.jpg" alt="images" />
                         <div class="ss_tabgs ss_tabgs_red">
                             Ended
                         </div>
@@ -429,7 +440,7 @@
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="ss_product">
                     <div class="images">
-                        <img src="images/SAA.jpg" alt="images"/>
+                        <img src="images/SAA.jpg" alt="images" />
                         <div class="ss_tabgs ss_tabgs_orange">
                             30 Days Left
                         </div>
@@ -458,7 +469,7 @@
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="ss_product">
                     <div class="images">
-                        <img src="images/episodesE.jpg" alt="images"/>
+                        <img src="images/episodesE.jpg" alt="images" />
                         <div class="ss_tabgs ss_tabgs_yellow">
                             90 Days Left
                         </div>
@@ -487,7 +498,7 @@
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="ss_product">
                     <div class="images">
-                        <img src="images/episodesC.jpg" alt="images"/>
+                        <img src="images/episodesC.jpg" alt="images" />
                         <div class="ss_tabgs ss_tabgs_red">
                             Ended
                         </div>
@@ -516,7 +527,7 @@
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="ss_product">
                     <div class="images">
-                        <img src="images/SAB.jpg" alt="images"/>
+                        <img src="images/SAB.jpg" alt="images" />
                         <div class="ss_tabgs ss_tabgs_green">
                             New Drop
                         </div>
@@ -545,7 +556,7 @@
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="ss_product">
                     <div class="images">
-                        <img src="images/SAA.jpg" alt="images"/>
+                        <img src="images/SAA.jpg" alt="images" />
                         <div class="ss_tabgs ss_tabgs_red">
                             Ended
                         </div>
@@ -574,7 +585,7 @@
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="ss_product">
                     <div class="images">
-                        <img src="images/SAC.jpg" alt="images"/>
+                        <img src="images/SAC.jpg" alt="images" />
                         <div class="ss_tabgs ss_tabgs_green">
                             New Drop
                         </div>
@@ -616,12 +627,12 @@
 </div>
 <!-- Modal -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-     aria-hidden="true">
+    aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content details_contents">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <img src="images/cancel.svg" alt="images"/>
+                    <img src="images/cancel.svg" alt="images" />
                 </button>
             </div>
             <div class="modal-body">
@@ -631,17 +642,17 @@
                             <div class="owl-carousel owl-theme" id="ss_slider_details">
                                 <div class="item">
                                     <div class="ss_model_images">
-                                        <img src="images/details_model.jpg" alt="details"/>
+                                        <img src="images/details_model.jpg" alt="details" />
                                     </div>
                                 </div>
                                 <div class="item">
                                     <div class="ss_model_images">
-                                        <img src="images/details_model.jpg" alt="details"/>
+                                        <img src="images/details_model.jpg" alt="details" />
                                     </div>
                                 </div>
                                 <div class="item">
                                     <div class="ss_model_images">
-                                        <img src="images/details_model.jpg" alt="details"/>
+                                        <img src="images/details_model.jpg" alt="details" />
                                     </div>
                                 </div>
                             </div>
@@ -658,7 +669,7 @@
                                 </p>
                                 <ul>
                                     <li>
-                                        <span> Sale ID	: </span>
+                                        <span> Sale ID : </span>
                                         <span> #5395761 </span>
                                     </li>
                                     <li>
@@ -695,4 +706,5 @@
 ?>
 
 </body>
+
 </html>

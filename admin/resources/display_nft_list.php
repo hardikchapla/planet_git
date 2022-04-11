@@ -9,7 +9,7 @@
 	foreach($result as $row)
 	{
 		$image = "";	
-		if(empty($row['logo'])){
+		if(empty($row['image'])){
 			$image = '<img src="../images/default.svg" style = "border-radius: 40px" width="40" height="40" />';
 		} else {
 			$image = '<img src="../images/nft_info_image/'.$row["image"].'" style = "border-radius: 40px" width="40" height="40" />';
@@ -25,7 +25,7 @@
 		$sub_array[] = $row['meant_no'];
 		$sub_array[] = $row['duration'];
 		$sub_array[] = '<button class="btn btn-primary fa fa-pencil updateNFTInfo" data-toggle="modal" data-target="#updateNFTInfo" type="button" id="'.$row["id"].'"></button>';
-		$sub_array[] = '<button class="btn btn-danger fa fa-trash updateNFTInfo" type="button" id="'.$row["id"].'" ></button>';
+		$sub_array[] = '<button class="btn btn-danger fa fa-trash deleteNFTInfo" type="button" id="'.$row["id"].'" ></button>';
 		$data[] = $sub_array;
 		$i++;
 	}
