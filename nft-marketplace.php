@@ -4,6 +4,8 @@
    $collection = $db->query("SELECT * FROM phtv_nft_collection");
    $listing = $db->query("SELECT * FROM phtv_nft_listing");
    $logos = $db->query("SELECT * FROM phtv_nft_logos");
+   $nft_info = $db->query("SELECT * FROM phtv_nft_info");
+   $nft_info1 = $db->query("SELECT * FROM phtv_nft_info");
 ?>
 
 <div class="container-fluid ss_header_sub ss_height100vh">
@@ -279,19 +281,39 @@
 <div class="container-fluid ss_product_slider_section">
     <div class="container">
         <div class="owl-carousel owl-theme" id="ss_product_slider">
+            <?php 
+                while ($feinfo = $nft_info->fetch(PDO::FETCH_ASSOC)) {
+                    $date1 = new DateTime(date('Y-m-d'));
+                    $date2 = new DateTime(date('Y-m-d', strtotime($feinfo['created_at'])));
+                    $interval = $date1->diff($date2);
+            ?>
             <div class="item">
                 <div class="ss_product">
                     <div class="images">
-                        <img src="images/SAA.jpg" alt="images" />
-                        <div class="ss_tabgs ss_tabgs_orange">
-                            30 Days Left
+                        <img src="images/nft_info_image/<?= $feinfo['image'] ?>" alt="images" />
+                        <?php if($interval->days <= 10){ ?>
+                        <div class="ss_tabgs ss_tabgs_green">
+                            New Drop
                         </div>
+                        <?php } elseif ($interval->days <= 60) { ?>
+                        <div class="ss_tabgs ss_tabgs_orange">
+                            <?= $interval->days ?> Days Left
+                        </div>
+                        <?php } elseif ($interval->days <= 90) { ?>
+                        <div class="ss_tabgs ss_tabgs_yellow">
+                            <?= $interval->days ?> Days Left
+                        </div>
+                        <?php } else { ?>
+                        <div class="ss_tabgs ss_tabgs_red">
+                            Ended
+                        </div>
+                        <?php } ?>
                     </div>
                     <div class="ss_main_des">
-                        <h5>Mona Loser <span>|</span> <span> The Studio </span></h5>
+                        <h5><?= $feinfo['name'] ?></h5>
                         <div class="d-flex bd-highlight">
                             <div class=" flex-grow-1 bd-highlight">
-                                <p> 200.00 PAY <span> ($58.64) </span></p>
+                                <p> <?= $feinfo['price'] ?> PAY <span> ($58.64) </span></p>
                             </div>
                             <div class=" bd-highlight">
                                 <p><span> M#154 | 200 </span></p>
@@ -299,18 +321,21 @@
                         </div>
                         <div class="d-flex bd-highlight ss_btn">
                             <div class=" flex-fill mr-4 bd-highlight">
-                                <a href="nft-marketplace-details" class="ss_details">
+                                <a href="nft-marketplace-details?id=<?= base64_encode($feinfo['id']) ?>"
+                                    class="ss_details">
                                     Details </a>
                             </div>
                             <div class=" flex-fill bd-highlight">
-                                <a href="#" class="ss_buy" data-toggle="modal" data-target="#exampleModalCenter">
-                                    Buy </a>
+                                <button type="button" class="ss_buy model_details" id="<?= $feinfo['id'] ?>"
+                                    data-toggle="modal" data-target="#exampleModalCenter">
+                                    Buy </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="item">
+            <?php } ?>
+            <!-- <div class="item">
                 <div class="ss_product">
                     <div class="images">
                         <img src="images/episodesE.jpg" alt="images" />
@@ -425,7 +450,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>
@@ -437,19 +462,39 @@
                     <h2> NFT Payload </h2>
                 </div>
             </div>
+            <?php 
+                while ($feinfo1 = $nft_info1->fetch(PDO::FETCH_ASSOC)) {
+                    $date1 = new DateTime(date('Y-m-d'));
+                    $date2 = new DateTime(date('Y-m-d', strtotime($feinfo1['created_at'])));
+                    $interval1 = $date1->diff($date2);
+            ?>
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="ss_product">
                     <div class="images">
-                        <img src="images/SAA.jpg" alt="images" />
-                        <div class="ss_tabgs ss_tabgs_orange">
-                            30 Days Left
+                        <img src="images/nft_info_image/<?= $feinfo1['image'] ?>" alt="images" />
+                        <?php if($interval1->days <= 10){ ?>
+                        <div class="ss_tabgs ss_tabgs_green">
+                            New Drop
                         </div>
+                        <?php } elseif ($interval1->days <= 60) { ?>
+                        <div class="ss_tabgs ss_tabgs_orange">
+                            <?= $interval1->days ?> Days Left
+                        </div>
+                        <?php } elseif ($interval1->days <= 90) { ?>
+                        <div class="ss_tabgs ss_tabgs_yellow">
+                            <?= $interval1->days ?> Days Left
+                        </div>
+                        <?php } else { ?>
+                        <div class="ss_tabgs ss_tabgs_red">
+                            Ended
+                        </div>
+                        <?php } ?>
                     </div>
                     <div class="ss_main_des">
-                        <h5>Mona Loser <span>|</span> <span> The Studio </span></h5>
+                        <h5><?= $feinfo1['name'] ?></span></h5>
                         <div class="d-flex bd-highlight">
                             <div class=" flex-grow-1 bd-highlight">
-                                <p> 200.00 PAY <span> ($58.64) </span></p>
+                                <p> <?= $feinfo1['price'] ?> PAY <span> ($58.64) </span></p>
                             </div>
                             <div class=" bd-highlight">
                                 <p><span> M#154 | 200 </span></p>
@@ -457,16 +502,19 @@
                         </div>
                         <div class="d-flex bd-highlight ss_btn">
                             <div class=" flex-fill mr-4 bd-highlight">
-                                <a href="nft-marketplace-details" class="ss_details"> Details </a>
+                                <a href="nft-marketplace-details?id=<?= base64_encode($feinfo['id']) ?>"
+                                    class="ss_details"> Details </a>
                             </div>
                             <div class=" flex-fill bd-highlight">
-                                <a href="#" class="ss_buy"> Buy </a>
+                                <button type="button" class="ss_buy model_details" id="<?= $feinfo['id'] ?>"
+                                    data-toggle="modal" data-target="#exampleModalCenter"> Buy </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <?php } ?>
+            <!-- <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="ss_product">
                     <div class="images">
                         <img src="images/episodesE.jpg" alt="images" />
@@ -610,7 +658,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>
@@ -642,55 +690,50 @@
                             <div class="owl-carousel owl-theme" id="ss_slider_details">
                                 <div class="item">
                                     <div class="ss_model_images">
-                                        <img src="images/details_model.jpg" alt="details" />
+                                        <img class="nft_marketing_image" src="images/details_model.jpg" alt="details" />
                                     </div>
                                 </div>
                                 <div class="item">
                                     <div class="ss_model_images">
-                                        <img src="images/details_model.jpg" alt="details" />
+                                        <img class="nft_marketing_image" src="images/details_model.jpg" alt="details" />
                                     </div>
                                 </div>
                                 <div class="item">
                                     <div class="ss_model_images">
-                                        <img src="images/details_model.jpg" alt="details" />
+                                        <img class="nft_marketing_image" src="images/details_model.jpg" alt="details" />
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-7 align-self-center">
                             <div class="ss_blog_details_des">
-                                <h2> Cuffed Beanie Planet Hopper TV </h2>
-                                <h5> 200.00 WAX <span> ($58.64) </span></h5>
-                                <p>
-                                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-                                    praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias
-                                    excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui
-                                    officia deserunt mollitia animi, id est laborum et dolorum fuga.
-                                </p>
+                                <h2 id="nft_marketing_name"> Cuffed Beanie Planet Hopper TV </h2>
+                                <h5 id="nft_marketing_price"> 200.00 WAX <span> ($58.64) </span></h5>
+                                <p id="nft_marketing_description"></p>
                                 <ul>
                                     <li>
                                         <span> Sale ID : </span>
-                                        <span> #5395761 </span>
+                                        <span id="nft_marketing_sale_id"> #5395761 </span>
                                     </li>
                                     <li>
                                         <span> Collection : </span>
-                                        <span> warclanstime </span>
+                                        <span id="nft_marketing_collection"> warclanstime </span>
                                     </li>
                                     <li>
                                         <span> Asset Name : </span>
-                                        <span> Goldenbeard Bob </span>
+                                        <span id="nft_marketing_asset_name"> Goldenbeard Bob </span>
                                     </li>
                                     <li>
                                         <span> Asset ID : </span>
-                                        <span class="themcolor"> #1099517828729 </span>
+                                        <span id="nft_marketing_asset_id" class="themcolor"> #1099517828729 </span>
                                     </li>
                                     <li>
                                         <span> Mint Number : </span>
-                                        <span> 59of179 (max: 300) - 2 </span>
+                                        <span id="nft_marketing_mint_number"> 59of179 (max: 300) - 2 </span>
                                     </li>
                                 </ul>
                                 <div class="ss_model_button">
-                                    <a href="#"> Buy for 0.20 WAX </a>
+                                    <a id="model_buy_link" href="#"> Buy for 0.20 WAX </a>
                                 </div>
                             </div>
                         </div>
@@ -704,7 +747,35 @@
 <?php
     include('footer.php');
 ?>
-
+<script>
+$(document).ready(function() {
+    $(document).on('click', '.model_details', function() {
+        var nft_id = $(this).attr('id');
+        $.ajax({
+            url: "resources/nft_model_details",
+            method: "POST",
+            data: {
+                nft_id: nft_id
+            },
+            dataType: "json",
+            success: function(data) {
+                $('.nft_marketing_image').attr('src', 'images/nft_info_image/' + data
+                    .image);
+                $('#nft_marketing_name').html(data.name);
+                $('#nft_marketing_price').html(data.price + " WAX <span> ($58.64) </span>");
+                $('#nft_marketing_description').html(data.description);
+                $('#nft_marketing_sale_id').html(data.sale_id);
+                $('#nft_marketing_collection').html(data.collection_name);
+                $('#nft_marketing_asset_name').html(data.assets_name);
+                $('#nft_marketing_asset_id').html(data.assets_id);
+                $('#nft_marketing_mint_number').html(data.meant_no + " (max: 300) - 2");
+                $('#model_buy_link').attr('href', 'nft-marketplace-details?id=' + data
+                    .nft_id);
+            }
+        })
+    });
+});
+</script>
 </body>
 
 </html>

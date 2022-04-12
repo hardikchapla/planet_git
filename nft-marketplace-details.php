@@ -1,5 +1,8 @@
 <?php
-   include('header.php');
+    include('header.php');
+    $nft_id =  base64_decode($_REQUEST['id']);
+    $nft = $db->query("SELECT a.*, b.name as category_name, c.name as collection_name FROM phtv_nft_info a, phtv_nft_categories b, phtv_nft_collection c WHERE a.collection_id = c.id AND a.category_id = b.id AND a.id = '$nft_id'");
+    $fenft = $nft->fetch(PDO::FETCH_ASSOC);
 ?>
 
 <div class="container-fluid ss_marketplace_details">
@@ -10,51 +13,46 @@
                     <div class="owl-carousel owl-theme" id="ss_slider_details">
                         <div class="item">
                             <div class="ss_model_images">
-                                <img src="images/details_model.jpg" alt="details"/>
+                                <img src="images/nft_info_image/<?= $fenft['image'] ?>" alt="details" />
                             </div>
                         </div>
                         <div class="item">
                             <div class="ss_model_images">
-                                <img src="images/details_model.jpg" alt="details"/>
+                                <img src="images/nft_info_image/<?= $fenft['image'] ?>" alt="details" />
                             </div>
                         </div>
                         <div class="item">
                             <div class="ss_model_images">
-                                <img src="images/details_model.jpg" alt="details"/>
+                                <img src="images/nft_info_image/<?= $fenft['image'] ?>" alt="details" />
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-7 align-self-center">
                     <div class="ss_blog_details_des">
-                        <h2> Cuffed Beanie Planet Hopper TV </h2>
-                        <h5> 200.00 WAX <span> ($58.64) </span></h5>
-                        <p>
-                            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-                            praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias
-                            excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui
-                            officia deserunt mollitia animi, id est laborum et dolorum fuga.
-                        </p>
+                        <h2> <?= $fenft['name'] ?> </h2>
+                        <h5> <?= $fenft['price'] ?> WAX <span> ($58.64) </span></h5>
+                        <p><?= $fenft['description'] ?></p>
                         <ul>
                             <li>
-                                <span> Sale ID	: </span>
-                                <span> #5395761 </span>
+                                <span> Sale ID : </span>
+                                <span> <?= $fenft['sale_id'] ?> </span>
                             </li>
                             <li>
                                 <span> Collection : </span>
-                                <span> warclanstime </span>
+                                <span> <?= $fenft['collection_name'] ?> </span>
                             </li>
                             <li>
                                 <span> Asset Name : </span>
-                                <span> Goldenbeard Bob </span>
+                                <span> <?= $fenft['assets_name'] ?> </span>
                             </li>
                             <li>
                                 <span> Asset ID : </span>
-                                <span class="themcolor"> #1099517828729 </span>
+                                <span class="themcolor"> <?= $fenft['assets_id'] ?> </span>
                             </li>
                             <li>
                                 <span> Mint Number : </span>
-                                <span> 59of179 (max: 300) - 2 </span>
+                                <span> <?= $fenft['meant_no'] ?> (max: 300) - 2 </span>
                             </li>
                         </ul>
                         <div class="ss_model_button">
@@ -75,53 +73,49 @@
                     <li>
                         <div class="d-flex bd-highlight">
                             <div class=" bd-highlight"> name</div>
-                            <div class="flex-fill bd-highlight"> The Oracle</div>
+                            <div class="flex-fill bd-highlight"><?= $fenft['attribute_name'] ?></div>
                         </div>
                     </li>
                     <li>
                         <div class="d-flex bd-highlight">
                             <div class=" bd-highlight"> img</div>
-                            <div class="flex-fill bd-highlight">
-                                QmVw3fDskNRcxQweB9vRoo8W8PchiTjtzaATFuGVfY3WWS/Kog/no_foil/rare/3-130-33-18-0_front.png
-                            </div>
+                            <div class="flex-fill bd-highlight"><?= $fenft['attribute_image'] ?></div>
                         </div>
                     </li>
                     <li>
                         <div class="d-flex bd-highlight">
                             <div class=" bd-highlight"> backimg</div>
-                            <div class="flex-fill bd-highlight">
-                                QmVw3fDskNRcxQweB9vRoo8W8PchiTjtzaATFuGVfY3WWS/Kog/no_foil/rare/3-130-33-18-0_front.png
-                            </div>
+                            <div class="flex-fill bd-highlight"><?= $fenft['attribute_bg_image'] ?></div>
                         </div>
                     </li>
                     <li>
                         <div class="d-flex bd-highlight">
                             <div class=" bd-highlight"> object</div>
-                            <div class="flex-fill bd-highlight">Kog</div>
+                            <div class="flex-fill bd-highlight"><?= $fenft['attribute_object'] ?></div>
                         </div>
                     </li>
                     <li>
                         <div class="d-flex bd-highlight">
                             <div class=" bd-highlight"> object_collection</div>
-                            <div class="flex-fill bd-highlight"> Crypto</div>
+                            <div class="flex-fill bd-highlight"> <?= $fenft['attribute_object_collection'] ?></div>
                         </div>
                     </li>
                     <li>
                         <div class="d-flex bd-highlight">
                             <div class=" bd-highlight"> object_number</div>
-                            <div class="flex-fill bd-highlight"> 130</div>
+                            <div class="flex-fill bd-highlight"> <?= $fenft['attribute_object_no'] ?></div>
                         </div>
                     </li>
                     <li>
                         <div class="d-flex bd-highlight">
                             <div class=" bd-highlight"> border_color</div>
-                            <div class="flex-fill bd-highlight"> sky</div>
+                            <div class="flex-fill bd-highlight"> <?= $fenft['attribute_border_color'] ?></div>
                         </div>
                     </li>
                     <li>
                         <div class="d-flex bd-highlight">
                             <div class=" bd-highlight"> border_type</div>
-                            <div class="flex-fill bd-highlight"> 18</div>
+                            <div class="flex-fill bd-highlight"> <?= $fenft['attribute_border_type'] ?></div>
                         </div>
                     </li>
                 </ul>
@@ -178,7 +172,7 @@
                                 <li>
                                     <div class="custom-control custom-checkbox mr-sm-2">
                                         <input type="checkbox" class="custom-control-input"
-                                               id="customControlAutosizing">
+                                            id="customControlAutosizing">
                                         <label class="custom-control-label" for="customControlAutosizing">
                                             Listings </label>
                                     </div>
@@ -186,14 +180,14 @@
                                 <li>
                                     <div class="custom-control custom-checkbox mr-sm-2">
                                         <input type="checkbox" class="custom-control-input"
-                                               id="customControlAutosizing2">
+                                            id="customControlAutosizing2">
                                         <label class="custom-control-label" for="customControlAutosizing2">Sales</label>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="custom-control custom-checkbox mr-sm-2">
                                         <input type="checkbox" class="custom-control-input"
-                                               id="customControlAutosizing6">
+                                            id="customControlAutosizing6">
                                         <label class="custom-control-label" for="customControlAutosizing6">
                                             Bids </label>
                                     </div>
@@ -201,7 +195,7 @@
                                 <li>
                                     <div class="custom-control custom-checkbox mr-sm-2">
                                         <input type="checkbox" class="custom-control-input"
-                                               id="customControlAutosizing8">
+                                            id="customControlAutosizing8">
                                         <label class="custom-control-label" for="customControlAutosizing8">
                                             Trasfers </label>
                                     </div>
@@ -213,301 +207,331 @@
                         <div class=" table-responsive">
                             <table class="table table-striped header-fixed">
                                 <thead>
-                                <tr>
-                                    <th>Event</th>
-                                    <th>Unit Price</th>
-                                    <th>Quantity</th>
-                                    <th>From</th>
-                                    <th>To</th>
-                                    <th> Date</th>
-                                </tr>
+                                    <tr>
+                                        <th>Event</th>
+                                        <th>Unit Price</th>
+                                        <th>Quantity</th>
+                                        <th>From</th>
+                                        <th>To</th>
+                                        <th> Date</th>
+                                    </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td class="filterable-cell"><span> <i class="fa fa-tag" aria-hidden="true"></i> List</span>
-                                    </td>
-                                    <td class="filterable-cell"><span>Ξ</span> <span>0.0166</span></td>
-                                    <td class="filterable-cell"><span>2</span></td>
-                                    <td class="filterable-cell">
-                                        <div class="d-flex bd-highlight">
-                                            <div class=" pr-2 bd-highlight align-self-center">
-                                                <div class="ss_trading_profiles">
-                                                    <img src="images/unnamed.jpg" alt="profiles"/>
+                                    <tr>
+                                        <td class="filterable-cell"><span> <i class="fa fa-tag" aria-hidden="true"></i>
+                                                List</span>
+                                        </td>
+                                        <td class="filterable-cell"><span>Ξ</span> <span>0.0166</span></td>
+                                        <td class="filterable-cell"><span>2</span></td>
+                                        <td class="filterable-cell">
+                                            <div class="d-flex bd-highlight">
+                                                <div class=" pr-2 bd-highlight align-self-center">
+                                                    <div class="ss_trading_profiles">
+                                                        <img src="images/unnamed.jpg" alt="profiles" />
+                                                    </div>
+                                                </div>
+                                                <div class=" flex-fill bd-highlight align-self-center">
+                                                    CryptoFinanceTeam
                                                 </div>
                                             </div>
-                                            <div class=" flex-fill bd-highlight align-self-center"> CryptoFinanceTeam
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="filterable-cell"><span></span></td>
-                                    <td class="filterable-cell"><span> an hour ago</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="filterable-cell"><span> <i class="fa fa-tag" aria-hidden="true"></i> List</span>
-                                    </td>
-                                    <td class="filterable-cell"><span>Ξ</span> <span>0.0166</span></td>
-                                    <td class="filterable-cell"><span>2</span></td>
-                                    <td class="filterable-cell">
-                                        <div class="d-flex bd-highlight">
-                                            <div class=" pr-2 bd-highlight align-self-center">
-                                                <div class="ss_trading_profiles">
-                                                    <img src="images/unnamed.jpg" alt="profiles"/>
+                                        </td>
+                                        <td class="filterable-cell"><span></span></td>
+                                        <td class="filterable-cell"><span> an hour ago</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="filterable-cell"><span> <i class="fa fa-tag" aria-hidden="true"></i>
+                                                List</span>
+                                        </td>
+                                        <td class="filterable-cell"><span>Ξ</span> <span>0.0166</span></td>
+                                        <td class="filterable-cell"><span>2</span></td>
+                                        <td class="filterable-cell">
+                                            <div class="d-flex bd-highlight">
+                                                <div class=" pr-2 bd-highlight align-self-center">
+                                                    <div class="ss_trading_profiles">
+                                                        <img src="images/unnamed.jpg" alt="profiles" />
+                                                    </div>
+                                                </div>
+                                                <div class=" flex-fill bd-highlight align-self-center">
+                                                    CryptoFinanceTeam
                                                 </div>
                                             </div>
-                                            <div class=" flex-fill bd-highlight align-self-center"> CryptoFinanceTeam
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="filterable-cell"><span></span></td>
-                                    <td class="filterable-cell"><span> an hour ago</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="filterable-cell"><span> <i class="fa fa-tag" aria-hidden="true"></i> List</span>
-                                    </td>
-                                    <td class="filterable-cell"><span>Ξ</span> <span>0.0166</span></td>
-                                    <td class="filterable-cell"><span>2</span></td>
-                                    <td class="filterable-cell">
-                                        <div class="d-flex bd-highlight">
-                                            <div class=" pr-2 bd-highlight align-self-center">
-                                                <div class="ss_trading_profiles">
-                                                    <img src="images/unnamed.jpg" alt="profiles"/>
+                                        </td>
+                                        <td class="filterable-cell"><span></span></td>
+                                        <td class="filterable-cell"><span> an hour ago</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="filterable-cell"><span> <i class="fa fa-tag" aria-hidden="true"></i>
+                                                List</span>
+                                        </td>
+                                        <td class="filterable-cell"><span>Ξ</span> <span>0.0166</span></td>
+                                        <td class="filterable-cell"><span>2</span></td>
+                                        <td class="filterable-cell">
+                                            <div class="d-flex bd-highlight">
+                                                <div class=" pr-2 bd-highlight align-self-center">
+                                                    <div class="ss_trading_profiles">
+                                                        <img src="images/unnamed.jpg" alt="profiles" />
+                                                    </div>
+                                                </div>
+                                                <div class=" flex-fill bd-highlight align-self-center">
+                                                    CryptoFinanceTeam
                                                 </div>
                                             </div>
-                                            <div class=" flex-fill bd-highlight align-self-center"> CryptoFinanceTeam
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="filterable-cell"><span></span></td>
-                                    <td class="filterable-cell"><span> an hour ago</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="filterable-cell"><span> <i class="fa fa-tag" aria-hidden="true"></i> List</span>
-                                    </td>
-                                    <td class="filterable-cell"><span>Ξ</span> <span>0.0166</span></td>
-                                    <td class="filterable-cell"><span>2</span></td>
-                                    <td class="filterable-cell">
-                                        <div class="d-flex bd-highlight">
-                                            <div class=" pr-2 bd-highlight align-self-center">
-                                                <div class="ss_trading_profiles">
-                                                    <img src="images/unnamed.jpg" alt="profiles"/>
+                                        </td>
+                                        <td class="filterable-cell"><span></span></td>
+                                        <td class="filterable-cell"><span> an hour ago</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="filterable-cell"><span> <i class="fa fa-tag" aria-hidden="true"></i>
+                                                List</span>
+                                        </td>
+                                        <td class="filterable-cell"><span>Ξ</span> <span>0.0166</span></td>
+                                        <td class="filterable-cell"><span>2</span></td>
+                                        <td class="filterable-cell">
+                                            <div class="d-flex bd-highlight">
+                                                <div class=" pr-2 bd-highlight align-self-center">
+                                                    <div class="ss_trading_profiles">
+                                                        <img src="images/unnamed.jpg" alt="profiles" />
+                                                    </div>
+                                                </div>
+                                                <div class=" flex-fill bd-highlight align-self-center">
+                                                    CryptoFinanceTeam
                                                 </div>
                                             </div>
-                                            <div class=" flex-fill bd-highlight align-self-center"> CryptoFinanceTeam
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="filterable-cell"><span></span></td>
-                                    <td class="filterable-cell"><span> an hour ago</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="filterable-cell"><span> <i class="fa fa-tag" aria-hidden="true"></i> List</span>
-                                    </td>
-                                    <td class="filterable-cell"><span>Ξ</span> <span>0.0166</span></td>
-                                    <td class="filterable-cell"><span>2</span></td>
-                                    <td class="filterable-cell">
-                                        <div class="d-flex bd-highlight">
-                                            <div class=" pr-2 bd-highlight align-self-center">
-                                                <div class="ss_trading_profiles">
-                                                    <img src="images/unnamed.jpg" alt="profiles"/>
+                                        </td>
+                                        <td class="filterable-cell"><span></span></td>
+                                        <td class="filterable-cell"><span> an hour ago</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="filterable-cell"><span> <i class="fa fa-tag" aria-hidden="true"></i>
+                                                List</span>
+                                        </td>
+                                        <td class="filterable-cell"><span>Ξ</span> <span>0.0166</span></td>
+                                        <td class="filterable-cell"><span>2</span></td>
+                                        <td class="filterable-cell">
+                                            <div class="d-flex bd-highlight">
+                                                <div class=" pr-2 bd-highlight align-self-center">
+                                                    <div class="ss_trading_profiles">
+                                                        <img src="images/unnamed.jpg" alt="profiles" />
+                                                    </div>
+                                                </div>
+                                                <div class=" flex-fill bd-highlight align-self-center">
+                                                    CryptoFinanceTeam
                                                 </div>
                                             </div>
-                                            <div class=" flex-fill bd-highlight align-self-center"> CryptoFinanceTeam
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="filterable-cell"><span></span></td>
-                                    <td class="filterable-cell"><span> an hour ago</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="filterable-cell"><span> <i class="fa fa-tag" aria-hidden="true"></i> List</span>
-                                    </td>
-                                    <td class="filterable-cell"><span>Ξ</span> <span>0.0166</span></td>
-                                    <td class="filterable-cell"><span>2</span></td>
-                                    <td class="filterable-cell">
-                                        <div class="d-flex bd-highlight">
-                                            <div class=" pr-2 bd-highlight align-self-center">
-                                                <div class="ss_trading_profiles">
-                                                    <img src="images/unnamed.jpg" alt="profiles"/>
+                                        </td>
+                                        <td class="filterable-cell"><span></span></td>
+                                        <td class="filterable-cell"><span> an hour ago</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="filterable-cell"><span> <i class="fa fa-tag" aria-hidden="true"></i>
+                                                List</span>
+                                        </td>
+                                        <td class="filterable-cell"><span>Ξ</span> <span>0.0166</span></td>
+                                        <td class="filterable-cell"><span>2</span></td>
+                                        <td class="filterable-cell">
+                                            <div class="d-flex bd-highlight">
+                                                <div class=" pr-2 bd-highlight align-self-center">
+                                                    <div class="ss_trading_profiles">
+                                                        <img src="images/unnamed.jpg" alt="profiles" />
+                                                    </div>
+                                                </div>
+                                                <div class=" flex-fill bd-highlight align-self-center">
+                                                    CryptoFinanceTeam
                                                 </div>
                                             </div>
-                                            <div class=" flex-fill bd-highlight align-self-center"> CryptoFinanceTeam
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="filterable-cell"><span></span></td>
-                                    <td class="filterable-cell"><span> an hour ago</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="filterable-cell"><span> <i class="fa fa-tag" aria-hidden="true"></i> List</span>
-                                    </td>
-                                    <td class="filterable-cell"><span>Ξ</span> <span>0.0166</span></td>
-                                    <td class="filterable-cell"><span>2</span></td>
-                                    <td class="filterable-cell">
-                                        <div class="d-flex bd-highlight">
-                                            <div class=" pr-2 bd-highlight align-self-center">
-                                                <div class="ss_trading_profiles">
-                                                    <img src="images/unnamed.jpg" alt="profiles"/>
+                                        </td>
+                                        <td class="filterable-cell"><span></span></td>
+                                        <td class="filterable-cell"><span> an hour ago</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="filterable-cell"><span> <i class="fa fa-tag" aria-hidden="true"></i>
+                                                List</span>
+                                        </td>
+                                        <td class="filterable-cell"><span>Ξ</span> <span>0.0166</span></td>
+                                        <td class="filterable-cell"><span>2</span></td>
+                                        <td class="filterable-cell">
+                                            <div class="d-flex bd-highlight">
+                                                <div class=" pr-2 bd-highlight align-self-center">
+                                                    <div class="ss_trading_profiles">
+                                                        <img src="images/unnamed.jpg" alt="profiles" />
+                                                    </div>
+                                                </div>
+                                                <div class=" flex-fill bd-highlight align-self-center">
+                                                    CryptoFinanceTeam
                                                 </div>
                                             </div>
-                                            <div class=" flex-fill bd-highlight align-self-center"> CryptoFinanceTeam
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="filterable-cell"><span></span></td>
-                                    <td class="filterable-cell"><span> an hour ago</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="filterable-cell"><span> <i class="fa fa-tag" aria-hidden="true"></i> List</span>
-                                    </td>
-                                    <td class="filterable-cell"><span>Ξ</span> <span>0.0166</span></td>
-                                    <td class="filterable-cell"><span>2</span></td>
-                                    <td class="filterable-cell">
-                                        <div class="d-flex bd-highlight">
-                                            <div class=" pr-2 bd-highlight align-self-center">
-                                                <div class="ss_trading_profiles">
-                                                    <img src="images/unnamed.jpg" alt="profiles"/>
+                                        </td>
+                                        <td class="filterable-cell"><span></span></td>
+                                        <td class="filterable-cell"><span> an hour ago</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="filterable-cell"><span> <i class="fa fa-tag" aria-hidden="true"></i>
+                                                List</span>
+                                        </td>
+                                        <td class="filterable-cell"><span>Ξ</span> <span>0.0166</span></td>
+                                        <td class="filterable-cell"><span>2</span></td>
+                                        <td class="filterable-cell">
+                                            <div class="d-flex bd-highlight">
+                                                <div class=" pr-2 bd-highlight align-self-center">
+                                                    <div class="ss_trading_profiles">
+                                                        <img src="images/unnamed.jpg" alt="profiles" />
+                                                    </div>
+                                                </div>
+                                                <div class=" flex-fill bd-highlight align-self-center">
+                                                    CryptoFinanceTeam
                                                 </div>
                                             </div>
-                                            <div class=" flex-fill bd-highlight align-self-center"> CryptoFinanceTeam
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="filterable-cell"><span></span></td>
-                                    <td class="filterable-cell"><span> an hour ago</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="filterable-cell"><span> <i class="fa fa-tag" aria-hidden="true"></i> List</span>
-                                    </td>
-                                    <td class="filterable-cell"><span>Ξ</span> <span>0.0166</span></td>
-                                    <td class="filterable-cell"><span>2</span></td>
-                                    <td class="filterable-cell">
-                                        <div class="d-flex bd-highlight">
-                                            <div class=" pr-2 bd-highlight align-self-center">
-                                                <div class="ss_trading_profiles">
-                                                    <img src="images/unnamed.jpg" alt="profiles"/>
+                                        </td>
+                                        <td class="filterable-cell"><span></span></td>
+                                        <td class="filterable-cell"><span> an hour ago</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="filterable-cell"><span> <i class="fa fa-tag" aria-hidden="true"></i>
+                                                List</span>
+                                        </td>
+                                        <td class="filterable-cell"><span>Ξ</span> <span>0.0166</span></td>
+                                        <td class="filterable-cell"><span>2</span></td>
+                                        <td class="filterable-cell">
+                                            <div class="d-flex bd-highlight">
+                                                <div class=" pr-2 bd-highlight align-self-center">
+                                                    <div class="ss_trading_profiles">
+                                                        <img src="images/unnamed.jpg" alt="profiles" />
+                                                    </div>
+                                                </div>
+                                                <div class=" flex-fill bd-highlight align-self-center">
+                                                    CryptoFinanceTeam
                                                 </div>
                                             </div>
-                                            <div class=" flex-fill bd-highlight align-self-center"> CryptoFinanceTeam
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="filterable-cell"><span></span></td>
-                                    <td class="filterable-cell"><span> an hour ago</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="filterable-cell"><span> <i class="fa fa-tag" aria-hidden="true"></i> List</span>
-                                    </td>
-                                    <td class="filterable-cell"><span>Ξ</span> <span>0.0166</span></td>
-                                    <td class="filterable-cell"><span>2</span></td>
-                                    <td class="filterable-cell">
-                                        <div class="d-flex bd-highlight">
-                                            <div class=" pr-2 bd-highlight align-self-center">
-                                                <div class="ss_trading_profiles">
-                                                    <img src="images/unnamed.jpg" alt="profiles"/>
+                                        </td>
+                                        <td class="filterable-cell"><span></span></td>
+                                        <td class="filterable-cell"><span> an hour ago</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="filterable-cell"><span> <i class="fa fa-tag" aria-hidden="true"></i>
+                                                List</span>
+                                        </td>
+                                        <td class="filterable-cell"><span>Ξ</span> <span>0.0166</span></td>
+                                        <td class="filterable-cell"><span>2</span></td>
+                                        <td class="filterable-cell">
+                                            <div class="d-flex bd-highlight">
+                                                <div class=" pr-2 bd-highlight align-self-center">
+                                                    <div class="ss_trading_profiles">
+                                                        <img src="images/unnamed.jpg" alt="profiles" />
+                                                    </div>
+                                                </div>
+                                                <div class=" flex-fill bd-highlight align-self-center">
+                                                    CryptoFinanceTeam
                                                 </div>
                                             </div>
-                                            <div class=" flex-fill bd-highlight align-self-center"> CryptoFinanceTeam
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="filterable-cell"><span></span></td>
-                                    <td class="filterable-cell"><span> an hour ago</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="filterable-cell"><span> <i class="fa fa-tag" aria-hidden="true"></i> List</span>
-                                    </td>
-                                    <td class="filterable-cell"><span>Ξ</span> <span>0.0166</span></td>
-                                    <td class="filterable-cell"><span>2</span></td>
-                                    <td class="filterable-cell">
-                                        <div class="d-flex bd-highlight">
-                                            <div class=" pr-2 bd-highlight align-self-center">
-                                                <div class="ss_trading_profiles">
-                                                    <img src="images/unnamed.jpg" alt="profiles"/>
+                                        </td>
+                                        <td class="filterable-cell"><span></span></td>
+                                        <td class="filterable-cell"><span> an hour ago</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="filterable-cell"><span> <i class="fa fa-tag" aria-hidden="true"></i>
+                                                List</span>
+                                        </td>
+                                        <td class="filterable-cell"><span>Ξ</span> <span>0.0166</span></td>
+                                        <td class="filterable-cell"><span>2</span></td>
+                                        <td class="filterable-cell">
+                                            <div class="d-flex bd-highlight">
+                                                <div class=" pr-2 bd-highlight align-self-center">
+                                                    <div class="ss_trading_profiles">
+                                                        <img src="images/unnamed.jpg" alt="profiles" />
+                                                    </div>
+                                                </div>
+                                                <div class=" flex-fill bd-highlight align-self-center">
+                                                    CryptoFinanceTeam
                                                 </div>
                                             </div>
-                                            <div class=" flex-fill bd-highlight align-self-center"> CryptoFinanceTeam
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="filterable-cell"><span></span></td>
-                                    <td class="filterable-cell"><span> an hour ago</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="filterable-cell"><span> <i class="fa fa-tag" aria-hidden="true"></i> List</span>
-                                    </td>
-                                    <td class="filterable-cell"><span>Ξ</span> <span>0.0166</span></td>
-                                    <td class="filterable-cell"><span>2</span></td>
-                                    <td class="filterable-cell">
-                                        <div class="d-flex bd-highlight">
-                                            <div class=" pr-2 bd-highlight align-self-center">
-                                                <div class="ss_trading_profiles">
-                                                    <img src="images/unnamed.jpg" alt="profiles"/>
+                                        </td>
+                                        <td class="filterable-cell"><span></span></td>
+                                        <td class="filterable-cell"><span> an hour ago</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="filterable-cell"><span> <i class="fa fa-tag" aria-hidden="true"></i>
+                                                List</span>
+                                        </td>
+                                        <td class="filterable-cell"><span>Ξ</span> <span>0.0166</span></td>
+                                        <td class="filterable-cell"><span>2</span></td>
+                                        <td class="filterable-cell">
+                                            <div class="d-flex bd-highlight">
+                                                <div class=" pr-2 bd-highlight align-self-center">
+                                                    <div class="ss_trading_profiles">
+                                                        <img src="images/unnamed.jpg" alt="profiles" />
+                                                    </div>
+                                                </div>
+                                                <div class=" flex-fill bd-highlight align-self-center">
+                                                    CryptoFinanceTeam
                                                 </div>
                                             </div>
-                                            <div class=" flex-fill bd-highlight align-self-center"> CryptoFinanceTeam
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="filterable-cell"><span></span></td>
-                                    <td class="filterable-cell"><span> an hour ago</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="filterable-cell"><span> <i class="fa fa-tag" aria-hidden="true"></i> List</span>
-                                    </td>
-                                    <td class="filterable-cell"><span>Ξ</span> <span>0.0166</span></td>
-                                    <td class="filterable-cell"><span>2</span></td>
-                                    <td class="filterable-cell">
-                                        <div class="d-flex bd-highlight">
-                                            <div class=" pr-2 bd-highlight align-self-center">
-                                                <div class="ss_trading_profiles">
-                                                    <img src="images/unnamed.jpg" alt="profiles"/>
+                                        </td>
+                                        <td class="filterable-cell"><span></span></td>
+                                        <td class="filterable-cell"><span> an hour ago</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="filterable-cell"><span> <i class="fa fa-tag" aria-hidden="true"></i>
+                                                List</span>
+                                        </td>
+                                        <td class="filterable-cell"><span>Ξ</span> <span>0.0166</span></td>
+                                        <td class="filterable-cell"><span>2</span></td>
+                                        <td class="filterable-cell">
+                                            <div class="d-flex bd-highlight">
+                                                <div class=" pr-2 bd-highlight align-self-center">
+                                                    <div class="ss_trading_profiles">
+                                                        <img src="images/unnamed.jpg" alt="profiles" />
+                                                    </div>
+                                                </div>
+                                                <div class=" flex-fill bd-highlight align-self-center">
+                                                    CryptoFinanceTeam
                                                 </div>
                                             </div>
-                                            <div class=" flex-fill bd-highlight align-self-center"> CryptoFinanceTeam
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="filterable-cell"><span></span></td>
-                                    <td class="filterable-cell"><span> an hour ago</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="filterable-cell"><span> <i class="fa fa-tag" aria-hidden="true"></i> List</span>
-                                    </td>
-                                    <td class="filterable-cell"><span>Ξ</span> <span>0.0166</span></td>
-                                    <td class="filterable-cell"><span>2</span></td>
-                                    <td class="filterable-cell">
-                                        <div class="d-flex bd-highlight">
-                                            <div class=" pr-2 bd-highlight align-self-center">
-                                                <div class="ss_trading_profiles">
-                                                    <img src="images/unnamed.jpg" alt="profiles"/>
+                                        </td>
+                                        <td class="filterable-cell"><span></span></td>
+                                        <td class="filterable-cell"><span> an hour ago</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="filterable-cell"><span> <i class="fa fa-tag" aria-hidden="true"></i>
+                                                List</span>
+                                        </td>
+                                        <td class="filterable-cell"><span>Ξ</span> <span>0.0166</span></td>
+                                        <td class="filterable-cell"><span>2</span></td>
+                                        <td class="filterable-cell">
+                                            <div class="d-flex bd-highlight">
+                                                <div class=" pr-2 bd-highlight align-self-center">
+                                                    <div class="ss_trading_profiles">
+                                                        <img src="images/unnamed.jpg" alt="profiles" />
+                                                    </div>
+                                                </div>
+                                                <div class=" flex-fill bd-highlight align-self-center">
+                                                    CryptoFinanceTeam
                                                 </div>
                                             </div>
-                                            <div class=" flex-fill bd-highlight align-self-center"> CryptoFinanceTeam
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="filterable-cell"><span></span></td>
-                                    <td class="filterable-cell"><span> an hour ago</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="filterable-cell"><span> <i class="fa fa-tag" aria-hidden="true"></i> List</span>
-                                    </td>
-                                    <td class="filterable-cell"><span>Ξ</span> <span>0.0166</span></td>
-                                    <td class="filterable-cell"><span>2</span></td>
-                                    <td class="filterable-cell">
-                                        <div class="d-flex bd-highlight">
-                                            <div class=" pr-2 bd-highlight align-self-center">
-                                                <div class="ss_trading_profiles">
-                                                    <img src="images/unnamed.jpg" alt="profiles"/>
+                                        </td>
+                                        <td class="filterable-cell"><span></span></td>
+                                        <td class="filterable-cell"><span> an hour ago</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="filterable-cell"><span> <i class="fa fa-tag" aria-hidden="true"></i>
+                                                List</span>
+                                        </td>
+                                        <td class="filterable-cell"><span>Ξ</span> <span>0.0166</span></td>
+                                        <td class="filterable-cell"><span>2</span></td>
+                                        <td class="filterable-cell">
+                                            <div class="d-flex bd-highlight">
+                                                <div class=" pr-2 bd-highlight align-self-center">
+                                                    <div class="ss_trading_profiles">
+                                                        <img src="images/unnamed.jpg" alt="profiles" />
+                                                    </div>
+                                                </div>
+                                                <div class=" flex-fill bd-highlight align-self-center">
+                                                    CryptoFinanceTeam
                                                 </div>
                                             </div>
-                                            <div class=" flex-fill bd-highlight align-self-center"> CryptoFinanceTeam
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="filterable-cell"><span></span></td>
-                                    <td class="filterable-cell"><span> an hour ago</span></td>
-                                </tr>
+                                        </td>
+                                        <td class="filterable-cell"><span></span></td>
+                                        <td class="filterable-cell"><span> an hour ago</span></td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -521,11 +545,11 @@
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item">
                             <a class=" active" id="home-tab" data-toggle="tab" href="#home" role="tab"
-                               aria-controls="home" aria-selected="true">Last Days</a>
+                                aria-controls="home" aria-selected="true">Last Days</a>
                         </li>
                         <li class="nav-item">
                             <a class="" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
-                               aria-controls="profile" aria-selected="false">Last Sales</a>
+                                aria-controls="profile" aria-selected="false">Last Sales</a>
                         </li>
                     </ul>
                     <div class="tab-content ss_chart_tabdes" id="myTabContent">
@@ -558,76 +582,77 @@
 ?>
 
 <script>
-    var ctx = document.getElementById('myChart').getContext('2d');
-    var myChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: ['4 APR', '5 APR', '6 APR', '7 APR', '8 APR', '9 APR'],
-            datasets: [{
-                label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3],
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
-                ],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['4 APR', '5 APR', '6 APR', '7 APR', '8 APR', '9 APR'],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
             }
         }
-    });
-    var ctx = document.getElementById('myChart1').getContext('2d');
-    var myChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: ['4 APR', '5 APR', '6 APR', '7 APR', '8 APR', '9 APR'],
-            datasets: [{
-                label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3],
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
-                ],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
+    }
+});
+var ctx = document.getElementById('myChart1').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['4 APR', '5 APR', '6 APR', '7 APR', '8 APR', '9 APR'],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
             }
         }
-    });
+    }
+});
 </script>
 </body>
+
 </html>
