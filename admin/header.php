@@ -67,6 +67,12 @@
     if($cur_page == 'nft_info'){
         $titleName = 'NFT Info';
     }
+    if($cur_page == 'pages'){
+        $titleName = 'Pages';
+    }
+    if($cur_page == 'banner'){
+        $titleName = 'Banner';
+    }
    
     $admin = $db->query("SELECT * FROM phtv_admin WHERE id = 1");
     $feadmin = $admin->fetch();
@@ -366,6 +372,18 @@
                             </a>
                         </li>
                     </ul>
+                </li>
+                <li class="nav-item <?php if($cur_page == 'pages') {echo 'active';} ?>">
+                    <a href="pages">
+                        <i class="fa fa-file" aria-hidden="true"></i>
+                        <span class="menu-title text-truncate" data-i18n="bxs-dashboard">Pages</span>
+                    </a>
+                </li>
+                <li class="nav-item <?php if($cur_page == 'banner') {echo 'active';} ?>">
+                    <a href="banner">
+                        <i class="fa fa-file" aria-hidden="true"></i>
+                        <span class="menu-title text-truncate" data-i18n="bxs-dashboard">Banner</span>
+                    </a>
                 </li>
             </ul>
         </div>
