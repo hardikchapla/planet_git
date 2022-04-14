@@ -12,6 +12,33 @@
                 <div class="col-lg-5 align-self-center">
                     <div class="owl-carousel owl-theme" id="ss_slider_details">
                         <div class="item">
+                            <?php if($fenft['image_type'] == 'image'){ ?>
+                            <div class="ss_model_images">
+                                <img src="images/nft_info_image/<?= $fenft['image'] ?>" alt="details" />
+                            </div>
+                            <?php } else if($fenft['image_type'] == 'gif'){ ?>
+                            <div class="ss_model_images">
+                                <img src="images/nft_info_image/<?= $fenft['image'] ?>" alt="details" />
+                            </div>
+                            <?php } else if($fenft['image_type'] == 'video'){ ?>
+                            <div class="ss_model_images">
+                                <video width="670" height="500" controls>
+                                    <source src="images/nft_info_image/<?= $fenft['image'] ?>" type="video/mp4">
+                                </video>
+                            </div>
+                            <?php } else if($fenft['image_type'] == 'audio'){ ?>
+                            <div class="ss_model_images audioPlayer">
+                                <audio controls poster='images/planethopper-TV-logo.png'>
+                                    <source src="images/nft_info_image/<?= $fenft['image'] ?>" type="audio/mpeg">
+                                </audio>
+                            </div>
+                            <?php } else { ?>
+                            <div class="ss_model_images">
+                                <img src="images/planethopper-TV-logo.png" alt="images" />
+                            </div>
+                            <?php } ?>
+                        </div>
+                        <!-- <div class="item">
                             <div class="ss_model_images">
                                 <img src="images/nft_info_image/<?= $fenft['image'] ?>" alt="details" />
                             </div>
@@ -20,12 +47,7 @@
                             <div class="ss_model_images">
                                 <img src="images/nft_info_image/<?= $fenft['image'] ?>" alt="details" />
                             </div>
-                        </div>
-                        <div class="item">
-                            <div class="ss_model_images">
-                                <img src="images/nft_info_image/<?= $fenft['image'] ?>" alt="details" />
-                            </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="col-lg-7 align-self-center">

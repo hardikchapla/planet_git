@@ -36,6 +36,7 @@ $(document).ready(function() {
             dataType: "json",
             success: function(data) {
                 $('#old_nft_info_image').val(data.nft_info_image);
+                $('#old_nft_info_image_type').val(data.nft_info_image_type);
                 $('#selectCollections').select2("val", data.selectCollections);
                 $('#selectCategory').select2("val", data.selectCategory);
                 $('#nft_info_description').val(data.nft_info_description);

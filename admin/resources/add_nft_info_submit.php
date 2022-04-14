@@ -26,27 +26,43 @@
         $created = date("Y-m-d H:i:s");
         if(!empty($_FILES['nft_info_image']['name']))
         {
-            $file = $_FILES['nft_info_image']['name'];
-            $tmp = $_FILES['nft_info_image']['tmp_name'];
-            $ext = pathinfo($file, PATHINFO_EXTENSION);
-            $photo = rand(1000,1000000).$file; 
-            $path = '../../images/nft_info_image/'.$photo;
-            move_uploaded_file($tmp,$path);
-            
-            $statement = $db->query("INSERT INTO phtv_nft_info SET `collection_id` = '$selectCollections',`category_id` = '$selectCategory', `name` = '$nft_info_name', `price` = '$nft_info_price', `description` = '$nft_info_description', `sale_id` = '$nft_info_sale_id', `assets_name` = '$nft_info_assets_name', `assets_id` = '$nft_info_assets_id', `meant_no` = '$nft_info_meant_no', `image` = '$photo', `duration` = '$nft_info_duration', `attribute_name` = '$nft_info_attribute_name', `attribute_image` = '$nft_info_attribute_image', `attribute_bg_image` = '$nft_info_attribute_bg_image', `attribute_object` = '$nft_info_attribute_object', `attribute_object_collection` = '$nft_info_attribute_object_collection', `attribute_object_no` = '$nft_info_attribute_object_no', `attribute_border_color` = '$nft_info_attribute_border_color', `attribute_border_type` = '$nft_info_attribute_border_type', `created_at` = '$created'");
-            if(!empty($statement))
-            {
-                $reoutput['success'] = 'success';
-                $reoutput['message'] = 'NFT Info added successfully';
+            $mime = $_FILES['nft_info_image']['type'];
+            $image_type = '';
+            if(strstr($mime, "video/")){
+                $image_type = 'video';
+            } else if (strstr($mime, "image/gif")) {
+                $image_type = 'gif';
+            } else if(strstr($mime, "image/")){
+                $image_type = 'image';
+            } else if(strstr($mime, "audio/")){
+                $image_type = 'audio';
+            }
+            if(!empty($image_type)){
+                $file = $_FILES['nft_info_image']['name'];
+                $tmp = $_FILES['nft_info_image']['tmp_name'];
+                $ext = pathinfo($file, PATHINFO_EXTENSION);
+                $photo = rand(1000,1000000).$file; 
+                $path = '../../images/nft_info_image/'.$photo;
+                move_uploaded_file($tmp,$path);
+                
+                $statement = $db->query("INSERT INTO phtv_nft_info SET `collection_id` = '$selectCollections',`category_id` = '$selectCategory', `name` = '$nft_info_name', `price` = '$nft_info_price', `description` = '$nft_info_description', `sale_id` = '$nft_info_sale_id', `assets_name` = '$nft_info_assets_name', `assets_id` = '$nft_info_assets_id', `meant_no` = '$nft_info_meant_no', `image` = '$photo', `image_type` = '$image_type', `duration` = '$nft_info_duration', `attribute_name` = '$nft_info_attribute_name', `attribute_image` = '$nft_info_attribute_image', `attribute_bg_image` = '$nft_info_attribute_bg_image', `attribute_object` = '$nft_info_attribute_object', `attribute_object_collection` = '$nft_info_attribute_object_collection', `attribute_object_no` = '$nft_info_attribute_object_no', `attribute_border_color` = '$nft_info_attribute_border_color', `attribute_border_type` = '$nft_info_attribute_border_type', `created_at` = '$created'");
+                if(!empty($statement))
+                {
+                    $reoutput['success'] = 'success';
+                    $reoutput['message'] = 'NFT Info added successfully';
+                } else {
+                    $reoutput['success'] = 'fail';
+                    $reoutput['message'] = 'NFT Info not added';
+                }
             } else {
                 $reoutput['success'] = 'fail';
-                $reoutput['message'] = 'NFT Info not added';
+                $reoutput['message'] = 'Please select valid file';
             }
         }
         else
         {
             $reoutput['success'] = 'fail';
-            $reoutput['message'] = 'Please select NFT Info Image';
+            $reoutput['message'] = 'Please select NFT Info file';
         }
         echo json_encode($reoutput);
     }
@@ -73,29 +89,48 @@
         $nft_info_attribute_border_type = addslashes($_REQUEST['nft_info_attribute_border_type']);
         if(!empty($_FILES['nft_info_image']['name']))
         {
-            $file = $_FILES['nft_info_image']['name'];
-            $tmp = $_FILES['nft_info_image']['tmp_name'];
-            $ext = pathinfo($file, PATHINFO_EXTENSION);
-            $photo = rand(1000,1000000).$file; 
-            $path = '../../images/nft_info_image/'.$photo;
-            move_uploaded_file($tmp,$path);
+            $mime = $_FILES['nft_info_image']['type'];
+            $image_type = '';
+            if(strstr($mime, "video/")){
+                $image_type = 'video';
+            } else if (strstr($mime, "image/gif")) {
+                $image_type = 'gif';
+            } else if(strstr($mime, "image/")){
+                $image_type = 'image';
+            } else if(strstr($mime, "audio/")){
+                $image_type = 'audio';
+            }
+            if(!empty($image_type)){
+                $file = $_FILES['nft_info_image']['name'];
+                $tmp = $_FILES['nft_info_image']['tmp_name'];
+                $ext = pathinfo($file, PATHINFO_EXTENSION);
+                $photo = rand(1000,1000000).$file; 
+                $path = '../../images/nft_info_image/'.$photo;
+                move_uploaded_file($tmp,$path);
 
-            if(file_exists('../../images/nft_info_image/'.$_REQUEST['old_nft_info_image'])){
-                unlink('../../images/nft_info_image/'.$_REQUEST['old_nft_info_image']);
+                if(file_exists('../../images/nft_info_image/'.$_REQUEST['old_nft_info_image'])){
+                    unlink('../../images/nft_info_image/'.$_REQUEST['old_nft_info_image']);
+                }
             }
         }
         else
         {
-            $photo = $_REQUEST['old_nft_listing_thumbnail'];
+            $photo = $_REQUEST['old_nft_info_image'];
+            $image_type = $_REQUEST['old_nft_info_image_type'];
         }
-        $statement = $db->query("UPDATE phtv_nft_info SET `collection_id` = '$selectCollections',`category_id` = '$selectCategory', `name` = '$nft_info_name', `price` = '$nft_info_price', `description` = '$nft_info_description', `sale_id` = '$nft_info_sale_id', `assets_name` = '$nft_info_assets_name', `assets_id` = '$nft_info_assets_id', `meant_no` = '$nft_info_meant_no', `image` = '$photo', `duration` = '$nft_info_duration', `attribute_name` = '$nft_info_attribute_name', `attribute_image` = '$nft_info_attribute_image', `attribute_bg_image` = '$nft_info_attribute_bg_image', `attribute_object` = '$nft_info_attribute_object', `attribute_object_collection` = '$nft_info_attribute_object_collection', `attribute_object_no` = '$nft_info_attribute_object_no', `attribute_border_color` = '$nft_info_attribute_border_color', `attribute_border_type` = '$nft_info_attribute_border_type' WHERE id = '$nft_info_id'");
-        if(!empty($statement))
-        {
-            $reoutput['success'] = 'success';
-            $reoutput['message'] = 'NFT Info updated successfully';
+        if (!empty($image_type)) {
+            $statement = $db->query("UPDATE phtv_nft_info SET `collection_id` = '$selectCollections',`category_id` = '$selectCategory', `name` = '$nft_info_name', `price` = '$nft_info_price', `description` = '$nft_info_description', `sale_id` = '$nft_info_sale_id', `assets_name` = '$nft_info_assets_name', `assets_id` = '$nft_info_assets_id', `meant_no` = '$nft_info_meant_no', `image` = '$photo',`image_type` = '$image_type', `duration` = '$nft_info_duration', `attribute_name` = '$nft_info_attribute_name', `attribute_image` = '$nft_info_attribute_image', `attribute_bg_image` = '$nft_info_attribute_bg_image', `attribute_object` = '$nft_info_attribute_object', `attribute_object_collection` = '$nft_info_attribute_object_collection', `attribute_object_no` = '$nft_info_attribute_object_no', `attribute_border_color` = '$nft_info_attribute_border_color', `attribute_border_type` = '$nft_info_attribute_border_type' WHERE id = '$nft_info_id'");
+            if(!empty($statement))
+            {
+                $reoutput['success'] = 'success';
+                $reoutput['message'] = 'NFT Info updated successfully';
+            } else {
+                $reoutput['success'] = 'fail';
+                $reoutput['message'] = 'NFT Info not updated';
+            }
         } else {
             $reoutput['success'] = 'fail';
-            $reoutput['message'] = 'NFT Info not updated';
+            $reoutput['message'] = 'Please select valid file';
         }
         echo json_encode($reoutput);
     }

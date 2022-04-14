@@ -8756,3 +8756,17 @@ form .error {
 .selected_category {
     color: #007bff
 }
+
+.audioPlayer {
+    width: 677px;
+    height: 400px;
+    background-image: url('../images/planethopper-TV-logo.png');
+    background-size: cover;
+    position: relative;
+}
+
+.audioPlayer audio {
+    position: absolute;
+    bottom: 0;
+    width: 100%
+}

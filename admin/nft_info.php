@@ -98,6 +98,7 @@
                                 <input type="file" name="nft_info_image" id="nft_info_image" placeholder="select file"
                                     class="form-control">
                                 <input type="hidden" name="old_nft_info_image" id="old_nft_info_image">
+                                <input type="hidden" name="old_nft_info_image_type" id="old_nft_info_image_type">
                                 <input type="hidden" name="nft_info_id" id="nft_info_id">
                             </div>
                         </div>

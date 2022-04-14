@@ -290,7 +290,11 @@
             <div class="item">
                 <div class="ss_product">
                     <div class="images">
+                        <?php if(empty($feinfo['image']) || $feinfo['image_type'] != 'image'){ ?>
+                        <img src="images/planethopper-TV-logo.png" alt="images" />
+                        <?php } else { ?>
                         <img src="images/nft_info_image/<?= $feinfo['image'] ?>" alt="images" />
+                        <?php } ?>
                         <?php if($interval->days <= 10){ ?>
                         <div class="ss_tabgs ss_tabgs_green">
                             New Drop
@@ -471,7 +475,11 @@
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="ss_product">
                     <div class="images">
+                        <?php if(empty($feinfo1['image']) || $feinfo1['image_type'] != 'image'){ ?>
+                        <img src="images/planethopper-TV-logo.png" alt="images" />
+                        <?php } else { ?>
                         <img src="images/nft_info_image/<?= $feinfo1['image'] ?>" alt="images" />
+                        <?php } ?>
                         <?php if($interval1->days <= 10){ ?>
                         <div class="ss_tabgs ss_tabgs_green">
                             New Drop

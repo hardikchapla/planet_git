@@ -9,8 +9,8 @@
 	foreach($result as $row)
 	{
 		$image = "";	
-		if(empty($row['image'])){
-			$image = '<img src="../images/default.svg" style = "border-radius: 40px" width="40" height="40" />';
+		if(empty($row['image']) || $row['image_type'] != 'image'){
+			$image = '<img src="../images/planethopper-TV-logo.png" style = "border-radius: 40px" width="40" height="40" />';
 		} else {
 			$image = '<img src="../images/nft_info_image/'.$row["image"].'" style = "border-radius: 40px" width="40" height="40" />';
 		}
