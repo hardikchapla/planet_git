@@ -510,11 +510,11 @@
                         </div>
                         <div class="d-flex bd-highlight ss_btn">
                             <div class=" flex-fill mr-4 bd-highlight">
-                                <a href="nft-marketplace-details?id=<?= base64_encode($feinfo['id']) ?>"
+                                <a href="nft-marketplace-details?id=<?= base64_encode($feinfo1['id']) ?>"
                                     class="ss_details"> Details </a>
                             </div>
                             <div class=" flex-fill bd-highlight">
-                                <button type="button" class="ss_buy model_details" id="<?= $feinfo['id'] ?>"
+                                <button type="button" class="ss_buy model_details" id="<?= $feinfo1['id'] ?>"
                                     data-toggle="modal" data-target="#exampleModalCenter"> Buy </button>
                             </div>
                         </div>
@@ -767,8 +767,13 @@ $(document).ready(function() {
             },
             dataType: "json",
             success: function(data) {
-                $('.nft_marketing_image').attr('src', 'images/nft_info_image/' + data
-                    .image);
+                if (data.image_type == 'image') {
+                    $('.nft_marketing_image').attr('src', 'images/nft_info_image/' + data
+                        .image);
+                } else {
+                    $('.nft_marketing_image').attr('src',
+                        'images/planethopper-TV-logo.png');
+                }
                 $('#nft_marketing_name').html(data.name);
                 $('#nft_marketing_price').html(data.price + " WAX <span> ($58.64) </span>");
                 $('#nft_marketing_description').html(data.description);
