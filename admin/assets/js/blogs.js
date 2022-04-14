@@ -26,6 +26,10 @@ $(document).ready(function() {
             type: "POST"
         }
     });
+    $(document).on('click', '.viewBlogDescriptionModel', function() {
+        var description = $(this).attr("id");
+        $('#viewBlogDescription').html(description);
+    });
     $(document).on('click', '.updateBlog', function() {
         var blog_id = $(this).attr("id");
         $.ajax({

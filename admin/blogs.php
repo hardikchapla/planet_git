@@ -44,9 +44,10 @@
                                                 <!-- <th>Type</th> -->
                                                 <th>Title</th>
                                                 <th>Subtitle</th>
-                                                <th>Description</th>
+                                                <!-- <th>Description</th> -->
                                                 <th>Auther</th>
                                                 <th>Category</th>
+                                                <th>View</th>
                                                 <th>Update</th>
                                                 <th>Delete</th>
                                             </tr>
@@ -58,9 +59,10 @@
                                                 <!-- <th>Type</th> -->
                                                 <th>Title</th>
                                                 <th>Subtitle</th>
-                                                <th>Description</th>
+                                                <!-- <th>Description</th> -->
                                                 <th>Auther</th>
                                                 <th>Category</th>
+                                                <th>View</th>
                                                 <th>Update</th>
                                                 <th>Delete</th>
                                             </tr>
@@ -183,6 +185,33 @@
                         <span class="d-none d-sm-block">Submit</span>
                     </button>
                 </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="modal fade text-left" id="viewBlogDescriptionModel" tabindex="-1" role="dialog"
+    aria-labelledby="myModalLabel33" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="blog_form_title">Blog Description</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="bx bx-x"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row mb-1">
+                    <div class="col" id="viewBlogDescription">
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light-secondary" data-dismiss="modal">
+                    <i class="bx bx-x d-block d-sm-none"></i>
+                    <span class="d-none d-sm-block">Close</span>
+                </button>
+            </div>
             </form>
         </div>
     </div>

@@ -24,9 +24,9 @@
 		// }
 		$sub_array[] = $row["title"];
 		$sub_array[] = $row["sub_title"];
-		$sub_array[] = $row["description"];
 		$sub_array[] = $row["name"];
 		$sub_array[] = $row["category_name"];
+		$sub_array[] = '<button class="btn btn-primary viewBlogDescriptionModel" data-toggle="modal" data-target="#viewBlogDescriptionModel" type="button" id="'.$row["description"].'">View</button>';
 		$sub_array[] = '<button class="btn btn-primary fa fa-pencil updateBlog" data-toggle="modal" data-target="#updateBlog" type="button" id="'.$row["id"].'"></button>';
 		$sub_array[] = '<button class="btn btn-danger fa fa-trash deleteBlog" type="button" id="'.$row["id"].'" ></button>';
 		$data[] = $sub_array;
