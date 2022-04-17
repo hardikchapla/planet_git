@@ -27,6 +27,7 @@ $(document).ready(function() {
         }
     });
     $(document).on('click', '.updatePodcast', function() {
+        showLoading();
         var podcast_id = $(this).attr("id");
         $.ajax({
             url: "resources/update_podcast",
@@ -36,6 +37,7 @@ $(document).ready(function() {
             },
             dataType: "json",
             success: function(data) {
+                hideLoading();
                 $('#old_podcast_image').val(data.podcast_image);
                 $('#podcast_title').val(data.podcast_title);
                 $('#podcast_fb_link').val(data.podcast_fb_link);
@@ -68,6 +70,7 @@ $(document).ready(function() {
             closeOnConfirm: false,
         }).then((result) => {
             if (result.isConfirmed) {
+                showLoading();
                 $.ajax({
                         url: 'resources/delete_podcast',
                         type: 'POST',
@@ -76,14 +79,19 @@ $(document).ready(function() {
                     })
                     .done(function(response) {
                         if (response.success == 'success') {
-                            toastr.options.onHidden = function() { window.location.href = 'podcast'; }
+                            toastr.options.onHidden = function() {
+                                window.location.href = 'podcast';
+                                hideLoading();
+                            }
                             toastr.success(response.message).delay(1000).fadeOut(1000);
                         } else {
+                            hideLoading();
                             toastr.warning(output.message).delay(1000).fadeOut(1000);
                         }
 
                     })
                     .fail(function() {
+                        hideLoading();
                         swal('Oops...', 'Something went wrong with ajax !', 'error');
                     });
             }
@@ -118,6 +126,7 @@ $(document).ready(function() {
             var formdata = new FormData(document.getElementById('updatePodcastForm'));
             var podcast_image = $('#podcast_image').get(0).files[0];
             formdata.append('podcast_image', podcast_image);
+            showLoading();
             $.ajax({
                 url: 'resources/add_podcast_submit',
                 type: 'POST',
@@ -127,13 +136,18 @@ $(document).ready(function() {
                 success: function(output) {
                     output = jQuery.parseJSON(output);
                     if (output.success == 'success') {
-                        toastr.options.onHidden = function() { window.location.href = 'podcast'; }
+                        toastr.options.onHidden = function() {
+                            window.location.href = 'podcast';
+                            hideLoading();
+                        }
                         toastr.success(output.message).delay(1000).fadeOut(1000);
                     } else {
+                        hideLoading();
                         toastr.warning(output.message).delay(1000).fadeOut(1000);
                     }
                 },
                 error: function() {
+                    hideLoading();
                     toastr.warning('Something went wrong with ajax !').delay(1000).fadeOut(1000);
                 }
             });

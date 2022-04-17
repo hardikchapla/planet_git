@@ -16,6 +16,7 @@ $(document).ready(function() {
     });
     $(document).on('click', '.updateBlogAuther', function() {
         var blog_auther_id = $(this).attr("id");
+        showLoading();
         $.ajax({
             url: "resources/update_blog_auther",
             method: "POST",
@@ -24,6 +25,7 @@ $(document).ready(function() {
             },
             dataType: "json",
             success: function(data) {
+                hideLoading();
                 $('#old_blog_auther_image').val(data.blog_auther_image);
                 $('#blog_auther_name').val(data.blog_auther_name);
                 $('#blog_auther_id').val(blog_auther_id);
@@ -45,6 +47,7 @@ $(document).ready(function() {
             closeOnConfirm: false,
         }).then((result) => {
             if (result.isConfirmed) {
+                showLoading();
                 $.ajax({
                         url: 'resources/delete_blog_auther',
                         type: 'POST',
@@ -53,14 +56,19 @@ $(document).ready(function() {
                     })
                     .done(function(response) {
                         if (response.success == 'success') {
-                            toastr.options.onHidden = function() { window.location.href = 'blog_auther'; }
+                            toastr.options.onHidden = function() {
+                                window.location.href = 'blog_auther';
+                                hideLoading();
+                            }
                             toastr.success(response.message).delay(1000).fadeOut(1000);
                         } else {
+                            hideLoading();
                             toastr.warning(output.message).delay(1000).fadeOut(1000);
                         }
 
                     })
                     .fail(function() {
+                        hideLoading();
                         swal('Oops...', 'Something went wrong with ajax !', 'error');
                     });
             }
@@ -81,6 +89,7 @@ $(document).ready(function() {
             var formdata = new FormData(document.getElementById('updateBlogAutherForm'));
             var blog_auther_image = $('#blog_auther_image').get(0).files[0];
             formdata.append('blog_auther_image', blog_auther_image);
+            showLoading();
             $.ajax({
                 url: 'resources/add_blog_auther_submit',
                 type: 'POST',
@@ -90,13 +99,18 @@ $(document).ready(function() {
                 success: function(output) {
                     output = jQuery.parseJSON(output);
                     if (output.success == 'success') {
-                        toastr.options.onHidden = function() { window.location.href = 'blog_auther'; }
+                        toastr.options.onHidden = function() {
+                            window.location.href = 'blog_auther';
+                            hideLoading();
+                        }
                         toastr.success(output.message).delay(1000).fadeOut(1000);
                     } else {
+                        hideLoading();
                         toastr.warning(output.message).delay(1000).fadeOut(1000);
                     }
                 },
                 error: function() {
+                    hideLoading();
                     toastr.warning('Something went wrong with ajax !').delay(1000).fadeOut(1000);
                 }
             });

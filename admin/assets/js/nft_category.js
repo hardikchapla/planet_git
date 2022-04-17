@@ -16,6 +16,7 @@ $(document).ready(function() {
     });
     $(document).on('click', '.updateNftCategory', function() {
         var nft_category_id = $(this).attr("id");
+        showLoading();
         $.ajax({
             url: "resources/update_nft_category",
             method: "POST",
@@ -24,6 +25,7 @@ $(document).ready(function() {
             },
             dataType: "json",
             success: function(data) {
+                hideLoading();
                 $('#nft_category_name').val(data.nft_category_name);
                 $('#nft_category_id').val(nft_category_id);
                 $('#action').val("Edit");
@@ -44,6 +46,7 @@ $(document).ready(function() {
             closeOnConfirm: false,
         }).then((result) => {
             if (result.isConfirmed) {
+                showLoading();
                 $.ajax({
                         url: 'resources/delete_nft_category',
                         type: 'POST',
@@ -52,14 +55,19 @@ $(document).ready(function() {
                     })
                     .done(function(response) {
                         if (response.success == 'success') {
-                            toastr.options.onHidden = function() { window.location.href = 'nft_category'; }
+                            toastr.options.onHidden = function() {
+                                window.location.href = 'nft_category';
+                                hideLoading();
+                            }
                             toastr.success(response.message).delay(1000).fadeOut(1000);
                         } else {
+                            hideLoading();
                             toastr.warning(output.message).delay(1000).fadeOut(1000);
                         }
 
                     })
                     .fail(function() {
+                        hideLoading();
                         swal('Oops...', 'Something went wrong with ajax !', 'error');
                     });
             }
@@ -88,8 +96,10 @@ $(document).ready(function() {
                 success: function(output) {
                     output = jQuery.parseJSON(output);
                     if (output.success == 'success') {
-                        hideLoading();
-                        toastr.options.onHidden = function() { window.location.href = 'nft_category'; }
+                        toastr.options.onHidden = function() {
+                            window.location.href = 'nft_category';
+                            hideLoading();
+                        }
                         toastr.success(output.message).delay(1000).fadeOut(1000);
                     } else {
                         hideLoading();

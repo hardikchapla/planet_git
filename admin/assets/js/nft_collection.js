@@ -16,6 +16,7 @@ $(document).ready(function() {
     });
     $(document).on('click', '.updateNFTCollection', function() {
         var nft_collection_id = $(this).attr("id");
+        showLoading();
         $.ajax({
             url: "resources/update_nft_collection",
             method: "POST",
@@ -24,6 +25,7 @@ $(document).ready(function() {
             },
             dataType: "json",
             success: function(data) {
+                hideLoading();
                 $('#old_nft_collection_image').val(data.nft_collection_logo);
                 $('#nft_collection_name').val(data.nft_collection_name);
                 $('#nft_collection_id').val(nft_collection_id);
@@ -45,6 +47,7 @@ $(document).ready(function() {
             closeOnConfirm: false,
         }).then((result) => {
             if (result.isConfirmed) {
+                showLoading();
                 $.ajax({
                         url: 'resources/delete_nft_collection',
                         type: 'POST',
@@ -53,14 +56,19 @@ $(document).ready(function() {
                     })
                     .done(function(response) {
                         if (response.success == 'success') {
-                            toastr.options.onHidden = function() { window.location.href = 'nft_collection'; }
+                            toastr.options.onHidden = function() {
+                                window.location.href = 'nft_collection';
+                                hideLoading();
+                            }
                             toastr.success(response.message).delay(1000).fadeOut(1000);
                         } else {
+                            hideLoading();
                             toastr.warning(output.message).delay(1000).fadeOut(1000);
                         }
 
                     })
                     .fail(function() {
+                        hideLoading();
                         swal('Oops...', 'Something went wrong with ajax !', 'error');
                     });
             }
@@ -78,11 +86,11 @@ $(document).ready(function() {
             }
         },
         submitHandler: function(form) {
-            showLoading();
             $("#updateNFTCollection").modal("hide");
             var formdata = new FormData(document.getElementById('updateNFTCollectionForm'));
             var nft_collection_image = $('#nft_collection_image').get(0).files[0];
             formdata.append('nft_collection_image', nft_collection_image);
+            showLoading();
             $.ajax({
                 url: 'resources/add_nft_collection_submit',
                 type: 'POST',

@@ -32,6 +32,7 @@ $(document).ready(function() {
     });
     $(document).on('click', '.updateBlog', function() {
         var blog_id = $(this).attr("id");
+        showLoading();
         $.ajax({
             url: "resources/update_blog",
             method: "POST",
@@ -40,6 +41,7 @@ $(document).ready(function() {
             },
             dataType: "json",
             success: function(data) {
+                hideLoading();
                 $('#old_blog_image').val(data.blog_image);
                 $('#old_blog_video').val(data.blog_video);
                 $('#blog_title').val(data.blog_title);
@@ -72,6 +74,7 @@ $(document).ready(function() {
             closeOnConfirm: false,
         }).then((result) => {
             if (result.isConfirmed) {
+                showLoading();
                 $.ajax({
                         url: 'resources/delete_blog',
                         type: 'POST',
@@ -80,14 +83,19 @@ $(document).ready(function() {
                     })
                     .done(function(response) {
                         if (response.success == 'success') {
-                            toastr.options.onHidden = function() { window.location.href = 'blogs'; }
+                            toastr.options.onHidden = function() {
+                                window.location.href = 'blogs';
+                                hideLoading();
+                            }
                             toastr.success(response.message).delay(1000).fadeOut(1000);
                         } else {
+                            hideLoading();
                             toastr.warning(output.message).delay(1000).fadeOut(1000);
                         }
 
                     })
                     .fail(function() {
+                        hideLoading();
                         swal('Oops...', 'Something went wrong with ajax !', 'error');
                     });
             }
@@ -134,6 +142,7 @@ $(document).ready(function() {
             var formdata = new FormData(document.getElementById('updateBlogForm'));
             var blog_image = $('#blog_image').get(0).files[0];
             formdata.append('blog_image', blog_image);
+            showLoading();
             $.ajax({
                 url: 'resources/add_blogs_submit',
                 type: 'POST',
@@ -143,13 +152,18 @@ $(document).ready(function() {
                 success: function(output) {
                     output = jQuery.parseJSON(output);
                     if (output.success == 'success') {
-                        toastr.options.onHidden = function() { window.location.href = 'blogs'; }
+                        toastr.options.onHidden = function() {
+                            window.location.href = 'blogs';
+                            hideLoading();
+                        }
                         toastr.success(output.message).delay(1000).fadeOut(1000);
                     } else {
+                        hideLoading();
                         toastr.warning(output.message).delay(1000).fadeOut(1000);
                     }
                 },
                 error: function() {
+                    hideLoading();
                     toastr.warning('Something went wrong with ajax !').delay(1000).fadeOut(1000);
                 }
             });

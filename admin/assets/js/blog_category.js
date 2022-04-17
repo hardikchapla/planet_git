@@ -16,6 +16,7 @@ $(document).ready(function() {
     });
     $(document).on('click', '.updateBlogCategory', function() {
         var blog_category_id = $(this).attr("id");
+        showLoading();
         $.ajax({
             url: "resources/update_blog_category",
             method: "POST",
@@ -24,6 +25,7 @@ $(document).ready(function() {
             },
             dataType: "json",
             success: function(data) {
+                hideLoading();
                 $('#blog_category_name').val(data.blog_category_name);
                 $('#blog_category_id').val(blog_category_id);
                 $('#action').val("Edit");
@@ -44,6 +46,7 @@ $(document).ready(function() {
             closeOnConfirm: false,
         }).then((result) => {
             if (result.isConfirmed) {
+                showLoading();
                 $.ajax({
                         url: 'resources/delete_blog_category',
                         type: 'POST',
@@ -52,14 +55,19 @@ $(document).ready(function() {
                     })
                     .done(function(response) {
                         if (response.success == 'success') {
-                            toastr.options.onHidden = function() { window.location.href = 'blog_category'; }
+                            toastr.options.onHidden = function() {
+                                window.location.href = 'blog_category';
+                                hideLoading();
+                            }
                             toastr.success(response.message).delay(1000).fadeOut(1000);
                         } else {
+                            hideLoading();
                             toastr.warning(output.message).delay(1000).fadeOut(1000);
                         }
 
                     })
                     .fail(function() {
+                        hideLoading();
                         swal('Oops...', 'Something went wrong with ajax !', 'error');
                     });
             }
@@ -78,6 +86,7 @@ $(document).ready(function() {
         },
         submitHandler: function(form) {
             var formdata = new FormData(document.getElementById('updateBlogCategoryForm'));
+            showLoading();
             $.ajax({
                 url: 'resources/add_blog_category_submit',
                 type: 'POST',
@@ -87,13 +96,18 @@ $(document).ready(function() {
                 success: function(output) {
                     output = jQuery.parseJSON(output);
                     if (output.success == 'success') {
-                        toastr.options.onHidden = function() { window.location.href = 'blog_category'; }
+                        toastr.options.onHidden = function() {
+                            window.location.href = 'blog_category';
+                            hideLoading();
+                        }
                         toastr.success(output.message).delay(1000).fadeOut(1000);
                     } else {
+                        hideLoading();
                         toastr.warning(output.message).delay(1000).fadeOut(1000);
                     }
                 },
                 error: function() {
+                    hideLoading();
                     toastr.warning('Something went wrong with ajax !').delay(1000).fadeOut(1000);
                 }
             });

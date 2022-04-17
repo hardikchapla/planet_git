@@ -27,6 +27,7 @@ $(document).ready(function() {
     });
     $(document).on('click', '.updateNFTListing', function() {
         var nft_listing_id = $(this).attr("id");
+        showLoading();
         $.ajax({
             url: "resources/update_nft_listing",
             method: "POST",
@@ -58,6 +59,7 @@ $(document).ready(function() {
             closeOnConfirm: false,
         }).then((result) => {
             if (result.isConfirmed) {
+                showLoading();
                 $.ajax({
                         url: 'resources/delete_nft_listing',
                         type: 'POST',
@@ -66,14 +68,19 @@ $(document).ready(function() {
                     })
                     .done(function(response) {
                         if (response.success == 'success') {
-                            toastr.options.onHidden = function() { window.location.href = 'nft_listing'; }
+                            toastr.options.onHidden = function() {
+                                window.location.href = 'nft_listing';
+                                hideLoading();
+                            }
                             toastr.success(response.message).delay(1000).fadeOut(1000);
                         } else {
+                            hideLoading();
                             toastr.warning(output.message).delay(1000).fadeOut(1000);
                         }
 
                     })
                     .fail(function() {
+                        hideLoading();
                         swal('Oops...', 'Something went wrong with ajax !', 'error');
                     });
             }

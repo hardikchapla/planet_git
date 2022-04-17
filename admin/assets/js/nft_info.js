@@ -27,6 +27,7 @@ $(document).ready(function() {
     });
     $(document).on('click', '.updateNFTInfo', function() {
         var nft_info_id = $(this).attr("id");
+        showLoading()
         $.ajax({
             url: "resources/update_nft_info",
             method: "POST",
@@ -35,6 +36,7 @@ $(document).ready(function() {
             },
             dataType: "json",
             success: function(data) {
+                hideLoading();
                 $('#old_nft_info_image').val(data.nft_info_image);
                 $('#old_nft_info_image_type').val(data.nft_info_image_type);
                 $('#selectCollections').select2("val", data.selectCollections);
@@ -76,6 +78,7 @@ $(document).ready(function() {
             closeOnConfirm: false,
         }).then((result) => {
             if (result.isConfirmed) {
+                showLoading()
                 $.ajax({
                         url: 'resources/delete_nft_info',
                         type: 'POST',
@@ -84,14 +87,19 @@ $(document).ready(function() {
                     })
                     .done(function(response) {
                         if (response.success == 'success') {
-                            toastr.options.onHidden = function() { window.location.href = 'nft_info'; }
+                            toastr.options.onHidden = function() {
+                                window.location.href = 'nft_info';
+                                hideLoading();
+                            }
                             toastr.success(response.message).delay(1000).fadeOut(1000);
                         } else {
+                            hideLoading();
                             toastr.warning(output.message).delay(1000).fadeOut(1000);
                         }
 
                     })
                     .fail(function() {
+                        hideLoading();
                         swal('Oops...', 'Something went wrong with ajax !', 'error');
                     });
             }

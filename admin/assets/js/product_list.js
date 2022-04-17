@@ -42,6 +42,7 @@ $(document).ready(function() {
     });
     $(document).on('click', '.updateProduct', function() {
         var product_id = $(this).attr("id");
+        showLoading();
         $.ajax({
             url: "resources/update_product",
             method: "POST",
@@ -50,6 +51,7 @@ $(document).ready(function() {
             },
             dataType: "json",
             success: function(data) {
+                hideLoading();
                 $('#addProductForm')[0].reset();
                 $("#productPreOrder").removeAttr('checked');
                 $('#productName').val(data.name);
@@ -79,6 +81,7 @@ $(document).ready(function() {
     });
     $(document).on('click', '.removeimage', function(e) {
         var product_image_id = $(this).attr("id");
+        showLoading();
         $.ajax({
                 url: 'resources/delete_product_image',
                 type: 'POST',
@@ -88,12 +91,15 @@ $(document).ready(function() {
             .done(function(response) {
                 if (response.success == 'success') {
                     $('#removeImage' + product_image_id).remove();
+                    hideLoading();
                     toastr.success(response.message).delay(1000).fadeOut(1000);
                 } else {
+                    hideLoading();
                     toastr.warning(output.message).delay(1000).fadeOut(1000);
                 }
             })
             .fail(function() {
+                hideLoading();
                 swal('Oops...', 'Something went wrong with ajax !', 'error');
             });
 
@@ -111,6 +117,7 @@ $(document).ready(function() {
             closeOnConfirm: false,
         }).then((result) => {
             if (result.isConfirmed) {
+                showLoading();
                 $.ajax({
                         url: 'resources/delete_product',
                         type: 'POST',
@@ -119,14 +126,19 @@ $(document).ready(function() {
                     })
                     .done(function(response) {
                         if (response.success == 'success') {
-                            toastr.options.onHidden = function() { window.location.href = 'product_list'; }
+                            toastr.options.onHidden = function() {
+                                window.location.href = 'product_list';
+                                hideLoading();
+                            }
                             toastr.success(response.message).delay(1000).fadeOut(1000);
                         } else {
+                            hideLoading();
                             toastr.warning(output.message).delay(1000).fadeOut(1000);
                         }
 
                     })
                     .fail(function() {
+                        hideLoading();
                         swal('Oops...', 'Something went wrong with ajax !', 'error');
                     });
             }
@@ -199,6 +211,7 @@ $(document).ready(function() {
             var formdata = new FormData(document.getElementById('addProductForm'));
             // var product_images = $('#files').get(0).files[0];
             // formdata.append('product_image', product_images);
+            showLoading();
             $.ajax({
                 url: 'resources/add_product_submit',
                 type: 'POST',
@@ -208,13 +221,18 @@ $(document).ready(function() {
                 success: function(output) {
                     output = jQuery.parseJSON(output);
                     if (output.success == 'success') {
-                        toastr.options.onHidden = function() { window.location.href = 'product_list'; }
+                        toastr.options.onHidden = function() {
+                            window.location.href = 'product_list';
+                            hideLoading();
+                        }
                         toastr.success(output.message).delay(1000).fadeOut(1000);
                     } else {
+                        hideLoading();
                         toastr.warning(output.message).delay(1000).fadeOut(1000);
                     }
                 },
                 error: function() {
+                    hideLoading();
                     toastr.warning('Something went wrong with ajax !').delay(1000).fadeOut(1000);
                 }
             });

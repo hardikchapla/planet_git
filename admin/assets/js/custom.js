@@ -66,6 +66,7 @@ $(document).ready(function() {
         var New_Password = $("#exampleInputPassword1").val();
         var confirm_password = $("#exampleInputPassword2").val();
         var form_data = "Email=" + Email + "&Password=" + Password + "&New_Password=" + New_Password + "&confirm_password=" + confirm_password;
+        showLoading();
         $.ajax({
             url: 'resources/adminresetpassword',
             type: 'Post',
@@ -74,9 +75,13 @@ $(document).ready(function() {
             success: function(output) {
                 var obj = $.parseJSON(output);
                 if (obj.success == "success") {
-                    toastr.options.onHidden = function() { window.location.href = 'index'; }
+                    toastr.options.onHidden = function() {
+                        window.location.href = 'index';
+                        hideLoading();
+                    }
                     toastr.success("Password has been successfully changed").delay(1000).fadeOut(1000);
                 } else if (obj.success == "fail") {
+                    hideLoading();
                     toastr.warning('Your password and confirmation password do not match').delay(1000).fadeOut(1000);
                     return false;
                 }
@@ -87,7 +92,8 @@ $(document).ready(function() {
     // Admin data update
     $("#updateadmindata").submit(function(event) {
         event.preventDefault();
-        var formData = new FormData(this);;
+        var formData = new FormData(this);
+        showLoading();
         $.ajax({
             url: 'resources/updateAdminData',
             type: 'POST',
@@ -97,10 +103,14 @@ $(document).ready(function() {
             contentType: false,
             processData: false,
             success: function(output) {
-                toastr.options.onHidden = function() { window.location.href = 'admin_profile'; }
+                toastr.options.onHidden = function() {
+                    window.location.href = 'admin_profile';
+                    hideLoading();
+                }
                 toastr.success("Admin details updated Successfully").delay(1000).fadeOut(1000);
             },
             error: function() {
+                hideLoading();
                 toastr.warning('Admin details not Updated').delay(1000).fadeOut(1000);
             }
         });
@@ -111,7 +121,8 @@ $(document).ready(function() {
     // Admin data update
     $("#changepassword").submit(function(event) {
         event.preventDefault();
-        var formData = new FormData(this);;
+        var formData = new FormData(this);
+        showLoading();
         $.ajax({
             url: 'resources/adminchangepassword',
             type: 'POST',
@@ -123,13 +134,18 @@ $(document).ready(function() {
             dataType: 'JSON',
             success: function(output) {
                 if (output.success == 'success') {
-                    toastr.options.onHidden = function() { window.location.href = 'admin_profile'; }
+                    toastr.options.onHidden = function() {
+                        window.location.href = 'admin_profile';
+                        hideLoading();
+                    }
                     toastr.success(output.message).delay(1000).fadeOut(1000);
                 } else {
+                    hideLoading();
                     toastr.warning(output.message).delay(1000).fadeOut(1000);
                 }
             },
             error: function(output) {
+                hideLoading();
                 toastr.warning('Password not updated').delay(1000).fadeOut(1000);
             }
         });

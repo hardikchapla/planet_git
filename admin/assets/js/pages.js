@@ -16,6 +16,7 @@ $(document).ready(function() {
     });
     $(document).on('click', '.updatePages', function() {
         var page_id = $(this).attr("id");
+        showLoading()
         $.ajax({
             url: "resources/update_page_list",
             method: "POST",
@@ -24,6 +25,7 @@ $(document).ready(function() {
             },
             dataType: "json",
             success: function(data) {
+                hideLoading()
                 $('#page_name').val(data.page_name);
                 $('#page_slug').val(data.page_slug);
                 $('#page_id').val(page_id);
@@ -45,6 +47,7 @@ $(document).ready(function() {
             closeOnConfirm: false,
         }).then((result) => {
             if (result.isConfirmed) {
+                showLoading()
                 $.ajax({
                         url: 'resources/delete_page',
                         type: 'POST',
@@ -53,14 +56,19 @@ $(document).ready(function() {
                     })
                     .done(function(response) {
                         if (response.success == 'success') {
-                            toastr.options.onHidden = function() { window.location.href = 'pages'; }
+                            toastr.options.onHidden = function() {
+                                window.location.href = 'pages';
+                                hideLoading()
+                            }
                             toastr.success(response.message).delay(1000).fadeOut(1000);
                         } else {
+                            hideLoading()
                             toastr.warning(output.message).delay(1000).fadeOut(1000);
                         }
 
                     })
                     .fail(function() {
+                        hideLoading()
                         swal('Oops...', 'Something went wrong with ajax !', 'error');
                     });
             }
@@ -85,6 +93,7 @@ $(document).ready(function() {
         },
         submitHandler: function(form) {
             var formdata = new FormData(document.getElementById('updatePagesForm'));
+            showLoading()
             $.ajax({
                 url: 'resources/add_page_submit',
                 type: 'POST',
@@ -94,13 +103,18 @@ $(document).ready(function() {
                 success: function(output) {
                     output = jQuery.parseJSON(output);
                     if (output.success == 'success') {
-                        toastr.options.onHidden = function() { window.location.href = 'pages'; }
+                        toastr.options.onHidden = function() {
+                            window.location.href = 'pages';
+                            hideLoading()
+                        }
                         toastr.success(output.message).delay(1000).fadeOut(1000);
                     } else {
+                        hideLoading()
                         toastr.warning(output.message).delay(1000).fadeOut(1000);
                     }
                 },
                 error: function() {
+                    hideLoading()
                     toastr.warning('Something went wrong with ajax !').delay(1000).fadeOut(1000);
                 }
             });

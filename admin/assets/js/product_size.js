@@ -1,20 +1,22 @@
 // Loader
-function showLoading(){
+function showLoading() {
     document.getElementById("page-loader").style = "visibility: visible";
 }
-function hideLoading(){
+
+function hideLoading() {
     document.getElementById("page-loader").style = "visibility: hidden";
 }
 
-$(document).ready(function(){
-    var dataTable = $('#productSizelist').DataTable({            
+$(document).ready(function() {
+    var dataTable = $('#productSizelist').DataTable({
         "ajax": {
             url: "resources/display_product_size",
             type: "POST"
-        }         
+        }
     });
     $(document).on('click', '.updateProductSize', function() {
         var product_size_id = $(this).attr("id");
+        showLoading();
         $.ajax({
             url: "resources/update_product_size",
             method: "POST",
@@ -23,6 +25,7 @@ $(document).ready(function(){
             },
             dataType: "json",
             success: function(data) {
+                hideLoading();
                 $('#product_size_name').val(data.size_name);
                 $('#product_size_id').val(product_size_id);
                 $('#action').val("Edit");
@@ -42,25 +45,31 @@ $(document).ready(function(){
             confirmButtonText: 'Yes, delete it!',
             closeOnConfirm: false,
         }).then((result) => {
-            if(result.isConfirmed){
+            if (result.isConfirmed) {
+                showLoading();
                 $.ajax({
-                    url: 'resources/delete_product_size',
-                    type: 'POST',
-                    data: 'product_size_id=' + product_size_id,
-                    dataType: 'json'
-                })
-                .done(function(response) {
-                    if(response.success == 'success'){
-                        toastr.options.onHidden = function() { window.location.href = 'product_size'; }
-                        toastr.success(response.message).delay(1000).fadeOut(1000);
-                    } else {
-                        toastr.warning(output.message).delay(1000).fadeOut(1000);
-                    }
-                    
-                })
-                .fail(function() {
-                    swal('Oops...', 'Something went wrong with ajax !', 'error');
-                });
+                        url: 'resources/delete_product_size',
+                        type: 'POST',
+                        data: 'product_size_id=' + product_size_id,
+                        dataType: 'json'
+                    })
+                    .done(function(response) {
+                        if (response.success == 'success') {
+                            toastr.options.onHidden = function() {
+                                window.location.href = 'product_size';
+                                hideLoading();
+                            }
+                            toastr.success(response.message).delay(1000).fadeOut(1000);
+                        } else {
+                            hideLoading();
+                            toastr.warning(output.message).delay(1000).fadeOut(1000);
+                        }
+
+                    })
+                    .fail(function() {
+                        hideLoading();
+                        swal('Oops...', 'Something went wrong with ajax !', 'error');
+                    });
             }
         });
     });
@@ -77,22 +86,28 @@ $(document).ready(function(){
         },
         submitHandler: function(form) {
             var formdata = new FormData(document.getElementById('updateProductSizeForm'));
+            showLoading();
             $.ajax({
                 url: 'resources/add_product_size_submit',
                 type: 'POST',
                 data: formdata,
                 contentType: false,
                 processData: false,
-                success: function (output) {
+                success: function(output) {
                     output = jQuery.parseJSON(output);
-                    if(output.success == 'success'){
-                        toastr.options.onHidden = function() { window.location.href = 'product_size'; }
+                    if (output.success == 'success') {
+                        toastr.options.onHidden = function() {
+                            window.location.href = 'product_size';
+                            hideLoading();
+                        }
                         toastr.success(output.message).delay(1000).fadeOut(1000);
                     } else {
+                        hideLoading();
                         toastr.warning(output.message).delay(1000).fadeOut(1000);
                     }
                 },
-                error: function(){
+                error: function() {
+                    hideLoading();
                     toastr.warning('Something went wrong with ajax !').delay(1000).fadeOut(1000);
                 }
             });

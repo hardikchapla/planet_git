@@ -16,6 +16,7 @@ $(document).ready(function() {
     });
     $(document).on("click", ".updatePodcastEpisode", function() {
         var podcast_episode_id = $(this).attr("id");
+        showLoading()
         $.ajax({
             url: "resources/update_podcast_episode",
             method: "POST",
@@ -24,6 +25,7 @@ $(document).ready(function() {
             },
             dataType: "json",
             success: function(data) {
+                hideLoading();
                 $("#old_podcast_episode_mp3_file").val(data.podcast_episode_file);
                 $("#podcast_episode_title").val(data.podcast_episode_title);
                 $("#selectPodcast").select2("val", data.podcast_id);
@@ -46,6 +48,7 @@ $(document).ready(function() {
             closeOnConfirm: false,
         }).then((result) => {
             if (result.isConfirmed) {
+                showLoading()
                 $.ajax({
                         url: "resources/delete_podcast_episode",
                         type: "POST",
@@ -56,13 +59,16 @@ $(document).ready(function() {
                         if (response.success == "success") {
                             toastr.options.onHidden = function() {
                                 window.location.href = "podcast_episode";
+                                hideLoading();
                             };
                             toastr.success(response.message).delay(1000).fadeOut(1000);
                         } else {
+                            hideLoading();
                             toastr.warning(output.message).delay(1000).fadeOut(1000);
                         }
                     })
                     .fail(function() {
+                        hideLoading();
                         swal("Oops...", "Something went wrong with ajax !", "error");
                     });
             }

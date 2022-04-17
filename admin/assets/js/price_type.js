@@ -16,6 +16,7 @@ $(document).ready(function() {
     });
     $(document).on('click', '.updatePriceType', function() {
         var price_type_id = $(this).attr("id");
+        showLoading();
         $.ajax({
             url: "resources/update_price_type",
             method: "POST",
@@ -24,6 +25,7 @@ $(document).ready(function() {
             },
             dataType: "json",
             success: function(data) {
+                hideLoading();
                 $('#price_type').val(data.price_type);
                 $('#price_type_id').val(price_type_id);
                 $('#action').val("Edit");
@@ -44,6 +46,7 @@ $(document).ready(function() {
             closeOnConfirm: false,
         }).then((result) => {
             if (result.isConfirmed) {
+                showLoading();
                 $.ajax({
                         url: 'resources/delete_price_type',
                         type: 'POST',
@@ -52,14 +55,19 @@ $(document).ready(function() {
                     })
                     .done(function(response) {
                         if (response.success == 'success') {
-                            toastr.options.onHidden = function() { window.location.href = 'price_type'; }
+                            toastr.options.onHidden = function() {
+                                window.location.href = 'price_type';
+                                hideLoading();
+                            }
                             toastr.success(response.message).delay(1000).fadeOut(1000);
                         } else {
+                            hideLoading();
                             toastr.warning(output.message).delay(1000).fadeOut(1000);
                         }
 
                     })
                     .fail(function() {
+                        hideLoading();
                         swal('Oops...', 'Something went wrong with ajax !', 'error');
                     });
             }
@@ -78,6 +86,7 @@ $(document).ready(function() {
         },
         submitHandler: function(form) {
             var formdata = new FormData(document.getElementById('updatePriceTypeForm'));
+            showLoading();
             $.ajax({
                 url: 'resources/add_price_type_submit',
                 type: 'POST',
@@ -87,13 +96,18 @@ $(document).ready(function() {
                 success: function(output) {
                     output = jQuery.parseJSON(output);
                     if (output.success == 'success') {
-                        toastr.options.onHidden = function() { window.location.href = 'price_type'; }
+                        toastr.options.onHidden = function() {
+                            window.location.href = 'price_type';
+                            hideLoading();
+                        }
                         toastr.success(output.message).delay(1000).fadeOut(1000);
                     } else {
+                        hideLoading();
                         toastr.warning(output.message).delay(1000).fadeOut(1000);
                     }
                 },
                 error: function() {
+                    hideLoading();
                     toastr.warning('Something went wrong with ajax !').delay(1000).fadeOut(1000);
                 }
             });
