@@ -741,7 +741,7 @@
                                     </li>
                                 </ul>
                                 <div class="ss_model_button">
-                                    <a id="model_buy_link" href="#"> Buy for 0.20 WAX </a>
+                                    <a id="model_buy_link" href="#"> Buy for 0.20 Pay </a>
                                 </div>
                             </div>
                         </div>
