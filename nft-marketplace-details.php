@@ -53,7 +53,7 @@
                 <div class="col-lg-7 align-self-center">
                     <div class="ss_blog_details_des">
                         <h2> <?= $fenft['name'] ?> </h2>
-                        <h5> <?= $fenft['price'] ?> WAX <span> ($58.64) </span></h5>
+                        <h5> <?= $fenft['price'] ?> <?= $fenft['price_type'] ?> <span> ($58.64) </span></h5>
                         <p><?= $fenft['description'] ?></p>
                         <ul>
                             <li>

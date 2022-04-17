@@ -2,6 +2,7 @@
    include('header.php');
    $category = $db->query("SELECT * FROM phtv_nft_categories");
    $collections = $db->query("SELECT * FROM phtv_nft_collection");
+   $price_type = $db->query("SELECT * FROM phtv_price_type");
 ?>
 <!-- BEGIN: Content-->
 <div class="app-content content">
@@ -43,6 +44,7 @@
                                                 <th>Image</th>
                                                 <th>Name</th>
                                                 <th>Price</th>
+                                                <th>Price type</th>
                                                 <th>Sale Id</th>
                                                 <th>Assets Name</th>
                                                 <th>Assets Id</th>
@@ -58,6 +60,7 @@
                                                 <th>Image</th>
                                                 <th>Name</th>
                                                 <th>Price</th>
+                                                <th>Price Type</th>
                                                 <th>Sale Id</th>
                                                 <th>Assets Name</th>
                                                 <th>Assets Id</th>
@@ -119,6 +122,18 @@
                                 <input type="number" name="nft_info_price" id="nft_info_price"
                                     placeholder="Enter nft info price" class="form-control">
                             </div>
+                        </div>
+                    </div>
+                    <div class="row mb-1">
+                        <div class="col">
+                            <label for="selectPriceType" class="form-label">Select Price Type:</label>
+                            <select class="form-control" name="selectPriceType" id="selectPriceType">
+                                <option value="">Select Price Type</option>
+                                <?php while ($feprice_type = $price_type->fetch(PDO::FETCH_ASSOC)) { ?>
+                                <option value="<?= $feprice_type['price_type'] ?>"><?= $feprice_type['price_type'] ?>
+                                </option>
+                                <?php } ?>
+                            </select>
                         </div>
                     </div>
                     <div class="row mb-1">

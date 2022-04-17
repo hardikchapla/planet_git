@@ -317,7 +317,7 @@
                         <h5><?= $feinfo['name'] ?></h5>
                         <div class="d-flex bd-highlight">
                             <div class=" flex-grow-1 bd-highlight">
-                                <p> <?= $feinfo['price'] ?> PAY <span> ($58.64) </span></p>
+                                <p> <?= $feinfo['price'] ?> <?= $feinfo['price_type'] ?> <span> ($58.64) </span></p>
                             </div>
                             <div class=" bd-highlight">
                                 <p><span> M#154 | 200 </span></p>
@@ -502,7 +502,7 @@
                         <h5><?= $feinfo1['name'] ?></span></h5>
                         <div class="d-flex bd-highlight">
                             <div class=" flex-grow-1 bd-highlight">
-                                <p> <?= $feinfo1['price'] ?> PAY <span> ($58.64) </span></p>
+                                <p> <?= $feinfo1['price'] ?> <?= $feinfo1['price_type'] ?> <span> ($58.64) </span></p>
                             </div>
                             <div class=" bd-highlight">
                                 <p><span> M#154 | 200 </span></p>
@@ -775,7 +775,8 @@ $(document).ready(function() {
                         'images/planethopper-TV-logo.png');
                 }
                 $('#nft_marketing_name').html(data.name);
-                $('#nft_marketing_price').html(data.price + " WAX <span> ($58.64) </span>");
+                $('#nft_marketing_price').html(data.price + " " + data.price_type +
+                    " <span> ($58.64) </span>");
                 $('#nft_marketing_description').html(data.description);
                 $('#nft_marketing_sale_id').html(data.sale_id);
                 $('#nft_marketing_collection').html(data.collection_name);

@@ -39,6 +39,7 @@ $(document).ready(function() {
                 $('#old_nft_info_image_type').val(data.nft_info_image_type);
                 $('#selectCollections').select2("val", data.selectCollections);
                 $('#selectCategory').select2("val", data.selectCategory);
+                $('#selectPriceType').val(data.selectPriceType);
                 $('#nft_info_description').val(data.nft_info_description);
                 nft_info_description.setData(data.nft_info_description);
                 $('#nft_info_name').val(data.nft_info_name);

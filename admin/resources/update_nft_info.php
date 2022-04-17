@@ -18,6 +18,7 @@
 			$reoutput["nft_info_image_type"] = $row["image_type"];
 			$reoutput["selectCollections"] = $row["collection_id"];
 			$reoutput["selectCategory"] = $row["category_id"];
+			$reoutput["selectPriceType"] = $row["price_type"];
 			$reoutput["nft_info_name"] = $row["name"];
 			$reoutput["nft_info_price"] = $row["price"];
 			$reoutput["nft_info_description"] = $row["description"];
