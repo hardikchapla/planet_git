@@ -64,7 +64,7 @@ if ($cur_page == 'order-tracking') {
     $titleName = 'Order tracking';
 }
 if ($cur_page == 'podcasts') {
-    $titleName = 'Podcasts';
+    $titleName = 'Audiocast';
     $active_podcasts = "active";
 }
 if ($cur_page == 'product-detail') {

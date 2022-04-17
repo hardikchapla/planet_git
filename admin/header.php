@@ -47,10 +47,10 @@
         $titleName = 'Blogs';
     }
     if($cur_page == 'podcast'){
-        $titleName = 'Podcast';
+        $titleName = 'Audiocast';
     }
     if($cur_page == 'podcast_episode'){
-        $titleName = 'Podcast Episode';
+        $titleName = 'Audiocast Episode';
     }
     if($cur_page == 'nft_category'){
         $titleName = 'NFT Category';
@@ -318,19 +318,19 @@
                 <li class=" nav-item <?php if($cur_page_main == 'Podcast') {echo 'active';} ?>">
                     <a href="#">
                         <i class="fa fa-cube" aria-hidden="true"></i>
-                        <span class="menu-title text-truncate" data-i18n="Starter kit">Podcast</span>
+                        <span class="menu-title text-truncate" data-i18n="Starter kit">Audiocast</span>
                     </a>
                     <ul class="menu-content">
                         <li class="<?php if($cur_page == 'podcast') {echo 'active';} ?>">
                             <a class="d-flex align-items-center" href="podcast">
                                 <i class="bx bx-right-arrow-alt"></i>
-                                <span class="menu-item text-truncate" data-i18n="1 column">Podcast</span>
+                                <span class="menu-item text-truncate" data-i18n="1 column">Audiocast</span>
                             </a>
                         </li>
                         <li class="<?php if($cur_page == 'podcast_episode') {echo 'active';} ?>">
                             <a class="d-flex align-items-center" href="podcast_episode">
                                 <i class="bx bx-right-arrow-alt"></i>
-                                <span class="menu-item text-truncate" data-i18n="1 column">Podcast Episode</span>
+                                <span class="menu-item text-truncate" data-i18n="1 column">Audiocast Episode</span>
                             </a>
                         </li>
                     </ul>

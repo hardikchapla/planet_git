@@ -9,12 +9,12 @@
         <div class="content-header row">
             <div class="content-header-left col-12 mb-2 mt-1">
                 <div class="breadcrumbs-top">
-                    <h5 class="content-header-title float-left pr-1 mb-0">Podcast Episode</h5>
+                    <h5 class="content-header-title float-left pr-1 mb-0">Audiocast Episode</h5>
                     <div class="breadcrumb-wrapper d-none d-sm-block">
                         <ol class="breadcrumb p-0 mb-0 pl-1">
                             <li class="breadcrumb-item"><a href="dashboard"><i class="bx bx-home-alt"></i></a>
                             </li>
-                            <li class="breadcrumb-item active">Podcast Episode</li>
+                            <li class="breadcrumb-item active">Audiocast Episode</li>
                         </ol>
                     </div>
                 </div>
@@ -27,7 +27,7 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">Podcast Episode List</h4>
+                                <h4 class="card-title">Audiocast Episode List</h4>
                                 <div class="card-title"><button type="button" data-toggle="modal"
                                         data-target="#updatePodcastEpisode" class="btn btn-success text-white">Add
                                         New</button></div>
@@ -74,7 +74,7 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="podcast_episode_form_title">Add Podcast Episode</h4>
+                <h4 class="modal-title" id="podcast_episode_form_title">Add Audiocast Episode</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <i class="bx bx-x"></i>
                 </button>

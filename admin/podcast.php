@@ -9,12 +9,12 @@
         <div class="content-header row">
             <div class="content-header-left col-12 mb-2 mt-1">
                 <div class="breadcrumbs-top">
-                    <h5 class="content-header-title float-left pr-1 mb-0">Podcast</h5>
+                    <h5 class="content-header-title float-left pr-1 mb-0">Audiocast</h5>
                     <div class="breadcrumb-wrapper d-none d-sm-block">
                         <ol class="breadcrumb p-0 mb-0 pl-1">
                             <li class="breadcrumb-item"><a href="dashboard"><i class="bx bx-home-alt"></i></a>
                             </li>
-                            <li class="breadcrumb-item active">Podcast
+                            <li class="breadcrumb-item active">Audiocast
                             </li>
                         </ol>
                     </div>
@@ -28,7 +28,7 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">Podcast List</h4>
+                                <h4 class="card-title">Audiocast List</h4>
                                 <div class="card-title"><button type="button" data-toggle="modal"
                                         data-target="#updatePodcast" class="btn btn-success text-white">Add
                                         New</button></div>
@@ -42,7 +42,8 @@
                                                 <th>Image</th>
                                                 <th>Title</th>
                                                 <th>Auther</th>
-                                                <th>Discription</th>
+                                                <!-- <th>Discription</th> -->
+                                                <th>View</th>
                                                 <th>Update</th>
                                                 <th>Delete</th>
                                             </tr>
@@ -53,7 +54,8 @@
                                                 <th>Image</th>
                                                 <th>Title</th>
                                                 <th>Auther</th>
-                                                <th>Discription</th>
+                                                <!-- <th>Discription</th> -->
+                                                <th>View</th>
                                                 <th>Update</th>
                                                 <th>Delete</th>
                                             </tr>
@@ -75,7 +77,7 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="podcast_form_title">Add Podcast</h4>
+                <h4 class="modal-title" id="podcast_form_title">Add Audiocast</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <i class="bx bx-x"></i>
                 </button>
@@ -167,6 +169,33 @@
                         <span class="d-none d-sm-block">Submit</span>
                     </button>
                 </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="modal fade text-left" id="viewPodcastDescriptionModel" tabindex="-1" role="dialog"
+    aria-labelledby="myModalLabel33" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="blog_form_title">Audiocast Description</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="bx bx-x"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row mb-1">
+                    <div class="col" id="viewPodcastDescription">
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light-secondary" data-dismiss="modal">
+                    <i class="bx bx-x d-block d-sm-none"></i>
+                    <span class="d-none d-sm-block">Close</span>
+                </button>
+            </div>
             </form>
         </div>
     </div>

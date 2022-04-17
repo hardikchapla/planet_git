@@ -51,6 +51,10 @@ $(document).ready(function() {
             }
         })
     });
+    $(document).on('click', '.viewPodcastDescriptionModel', function() {
+        var description = $(this).attr("id");
+        $('#viewPodcastDescription').html(description);
+    });
     $(document).on('click', '.deletePodcast', function(e) {
         var podcast_id = $(this).attr("id");
         e.preventDefault();

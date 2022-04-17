@@ -46,7 +46,7 @@
                                                 <th>Sale Id</th>
                                                 <th>Assets Name</th>
                                                 <th>Assets Id</th>
-                                                <th>Meant No</th>
+                                                <th>Mint No.</th>
                                                 <th>Duration</th>
                                                 <th>Update</th>
                                                 <th>Delete</th>
@@ -61,7 +61,7 @@
                                                 <th>Sale Id</th>
                                                 <th>Assets Name</th>
                                                 <th>Assets Id</th>
-                                                <th>Meant No</th>
+                                                <th>Mint No.</th>
                                                 <th>Duration</th>
                                                 <th>Update</th>
                                                 <th>Delete</th>
@@ -171,7 +171,7 @@
                     </div>
                     <div class="row mb-1">
                         <div class="col">
-                            <label for="nft_info_meant_no" class="form-label">Meant No:</label>
+                            <label for="nft_info_meant_no" class="form-label">Mint No. :</label>
                             <input type="text" name="nft_info_meant_no" id="nft_info_meant_no"
                                 placeholder="Enter nft info meant no" class="form-control">
                         </div>

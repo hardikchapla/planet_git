@@ -19,7 +19,8 @@
 		$sub_array[] = $image;
 		$sub_array[] = $row["title"];
 		$sub_array[] = $row["blog_auther"];
-		$sub_array[] = $row["description"];
+		// $sub_array[] = $row["description"];
+		$sub_array[] = '<button class="btn btn-primary viewPodcastDescriptionModel" data-toggle="modal" data-target="#viewPodcastDescriptionModel" type="button" id="'.$row["description"].'">View</button>';
 		$sub_array[] = '<button class="btn btn-primary fa fa-pencil updatePodcast" data-toggle="modal" data-target="#updatePodcast" type="button" id="'.$row["id"].'"></button>';
 		$sub_array[] = '<button class="btn btn-danger fa fa-trash deletePodcast" type="button" id="'.$row["id"].'" ></button>';
 		$data[] = $sub_array;
