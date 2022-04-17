@@ -73,6 +73,9 @@
     if($cur_page == 'banner'){
         $titleName = 'Banner';
     }
+    if($cur_page == 'price_type'){
+        $titleName = 'Price Type';
+    }
    
     $admin = $db->query("SELECT * FROM phtv_admin WHERE id = 1");
     $feadmin = $admin->fetch();
@@ -377,6 +380,12 @@
                     <a href="pages">
                         <i class="fa fa-file" aria-hidden="true"></i>
                         <span class="menu-title text-truncate" data-i18n="bxs-dashboard">Pages</span>
+                    </a>
+                </li>
+                <li class="nav-item <?php if($cur_page == 'price_type') {echo 'active';} ?>">
+                    <a href="price_type">
+                        <i class="fa fa-money" aria-hidden="true"></i>
+                        <span class="menu-title text-truncate" data-i18n="bxs-dashboard">Price Type</span>
                     </a>
                 </li>
                 <li class="nav-item <?php if($cur_page == 'banner') {echo 'active';} ?>">
