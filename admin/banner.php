@@ -79,7 +79,7 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="page_form_title">Add Banner</h4>
+                <h4 class="modal-title" id="banner_form_title">Add Banner</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <i class="bx bx-x"></i>
                 </button>

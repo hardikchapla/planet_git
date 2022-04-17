@@ -12,7 +12,7 @@
 		if(empty($row['image'])){
 			$image = '<img src="../images/default.svg" style = "border-radius: 40px" width="40" height="40" />';
 		} else {
-			$image = '<img src="../images/banner/'.$row["image"].'" style = "border-radius: 40px" width="40" height="40" />';
+			$image = '<img src="../images/banner_image/'.$row["image"].'" style = "border-radius: 40px" width="40" height="40" />';
 		}
 		$sub_array = array();
 		$sub_array[] = $i;

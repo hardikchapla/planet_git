@@ -87,7 +87,7 @@ $(document).ready(function() {
                 success: function(output) {
                     output = jQuery.parseJSON(output);
                     if (output.success == 'success') {
-                        toastr.options.onHidden = function() { window.location.href = 'pages'; }
+                        toastr.options.onHidden = function() { window.location.href = 'banner'; }
                         toastr.success(output.message).delay(1000).fadeOut(1000);
                     } else {
                         toastr.warning(output.message).delay(1000).fadeOut(1000);
@@ -98,5 +98,75 @@ $(document).ready(function() {
                 }
             });
         }
+    });
+    $(document).on('click', '.updateBanner', function() {
+        var banner_id = $(this).attr("id");
+        $.ajax({
+            url: "resources/update_banner",
+            method: "POST",
+            data: {
+                banner_id: banner_id
+            },
+            dataType: "json",
+            success: function(data) {
+                $('#old_banner_image').val(data.old_banner_image);
+                $('#banner_title').val(data.banner_title);
+                $('#banner_link').val(data.banner_link);
+                $('#link_type').val(data.link_type);
+                banner_description.setData(data.banner_description);
+                $('#selectPage').select2("val", data.selectPage);
+                $('#banner_id').val(banner_id);
+                if (data.banner_type == 1) {
+                    $('#banner_type1').attr('checked', true);
+                } else {
+                    $('#banner_type2').attr('checked', true);
+                }
+                if (data.link_type == 1) {
+                    $('#link_type1').attr('checked', true);
+                } else if (data.link_type == 2) {
+                    $('#link_type2').attr('checked', true);
+                } else if (data.link_type == 3) {
+                    $('#link_type3').attr('checked', true);
+                } else {
+                    $('#link_type4').attr('checked', true);
+                }
+                $('#action').val("Edit");
+                $('#banner_form_title').html("Update Banner");
+            }
+        })
+    });
+    $(document).on('click', '.deleteBanner', function(e) {
+        var banner_id = $(this).attr("id");
+        e.preventDefault();
+        Swal.fire({
+            title: 'Are you sure?',
+            text: 'You will not be able to recover this banner!',
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonClass: 'btn-danger',
+            confirmButtonText: 'Yes, delete it!',
+            closeOnConfirm: false,
+        }).then((result) => {
+            if (result.isConfirmed) {
+                $.ajax({
+                        url: 'resources/delete_banner',
+                        type: 'POST',
+                        data: 'banner_id=' + banner_id,
+                        dataType: 'json'
+                    })
+                    .done(function(response) {
+                        if (response.success == 'success') {
+                            toastr.options.onHidden = function() { window.location.href = 'banner'; }
+                            toastr.success(response.message).delay(1000).fadeOut(1000);
+                        } else {
+                            toastr.warning(output.message).delay(1000).fadeOut(1000);
+                        }
+
+                    })
+                    .fail(function() {
+                        swal('Oops...', 'Something went wrong with ajax !', 'error');
+                    });
+            }
+        });
     });
 });
