@@ -85,8 +85,8 @@
                         </div>
                         <div class="mr-auto  bd-highlight align-self-center">
                             <div class="ss_des_play">
-                                <h3><?= $oneepisode['title'] ?></h3>
-                                <p><?= $fepodcast['auther_name'] ?></p>
+                                <h3 id="audiocast_title"><?= $oneepisode['title'] ?></h3>
+                                <p id="audiocast_authername"><?= $fepodcast['auther_name'] ?></p>
                             </div>
                         </div>
                         <div class="p-2 bd-highlight align-self-center ss_social_media_relative">
@@ -99,8 +99,9 @@
                                             src="images/twitterA.svg" alt="youtube"> </a>
                                     <a href="<?= ($fepodcast['twiter_link']) ? $fepodcast['twiter_link']:'#' ?>"> <img
                                             src="images/youtubeshaA.svg" alt="youtube"> </a>
-                                    <a href="<?= ($fepodcast['google_link']) ? $fepodcast['google_link']:'#' ?>"> <img
-                                            src="images/fb.svg" alt="youtube"> </a>
+                                    <a id="facebooklink"
+                                        href="https://www.facebook.com/sharer/sharer.php?u=<?= BASE_URL ?>images/podcast_mp3/<?= $oneepisode['mp3_file'] ?>"
+                                        target="_blank"> <img src="images/fb.svg" alt="youtube"> </a>
                                     <a href="<?= ($fepodcast['insta_link']) ? $fepodcast['insta_link']:'#' ?>"> <img
                                             src="images/instagram.svg" alt="youtube"> </a>
                                 </div>
@@ -132,7 +133,9 @@
                                 <div class="col-auto">
                                     <div class="d-flex bd-highlight ">
                                         <div class=" bd-highlight align-self-center">
-                                            <button type="button" class="ss_play podcast_start"
+                                            <button type="button" audiocast_title="<?= $fepisode['title'] ?>"
+                                                audiocast_auther="<?= $fepodcast['auther_name'] ?>"
+                                                class="ss_play podcast_start"
                                                 id="images/podcast_mp3/<?= $fepisode['mp3_file'] ?>"
                                                 key="<?= $fepodcast['id'] ?>">
                                                 <i class="fa fa-play" aria-hidden="true"></i>
@@ -1030,16 +1033,50 @@ $(document).ready(function() {
     });
     $(document).on('click', '#startplayer', function() {
         $('#buzzer').trigger("play");
+        $(this).removeClass('fa-play');
+        $(this).addClass('fa-pause');
         $(this).attr('id', "stopplayer");
     });
     $(document).on('click', '#stopplayer', function() {
         $('#buzzer').trigger("pause");
+        $(this).addClass('fa-play');
+        $(this).removeClass('fa-pause');
         $(this).attr('id', "startplayer");
     });
     $(document).on('click', '.podcast_start', function() {
         var audio_url = $(this).attr('id');
         var audio_key = $(this).attr('key');
+        var audiocast_title = $(this).attr('audiocast_title');
+        $('#audiocast_title').html(audiocast_title);
+        var audiocast_auther = $(this).attr('audiocast_auther');
+        $('#audiocast_authername').html(audiocast_auther);
+        $('#facebooklink').attr('href', 'https://www.facebook.com/sharer/sharer.php?u=<?= BASE_URL ?>' +
+            audio_url);
         change(audio_url, audio_key);
+        $('#startplayer').addClass('fa-pause');
+        $('#startplayer').removeClass('fa-play');
+        $(this).addClass('podcast_pause');
+        $(this).removeClass('podcast_start');
+        $('.podcast_start').find('i').removeClass('fa-pause').addClass('fa-play');
+        $('.podcast_pause').find('i').removeClass('fa-pause').addClass('fa-play');
+        var itag = $(this).find('i').removeClass('fa-play').addClass('fa-pause');
+
+    });
+    $(document).on('click', '.podcast_pause', function() {
+        var audio_url = $(this).attr('id');
+        var audio_key = $(this).attr('key');
+        var audiocast_title = $(this).attr('audiocast_title');
+        $('#audiocast_title').html(audiocast_title);
+        var audiocast_auther = $(this).attr('audiocast_auther');
+        $('#audiocast_authername').html(audiocast_auther);
+        pause(audio_url, audio_key);
+        $('#startplayer').addClass('fa-play');
+        $('#startplayer').removeClass('fa-pause');
+        $(this).addClass('podcast_start');
+        $(this).removeClass('podcast_pause');
+        $('.podcast_start').find('i').removeClass('fa-pause').addClass('fa-play');
+        $('.podcast_pause').find('i').removeClass('fa-pause').addClass('fa-play');
+        var itag = $(this).find('i').removeClass('fa-pause').addClass('fa-play');
     });
 
     function change(sourceUrl, key) {
@@ -1048,6 +1085,14 @@ $(document).ready(function() {
         audio[0].pause();
         audio[0].load();
         audio[0].oncanplaythrough = audio[0].play();
+    }
+
+    function pause(sourceUrl, key) {
+        var audio = $("#buzzer");
+        $("#podcast_player" + key).attr("src", sourceUrl);
+        audio[0].play();
+        audio[0].load();
+        audio[0].oncanplaythrough = audio[0].pause();
     }
 });
 $(document).click(function() {
