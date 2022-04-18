@@ -95,8 +95,10 @@
                             </div>
                             <div class="ss_music">
                                 <div class="ss_social_media">
-                                    <a href="<?= ($fepodcast['fb_link']) ? $fepodcast['fb_link']:'#' ?>"> <img
-                                            src="images/twitterA.svg" alt="youtube"> </a>
+                                    <a id="twitterlink"
+                                        href="http://twitter.com/share?url=<?= BASE_URL ?>images/podcast_mp3/<?= $oneepisode['mp3_file'] ?>"
+                                        target="_blank">
+                                        <img src="images/twitterA.svg" alt="youtube"> </a>
                                     <a href="<?= ($fepodcast['twiter_link']) ? $fepodcast['twiter_link']:'#' ?>"> <img
                                             src="images/youtubeshaA.svg" alt="youtube"> </a>
                                     <a id="facebooklink"
@@ -1051,6 +1053,8 @@ $(document).ready(function() {
         var audiocast_auther = $(this).attr('audiocast_auther');
         $('#audiocast_authername').html(audiocast_auther);
         $('#facebooklink').attr('href', 'https://www.facebook.com/sharer/sharer.php?u=<?= BASE_URL ?>' +
+            audio_url);
+        $('#twitterlink').attr('href', 'http://twitter.com/share?url=<?= BASE_URL ?>' +
             audio_url);
         change(audio_url, audio_key);
         $('#startplayer').addClass('fa-pause');
