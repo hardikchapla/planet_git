@@ -8770,3 +8770,12 @@ form .error {
     bottom: 0;
     width: 100%
 }
+
+.ss_selected {
+    background: #3fa9f5;
+    color: #ffffff;
+}
+
+.ss_active {
+    opacity: 1 !important;
+}

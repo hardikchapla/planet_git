@@ -1,11 +1,24 @@
 <?php
    include('header.php');
+   $category_id = (isset($_REQUEST['category_id']) && !empty($_REQUEST['category_id'])) ? base64_decode($_REQUEST['category_id']):'';
+   $collection_id = (isset($_REQUEST['collection_id']) && !empty($_REQUEST['collection_id'])) ? base64_decode($_REQUEST['collection_id']):'';
    $category = $db->query("SELECT * FROM phtv_nft_categories");
    $collection = $db->query("SELECT * FROM phtv_nft_collection");
    $listing = $db->query("SELECT * FROM phtv_nft_listing");
    $logos = $db->query("SELECT * FROM phtv_nft_logos");
-   $nft_info = $db->query("SELECT * FROM phtv_nft_info");
-   $nft_info1 = $db->query("SELECT * FROM phtv_nft_info");
+   if(!empty($category_id) && !empty($collection_id)){
+        $nft_info = $db->query("SELECT * FROM phtv_nft_info WHERE category_id = '$category_id' AND collection_id = '$collection_id'");
+        $nft_info1 = $db->query("SELECT * FROM phtv_nft_info WHERE category_id = '$category_id' AND collection_id = '$collection_id'");
+   } elseif (!empty($category_id)) {
+        $nft_info = $db->query("SELECT * FROM phtv_nft_info WHERE category_id = '$category_id'");
+        $nft_info1 = $db->query("SELECT * FROM phtv_nft_info WHERE category_id = '$category_id'");
+   } elseif (!empty($collection_id)) {
+        $nft_info = $db->query("SELECT * FROM phtv_nft_info WHERE collection_id = '$collection_id'");
+        $nft_info1 = $db->query("SELECT * FROM phtv_nft_info WHERE collection_id = '$collection_id'");
+   } else {
+        $nft_info = $db->query("SELECT * FROM phtv_nft_info");
+        $nft_info1 = $db->query("SELECT * FROM phtv_nft_info");   
+   }
 ?>
 
 <div class="container-fluid ss_header_sub ss_height100vh">
@@ -144,7 +157,8 @@
             <div class="owl-carousel owl-theme" id="ss_categories">
                 <?php while ($fecategory = $category->fetch(PDO::FETCH_ASSOC)) { ?>
                 <div class="item">
-                    <a href="#" class="ss_experiences">
+                    <a href="nft-marketplace?category_id=<?= base64_encode($fecategory['id']) ?>&collection_id=<?= base64_encode($collection_id) ?>"
+                        class="ss_experiences <?= ($fecategory['id'] == $category_id) ? 'ss_selected':'' ?>">
                         <h2><?= $fecategory['name'] ?></h2>
                     </a>
                 </div>
@@ -211,7 +225,8 @@
             <div class="owl-carousel owl-theme" id="ss_collections">
                 <?php while ($fecollecton = $collection->fetch(PDO::FETCH_ASSOC)) { ?>
                 <div class="item">
-                    <a href="#" class="ss_experiences">
+                    <a href="nft-marketplace?category_id=<?= base64_encode($category_id) ?>&collection_id=<?= base64_encode($fecollecton['id']) ?>"
+                        class="ss_experiences <?= ($fecollecton['id'] == $collection_id) ? 'ss_selected':'' ?>">
                         <div class="verticle_middle">
                             <img src="images/nft_collection/<?= $fecollecton['logo'] ?>" alt="images" />
                         </div>

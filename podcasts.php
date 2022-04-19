@@ -1064,7 +1064,8 @@ $(document).ready(function() {
         $('.podcast_start').find('i').removeClass('fa-pause').addClass('fa-play');
         $('.podcast_pause').find('i').removeClass('fa-pause').addClass('fa-play');
         var itag = $(this).find('i').removeClass('fa-play').addClass('fa-pause');
-
+        $('div').removeClass('ss_active');
+        $(this).closest('div.ss_list').addClass('ss_active');
     });
     $(document).on('click', '.podcast_pause', function() {
         var audio_url = $(this).attr('id');
@@ -1081,6 +1082,8 @@ $(document).ready(function() {
         $('.podcast_start').find('i').removeClass('fa-pause').addClass('fa-play');
         $('.podcast_pause').find('i').removeClass('fa-pause').addClass('fa-play');
         var itag = $(this).find('i').removeClass('fa-pause').addClass('fa-play');
+        $('div').removeClass('ss_active');
+        $(this).closest('div.ss_list').addClass('ss_active');
     });
 
     function change(sourceUrl, key) {
