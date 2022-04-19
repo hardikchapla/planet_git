@@ -4,6 +4,9 @@ $category_id = (isset($_REQUEST['category_id']) && !empty($_REQUEST['category_id
 $brand_id = (isset($_REQUEST['brand_id']) && !empty($_REQUEST['brand_id'])) ? base64_decode($_REQUEST['brand_id']):'';
 $brand = $db->query("SELECT * FROM phtv_product_brand");
 $category = $db->query("SELECT * FROM phtv_product_category");
+
+$blogs = $db->query("SELECT a.*, b.name, c.category_name FROM phtv_blog a LEFT JOIN phtv_blog_auther b ON a.auther_id = b.id LEFT JOIN phtv_blog_category c ON a.category_id = c.id GROUP BY a.id ORDER BY a.id DESC LIMIT 0, 5");
+$feblogs = $blogs->fetchAll();
 $product = $db->query("SELECT a.*, b.* FROM phtv_product a LEFT JOIN phtv_product_images b ON a.id=b.product_id GROUP BY a.id LIMIT 0,3");
 ?>
 
@@ -769,34 +772,38 @@ $product = $db->query("SELECT a.*, b.* FROM phtv_product a LEFT JOIN phtv_produc
             </div>
         </div>
         <div class=" row pt-5">
+            <?php if($blogs->rowCount() > 0){ ?>
             <div class="col-lg-6">
                 <div class="ss_blog_post">
                     <div class="imagesB">
-                        <img src="images/blogA.jpg" alt="images" />
+                        <img src="images/blog/<?= $feblogs[0]['image'] ?>" alt="images" />
                     </div>
                     <div class="blog_des">
-                        <h2>Ethics Men's Sports Latest Stylish Casual Sneakers/Lace up Lightweight</h2>
-                        <p>For this special capsule, Common Ace co-founders and sneaker connoisseurs Sophia Chang
-                            and
-                            Romy selection of women’s, men’s.</p>
-                        <span> <strong> Posted by : </strong> Tash Ingeram on April 3, 2020 </span>
+                        <h2><?= $feblogs[0]['title'] ?></h2>
+                        <p><?= $feblogs[0]['description'] ?></p>
+                        <span> <strong> Posted by : </strong> <?= $feblogs[0]['name'] ?> on
+                            <?= date('F, d Y',strtotime($feblogs[0]['created_at'])) ?> </span>
                     </div>
                 </div>
             </div>
+            <?php unset($feblogs[0]); ?>
             <div class="col-lg-6">
                 <div class="row">
+                    <?php foreach($feblogs as $blog){ ?>
                     <div class="col-lg-6">
                         <div class="ss_blog_post">
                             <div class="images">
-                                <img src="images/blogB.jpg" alt="images" />
+                                <img src="images/blog/<?= $blog['image'] ?>" alt="images" />
                             </div>
                             <div class="blog_desB">
-                                <h2>Ethics Men's Sports Latest Stylish Casual Sneakers/Lace up Lightweight</h2>
-                                <span> <strong> Posted by : </strong> Tash Ingeram on April 3, 2020 </span>
+                                <h2><?= $blog['title'] ?></h2>
+                                <span> <strong> Posted by : </strong> <?= $blog['name'] ?> on
+                                    <?= date('F, d Y',strtotime($blog['created_at'])) ?> </span>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <?php } ?>
+                    <!-- <div class="col-lg-6">
                         <div class="ss_blog_post">
                             <div class="images">
                                 <img src="images/blogC.jpg" alt="images" />
@@ -807,8 +814,6 @@ $product = $db->query("SELECT a.*, b.* FROM phtv_product a LEFT JOIN phtv_produc
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
                     <div class="col-lg-6">
                         <div class="ss_blog_post">
                             <div class="images">
@@ -830,13 +835,22 @@ $product = $db->query("SELECT a.*, b.* FROM phtv_product a LEFT JOIN phtv_produc
                                 <span> <strong> Posted by : </strong> Tash Ingeram on April 3, 2020 </span>
                             </div>
                         </div>
+                    </div> -->
+                </div>
+            </div>
+            <?php } else { ?>
+            <div class="col-lg-12">
+                <div class="ss_blog_post">
+                    <div class="blog_des text-center">
+                        <h2>Blogs not added from this site</h2>
                     </div>
                 </div>
             </div>
+            <?php } ?>
         </div>
         <div class="col-lg-12 text-center">
             <div class="episode_button">
-                <a href="#"> View All </a>
+                <a href="blog"> View All </a>
             </div>
         </div>
     </div>
