@@ -8,6 +8,8 @@
         $podcast_title = addslashes($_REQUEST['podcast_title']);
         $podcast_description = addslashes($_REQUEST['podcast_description']);
         $selectAuter = $_REQUEST['selectAuter'];
+        $selectCreatedBy = $_REQUEST['selectCreatedBy'];
+        $selectSponsoredBy = $_REQUEST['selectSponsoredBy'];
         $podcast_fb_link = addslashes($_REQUEST['podcast_fb_link']);
         $podcast_twiter_link = addslashes($_REQUEST['podcast_twiter_link']);
         $podcast_google_link = addslashes($_REQUEST['podcast_google_link']);
@@ -22,7 +24,7 @@
             $path = '../../images/podcast_image/'.$photo;
             move_uploaded_file($tmp,$path);
             
-            $statement = $db->query("INSERT INTO phtv_podcast SET `title` = '$podcast_title',`image` = '$photo', `auther_id` = '$selectAuter', `description` = '$podcast_description', `fb_link` = '$podcast_fb_link', `twiter_link` = '$podcast_twiter_link', `google_link` = '$podcast_google_link', `insta_link` = '$podcast_insta_link', `created_at` = '$created'");
+            $statement = $db->query("INSERT INTO phtv_podcast SET `title` = '$podcast_title',`image` = '$photo', `auther_id` = '$selectAuter', `created_by_id` = '$selectCreatedBy', `sponsored_by_id` = '$selectSponsoredBy', `description` = '$podcast_description', `fb_link` = '$podcast_fb_link', `twiter_link` = '$podcast_twiter_link', `google_link` = '$podcast_google_link', `insta_link` = '$podcast_insta_link', `created_at` = '$created'");
             if(!empty($statement))
             {
                 $reoutput['success'] = 'success';
@@ -45,6 +47,8 @@
         $podcast_title = addslashes($_REQUEST['podcast_title']);
         $podcast_description = addslashes($_REQUEST['podcast_description']);
         $selectAuter = $_REQUEST['selectAuter'];
+        $selectCreatedBy = $_REQUEST['selectCreatedBy'];
+        $selectSponsoredBy = $_REQUEST['selectSponsoredBy'];
         $podcast_fb_link = addslashes($_REQUEST['podcast_fb_link']);
         $podcast_twiter_link = addslashes($_REQUEST['podcast_twiter_link']);
         $podcast_google_link = addslashes($_REQUEST['podcast_google_link']);
@@ -66,7 +70,7 @@
         {
             $photo = $_REQUEST['old_podcast_image'];
         }
-        $statement = $db->query("UPDATE phtv_podcast SET `title` = '$podcast_title',`image` = '$photo', `auther_id` = '$selectAuter', `description` = '$podcast_description', `fb_link` = '$podcast_fb_link', `twiter_link` = '$podcast_twiter_link', `google_link` = '$podcast_google_link', `insta_link` = '$podcast_insta_link' WHERE id = '$podcast_id'");
+        $statement = $db->query("UPDATE phtv_podcast SET `title` = '$podcast_title',`image` = '$photo', `auther_id` = '$selectAuter', `created_by_id` = '$selectCreatedBy', `sponsored_by_id` = '$selectSponsoredBy', `description` = '$podcast_description', `fb_link` = '$podcast_fb_link', `twiter_link` = '$podcast_twiter_link', `google_link` = '$podcast_google_link', `insta_link` = '$podcast_insta_link' WHERE id = '$podcast_id'");
         if(!empty($statement))
         {
             $reoutput['success'] = 'success';

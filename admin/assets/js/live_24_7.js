@@ -1,11 +1,11 @@
 // Loader
-let podcast_description;
+let phtv_24_7_description;
 
 ClassicEditor
-    .create(document.querySelector('#podcast_description'))
-    .then(podcast_description_editor => {
+    .create(document.querySelector('#phtv_24_7_description'))
+    .then(phtv_24_7_description_editor => {
         // Store it in more "global" context.
-        podcast_description = podcast_description_editor;
+        phtv_24_7_description = phtv_24_7_description_editor;
     })
     .catch(error => {
         console.error(error);
@@ -20,51 +20,53 @@ function hideLoading() {
 }
 
 $(document).ready(function() {
-    var dataTable = $('#podcastlist').DataTable({
+    var dataTable = $('#phtv_24_7_list').DataTable({
         "ajax": {
-            url: "resources/display_podcast",
+            url: "resources/display_phtv_24_7",
             type: "POST"
         }
     });
-    $(document).on('click', '.updatePodcast', function() {
+    $(document).on('click', '.viewPHTV_24_7_DescriptionModel', function() {
+        var description = $(this).attr("id");
+        $('#viewPHTV_24_7_Description').html(description);
+    });
+    $(document).on('click', '.updateBlog', function() {
+        var blog_id = $(this).attr("id");
         showLoading();
-        var podcast_id = $(this).attr("id");
         $.ajax({
-            url: "resources/update_podcast",
+            url: "resources/update_blog",
             method: "POST",
             data: {
-                podcast_id: podcast_id
+                blog_id: blog_id
             },
             dataType: "json",
             success: function(data) {
                 hideLoading();
-                $('#old_podcast_image').val(data.podcast_image);
-                $('#podcast_title').val(data.podcast_title);
-                $('#podcast_fb_link').val(data.podcast_fb_link);
-                $('#podcast_twiter_link').val(data.podcast_twiter_link);
-                $('#podcast_google_link').val(data.podcast_google_link);
-                $('#podcast_insta_link').val(data.podcast_insta_link);
-                $('#podcast_description').val(data.podcast_description);
-                podcast_description.setData(data.podcast_description);
+                $('#old_blog_image').val(data.blog_image);
+                $('#old_blog_video').val(data.blog_video);
+                $('#blog_title').val(data.blog_title);
+                $('#blog_sub_title').val(data.blog_sub_title);
+                $('#blog_description').val(data.blog_description);
+                blog_description.setData(data.blog_description);
+                $('#selectCategory').select2("val", data.category_id);
                 $('#selectAuter').select2("val", data.auther_id);
-                $('#selectCreatedBy').select2("val", data.created_by_id);
-                $('#selectSponsoredBy').select2("val", data.sponsored_by_id);
-                $('#podcast_id').val(podcast_id);
+                $('#blog_id').val(blog_id);
+                if (data.blog_type == 1) {
+                    $('#blog_type2').attr('checked', true);
+                } else {
+                    $('#blog_type1').attr('checked', true);
+                }
                 $('#action').val("Edit");
-                $('#podcast_form_title').html("Update Podcast");
+                $('#blog_form_title').html("Update Blog");
             }
         })
     });
-    $(document).on('click', '.viewPodcastDescriptionModel', function() {
-        var description = $(this).attr("id");
-        $('#viewPodcastDescription').html(description);
-    });
-    $(document).on('click', '.deletePodcast', function(e) {
-        var podcast_id = $(this).attr("id");
+    $(document).on('click', '.deleteBlog', function(e) {
+        var blog_id = $(this).attr("id");
         e.preventDefault();
         Swal.fire({
             title: 'Are you sure?',
-            text: 'You will not be able to recover this podcast!',
+            text: 'You will not be able to recover this blog!',
             type: "warning",
             showCancelButton: true,
             confirmButtonClass: 'btn-danger',
@@ -74,15 +76,15 @@ $(document).ready(function() {
             if (result.isConfirmed) {
                 showLoading();
                 $.ajax({
-                        url: 'resources/delete_podcast',
+                        url: 'resources/delete_blog',
                         type: 'POST',
-                        data: 'podcast_id=' + podcast_id,
+                        data: 'blog_id=' + blog_id,
                         dataType: 'json'
                     })
                     .done(function(response) {
                         if (response.success == 'success') {
                             toastr.options.onHidden = function() {
-                                window.location.href = 'podcast';
+                                window.location.href = 'blogs';
                                 hideLoading();
                             }
                             toastr.success(response.message).delay(1000).fadeOut(1000);
@@ -99,38 +101,59 @@ $(document).ready(function() {
             }
         });
     });
-    $("#updatePodcastForm").validate({
+    $("#updatePHTV_24_7Form").validate({
         rules: {
-            podcast_title: {
+            phtv_24_7_title: {
                 required: true,
             },
-            podcast_description: {
-                required: true,
+            phtv_24_7_description: {
+                required: function() {
+                    CKEDITOR.instances.phtv_24_7_description.updateElement();
+                },
                 minlength: 10
             },
-            selectAuter: {
+            phtv_24_7_youtube_link: {
+                required: true,
+            },
+            phtv_24_7_length: {
+                required: true,
+            },
+            is_recomended: {
                 required: true,
             }
         },
         messages: {
-            podcast_title: {
-                required: "Please provide a podcast title"
+            phtv_24_7_title: {
+                required: "Please provide a PHTV 24/7 title"
             },
-            podcast_description: {
-                required: "Please enter podcast description",
+            phtv_24_7_description: {
+                required: "Please enter PHTV 24/7 description",
                 minlength: "Please enter minimum 10 characters"
             },
-            selectAuter: {
-                required: "Please select auther"
+            phtv_24_7_youtube_link: {
+                required: "Please provide a PHTV 24/7 youtube link"
+            },
+            phtv_24_7_length: {
+                required: "Please provide a PHTV 24/7 length"
+            },
+            is_recomended: {
+                required: "Please select type",
+            }
+        },
+        errorPlacement: function(error, element) {
+            if (element.attr("name") == "phtv_24_7_description") {
+                error.insertAfter(".phtv_24_7_description");
+            } else {
+                error.insertAfter(element);
             }
         },
         submitHandler: function(form) {
-            var formdata = new FormData(document.getElementById('updatePodcastForm'));
-            var podcast_image = $('#podcast_image').get(0).files[0];
-            formdata.append('podcast_image', podcast_image);
+            var formdata = new FormData(document.getElementById('updatePHTV_24_7Form'));
+            var phtv_24_7_thumbnail = $('#phtv_24_7_thumbnail').get(0).files[0];
+            formdata.append('phtv_24_7_thumbnail', phtv_24_7_thumbnail);
             showLoading();
             $.ajax({
-                url: 'resources/add_podcast_submit',
+                url: 'resources/add_phtv_24_7_submit',
                 type: 'POST',
                 data: formdata,
                 contentType: false,
@@ -139,7 +162,7 @@ $(document).ready(function() {
                     output = jQuery.parseJSON(output);
                     if (output.success == 'success') {
                         toastr.options.onHidden = function() {
-                            window.location.href = 'podcast';
+                            window.location.href = 'live_24_7';
                             hideLoading();
                         }
                         toastr.success(output.message).delay(1000).fadeOut(1000);

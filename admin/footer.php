@@ -33,6 +33,8 @@
 <script src="assets/js/product_list.js"></script>
 <script src="assets/js/order_list.js"></script>
 <script src="assets/js/blog_auther.js"></script>
+<script src="assets/js/created_by.js"></script>
+<script src="assets/js/sponsored_bys.js"></script>
 <script src="assets/js/blog_category.js"></script>
 <script src="assets/js/blogs.js"></script>
 <script src="assets/js/podcast.js"></script>
@@ -45,6 +47,7 @@
 <script src="assets/js/pages.js"></script>
 <script src="assets/js/banner.js"></script>
 <script src="assets/js/price_type.js"></script>
+<script src="assets/js/live_24_7.js"></script>
 <script src="app-assets/vendors/js/forms/select/select2.full.min.js"></script>
 <script src="app-assets/js/scripts/forms/select/form-select2.min.js"></script>
 

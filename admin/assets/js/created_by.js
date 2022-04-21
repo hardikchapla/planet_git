@@ -8,38 +8,38 @@ function hideLoading() {
 }
 
 $(document).ready(function() {
-    var dataTable = $('#blogAutherlist').DataTable({
+    var dataTable = $('#createdBylist').DataTable({
         "ajax": {
-            url: "resources/display_blog_auther",
+            url: "resources/display_created_by",
             type: "POST"
         }
     });
-    $(document).on('click', '.updateBlogAuther', function() {
-        var blog_auther_id = $(this).attr("id");
+    $(document).on('click', '.updateCreatedBy', function() {
+        var created_by_id = $(this).attr("id");
         showLoading();
         $.ajax({
-            url: "resources/update_blog_auther",
+            url: "resources/update_created_by",
             method: "POST",
             data: {
-                blog_auther_id: blog_auther_id
+                created_by_id: created_by_id
             },
             dataType: "json",
             success: function(data) {
                 hideLoading();
-                $('#old_blog_auther_image').val(data.blog_auther_image);
-                $('#blog_auther_name').val(data.blog_auther_name);
-                $('#blog_auther_id').val(blog_auther_id);
+                $('#old_created_by_image').val(data.created_by_image);
+                $('#created_by_name').val(data.created_by_name);
+                $('#created_by_id').val(created_by_id);
                 $('#action').val("Edit");
-                $('#blog_auther_form_title').html("Update Auther");
+                $('#created_by_form_title').html("Update Created By");
             }
         })
     });
-    $(document).on('click', '.deleteBlogAuther', function(e) {
-        var blog_auther_id = $(this).attr("id");
+    $(document).on('click', '.deleteCreatedBy', function(e) {
+        var created_by_id = $(this).attr("id");
         e.preventDefault();
         Swal.fire({
             title: 'Are you sure?',
-            text: 'You will not be able to recover this auther!',
+            text: 'You will not be able to recover this created by!',
             type: "warning",
             showCancelButton: true,
             confirmButtonClass: 'btn-danger',
@@ -49,15 +49,15 @@ $(document).ready(function() {
             if (result.isConfirmed) {
                 showLoading();
                 $.ajax({
-                        url: 'resources/delete_blog_auther',
+                        url: 'resources/delete_created_by',
                         type: 'POST',
-                        data: 'blog_auther_id=' + blog_auther_id,
+                        data: 'created_by_id=' + created_by_id,
                         dataType: 'json'
                     })
                     .done(function(response) {
                         if (response.success == 'success') {
                             toastr.options.onHidden = function() {
-                                window.location.href = 'blog_auther';
+                                window.location.href = 'created_by';
                                 hideLoading();
                             }
                             toastr.success(response.message).delay(1000).fadeOut(1000);
@@ -74,24 +74,24 @@ $(document).ready(function() {
             }
         });
     });
-    $("#updateBlogAutherForm").validate({
+    $("#updateCreatedByForm").validate({
         rules: {
-            blog_auther_name: {
+            created_by_name: {
                 required: true,
             }
         },
         messages: {
-            blog_auther_name: {
-                required: "Please provide a auther name"
+            created_by_name: {
+                required: "Please provide a created by name"
             }
         },
         submitHandler: function(form) {
-            var formdata = new FormData(document.getElementById('updateBlogAutherForm'));
-            var blog_auther_image = $('#blog_auther_image').get(0).files[0];
-            formdata.append('blog_auther_image', blog_auther_image);
+            var formdata = new FormData(document.getElementById('updateCreatedByForm'));
+            var created_by_image = $('#created_by_image').get(0).files[0];
+            formdata.append('created_by_image', created_by_image);
             showLoading();
             $.ajax({
-                url: 'resources/add_blog_auther_submit',
+                url: 'resources/add_created_by_submit',
                 type: 'POST',
                 data: formdata,
                 contentType: false,
@@ -100,7 +100,7 @@ $(document).ready(function() {
                     output = jQuery.parseJSON(output);
                     if (output.success == 'success') {
                         toastr.options.onHidden = function() {
-                            window.location.href = 'blog_auther';
+                            window.location.href = 'created_by';
                             hideLoading();
                         }
                         toastr.success(output.message).delay(1000).fadeOut(1000);

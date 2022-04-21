@@ -1,8 +1,7 @@
 <?php
    include('header.php');
+   $category = $db->query("SELECT * FROM phtv_blog_category");
    $auther = $db->query("SELECT * FROM phtv_blog_auther");
-   $created_by = $db->query("SELECT * FROM phtv_created_by");
-   $sponsered_bys = $db->query("SELECT * FROM phtv_sponsored_by");
 ?>
 <!-- BEGIN: Content-->
 <div class="app-content content">
@@ -11,12 +10,12 @@
         <div class="content-header row">
             <div class="content-header-left col-12 mb-2 mt-1">
                 <div class="breadcrumbs-top">
-                    <h5 class="content-header-title float-left pr-1 mb-0">Audiocast</h5>
+                    <h5 class="content-header-title float-left pr-1 mb-0">PHTV 27/7</h5>
                     <div class="breadcrumb-wrapper d-none d-sm-block">
                         <ol class="breadcrumb p-0 mb-0 pl-1">
                             <li class="breadcrumb-item"><a href="dashboard"><i class="bx bx-home-alt"></i></a>
                             </li>
-                            <li class="breadcrumb-item active">Audiocast
+                            <li class="breadcrumb-item active">PHTV 24/7
                             </li>
                         </ol>
                     </div>
@@ -30,21 +29,22 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">Audiocast List</h4>
+                                <h4 class="card-title">PHTV 24/7 List</h4>
                                 <div class="card-title"><button type="button" data-toggle="modal"
-                                        data-target="#updatePodcast" class="btn btn-success text-white">Add
+                                        data-target="#updatePHTV_24_7" class="btn btn-success text-white">Add
                                         New</button></div>
                             </div>
                             <div class="card-body card-dashboard">
                                 <div class="table-responsive">
-                                    <table id="podcastlist" class="table zero-configuration">
+                                    <table id="phtv_24_7_list" class="table zero-configuration">
                                         <thead>
                                             <tr>
                                                 <th>No.</th>
                                                 <th>Image</th>
                                                 <th>Title</th>
-                                                <th>Auther</th>
-                                                <!-- <th>Discription</th> -->
+                                                <th>Youtube Link</th>
+                                                <th>Is Recommended</th>
+                                                <th>Length</th>
                                                 <th>View</th>
                                                 <th>Update</th>
                                                 <th>Delete</th>
@@ -55,8 +55,9 @@
                                                 <th>No.</th>
                                                 <th>Image</th>
                                                 <th>Title</th>
-                                                <th>Auther</th>
-                                                <!-- <th>Discription</th> -->
+                                                <th>Youtube Link</th>
+                                                <th>Is Recommended</th>
+                                                <th>Length</th>
                                                 <th>View</th>
                                                 <th>Update</th>
                                                 <th>Delete</th>
@@ -74,111 +75,77 @@
     </div>
 </div>
 <!-- END: Content-->
-<div class="modal fade text-left" id="updatePodcast" tabindex="-1" role="dialog" aria-labelledby="myModalLabel33"
+<div class="modal fade text-left" id="updatePHTV_24_7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel33"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="podcast_form_title">Add Audiocast</h4>
+                <h4 class="modal-title" id="phtv_24_7_form_title">Add PHTV 24/7</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <i class="bx bx-x"></i>
                 </button>
             </div>
-            <form id="updatePodcastForm" method="post" enctype="multipart/form-data">
+            <form id="updatePHTV_24_7Form" method="post" enctype="multipart/form-data">
                 <div class="modal-body">
                     <div class="row mb-1">
                         <div class="col">
-                            <label>Image: </label>
+                            <label>PHTV 24/7 Thumbnail: </label>
                             <div class="form-group">
-                                <input type="file" name="podcast_image" id="podcast_image" placeholder="select file"
-                                    class="form-control">
-                                <input type="hidden" name="old_podcast_image" id="old_podcast_image">
-                                <input type="hidden" name="podcast_id" id="podcast_id">
+                                <input type="file" name="phtv_24_7_thumbnail" id="phtv_24_7_thumbnail"
+                                    placeholder="select file" class="form-control">
+                                <input type="hidden" name="old_phtv_24_7_thumbnail" id="old_phtv_24_7_thumbnail">
+                                <input type="hidden" name="phtv_24_7_thumbnail_id" id="phtv_24_7_thumbnail_id">
                             </div>
                         </div>
                     </div>
                     <div class="row mb-1">
                         <div class="col">
-                            <label>Title: </label>
+                            <label>PHTV 24/7 Title: </label>
                             <div class="form-group mb-0">
-                                <input type="text" name="podcast_title" id="podcast_title"
-                                    placeholder="Enter podcast title" class="form-control">
+                                <input type="text" name="phtv_24_7_title" id="phtv_24_7_title"
+                                    placeholder="Enter phtv 24/7 title" class="form-control">
                             </div>
                         </div>
                     </div>
                     <div class="row mb-1">
-                        <div class="col">
-                            <label for="podcast_description" class="form-label">Description:</label>
-                            <textarea id="podcast_description" name="podcast_description" required>
+                        <div class="col phtv_24_7_description">
+                            <label for="phtv_24_7_description" class="form-label">PHTV 24/7 Description:</label>
+                            <textarea id="phtv_24_7_description" name="phtv_24_7_description" required>
                             </textarea>
                         </div>
                     </div>
                     <div class="row mb-1">
-                        <div class="col mb-0">
-                            <label for="selectAuter" class="form-label">Select Auther:</label>
-                            <select class="select2 form-control" name="selectAuter" id="selectAuter">
-                                <option value="">Select Auther</option>
-                                <?php while ($feauther = $auther->fetch(PDO::FETCH_ASSOC)) { ?>
-                                <option value="<?= $feauther['id'] ?>"><?= $feauther['name'] ?></option>
-                                <?php } ?>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row mb-1">
-                        <div class="col mb-0">
-                            <label for="selectCreatedBy" class="form-label">Select Created By:</label>
-                            <select class="select2 form-control" name="selectCreatedBy" id="selectCreatedBy">
-                                <option value="">Select Created By</option>
-                                <?php while ($fecreated_by = $created_by->fetch(PDO::FETCH_ASSOC)) { ?>
-                                <option value="<?= $fecreated_by['id'] ?>"><?= $fecreated_by['name'] ?></option>
-                                <?php } ?>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row mb-1">
-                        <div class="col mb-0">
-                            <label for="selectSponsoredBy" class="form-label">Select Sponsored By:</label>
-                            <select class="select2 form-control" name="selectSponsoredBy" id="selectSponsoredBy">
-                                <option value="">Select Sponsored By</option>
-                                <?php while ($fesponsered_by = $sponsered_bys->fetch(PDO::FETCH_ASSOC)) { ?>
-                                <option value="<?= $fesponsered_by['id'] ?>"><?= $fesponsered_by['name'] ?></option>
-                                <?php } ?>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row mb-1">
                         <div class="col">
-                            <label>Facebook Link: </label>
+                            <label>PHTV 24/7 Youtube Link: </label>
                             <div class="form-group mb-0">
-                                <input type="text" name="podcast_fb_link" id="podcast_fb_link"
-                                    placeholder="Enter podcast facebook link" class="form-control">
+                                <input type="text" name="phtv_24_7_youtube_link" id="phtv_24_7_youtube_link"
+                                    placeholder="Enter phtv 24/7 youtube link" class="form-control">
                             </div>
                         </div>
                     </div>
                     <div class="row mb-1">
                         <div class="col">
-                            <label>Twiter Link: </label>
+                            <label>PHTV 24/7 Video Length: </label>
                             <div class="form-group mb-0">
-                                <input type="text" name="podcast_twiter_link" id="podcast_twiter_link"
-                                    placeholder="Enter podcast twiter link" class="form-control">
+                                <input type="text" name="phtv_24_7_length" id="phtv_24_7_length"
+                                    placeholder="Enter phtv 24/7 length" class="form-control">
                             </div>
                         </div>
                     </div>
                     <div class="row mb-1">
                         <div class="col">
-                            <label>Google Link: </label>
+                            <label>PHTV 24/7 Is Recommended: </label>
                             <div class="form-group mb-0">
-                                <input type="text" name="podcast_google_link" id="podcast_google_link"
-                                    placeholder="Enter podcast google link" class="form-control">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mb-1">
-                        <div class="col">
-                            <label>Instagram Link: </label>
-                            <div class="form-group mb-0">
-                                <input type="text" name="podcast_insta_link" id="podcast_insta_link"
-                                    placeholder="Enter podcast insta link" class="form-control">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" checked name="is_recomended"
+                                        id="is_recomended1" value="1">
+                                    <label class="form-check-label" for="is_recomended1">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="is_recomended"
+                                        id="is_recomended2" value="0">
+                                    <label class="form-check-label" for="is_recomended2">No</label>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -197,19 +164,19 @@
         </div>
     </div>
 </div>
-<div class="modal fade text-left" id="viewPodcastDescriptionModel" tabindex="-1" role="dialog"
+<div class="modal fade text-left" id="viewPHTV_24_7_DescriptionModel" tabindex="-1" role="dialog"
     aria-labelledby="myModalLabel33" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="blog_form_title">Audiocast Description</h4>
+                <h4 class="modal-title" id="blog_form_title">PHTV 24/7 Description</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <i class="bx bx-x"></i>
                 </button>
             </div>
             <div class="modal-body">
                 <div class="row mb-1">
-                    <div class="col" id="viewPodcastDescription">
+                    <div class="col" id="viewPHTV_24_7_Description">
 
                     </div>
                 </div>

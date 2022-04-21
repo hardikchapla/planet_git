@@ -8,12 +8,12 @@
         <div class="content-header row">
             <div class="content-header-left col-12 mb-2 mt-1">
                 <div class="breadcrumbs-top">
-                    <h5 class="content-header-title float-left pr-1 mb-0">Auther</h5>
+                    <h5 class="content-header-title float-left pr-1 mb-0">Created By</h5>
                     <div class="breadcrumb-wrapper d-none d-sm-block">
                         <ol class="breadcrumb p-0 mb-0 pl-1">
                             <li class="breadcrumb-item"><a href="dashboard"><i class="bx bx-home-alt"></i></a>
                             </li>
-                            <li class="breadcrumb-item active">Auther
+                            <li class="breadcrumb-item active">Created By
                             </li>
                         </ol>
                     </div>
@@ -27,14 +27,14 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">Auther List</h4>
+                                <h4 class="card-title">Created By List</h4>
                                 <div class="card-title"><button type="button" data-toggle="modal"
-                                        data-target="#updateBlogAuther" class="btn btn-success text-white">Add
+                                        data-target="#updateCreatedBy" class="btn btn-success text-white">Add
                                         New</button></div>
                             </div>
                             <div class="card-body card-dashboard">
                                 <div class="table-responsive">
-                                    <table id="blogAutherlist" class="table zero-configuration">
+                                    <table id="createdBylist" class="table zero-configuration">
                                         <thead>
                                             <tr>
                                                 <th>No.</th>
@@ -65,29 +65,29 @@
     </div>
 </div>
 <!-- END: Content-->
-<div class="modal fade text-left" id="updateBlogAuther" tabindex="-1" role="dialog" aria-labelledby="myModalLabel33"
+<div class="modal fade text-left" id="updateCreatedBy" tabindex="-1" role="dialog" aria-labelledby="myModalLabel33"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="blog_auther_form_title">Add Auther</h4>
+                <h4 class="modal-title" id="created_by_form_title">Add Created By</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <i class="bx bx-x"></i>
                 </button>
             </div>
-            <form id="updateBlogAutherForm" method="post" enctype="multipart/form-data">
+            <form id="updateCreatedByForm" method="post" enctype="multipart/form-data">
                 <div class="modal-body">
-                    <label>Auther Profile: </label>
+                    <label>Created By Profile: </label>
                     <div class="form-group">
-                        <input type="file" name="blog_auther_image" id="blog_auther_image" placeholder="select file"
+                        <input type="file" name="created_by_image" id="created_by_image" placeholder="select file"
                             class="form-control">
-                        <input type="hidden" name="old_blog_auther_image" id="old_blog_auther_image">
-                        <input type="hidden" name="blog_auther_id" id="blog_auther_id">
+                        <input type="hidden" name="old_created_by_image" id="old_created_by_image">
+                        <input type="hidden" name="created_by_id" id="created_by_id">
                     </div>
-                    <label>Auther name: </label>
+                    <label>Created By name: </label>
                     <div class="form-group mb-0">
-                        <input type="text" name="blog_auther_name" id="blog_auther_name" placeholder="Enter auther name"
-                            class="form-control">
+                        <input type="text" name="created_by_name" id="created_by_name"
+                            placeholder="Enter created by name" class="form-control">
                     </div>
                 </div>
                 <div class="modal-footer">

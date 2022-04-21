@@ -8,38 +8,38 @@ function hideLoading() {
 }
 
 $(document).ready(function() {
-    var dataTable = $('#blogAutherlist').DataTable({
+    var dataTable = $('#sponsoredBylist').DataTable({
         "ajax": {
-            url: "resources/display_blog_auther",
+            url: "resources/display_sponsored_by",
             type: "POST"
         }
     });
-    $(document).on('click', '.updateBlogAuther', function() {
-        var blog_auther_id = $(this).attr("id");
+    $(document).on('click', '.updateSponsoredBy', function() {
+        var sponsored_by_id = $(this).attr("id");
         showLoading();
         $.ajax({
-            url: "resources/update_blog_auther",
+            url: "resources/update_sponsored_by",
             method: "POST",
             data: {
-                blog_auther_id: blog_auther_id
+                sponsored_by_id: sponsored_by_id
             },
             dataType: "json",
             success: function(data) {
                 hideLoading();
-                $('#old_blog_auther_image').val(data.blog_auther_image);
-                $('#blog_auther_name').val(data.blog_auther_name);
-                $('#blog_auther_id').val(blog_auther_id);
+                $('#old_sponsored_by_image').val(data.sponsored_by_image);
+                $('#sponsored_by_name').val(data.sponsored_by_name);
+                $('#sponsored_by_id').val(sponsored_by_id);
                 $('#action').val("Edit");
-                $('#blog_auther_form_title').html("Update Auther");
+                $('#sponsored_by_form_title').html("Update Sponsored By");
             }
         })
     });
-    $(document).on('click', '.deleteBlogAuther', function(e) {
-        var blog_auther_id = $(this).attr("id");
+    $(document).on('click', '.deleteSponsoredBy', function(e) {
+        var sponsored_by_id = $(this).attr("id");
         e.preventDefault();
         Swal.fire({
             title: 'Are you sure?',
-            text: 'You will not be able to recover this auther!',
+            text: 'You will not be able to recover this sponsored by!',
             type: "warning",
             showCancelButton: true,
             confirmButtonClass: 'btn-danger',
@@ -49,15 +49,15 @@ $(document).ready(function() {
             if (result.isConfirmed) {
                 showLoading();
                 $.ajax({
-                        url: 'resources/delete_blog_auther',
+                        url: 'resources/delete_sponsored_by',
                         type: 'POST',
-                        data: 'blog_auther_id=' + blog_auther_id,
+                        data: 'sponsored_by_id=' + sponsored_by_id,
                         dataType: 'json'
                     })
                     .done(function(response) {
                         if (response.success == 'success') {
                             toastr.options.onHidden = function() {
-                                window.location.href = 'blog_auther';
+                                window.location.href = 'sponsored_by';
                                 hideLoading();
                             }
                             toastr.success(response.message).delay(1000).fadeOut(1000);
@@ -74,24 +74,24 @@ $(document).ready(function() {
             }
         });
     });
-    $("#updateBlogAutherForm").validate({
+    $("#updateSponsoredByForm").validate({
         rules: {
-            blog_auther_name: {
+            sponsored_by_name: {
                 required: true,
             }
         },
         messages: {
-            blog_auther_name: {
-                required: "Please provide a auther name"
+            sponsored_by_name: {
+                required: "Please provide a sponsored by name"
             }
         },
         submitHandler: function(form) {
-            var formdata = new FormData(document.getElementById('updateBlogAutherForm'));
-            var blog_auther_image = $('#blog_auther_image').get(0).files[0];
-            formdata.append('blog_auther_image', blog_auther_image);
+            var formdata = new FormData(document.getElementById('updateSponsoredByForm'));
+            var sponsored_by_image = $('#sponsored_by_image').get(0).files[0];
+            formdata.append('sponsored_by_image', sponsored_by_image);
             showLoading();
             $.ajax({
-                url: 'resources/add_blog_auther_submit',
+                url: 'resources/add_sponsored_by_submit',
                 type: 'POST',
                 data: formdata,
                 contentType: false,
@@ -100,7 +100,7 @@ $(document).ready(function() {
                     output = jQuery.parseJSON(output);
                     if (output.success == 'success') {
                         toastr.options.onHidden = function() {
-                            window.location.href = 'blog_auther';
+                            window.location.href = 'sponsored_by';
                             hideLoading();
                         }
                         toastr.success(output.message).delay(1000).fadeOut(1000);

@@ -38,7 +38,7 @@
         $titleName = 'Order Invoice';
     }
     if($cur_page == 'blog_auther'){
-        $titleName = 'Blog Auther';
+        $titleName = 'Auther';
     }
     if($cur_page == 'blog_category'){
         $titleName = 'Blog Category';
@@ -75,6 +75,15 @@
     }
     if($cur_page == 'price_type'){
         $titleName = 'Price Type';
+    }
+    if($cur_page == 'live_24_7'){
+        $titleName = 'PHTV 24/7';
+    }
+    if($cur_page == 'created_by'){
+        $titleName = 'Created By';
+    }
+    if($cur_page == 'sponsored_by'){
+        $titleName = 'Sponsored By';
     }
    
     $admin = $db->query("SELECT * FROM phtv_admin WHERE id = 1");
@@ -298,12 +307,6 @@
                         <span class="menu-title text-truncate" data-i18n="Starter kit">Blog</span>
                     </a>
                     <ul class="menu-content">
-                        <li class="<?php if($cur_page == 'blog_auther') {echo 'active';} ?>">
-                            <a class="d-flex align-items-center" href="blog_auther">
-                                <i class="bx bx-right-arrow-alt"></i>
-                                <span class="menu-item text-truncate" data-i18n="1 column">Blog Auther</span>
-                            </a>
-                        </li>
                         <li class="<?php if($cur_page == 'blog_category') {echo 'active';} ?>">
                             <a class="d-flex align-items-center" href="blog_category">
                                 <i class="bx bx-right-arrow-alt"></i>
@@ -393,6 +396,38 @@
                         <i class="fa fa-file" aria-hidden="true"></i>
                         <span class="menu-title text-truncate" data-i18n="bxs-dashboard">Banner</span>
                     </a>
+                </li>
+                <li class="nav-item <?php if($cur_page == 'live_24_7') {echo 'active';} ?>">
+                    <a href="live_24_7">
+                        <i class="fa fa-file" aria-hidden="true"></i>
+                        <span class="menu-title text-truncate" data-i18n="bxs-dashboard">PHTV 24/7</span>
+                    </a>
+                </li>
+                <li class=" nav-item <?php if($cur_page_main == 'setting') {echo 'active';} ?>">
+                    <a href="#">
+                        <i class="fa fa-cube" aria-hidden="true"></i>
+                        <span class="menu-title text-truncate" data-i18n="Starter kit">Setting</span>
+                    </a>
+                    <ul class="menu-content">
+                        <li class="<?php if($cur_page == 'blog_auther') {echo 'active';} ?>">
+                            <a class="d-flex align-items-center" href="blog_auther">
+                                <i class="bx bx-right-arrow-alt"></i>
+                                <span class="menu-item text-truncate" data-i18n="1 column">Auther</span>
+                            </a>
+                        </li>
+                        <li class="<?php if($cur_page == 'created_by') {echo 'active';} ?>">
+                            <a class="d-flex align-items-center" href="created_by">
+                                <i class="bx bx-right-arrow-alt"></i>
+                                <span class="menu-item text-truncate" data-i18n="1 column">Created By</span>
+                            </a>
+                        </li>
+                        <li class="<?php if($cur_page == 'sponsored_by') {echo 'active';} ?>">
+                            <a class="d-flex align-items-center" href="sponsored_by">
+                                <i class="bx bx-right-arrow-alt"></i>
+                                <span class="menu-item text-truncate" data-i18n="1 column">Sponsored By</span>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </div>
