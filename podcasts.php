@@ -83,7 +83,8 @@
                     <div class="d-flex bd-highlight">
                         <div class=" bd-highlight align-self-center">
                             <div class="ss_play">
-                                <i class="fa fa-play" id="startplayer" aria-hidden="true"></i>
+                                <i class="fa fa-play startplayer" key="<?= $fepodcast['id'] ?>"
+                                    id="startplayer_<?= $fepodcast['id'] ?>" aria-hidden="true"></i>
                             </div>
                         </div>
                         <div class="mr-auto  bd-highlight align-self-center">
@@ -118,7 +119,7 @@
                     </div>
                     <div class="py-3">
                         <div class="rSlider">
-                            <audio id="buzzer" controls style="border-radius: 40px;width:100%">
+                            <audio id="buzzer<?= $fepodcast['id'] ?>" controls style="border-radius: 40px;width:100%">
                                 <source id="podcast_player<?= $fepodcast['id'] ?>"
                                     src="images/podcast_mp3/<?= $oneepisode['mp3_file'] ?>" type="audio/mpeg">
                             </audio>
@@ -1039,17 +1040,21 @@ $(document).ready(function() {
         e.stopPropagation();
         $('.ss_music').fadeToggle(); /*--- Content div id and class you want to be toggle ---*/
     });
-    $(document).on('click', '#startplayer', function() {
-        $('#buzzer').trigger("play");
+    $(document).on('click', '.startplayer', function() {
+        var id = $(this).attr('key');
+        $('#buzzer' + id).trigger("play");
         $(this).removeClass('fa-play');
         $(this).addClass('fa-pause');
-        $(this).attr('id', "stopplayer");
+        $('#startplayer' + id).addClass("stopplayer");
+        $('#startplayer' + id).removeClass("startplayer");
     });
-    $(document).on('click', '#stopplayer', function() {
-        $('#buzzer').trigger("pause");
+    $(document).on('click', '.stopplayer', function() {
+        var id = $(this).attr('key');
+        $('#buzzer' + id).trigger("pause");
         $(this).addClass('fa-play');
         $(this).removeClass('fa-pause');
-        $(this).attr('id', "startplayer");
+        $('#startplayer' + id).addClass("startplayer");
+        $('#startplayer' + id).removeClass("stopplayer");
     });
     $(document).on('click', '.podcast_start', function() {
         var audio_url = $(this).attr('id');
@@ -1063,8 +1068,8 @@ $(document).ready(function() {
         $('#twitterlink').attr('href', 'http://twitter.com/share?url=<?= BASE_URL ?>' +
             audio_url);
         change(audio_url, audio_key);
-        $('#startplayer').addClass('fa-pause');
-        $('#startplayer').removeClass('fa-play');
+        $('#startplayer_' + audio_key).addClass('fa-pause');
+        $('#startplayer_' + audio_key).removeClass('fa-play');
         $(this).addClass('podcast_pause');
         $(this).removeClass('podcast_start');
         $('.podcast_start').find('i').removeClass('fa-pause').addClass('fa-play');
@@ -1081,8 +1086,8 @@ $(document).ready(function() {
         var audiocast_auther = $(this).attr('audiocast_auther');
         $('#audiocast_authername').html(audiocast_auther);
         pause(audio_url, audio_key);
-        $('#startplayer').addClass('fa-play');
-        $('#startplayer').removeClass('fa-pause');
+        $('#startplayer_' + audio_key).addClass('fa-play');
+        $('#startplayer_' + audio_key).removeClass('fa-pause');
         $(this).addClass('podcast_start');
         $(this).removeClass('podcast_pause');
         $('.podcast_start').find('i').removeClass('fa-pause').addClass('fa-play');
@@ -1093,7 +1098,7 @@ $(document).ready(function() {
     });
 
     function change(sourceUrl, key) {
-        var audio = $("#buzzer");
+        var audio = $("#buzzer" + key);
         $("#podcast_player" + key).attr("src", sourceUrl);
         audio[0].pause();
         audio[0].load();
@@ -1101,7 +1106,7 @@ $(document).ready(function() {
     }
 
     function pause(sourceUrl, key) {
-        var audio = $("#buzzer");
+        var audio = $("#buzzer" + key);
         $("#podcast_player" + key).attr("src", sourceUrl);
         audio[0].play();
         audio[0].load();
