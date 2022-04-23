@@ -94,7 +94,7 @@
                                 <input type="file" name="phtv_24_7_thumbnail" id="phtv_24_7_thumbnail"
                                     placeholder="select file" class="form-control">
                                 <input type="hidden" name="old_phtv_24_7_thumbnail" id="old_phtv_24_7_thumbnail">
-                                <input type="hidden" name="phtv_24_7_thumbnail_id" id="phtv_24_7_thumbnail_id">
+                                <input type="hidden" name="phtv_24_7_id" id="phtv_24_7_id">
                             </div>
                         </div>
                     </div>

@@ -28,45 +28,52 @@ $(document).ready(function() {
     });
     $(document).on('click', '.viewPHTV_24_7_DescriptionModel', function() {
         var description = $(this).attr("id");
-        $('#viewPHTV_24_7_Description').html(description);
-    });
-    $(document).on('click', '.updateBlog', function() {
-        var blog_id = $(this).attr("id");
-        showLoading();
         $.ajax({
-            url: "resources/update_blog",
+            url: "resources/get_discription",
             method: "POST",
             data: {
-                blog_id: blog_id
+                description: description
+            },
+            success: function(data) {
+                $('#viewPHTV_24_7_Description').html(data);
+            }
+        });
+    });
+    $(document).on('click', '.updatePHTV_24_7', function() {
+        var phtv_24_7_id = $(this).attr("id");
+        showLoading();
+        $.ajax({
+            url: "resources/update_phtv_24_7",
+            method: "POST",
+            data: {
+                phtv_24_7_id: phtv_24_7_id
             },
             dataType: "json",
             success: function(data) {
                 hideLoading();
-                $('#old_blog_image').val(data.blog_image);
-                $('#old_blog_video').val(data.blog_video);
-                $('#blog_title').val(data.blog_title);
-                $('#blog_sub_title').val(data.blog_sub_title);
-                $('#blog_description').val(data.blog_description);
-                blog_description.setData(data.blog_description);
-                $('#selectCategory').select2("val", data.category_id);
-                $('#selectAuter').select2("val", data.auther_id);
-                $('#blog_id').val(blog_id);
-                if (data.blog_type == 1) {
-                    $('#blog_type2').attr('checked', true);
+                $('#old_phtv_24_7_thumbnail').val(data.phtv_24_7_thumbnail);
+                $('#phtv_24_7_title').val(data.phtv_24_7_title);
+                $('#phtv_24_7_youtube_link').val(data.phtv_24_7_youtube_link);
+                $('#phtv_24_7_length').val(data.phtv_24_7_length);
+                $('#phtv_24_7_description').val(data.phtv_24_7_description);
+                phtv_24_7_description.setData(data.phtv_24_7_description);
+                $('#phtv_24_7_id').val(phtv_24_7_id);
+                if (data.is_recomended == 1) {
+                    $('#is_recomended1').attr('checked', true);
                 } else {
-                    $('#blog_type1').attr('checked', true);
+                    $('#is_recomended2').attr('checked', true);
                 }
                 $('#action').val("Edit");
-                $('#blog_form_title').html("Update Blog");
+                $('#phtv_24_7_form_title').html("Update PHTV 24/7");
             }
         })
     });
-    $(document).on('click', '.deleteBlog', function(e) {
-        var blog_id = $(this).attr("id");
+    $(document).on('click', '.deletePHTV_24_7', function(e) {
+        var phtv_24_7_id = $(this).attr("id");
         e.preventDefault();
         Swal.fire({
             title: 'Are you sure?',
-            text: 'You will not be able to recover this blog!',
+            text: 'You will not be able to recover this PHTV 24/7 Link!',
             type: "warning",
             showCancelButton: true,
             confirmButtonClass: 'btn-danger',
@@ -76,15 +83,15 @@ $(document).ready(function() {
             if (result.isConfirmed) {
                 showLoading();
                 $.ajax({
-                        url: 'resources/delete_blog',
+                        url: 'resources/delete_phtv_24_7',
                         type: 'POST',
-                        data: 'blog_id=' + blog_id,
+                        data: 'phtv_24_7_id=' + phtv_24_7_id,
                         dataType: 'json'
                     })
                     .done(function(response) {
                         if (response.success == 'success') {
                             toastr.options.onHidden = function() {
-                                window.location.href = 'blogs';
+                                window.location.href = 'live_24_7';
                                 hideLoading();
                             }
                             toastr.success(response.message).delay(1000).fadeOut(1000);
