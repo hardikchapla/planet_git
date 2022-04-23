@@ -79,6 +79,9 @@
     if($cur_page == 'live_24_7'){
         $titleName = 'PHTV 24/7';
     }
+    if($cur_page == 'live_tv'){
+        $titleName = 'Live TV';
+    }
     if($cur_page == 'created_by'){
         $titleName = 'Created By';
     }
@@ -399,8 +402,14 @@
                 </li>
                 <li class="nav-item <?php if($cur_page == 'live_24_7') {echo 'active';} ?>">
                     <a href="live_24_7">
-                        <i class="fa fa-file" aria-hidden="true"></i>
+                        <i class="fa fa-video-camera" aria-hidden="true"></i>
                         <span class="menu-title text-truncate" data-i18n="bxs-dashboard">PHTV 24/7</span>
+                    </a>
+                </li>
+                <li class="nav-item <?php if($cur_page == 'live_tv') {echo 'active';} ?>">
+                    <a href="live_tv">
+                        <i class="fa fa-video-camera" aria-hidden="true"></i>
+                        <span class="menu-title text-truncate" data-i18n="bxs-dashboard">Live TV</span>
                     </a>
                 </li>
                 <li class=" nav-item <?php if($cur_page_main == 'setting') {echo 'active';} ?>">
