@@ -88,6 +88,15 @@
     if($cur_page == 'sponsored_by'){
         $titleName = 'Sponsored By';
     }
+    if($cur_page == 'high_voltage_category'){
+        $titleName = 'High Voltage Category';
+    }
+    if($cur_page == 'high_voltage_logos'){
+        $titleName = 'High Voltage Logos';
+    }
+    if($cur_page == 'high_voltage_titles'){
+        $titleName = 'High Voltage Titles';
+    }
    
     $admin = $db->query("SELECT * FROM phtv_admin WHERE id = 1");
     $feadmin = $admin->fetch();
@@ -434,6 +443,32 @@
                             <a class="d-flex align-items-center" href="sponsored_by">
                                 <i class="bx bx-right-arrow-alt"></i>
                                 <span class="menu-item text-truncate" data-i18n="1 column">Sponsored By</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" nav-item <?php if($cur_page_main == 'high_voltage_show') {echo 'active';} ?>">
+                    <a href="#">
+                        <i class="fa fa-cube" aria-hidden="true"></i>
+                        <span class="menu-title text-truncate" data-i18n="Starter kit">High Voltage Show</span>
+                    </a>
+                    <ul class="menu-content">
+                        <li class="<?php if($cur_page == 'high_voltage_category') {echo 'active';} ?>">
+                            <a class="d-flex align-items-center" href="high_voltage_category">
+                                <i class="bx bx-right-arrow-alt"></i>
+                                <span class="menu-item text-truncate" data-i18n="1 column">High Voltage Category</span>
+                            </a>
+                        </li>
+                        <li class="<?php if($cur_page == 'high_voltage_logos') {echo 'active';} ?>">
+                            <a class="d-flex align-items-center" href="high_voltage_logos">
+                                <i class="bx bx-right-arrow-alt"></i>
+                                <span class="menu-item text-truncate" data-i18n="1 column">High Voltage Logos</span>
+                            </a>
+                        </li>
+                        <li class="<?php if($cur_page == 'high_voltage_titles') {echo 'active';} ?>">
+                            <a class="d-flex align-items-center" href="high_voltage_titles">
+                                <i class="bx bx-right-arrow-alt"></i>
+                                <span class="menu-item text-truncate" data-i18n="1 column">High Voltage Titles</span>
                             </a>
                         </li>
                     </ul>

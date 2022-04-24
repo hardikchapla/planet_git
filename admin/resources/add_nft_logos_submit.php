@@ -37,10 +37,10 @@
         $reoutput = array();
         $nft_logos_id = $_REQUEST['nft_logos_id'];
         $nft_logos_name = addslashes($_REQUEST['nft_logos_name']);
-        if(!empty($_FILES['old_nft_logos_image']['name']))
+        if(!empty($_FILES['nft_logos_image']['name']))
         {
-            $file = $_FILES['old_nft_logos_image']['name'];
-            $tmp = $_FILES['old_nft_logos_image']['tmp_name'];
+            $file = $_FILES['nft_logos_image']['name'];
+            $tmp = $_FILES['nft_logos_image']['tmp_name'];
             $ext = pathinfo($file, PATHINFO_EXTENSION);
             $photo = rand(1000,1000000).$file; 
             $path = '../../images/nft_logos/'.$photo;
