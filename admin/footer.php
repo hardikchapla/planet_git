@@ -52,6 +52,7 @@
 <script src="assets/js/high_voltage_category.js"></script>
 <script src="assets/js/high_voltage_logos.js"></script>
 <script src="assets/js/high_voltage_titles.js"></script>
+<script src="assets/js/high_voltage_episode.js"></script>
 <script src="app-assets/vendors/js/forms/select/select2.full.min.js"></script>
 <script src="app-assets/js/scripts/forms/select/form-select2.min.js"></script>
 

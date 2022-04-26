@@ -97,6 +97,9 @@
     if($cur_page == 'high_voltage_titles'){
         $titleName = 'High Voltage Titles';
     }
+    if($cur_page == 'high_voltage_episode'){
+        $titleName = 'High Voltage Episode';
+    }
    
     $admin = $db->query("SELECT * FROM phtv_admin WHERE id = 1");
     $feadmin = $admin->fetch();
@@ -477,6 +480,12 @@
                             <a class="d-flex align-items-center" href="high_voltage_titles">
                                 <i class="bx bx-right-arrow-alt"></i>
                                 <span class="menu-item text-truncate" data-i18n="1 column">High Voltage Titles</span>
+                            </a>
+                        </li>
+                        <li class="<?php if($cur_page == 'high_voltage_episode') {echo 'active';} ?>">
+                            <a class="d-flex align-items-center" href="high_voltage_episode">
+                                <i class="bx bx-right-arrow-alt"></i>
+                                <span class="menu-item text-truncate" data-i18n="1 column">High Voltage Episode</span>
                             </a>
                         </li>
                     </ul>
