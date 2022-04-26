@@ -322,13 +322,13 @@
                         <li class="<?php if($cur_page == 'blog_category') {echo 'active';} ?>">
                             <a class="d-flex align-items-center" href="blog_category">
                                 <i class="bx bx-right-arrow-alt"></i>
-                                <span class="menu-item text-truncate" data-i18n="1 column">Blog Category</span>
+                                <span class="menu-item text-truncate" data-i18n="1 column">Blog Entries Category</span>
                             </a>
                         </li>
                         <li class="<?php if($cur_page == 'blogs') {echo 'active';} ?>">
                             <a class="d-flex align-items-center" href="blogs">
                                 <i class="bx bx-right-arrow-alt"></i>
-                                <span class="menu-item text-truncate" data-i18n="1 column">Blogs</span>
+                                <span class="menu-item text-truncate" data-i18n="1 column">Blog Entries</span>
                             </a>
                         </li>
                     </ul>
@@ -403,12 +403,6 @@
                         <span class="menu-title text-truncate" data-i18n="bxs-dashboard">Price Type</span>
                     </a>
                 </li>
-                <li class="nav-item <?php if($cur_page == 'banner') {echo 'active';} ?>">
-                    <a href="banner">
-                        <i class="fa fa-file" aria-hidden="true"></i>
-                        <span class="menu-title text-truncate" data-i18n="bxs-dashboard">Banner</span>
-                    </a>
-                </li>
                 <li class="nav-item <?php if($cur_page == 'live_24_7') {echo 'active';} ?>">
                     <a href="live_24_7">
                         <i class="fa fa-video-camera" aria-hidden="true"></i>
@@ -430,19 +424,33 @@
                         <li class="<?php if($cur_page == 'blog_auther') {echo 'active';} ?>">
                             <a class="d-flex align-items-center" href="blog_auther">
                                 <i class="bx bx-right-arrow-alt"></i>
-                                <span class="menu-item text-truncate" data-i18n="1 column">Auther</span>
+                                <span class="menu-item text-truncate" data-i18n="1 column">Authors</span>
                             </a>
                         </li>
                         <li class="<?php if($cur_page == 'created_by') {echo 'active';} ?>">
                             <a class="d-flex align-items-center" href="created_by">
                                 <i class="bx bx-right-arrow-alt"></i>
-                                <span class="menu-item text-truncate" data-i18n="1 column">Created By</span>
+                                <span class="menu-item text-truncate" data-i18n="1 column">Creators</span>
                             </a>
                         </li>
+                    </ul>
+                </li>
+                <li class=" nav-item <?php if($cur_page_main == 'hosts') {echo 'active';} ?>">
+                    <a href="#">
+                        <i class="fa fa-cube" aria-hidden="true"></i>
+                        <span class="menu-title text-truncate" data-i18n="Starter kit">Hosts</span>
+                    </a>
+                    <ul class="menu-content">
                         <li class="<?php if($cur_page == 'sponsored_by') {echo 'active';} ?>">
                             <a class="d-flex align-items-center" href="sponsored_by">
                                 <i class="bx bx-right-arrow-alt"></i>
-                                <span class="menu-item text-truncate" data-i18n="1 column">Sponsored By</span>
+                                <span class="menu-item text-truncate" data-i18n="1 column">Hosts</span>
+                            </a>
+                        </li>
+                        <li class="nav-item <?php if($cur_page == 'banner') {echo 'active';} ?>">
+                            <a class="d-flex align-items-center" href="banner">
+                                <i class="bx bx-right-arrow-alt"></i>
+                                <span class="menu-title text-truncate" data-i18n="bxs-dashboard">Banners</span>
                             </a>
                         </li>
                     </ul>
