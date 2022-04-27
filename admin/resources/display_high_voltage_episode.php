@@ -1,7 +1,7 @@
 <?php
 	include('../../inc/connection/connection.php');
 	$reoutput = array();
-	$query = "SELECT a.*,b.name,c.category_name FROM phtv_voltage_episode a, phtv_voltage_title b, phtv_voltage_category c WHERE a.category_id = b.id AND a.voltage_title_id = c.id";
+	$query = "SELECT a.*,b.name,c.category_name FROM phtv_voltage_episode a, phtv_voltage_title b, phtv_voltage_category c WHERE a.category_id = c.id AND a.voltage_title_id = b.id";
 	$statement = $db->query($query);
 	$result = $statement->fetchAll();
 	$data = array();

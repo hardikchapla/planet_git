@@ -1,5 +1,7 @@
 <?php
    include('header.php');
+   $logo = $db->query("SELECT * FROM phtv_voltage_logo");
+   $titles = $db->query("SELECT * FROM phtv_voltage_title");
 ?>
 
 <div class="container-fluid ss_high_voltage_show ss_height100vh ">
@@ -28,52 +30,28 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="owl-carousel owl-theme" id="planet_logo_show">
+                    <?php while ($felogo = $logo->fetch(PDO::FETCH_ASSOC)) { ?>
                     <div class="item">
                         <div class="ss_logo_box">
-                            <img src="images/logoA.png" alt="logo" />
+                            <img src="images/high_voltage_logos/<?= $felogo['image'] ?>" alt="logo" />
                         </div>
                     </div>
-                    <div class="item">
-                        <div class="ss_logo_box">
-                            <img src="images/logoB.png" alt="logo" />
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="ss_logo_box">
-                            <img src="images/logoC.png" alt="logo" />
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="ss_logo_box">
-                            <img src="images/logoD.png" alt="logo" />
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="ss_logo_box">
-                            <img src="images/logoE.png" alt="logo" />
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="ss_logo_box">
-                            <img src="images/logoF.png" alt="logo" />
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="ss_logo_box">
-                            <img src="images/logoF.png" alt="logo" />
-                        </div>
-                    </div>
+                    <?php } ?>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<div class="container-fluid ss_episodes_section">
+<?php 
+    while ($fetitles = $titles->fetch(PDO::FETCH_ASSOC)) {
+        $episode = $db->query("SELECT a.*,b.category_name FROM phtv_voltage_episode a, phtv_voltage_category b WHERE a.category_id = b.id AND voltage_title_id = '".$fetitles['id']."'");
+?>
+<div class="container-fluid stock_raving_section">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-7 align-self-center">
                 <div class="main_title">
-                    <h1> Latest Episodes </h1>
+                    <h1> <?= $fetitles['name'] ?> </h1>
                 </div>
             </div>
             <div class="col-lg-6 col-5 align-self-center text-right">
@@ -83,18 +61,28 @@
             </div>
         </div>
         <div class="row episodes_sections">
+            <?php 
+            if($episode->rowCount() > 0){
+                while ($feepisode = $episode->fetch(PDO::FETCH_ASSOC)) { ?>
             <div class="col-lg-3 col-sm-6 col-md-6">
                 <div class="episodes_blogs">
                     <div class="images">
-                        <img src="images/episodesA.jpg" alt="episodes" />
+                        <img src="images/episode_image/<?= $feepisode['image'] ?>" alt="episodes" />
                     </div>
                     <div class="des">
-                        <h2> Melody Ehsani Explains Why Her Air Jordans </h2>
-                        <p> Mar 26, 2021 </p>
+                        <p><?= $feepisode['category_name'] ?></p>
+                        <h2> <?= $feepisode['title'] ?> </h2>
+                        <p> <?= date('F d, Y',strtotime($feepisode['created_at'])) ?> </p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-sm-6 col-md-6">
+            <?php } 
+                } else { ?>
+            <div class="col-lg-12 col-sm-12 col-md-12 text-center">
+                <h2> No Episode Available </h2>
+            </div>
+            <?php } ?>
+            <!-- <div class="col-lg-3 col-sm-6 col-md-6">
                 <div class="episodes_blogs">
                     <div class="images">
                         <img src="images/episodesB.jpg" alt="episodes" />
@@ -126,11 +114,12 @@
                         <p> Mar 26, 2021 </p>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>
-<div class="container-fluid stock_raving_section">
+<?php } ?>
+<!-- <div class="container-fluid stock_raving_section">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-7 align-self-center">
@@ -439,7 +428,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <div class="container-fluid">
     <div class="container">
         <div class="row">
