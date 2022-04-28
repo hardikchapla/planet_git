@@ -1,6 +1,6 @@
 <?php
    include('header.php');
-   $podcast = $db->query("SELECT a.*,b.name as auther_name, c.name as created_by_name, d.name as sponsored_by_name FROM phtv_podcast a LEFT JOIN phtv_blog_auther b ON a.auther_id = b.id LEFT JOIN phtv_created_by c ON a.created_by_id = c.id LEFT JOIN phtv_sponsored_by d ON a.sponsored_by_id = d.id");
+   $podcast = $db->query("SELECT a.*,b.name as host_name, c.name as created_by_name, d.name as sponsored_by_name FROM phtv_podcast a LEFT JOIN phtv_hosted_by b ON a.hosts_id = b.id LEFT JOIN phtv_created_by c ON a.created_by_id = c.id LEFT JOIN phtv_sponsored_by d ON a.sponsored_by_id = d.id");
 ?>
 
 <div class="container-fluid ss_podcast_audiocasts ss_height100vh">
@@ -44,10 +44,9 @@
                     <div class="py-2 flex-grow-1 bd-highlight align-self-center">
                         <div class="ss_des">
                             <h2> <?= $fepodcast['title'] ?> </h2>
-                            <p> Auther : <?= $fepodcast['auther_name'] ?>, Created by :
+                            <p> Host/s : <?= $fepodcast['host_name'] ?>, Creator/s :
                                 <?= $fepodcast['created_by_name'] ?>,
-                                Sponsored
-                                By : <?= $fepodcast['sponsored_by_name'] ?></p>
+                                Sponsor/s : <?= $fepodcast['sponsored_by_name'] ?></p>
                             <div class="liness"></div>
                         </div>
                     </div>
@@ -90,10 +89,9 @@
                         <div class="mr-auto  bd-highlight align-self-center">
                             <div class="ss_des_play">
                                 <h3 id="audiocast_title"><?= $oneepisode['title'] ?></h3>
-                                <p id="audiocast_authername">Auther : <?= $fepodcast['auther_name'] ?>, Created by :
+                                <p id="audiocast_authername">Host/s : <?= $fepodcast['host_name'] ?>, Creator/s :
                                     <?= $fepodcast['created_by_name'] ?>,
-                                    Sponsored
-                                    By : <?= $fepodcast['sponsored_by_name'] ?></p>
+                                    Sponsor/s : <?= $fepodcast['sponsored_by_name'] ?></p>
                             </div>
                         </div>
                         <div class="p-2 bd-highlight align-self-center ss_social_media_relative">
@@ -143,7 +141,7 @@
                                     <div class="d-flex bd-highlight ">
                                         <div class=" bd-highlight align-self-center">
                                             <button type="button" audiocast_title="<?= $fepisode['title'] ?>"
-                                                audiocast_auther="Auther : <?= $fepodcast['auther_name'] ?>, Created by : <?= $fepodcast['created_by_name'] ?>, Sponsored By : <?= $fepodcast['sponsored_by_name'] ?>"
+                                                audiocast_auther="Host/s : <?= $fepodcast['host_name'] ?>, Creator/s : <?= $fepodcast['created_by_name'] ?>, Sponsor/s : <?= $fepodcast['sponsored_by_name'] ?>"
                                                 class="ss_play podcast_start"
                                                 id="images/podcast_mp3/<?= $fepisode['mp3_file'] ?>"
                                                 key="<?= $fepodcast['id'] ?>">

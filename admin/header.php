@@ -100,6 +100,9 @@
     if($cur_page == 'high_voltage_episode'){
         $titleName = 'High Voltage Episode';
     }
+    if($cur_page == 'hosts'){
+        $titleName = 'Hosts';
+    }
    
     $admin = $db->query("SELECT * FROM phtv_admin WHERE id = 1");
     $feadmin = $admin->fetch();
@@ -325,7 +328,7 @@
                         <li class="<?php if($cur_page == 'blog_category') {echo 'active';} ?>">
                             <a class="d-flex align-items-center" href="blog_category">
                                 <i class="bx bx-right-arrow-alt"></i>
-                                <span class="menu-item text-truncate" data-i18n="1 column">Blog Entries Category</span>
+                                <span class="menu-item text-truncate" data-i18n="1 column">Categories</span>
                             </a>
                         </li>
                         <li class="<?php if($cur_page == 'blogs') {echo 'active';} ?>">
@@ -418,10 +421,16 @@
                         <span class="menu-title text-truncate" data-i18n="bxs-dashboard">Live TV</span>
                     </a>
                 </li>
+                <li class="nav-item <?php if($cur_page == 'banner') {echo 'active';} ?>">
+                    <a class="d-flex align-items-center" href="banner">
+                        <i class="fa fa-picture-o" aria-hidden="true"></i>
+                        <span class="menu-title text-truncate" data-i18n="bxs-dashboard">Banners</span>
+                    </a>
+                </li>
                 <li class=" nav-item <?php if($cur_page_main == 'setting') {echo 'active';} ?>">
                     <a href="#">
                         <i class="fa fa-cube" aria-hidden="true"></i>
-                        <span class="menu-title text-truncate" data-i18n="Starter kit">Setting</span>
+                        <span class="menu-title text-truncate" data-i18n="Starter kit">B.T.S People</span>
                     </a>
                     <ul class="menu-content">
                         <li class="<?php if($cur_page == 'blog_auther') {echo 'active';} ?>">
@@ -436,31 +445,43 @@
                                 <span class="menu-item text-truncate" data-i18n="1 column">Creators</span>
                             </a>
                         </li>
-                    </ul>
-                </li>
-                <li class=" nav-item <?php if($cur_page_main == 'hosts') {echo 'active';} ?>">
-                    <a href="#">
-                        <i class="fa fa-cube" aria-hidden="true"></i>
-                        <span class="menu-title text-truncate" data-i18n="Starter kit">Hosts</span>
-                    </a>
-                    <ul class="menu-content">
-                        <li class="<?php if($cur_page == 'sponsored_by') {echo 'active';} ?>">
-                            <a class="d-flex align-items-center" href="sponsored_by">
+                        <li class="<?php if($cur_page == 'hosts') {echo 'active';} ?>">
+                            <a class="d-flex align-items-center" href="hosts">
                                 <i class="bx bx-right-arrow-alt"></i>
                                 <span class="menu-item text-truncate" data-i18n="1 column">Hosts</span>
                             </a>
                         </li>
-                        <li class="nav-item <?php if($cur_page == 'banner') {echo 'active';} ?>">
-                            <a class="d-flex align-items-center" href="banner">
+                    </ul>
+                </li>
+                <li class=" nav-item <?php if($cur_page_main == 'p_h_cinema_and_audiocast') {echo 'active';} ?>">
+                    <a href="#">
+                        <i class="fa fa-cube" aria-hidden="true"></i>
+                        <span class="menu-title text-truncate" data-i18n="Starter kit">P.H. Cinema & Podcasts</span>
+                    </a>
+                    <ul class="menu-content">
+                        <li class="<?php if($cur_page == 'hosts') {echo 'active';} ?>">
+                            <a class="d-flex align-items-center" href="hosts">
                                 <i class="bx bx-right-arrow-alt"></i>
-                                <span class="menu-title text-truncate" data-i18n="bxs-dashboard">Banners</span>
+                                <span class="menu-item text-truncate" data-i18n="1 column">Host/s</span>
+                            </a>
+                        </li>
+                        <li class="<?php if($cur_page == 'created_by') {echo 'active';} ?>">
+                            <a class="d-flex align-items-center" href="created_by">
+                                <i class="bx bx-right-arrow-alt"></i>
+                                <span class="menu-item text-truncate" data-i18n="1 column">Creator/s</span>
+                            </a>
+                        </li>
+                        <li class="<?php if($cur_page == 'sponsored_by') {echo 'active';} ?>">
+                            <a class="d-flex align-items-center" href="sponsored_by">
+                                <i class="bx bx-right-arrow-alt"></i>
+                                <span class="menu-item text-truncate" data-i18n="1 column">Sponsor/s</span>
                             </a>
                         </li>
                     </ul>
                 </li>
                 <li class=" nav-item <?php if($cur_page_main == 'high_voltage_show') {echo 'active';} ?>">
                     <a href="#">
-                        <i class="fa fa-cube" aria-hidden="true"></i>
+                        <i class="fa fa-video-camera" aria-hidden="true"></i>
                         <span class="menu-title text-truncate" data-i18n="Starter kit">High Voltage Show</span>
                     </a>
                     <ul class="menu-content">
