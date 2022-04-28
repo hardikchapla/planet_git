@@ -1,7 +1,7 @@
 <?php
 	include('../../inc/connection/connection.php');
 	$reoutput = array();
-	$query = "SELECT a.*, b.name as blog_auther FROM phtv_podcast a LEFT JOIN phtv_blog_auther b ON a.auther_id = b.id";
+	$query = "SELECT a.*, b.name as blog_auther FROM phtv_podcast a LEFT JOIN phtv_hosted_by b ON a.hosts_id = b.id";
 	$statement = $db->query($query);
 	$result = $statement->fetchAll();
 	$data = array();

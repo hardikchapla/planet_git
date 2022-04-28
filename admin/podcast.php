@@ -1,6 +1,6 @@
 <?php
    include('header.php');
-   $auther = $db->query("SELECT * FROM phtv_blog_auther");
+   $auther = $db->query("SELECT * FROM phtv_hosted_by");
    $created_by = $db->query("SELECT * FROM phtv_created_by");
    $sponsered_bys = $db->query("SELECT * FROM phtv_sponsored_by");
 ?>
@@ -43,7 +43,7 @@
                                                 <th>No.</th>
                                                 <th>Image</th>
                                                 <th>Title</th>
-                                                <th>Auther</th>
+                                                <th>Hosts</th>
                                                 <!-- <th>Discription</th> -->
                                                 <th>View</th>
                                                 <th>Update</th>
@@ -55,7 +55,7 @@
                                                 <th>No.</th>
                                                 <th>Image</th>
                                                 <th>Title</th>
-                                                <th>Auther</th>
+                                                <th>Hosts</th>
                                                 <!-- <th>Discription</th> -->
                                                 <th>View</th>
                                                 <th>Update</th>
@@ -115,9 +115,9 @@
                     </div>
                     <div class="row mb-1">
                         <div class="col mb-0">
-                            <label for="selectAuter" class="form-label">Select Auther:</label>
+                            <label for="selectAuter" class="form-label">Select Hosts:</label>
                             <select class="select2 form-control" name="selectAuter" id="selectAuter">
-                                <option value="">Select Auther</option>
+                                <option value="">Select Hosts</option>
                                 <?php while ($feauther = $auther->fetch(PDO::FETCH_ASSOC)) { ?>
                                 <option value="<?= $feauther['id'] ?>"><?= $feauther['name'] ?></option>
                                 <?php } ?>

@@ -15,7 +15,7 @@
 		{
 			$reoutput["podcast_title"] = $row["title"];
 			$reoutput["podcast_image"] = $row["image"];
-			$reoutput["auther_id"] = $row["auther_id"];
+			$reoutput["auther_id"] = $row["hosts_id"];
 			$reoutput["created_by_id"] = $row["created_by_id"];
 			$reoutput["sponsored_by_id"] = $row["sponsored_by_id"];
 			$reoutput["podcast_description"] = $row["description"];
