@@ -3,10 +3,19 @@
     if(empty($_REQUEST['id'])){
         header("location:high-voltage-show");
     }
+    $computerId = md5($_SERVER['HTTP_USER_AGENT'].$_SERVER['LOCAL_ADDR'].$_SERVER['LOCAL_PORT'].$_SERVER['REMOTE_ADDR']);
     $episode_id =  base64_decode($_REQUEST['id']);
+    $views = $db->query("SELECT * FROM phtv_episode_views WHERE episode_id = '$episode_id' AND browser_id = '$computerId'");
 
     $episode = $db->query("SELECT a.*,b.category_name FROM phtv_voltage_episode a, phtv_voltage_category b WHERE a.category_id = b.id AND a.id = '".$episode_id."'");
     $feepisode = $episode->fetch(PDO::FETCH_ASSOC);
+
+    $total_views = $feepisode['view'];
+    if($views->rowCount() == 0){
+        $total_views = $total_views + 1;
+        $update_view = $db->query("UPDATE phtv_voltage_episode SET view = '$total_views' WHERE id = '$episode_id'");
+        $insert_view = $db->query("INSERT INTO phtv_episode_views SET episode_id = '$episode_id', browser_id = '$computerId'");
+    }
 
     $title = $db->query("SELECT * FROM phtv_voltage_title WHERE id = '".$feepisode['voltage_title_id']."'");
     $fetitle = $title->fetch(PDO::FETCH_ASSOC);
@@ -75,7 +84,7 @@
                         </div>
                         <div class="p-2 flex-fill bd-highlight ss__right_mobile_left align-self-center ">
                             <a href="#" class="like_and_dislike">
-                                <img src="images/view_A.png"> <span> <?= $feepisode['view'] ?> viewers </span>
+                                <img src="images/view_A.png"> <span> <?= $total_views ?> viewers </span>
                             </a>
                             <a id="<?= $episode_id ?>" class="like_and_dislike like_user">
                                 <img src="images/like.png"> <span id="episode_likes"><?= $feepisode['likes'] ?>
