@@ -453,7 +453,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class=" nav-item <?php if($cur_page_main == 'p_h_cinema_and_audiocast') {echo 'active';} ?>">
+                <!-- <li class=" nav-item <?php if($cur_page_main == 'p_h_cinema_and_audiocast') {echo 'active';} ?>">
                     <a href="#">
                         <i class="fa fa-cube" aria-hidden="true"></i>
                         <span class="menu-title text-truncate" data-i18n="Starter kit">P.H. Cinema & Podcasts</span>
@@ -478,7 +478,7 @@
                             </a>
                         </li>
                     </ul>
-                </li>
+                </li> -->
                 <li class=" nav-item <?php if($cur_page_main == 'high_voltage_show') {echo 'active';} ?>">
                     <a href="#">
                         <i class="fa fa-video-camera" aria-hidden="true"></i>

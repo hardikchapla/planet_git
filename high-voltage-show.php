@@ -56,7 +56,7 @@
             </div>
             <div class="col-lg-6 col-5 align-self-center text-right">
                 <div class="episode_button">
-                    <a href="all-high-voltage-show"> View All </a>
+                    <a href="all-high-voltage-show?id=<?= base64_encode($fetitles['id']) ?>"> View All </a>
                 </div>
             </div>
         </div>
@@ -65,16 +65,18 @@
             if($episode->rowCount() > 0){
                 while ($feepisode = $episode->fetch(PDO::FETCH_ASSOC)) { ?>
             <div class="col-lg-3 col-sm-6 col-md-6">
-                <div class="episodes_blogs">
-                    <div class="images">
-                        <img src="images/episode_image/<?= $feepisode['image'] ?>" alt="episodes" />
+                <a href="high-voltage-show-details?id=<?= base64_encode($feepisode['id']) ?>">
+                    <div class="episodes_blogs">
+                        <div class="images">
+                            <img src="images/episode_image/<?= $feepisode['image'] ?>" alt="episodes" />
+                        </div>
+                        <div class="des text-white">
+                            <p><?= $feepisode['category_name'] ?></p>
+                            <h2> <?= $feepisode['title'] ?> </h2>
+                            <p> <?= date('F d, Y',strtotime($feepisode['created_at'])) ?> </p>
+                        </div>
                     </div>
-                    <div class="des">
-                        <p><?= $feepisode['category_name'] ?></p>
-                        <h2> <?= $feepisode['title'] ?> </h2>
-                        <p> <?= date('F d, Y',strtotime($feepisode['created_at'])) ?> </p>
-                    </div>
-                </div>
+                </a>
             </div>
             <?php } 
                 } else { ?>

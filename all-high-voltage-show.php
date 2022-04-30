@@ -1,5 +1,12 @@
 <?php
    include('header.php');
+   if(empty($_REQUEST['id'])){
+        header("location:high-voltage-show");
+    }
+    $titles_id =  base64_decode($_REQUEST['id']);
+    $titles = $db->query("SELECT * FROM phtv_voltage_title WHERE id = '$titles_id'");
+    $fetitles = $titles->fetch(PDO::FETCH_ASSOC);
+    $episode = $db->query("SELECT a.*,b.category_name FROM phtv_voltage_episode a, phtv_voltage_category b WHERE a.category_id = b.id AND voltage_title_id = '".$titles_id."'");
 ?>
 
 <div class="container-fluid ss_high_voltage_show ss_height100vh ">
@@ -28,12 +35,35 @@
         <div class="row">
             <div class="col-lg-6 col-7 align-self-center">
                 <div class="main_title">
-                    <h1> Latest Episodes </h1>
+                    <h1> <?= $fetitles['name'] ?> </h1>
                 </div>
             </div>
         </div>
         <div class="row episodes_sections">
+            <?php 
+            if($episode->rowCount() > 0){
+                while ($feepisode = $episode->fetch(PDO::FETCH_ASSOC)) { ?>
             <div class="col-lg-3 col-sm-6 col-md-6">
+                <a href="high-voltage-show-details?id=<?= base64_encode($feepisode['id']) ?>">
+                    <div class="episodes_blogs">
+                        <div class="images">
+                            <img src="images/episode_image/<?= $feepisode['image'] ?>" alt="episodes" />
+                        </div>
+                        <div class="des text-white">
+                            <p><?= $feepisode['category_name'] ?></p>
+                            <h2> <?= $feepisode['title'] ?> </h2>
+                            <p> <?= date('F d, Y',strtotime($feepisode['created_at'])) ?> </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <?php } 
+                } else { ?>
+            <div class="col-lg-12 col-sm-12 col-md-12 text-center">
+                <h2> No Episode Available </h2>
+            </div>
+            <?php } ?>
+            <!-- <div class="col-lg-3 col-sm-6 col-md-6">
                 <div class="episodes_blogs">
                     <div class="images">
                         <img src="images/episodesA.jpg" alt="episodes" />
@@ -120,7 +150,7 @@
                         <p> Mar 26, 2021 </p>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>
