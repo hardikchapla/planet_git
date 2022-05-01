@@ -79,6 +79,9 @@
     if($cur_page == 'live_24_7'){
         $titleName = 'PHTV 24/7';
     }
+    if($cur_page == 'live_24_7_category'){
+        $titleName = 'PHTV 24/7 Category';
+    }
     if($cur_page == 'live_tv'){
         $titleName = 'Live TV';
     }
@@ -409,11 +412,26 @@
                         <span class="menu-title text-truncate" data-i18n="bxs-dashboard">Price Type</span>
                     </a>
                 </li>
-                <li class="nav-item <?php if($cur_page == 'live_24_7') {echo 'active';} ?>">
-                    <a href="live_24_7">
-                        <i class="fa fa-video-camera" aria-hidden="true"></i>
-                        <span class="menu-title text-truncate" data-i18n="bxs-dashboard">PHTV 24/7</span>
+                <li class=" nav-item <?php if($cur_page_main == 'phtv_24_7') {echo 'active';} ?>">
+                    <a href="#">
+                        <i class="fa fa-cube" aria-hidden="true"></i>
+                        <span class="menu-title text-truncate" data-i18n="Starter kit">PHTV 24/7</span>
                     </a>
+                    <ul class="menu-content">
+                        <li class="nav-item <?php if($cur_page == 'live_24_7') {echo 'active';} ?>">
+                            <a href="live_24_7">
+                                <i class="bx bx-right-arrow-alt"></i>
+                                <span class="menu-title text-truncate" data-i18n="bxs-dashboard">Live 24/7</span>
+                            </a>
+                        </li>
+                        <li class="nav-item <?php if($cur_page == 'live_24_7_category') {echo 'active';} ?>">
+                            <a href="live_24_7_category">
+                                <i class="bx bx-right-arrow-alt"></i>
+                                <span class="menu-title text-truncate" data-i18n="bxs-dashboard">Live 24/7
+                                    Category</span>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
                 <li class="nav-item <?php if($cur_page == 'live_tv') {echo 'active';} ?>">
                     <a href="live_tv">

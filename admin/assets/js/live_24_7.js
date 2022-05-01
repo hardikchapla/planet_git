@@ -56,6 +56,7 @@ $(document).ready(function() {
                 $('#phtv_24_7_youtube_link').val(data.phtv_24_7_youtube_link);
                 $('#phtv_24_7_length').val(data.phtv_24_7_length);
                 $('#phtv_24_7_description').val(data.phtv_24_7_description);
+                $('#selectCategory').select2("val", data.selectCategory);
                 phtv_24_7_description.setData(data.phtv_24_7_description);
                 $('#phtv_24_7_id').val(phtv_24_7_id);
                 if (data.is_recomended == 1) {
@@ -125,6 +126,9 @@ $(document).ready(function() {
             phtv_24_7_length: {
                 required: true,
             },
+            selectCategory: {
+                required: true,
+            },
             is_recomended: {
                 required: true,
             }
@@ -142,6 +146,9 @@ $(document).ready(function() {
             },
             phtv_24_7_length: {
                 required: "Please provide a PHTV 24/7 length"
+            },
+            selectCategory: {
+                required: "Please select category"
             },
             is_recomended: {
                 required: "Please select type",

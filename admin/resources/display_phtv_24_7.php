@@ -1,7 +1,7 @@
 <?php
 	include('../../inc/connection/connection.php');
 	$reoutput = array();
-	$query = "SELECT * FROM phtv_live_tv_24_7_page";
+	$query = "SELECT a.*, b.name FROM phtv_live_tv_24_7_page a,phtv_live_tv_24_7_category b WHERE a.category_id = b.id";
 	$statement = $db->query($query);
 	$result = $statement->fetchAll();
 	$data = array();
@@ -18,6 +18,7 @@
 		$sub_array[] = $i;
 		$sub_array[] = $image;
         $sub_array[] = $row["title"];
+        $sub_array[] = $row["name"];
         $sub_array[] = $row["youtube_link"];
 		if($row['is_recomended'] == 1){
 			$sub_array[] = "Yes";

@@ -9,6 +9,7 @@
         $phtv_24_7_description = addslashes($_REQUEST['phtv_24_7_description']);
         $phtv_24_7_youtube_link = addslashes($_REQUEST['phtv_24_7_youtube_link']);
         $phtv_24_7_length = $_REQUEST['phtv_24_7_length'];
+        $selectCategory = $_REQUEST['selectCategory'];
         $is_recomended = $_REQUEST['is_recomended'];
         $created = date("Y-m-d H:i:s");
         if(!empty($_FILES['phtv_24_7_thumbnail']['name']))
@@ -19,7 +20,7 @@
             $photo = rand(1000,1000000).$file; 
             $path = '../../images/phtv_24_7/'.$photo;
             move_uploaded_file($tmp,$path);
-            $statement = $db->query("INSERT INTO phtv_live_tv_24_7_page SET `title` = '$phtv_24_7_title',`description` = '$phtv_24_7_description', `thumbnail` = '$photo', `youtube_link` = '$phtv_24_7_youtube_link', `is_recomended` = '$is_recomended', `length` = '$phtv_24_7_length', `created_at` = '$created'");
+            $statement = $db->query("INSERT INTO phtv_live_tv_24_7_page SET `title` = '$phtv_24_7_title',`description` = '$phtv_24_7_description', `thumbnail` = '$photo', `youtube_link` = '$phtv_24_7_youtube_link', `is_recomended` = '$is_recomended', `length` = '$phtv_24_7_length',`category_id` = '$selectCategory', `created_at` = '$created'");
             
             if(!empty($statement))
             {
@@ -44,6 +45,7 @@
         $phtv_24_7_description = addslashes($_REQUEST['phtv_24_7_description']);
         $phtv_24_7_youtube_link = addslashes($_REQUEST['phtv_24_7_youtube_link']);
         $phtv_24_7_length = $_REQUEST['phtv_24_7_length'];
+        $selectCategory = $_REQUEST['selectCategory'];
         $is_recomended = $_REQUEST['is_recomended'];
         if(!empty($_FILES['phtv_24_7_thumbnail']['name']))
         {
@@ -62,7 +64,7 @@
         {
             $photo = $_REQUEST['old_phtv_24_7_thumbnail'];
         }
-        $statement = $db->query("UPDATE phtv_live_tv_24_7_page SET `title` = '$phtv_24_7_title',`description` = '$phtv_24_7_description', `thumbnail` = '$photo', `youtube_link` = '$phtv_24_7_youtube_link', `is_recomended` = '$is_recomended', `length` = '$phtv_24_7_length' WHERE id = '$phtv_24_7_id'");
+        $statement = $db->query("UPDATE phtv_live_tv_24_7_page SET `title` = '$phtv_24_7_title',`description` = '$phtv_24_7_description', `thumbnail` = '$photo',`category_id` = '$selectCategory', `youtube_link` = '$phtv_24_7_youtube_link', `is_recomended` = '$is_recomended', `length` = '$phtv_24_7_length' WHERE id = '$phtv_24_7_id'");
         if(!empty($statement))
         {
             $reoutput['success'] = 'success';

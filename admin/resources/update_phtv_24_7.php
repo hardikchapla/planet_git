@@ -20,6 +20,7 @@
 			$reoutput["phtv_24_7_youtube_link"] = $row["youtube_link"];
 			$reoutput["phtv_24_7_is_recomended"] = $row["is_recomended"];
 			$reoutput["phtv_24_7_length"] = $row["length"];
+			$reoutput["selectCategory"] = $row["category_id"];
 		}
 		echo json_encode($reoutput);
 	}

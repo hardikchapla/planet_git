@@ -1,7 +1,6 @@
 <?php
    include('header.php');
-   $category = $db->query("SELECT * FROM phtv_blog_category");
-   $auther = $db->query("SELECT * FROM phtv_blog_auther");
+   $category = $db->query("SELECT * FROM phtv_live_tv_24_7_category");
 ?>
 <!-- BEGIN: Content-->
 <div class="app-content content">
@@ -42,6 +41,7 @@
                                                 <th>No.</th>
                                                 <th>Image</th>
                                                 <th>Title</th>
+                                                <th>Category</th>
                                                 <th>Youtube Link</th>
                                                 <th>Is Recommended</th>
                                                 <th>Length</th>
@@ -55,6 +55,7 @@
                                                 <th>No.</th>
                                                 <th>Image</th>
                                                 <th>Title</th>
+                                                <th>Category</th>
                                                 <th>Youtube Link</th>
                                                 <th>Is Recommended</th>
                                                 <th>Length</th>
@@ -112,6 +113,17 @@
                             <label for="phtv_24_7_description" class="form-label">PHTV 24/7 Description:</label>
                             <textarea id="phtv_24_7_description" name="phtv_24_7_description" required>
                             </textarea>
+                        </div>
+                    </div>
+                    <div class="row mb-1">
+                        <div class="col mb-0">
+                            <label for="selectCategory" class="form-label">Select Category:</label>
+                            <select class="select2 form-control" name="selectCategory" id="selectCategory">
+                                <option value="">Select Category</option>
+                                <?php while ($fecategory = $category->fetch(PDO::FETCH_ASSOC)) { ?>
+                                <option value="<?= $fecategory['id'] ?>"><?= $fecategory['name'] ?></option>
+                                <?php } ?>
+                            </select>
                         </div>
                     </div>
                     <div class="row mb-1">

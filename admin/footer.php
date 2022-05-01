@@ -48,6 +48,7 @@
 <script src="assets/js/banner.js"></script>
 <script src="assets/js/price_type.js"></script>
 <script src="assets/js/live_24_7.js"></script>
+<script src="assets/js/live_24_7_category.js"></script>
 <script src="assets/js/live_tv.js"></script>
 <script src="assets/js/high_voltage_category.js"></script>
 <script src="assets/js/high_voltage_logos.js"></script>
