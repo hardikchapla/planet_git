@@ -86,8 +86,8 @@
                     </div>
                     <label>Hosted By name: </label>
                     <div class="form-group mb-0">
-                        <input type="text" name="hosted_by_name" id="hosted_by_name"
-                            placeholder="Enter Sponsored by name" class="form-control">
+                        <input type="text" name="hosted_by_name" id="hosted_by_name" placeholder="Enter Hosts"
+                            class="form-control">
                     </div>
                 </div>
                 <div class="modal-footer">
