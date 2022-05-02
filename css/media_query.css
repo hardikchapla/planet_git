@@ -2673,3 +2673,18 @@
     max-width: 100%;
   }
 }
+
+
+@media (min-width: 1000px) and (max-width: 1500px) {
+  .ss_slider_contents_ab h2 {
+    font-size: 30px !important;
+    line-height: 40px !important;
+  }
+  .ss_cinematics_des h2{
+    font-size: 40px!important;
+  }
+  .ss_live_events_box .ss_des h2{
+    font-size: 16px!important;
+  }
+
+}

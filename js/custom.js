@@ -126,8 +126,12 @@ $('#album_slider').owlCarousel({
             items: 2
         },
         1000: {
+            items: 2
+        },
+        1500: {
             items: 3
         }
+
     }
 });
 
@@ -237,8 +241,12 @@ $('#album_slider1').owlCarousel({
             items: 2
         },
         1000: {
+            items: 2
+        },
+        1500: {
             items: 3
         }
+
     }
 });
 $('#album_slider2').owlCarousel({
@@ -258,8 +266,12 @@ $('#album_slider2').owlCarousel({
             items: 2
         },
         1000: {
+            items: 2
+        },
+        1500: {
             items: 3
         }
+
     }
 });
 $('#album_slider3').owlCarousel({
@@ -279,6 +291,9 @@ $('#album_slider3').owlCarousel({
             items: 2
         },
         1000: {
+            items: 2
+        },
+        1500: {
             items: 3
         }
     }
@@ -300,6 +315,9 @@ $('#exciting_slider').owlCarousel({
             items: 2
         },
         1000: {
+            items: 2
+        },
+        1500: {
             items: 3
         }
     }
@@ -321,6 +339,9 @@ $('#featured_slider').owlCarousel({
             items: 2
         },
         1000: {
+            items: 2
+        },
+        1500: {
             items: 3
         }
     }
@@ -342,6 +363,9 @@ $('#top_slider').owlCarousel({
             items: 2
         },
         1000: {
+            items: 2
+        },
+        1500: {
             items: 3
         }
     }
@@ -363,6 +387,9 @@ $('#coming_slider').owlCarousel({
             items: 2
         },
         1000: {
+            items: 2
+        },
+        1500: {
             items: 3
         }
     }
@@ -384,6 +411,9 @@ $('#documentaries_slider').owlCarousel({
             items: 2
         },
         1000: {
+            items: 2
+        },
+        1500: {
             items: 3
         }
     }
@@ -405,7 +435,10 @@ $('#animated_slider').owlCarousel({
             items: 2
         },
         1000: {
-            items: 3
+            items: 2
+        },
+        1500:{
+            items:3
         }
     }
 });
@@ -426,7 +459,10 @@ $('#cinematics_slider').owlCarousel({
             items: 2
         },
         1000: {
-            items: 3
+            items: 2
+        },
+        1500:{
+            items:3
         }
     }
 });
@@ -447,6 +483,9 @@ $('#cartoons_slider').owlCarousel({
             items: 2
         },
         1000: {
+            items: 2
+        },
+        1500:{
             items: 3
         }
     }
@@ -468,7 +507,10 @@ $('#video_slider').owlCarousel({
             items: 2
         },
         1000: {
-            items: 3
+            items: 2
+        },
+        1500:{
+            items:3
         }
     }
 });

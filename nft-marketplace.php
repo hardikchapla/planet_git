@@ -117,7 +117,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <div class="nss_new_listings">
+                <div class="nss_new_listings new_listing_padd_top">
                     <h2> New Listings </h2>
                 </div>
             </div>
@@ -305,6 +305,7 @@
             <div class="item">
                 <div class="ss_product">
                     <div class="images">
+                        <div class="ss_vertical_align_middle">
                         <?php if(empty($feinfo['image']) || $feinfo['image_type'] != 'image'){ ?>
                         <img src="images/planethopper-TV-logo.png" alt="images" />
                         <?php } else { ?>
@@ -327,6 +328,7 @@
                             Ended
                         </div>
                         <?php } ?>
+                        </div>
                     </div>
                     <div class="ss_main_des">
                         <h5><?= $feinfo['name'] ?></h5>
@@ -490,6 +492,7 @@
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="ss_product">
                     <div class="images">
+                        <div class="ss_vertical_align_middle">
                         <?php if(empty($feinfo1['image']) || $feinfo1['image_type'] != 'image'){ ?>
                         <img src="images/planethopper-TV-logo.png" alt="images" />
                         <?php } else { ?>
@@ -512,6 +515,7 @@
                             Ended
                         </div>
                         <?php } ?>
+                        </div>
                     </div>
                     <div class="ss_main_des">
                         <h5><?= $feinfo1['name'] ?></span></h5>
