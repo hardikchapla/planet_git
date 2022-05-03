@@ -153,7 +153,7 @@ include('header.php');
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-sm-6" >
                 <div class="featured_blogs">
                     <div class="images">
                         <img src="images/FeaturedA.png" alt="FeaturedA">
@@ -175,7 +175,7 @@ include('header.php');
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-sm-6">
                 <div class="featured_blogs">
                     <div class="images">
                         <img src="images/FeaturedA.png" alt="FeaturedA">
@@ -197,7 +197,7 @@ include('header.php');
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-sm-6">
                 <div class="featured_blogs">
                     <div class="images">
                         <img src="images/FeaturedB.png" alt="FeaturedA">
@@ -216,7 +216,7 @@ include('header.php');
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-sm-6">
                 <div class="featured_blogs">
                     <div class="images">
                         <img src="images/FeaturedB.png" alt="FeaturedA">
@@ -253,7 +253,7 @@ include('header.php');
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-sm-6">
                 <div class="featured_blogs">
                     <div class="images ss_cinematics_images">
                         <img src="images/cinematicsA.jpg" alt="FeaturedA">
@@ -263,7 +263,7 @@ include('header.php');
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-sm-6">
                 <div class="featured_blogs">
                     <div class="images ss_cinematics_images ss_cinematics_imagesB ">
                         <img src="images/cinematicsB.jpg" alt="FeaturedA">
@@ -274,7 +274,7 @@ include('header.php');
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-sm-6">
                 <div class="featured_blogs">
                     <div class="images ss_cinematics_images">
                         <img src="images/cinematicsA.jpg" alt="FeaturedA">
@@ -284,7 +284,7 @@ include('header.php');
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-sm-6">
                 <div class="featured_blogs">
                     <div class="images ss_cinematics_images ss_cinematics_imagesB ">
                         <img src="images/cinematicsB.jpg" alt="FeaturedA">
@@ -313,7 +313,7 @@ include('header.php');
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-sm-6">
                 <div class="featured_blogs">
                     <div class="images">
                         <img src="images/album_11.jpg" alt="FeaturedA">
@@ -329,7 +329,7 @@ include('header.php');
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-sm-6">
                 <div class="featured_blogs">
                     <div class="images">
                         <img src="images/album_14.jpg" alt="FeaturedA">
@@ -345,7 +345,7 @@ include('header.php');
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-sm-6">
                 <div class="featured_blogs">
                     <div class="images">
                         <img src="images/album_15.jpg" alt="FeaturedA">
@@ -361,7 +361,7 @@ include('header.php');
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-sm-6">
                 <div class="featured_blogs">
                     <div class="images">
                         <img src="images/album_16.jpg" alt="FeaturedA">
@@ -530,7 +530,7 @@ include('header.php');
 </div>
 <div class="container-fluid ss_featured ss_sectioncrew_pickss">
     <div class="container">
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col-lg-12">
                 <div class="d-flex bd-highlight ss_main_title">
                     <div class="p-2  bd-highlight align-self-center">
@@ -543,7 +543,7 @@ include('header.php');
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-sm-6">
                 <div class="crew_picksss">
                     <div class="crew_count">
                         <img src="images/crew.svg" alt="images">
@@ -559,7 +559,7 @@ include('header.php');
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-sm-6">
                 <div class="crew_picksss">
                     <div class="crew_count">
                         <img src="images/crew.svg" alt="images">
@@ -575,7 +575,7 @@ include('header.php');
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-sm-6">
                 <div class="crew_picksss">
                     <div class="crew_count">
                         <img src="images/crew.svg" alt="images">
@@ -602,7 +602,7 @@ include('header.php');
             </div>
         </div>
         <div class="row pt-5">
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-sm-6">
                 <div class="nss_new_chinema ">
                     <div class="ss_des">
                         <h2> World's Chinema Movie Scene NFTs </h2>
@@ -610,7 +610,7 @@ include('header.php');
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-sm-6">
                 <div class="nss_new_chinemaB ">
                     <div class="ss_des">
                         <h2> The Payload
@@ -639,8 +639,8 @@ include('header.php');
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-5 align-self-center">
+        <div class="row justify-content-between">
+            <div class="col-lg-5 align-self-center col-sm-6">
                 <div class="treend_matrix">
                     <div class="d-flex bd-highlight align-self-center">
                         <div class="p-2 bd-highlight">
@@ -684,8 +684,7 @@ include('header.php');
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 align-self-center"></div>
-            <div class="col-lg-4 align-self-center">
+            <div class="col-lg-4 align-self-center col-sm-6">
                 <div class="ss_trend_images">
                     <img src="images/wid.jpg" alt="images" />
                 </div>
@@ -710,8 +709,8 @@ include('header.php');
             </div>
         </div>
     </div>
-    <div class="row ss_blogsshere_padm">
-        <div class="col-lg-4">
+    <div class="row ss_blogsshere_padm justify-content-center">
+        <div class="col-lg-4 col-sm-6">
             <div class="Blogosphere_blogs">
                 <div class="images">
                     <img src="images/Game.png" alt="images">
@@ -724,7 +723,7 @@ include('header.php');
                 </div>
             </div>
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-4 col-sm-6">
             <div class="Blogosphere_blogs">
                 <div class="images">
                     <img src="images/Game2.png" alt="images">
@@ -737,7 +736,7 @@ include('header.php');
                 </div>
             </div>
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-4 col-sm-6">
             <div class="Blogosphere_blogs">
                 <div class="images">
                     <img src="images/Game3.png" alt="images">
@@ -754,7 +753,7 @@ include('header.php');
 </div>
 <div class="container-fluid ss_recommended ">
     <div class="container">
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col-lg-12">
                 <div class="d-flex bd-highlight ss_main_title">
                     <div class="p-2  bd-highlight align-self-center">
@@ -768,8 +767,8 @@ include('header.php');
                 </div>
             </div>
         </div>
-        <div class="row pt-5">
-            <div class="col-lg-3">
+        <div class="row pt-5 justify-content-center">
+            <div class="col-lg-3 col-sm-6">
                 <div class="ss_recommended_images">
                     <div class="images">
                         <img src="images/Sa.png" alt="images" />
@@ -782,7 +781,7 @@ include('header.php');
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-sm-6">
                 <div class="ss_recommended_images">
                     <div class="images">
                         <img src="images/Sb.png" alt="images" />
@@ -795,7 +794,7 @@ include('header.php');
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-sm-6">
                 <div class="ss_recommended_images">
                     <div class="images">
                         <img src="images/Sc.png" alt="images" />
@@ -808,7 +807,7 @@ include('header.php');
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-sm-6">
                 <div class="ss_recommended_images">
                     <div class="images">
                         <img src="images/Sd.png" alt="images" />

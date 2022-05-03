@@ -999,9 +999,9 @@ $('#ss_stor_item_slider').owlCarousel({
             items: 1
         },
         600: {
-            items: 1
+            items: 2
         },
-        1000: {
+        991: {
             items: 1
         }
     }

@@ -8796,3 +8796,9 @@ form .error {
     object-fit: cover;
 }
 
+.ss_social_media .badge {
+    height: 15px;
+    width: 15px;
+    line-height: 15px;
+    padding: 0!important;
+}
