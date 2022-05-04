@@ -2,7 +2,7 @@
    include('header.php');
 ?>
 
-<div class="container-fluid ss_padding_live_events">
+<div class="container-fluid ss_padding_live_events main-video-wrapper">
     <div class="container">
         <div class="row">
             <div class="col-lg-9 ss_mobile_padd_0">

@@ -2723,3 +2723,10 @@
     width: 40px;
   }
 }
+
+@media (max-width: 1400px) {
+  .ss_live_TV_events .ss_profile_imges {
+    height: 70px;
+    width: 70px;
+  }
+}
