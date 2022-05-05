@@ -79,9 +79,9 @@
         </div>
     </div>
 </div>
-<div class="container-fluid ss_products_slidem">
+<div class="container-fluid ss_products_slidem ">
     <div class="container">
-        <div class="row ">
+        <div class="row  order-wrapper-bottom">
             <div class="col-lg-8">
                 <div class="ss_shopping_order">
                     <ul>
@@ -309,19 +309,24 @@
                         </li>
                     </ul>
                 </div>
-                <div class="ss_save_order">
-                    <div class="row">
-                        <div class="col-8 text-left pt-2">
+                <div class="ss_save_order py-4">
+
+
+                    <div class="d-flex bd-highlight">
+                        <div class=" flex-grow-1 bd-highlight text-left">
                             <p class="" id="save_text"> You will save $0 on this order </p>
                         </div>
-                        <div class="col-4 text-right pt-2">
+                        <div class=" bd-highlight">
                             <a href="checkout?applycoin=false" id="apply_count_checkout" class="ss_apply">Checkout</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container-fluid">
+    </div>
+</div>
+
+        <div class="container-fluid ">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">

@@ -314,10 +314,10 @@
   }
   .main_title h1,
   .ss_main_title h1 {
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 700;
     position: relative;
-    padding: 0px 100px 0px 0;
+    padding: 0px 100px 20px 0;
   }
   .episodes_blogs .des h2 {
     font-size: 18px;
@@ -561,7 +561,7 @@
   }
   .ss_best_products_des h2 {
     font-size: 24px;
-    line-height: 38px;
+    line-height: 30px;
   }
   .ss_best_products_des {
     padding: 0 10px;
@@ -1837,7 +1837,7 @@
   }
   .ss_product_banner {
     position: relative;
-    height: 300px;
+    height: 450px;
   }
   .ss_product_banner img {
     width: 100%;
@@ -1848,6 +1848,7 @@
     color: #ffffff;
     font-size: 24px;
     font-weight: 700;
+    margin-bottom: 0;
   }
   .ss_position_products {
     top: 0;
@@ -2221,7 +2222,6 @@
     width: 100%;
   }
   .episode_button a {
-    min-width: 100%;
   }
   .stock_blogs .des h2 {
     font-size: 18px;
@@ -2370,7 +2370,7 @@
   }
   .ss_product_banner {
     position: relative;
-    height: 300px;
+    height: 540px;
   }
   .ss_product_banner img {
     width: 100%;
@@ -2728,5 +2728,41 @@
   .ss_live_TV_events .ss_profile_imges {
     height: 70px;
     width: 70px;
+  }
+  #ss_livechatings .owl-prev,
+  #ss_livechatings .owl-next
+  {
+    height: 35px;
+    width: 35px;
+    background: #3fa9f5;
+    border-radius: 40px;
+    line-height: 35px;
+    font-size: 18px;
+  }
+  .ss_hot_deal_ab h3 {
+    font-size: 26px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .ss_hot_deal_ab h2 {
+    font-size: 35px;
+    font-weight: 600;
+  }
+  .ss_hotdeal{
+    margin-bottom: 20px;
+  }
+  .ss_start_ouputmksams img {
+    height: 60px !important;
+    width: auto !important;
+  }
+
+  .ss_position_products .liness {
+    height: 4px;
+    width: 52px;
+    margin-bottom: 5px;
+    margin-top: 7px;
+  }
+  .ss_profile_imges{
+    display: inline-block;
   }
 }

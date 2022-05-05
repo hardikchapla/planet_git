@@ -309,7 +309,7 @@ $product = $db->query("SELECT a.*, b.* FROM phtv_product a LEFT JOIN phtv_produc
                 <div class="tab-content" id="pills-tabContent">
                     <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
                         aria-labelledby="pills-home-tab">
-                        <div class="row" id="featured_products">
+                        <div class="row justify-content-center" id="featured_products">
                             <div class="col-lg-12 col-sm-12">
                                 <div class="ss_products_boxi">
                                     <div class="_ss_product_des text-center">
@@ -446,7 +446,7 @@ $product = $db->query("SELECT a.*, b.* FROM phtv_product a LEFT JOIN phtv_produc
                         </div>
                     </div>
                     <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                        <div class="row" id="new_products">
+                        <div class="row justify-content-center" id="new_products">
                             <div class="col-lg-12 col-sm-12">
                                 <div class="ss_products_boxi">
                                     <div class="_ss_product_des text-center">
@@ -569,7 +569,7 @@ $product = $db->query("SELECT a.*, b.* FROM phtv_product a LEFT JOIN phtv_produc
                         </div>
                     </div>
                     <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-                        <div class="row" id="preorder_products">
+                        <div class="row justify-content-center" id="preorder_products">
                             <div class="col-lg-12 col-sm-12">
                                 <div class="ss_products_boxi">
                                     <div class="_ss_product_des text-center">
@@ -713,8 +713,8 @@ $product = $db->query("SELECT a.*, b.* FROM phtv_product a LEFT JOIN phtv_produc
 </div>
 <div class="container-fluid ss_hot_deal_section">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-sm-6" >
                 <div class="ss_hotdeal">
                     <div class="images">
                         <img src="images/hot_deal.png" alt="image" />
@@ -727,7 +727,7 @@ $product = $db->query("SELECT a.*, b.* FROM phtv_product a LEFT JOIN phtv_produc
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-sm-6">
                 <div class="ss_hotdeal">
                     <div class="images">
                         <img src="images/hot_deal_B.png" alt="image" />
@@ -742,7 +742,7 @@ $product = $db->query("SELECT a.*, b.* FROM phtv_product a LEFT JOIN phtv_produc
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-sm-6">
                 <div class="ss_hotdeal">
                     <div class="images">
                         <img src="images/deal_sec.png" alt="image" />
@@ -771,7 +771,7 @@ $product = $db->query("SELECT a.*, b.* FROM phtv_product a LEFT JOIN phtv_produc
                 </div>
             </div>
         </div>
-        <div class=" row pt-5">
+        <div class=" row pt-5 justify-content-center">
             <?php if($blogs->rowCount() > 0){ ?>
             <div class="col-lg-6">
                 <div class="ss_blog_post">
@@ -787,10 +787,10 @@ $product = $db->query("SELECT a.*, b.* FROM phtv_product a LEFT JOIN phtv_produc
                 </div>
             </div>
             <?php unset($feblogs[0]); ?>
-            <div class="col-lg-6">
+            <div class="col-lg-6 ">
                 <div class="row">
                     <?php foreach($feblogs as $blog){ ?>
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 col-sm-6 ">
                         <div class="ss_blog_post">
                             <div class="images">
                                 <img src="images/blog/<?= $blog['image'] ?>" alt="images" />

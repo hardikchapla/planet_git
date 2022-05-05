@@ -543,22 +543,22 @@
                 <div class="ss_channels">
                     <h2>Channels</h2>
                     <div class="row">
-                        <div class="col-lg-6 col-6">
+                        <div class="col-lg-6 col-6 col-sm-3">
                             <a href="#" class="ss_channels_box">
                                 <h3>Partner channel place holder <br/> comming Soon!</h3>
                             </a>
                         </div>
-                        <div class="col-lg-6 col-6">
+                        <div class="col-lg-6 col-6 col-sm-3">
                             <a href="#" class="ss_channels_box">
                                 <h3>Partner channel place holder <br/> comming Soon!</h3>
                             </a>
                         </div>
-                        <div class="col-lg-6 col-6">
+                        <div class="col-lg-6 col-6 col-sm-3">
                             <a href="#" class="ss_channels_box">
                                 <h3>Partner channel place holder <br/> comming Soon!</h3>
                             </a>
                         </div>
-                        <div class="col-lg-6 col-6">
+                        <div class="col-lg-6 col-6 col-sm-3">
                             <a href="#" class="ss_channels_box">
                                 <h3>Partner channel place holder <br/> comming Soon!</h3>
                             </a>
