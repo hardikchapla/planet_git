@@ -161,3 +161,7 @@ form .error {
     border-color: transparent;
     background: #e7ebef;
 }
+
+.main-menu .shadow-bottom{
+    background: none;
+}
