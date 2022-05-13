@@ -437,8 +437,8 @@ $('#animated_slider').owlCarousel({
         1000: {
             items: 2
         },
-        1500:{
-            items:3
+        1500: {
+            items: 3
         }
     }
 });
@@ -461,8 +461,8 @@ $('#cinematics_slider').owlCarousel({
         1000: {
             items: 2
         },
-        1500:{
-            items:3
+        1500: {
+            items: 3
         }
     }
 });
@@ -485,7 +485,7 @@ $('#cartoons_slider').owlCarousel({
         1000: {
             items: 2
         },
-        1500:{
+        1500: {
             items: 3
         }
     }
@@ -509,8 +509,8 @@ $('#video_slider').owlCarousel({
         1000: {
             items: 2
         },
-        1500:{
-            items:3
+        1500: {
+            items: 3
         }
     }
 });
@@ -538,21 +538,48 @@ $('#planet_logo_show').owlCarousel({
     }
 });
 
-$(document).ready(function () {
-    $('.ss_trading_box').click(function (e) {  /*--- Content div id and class you want to be toggle ---*/
+$(document).ready(function() {
+    $('.ss_trading_box').click(function(e) { /*--- Content div id and class you want to be toggle ---*/
         e.stopPropagation();
     });
-    $('.Filter_down').click(function (e) { /*--- That div(Button) id and class you want to click to toggle div ---*/
+    $('.Filter_down').click(function(e) { /*--- That div(Button) id and class you want to click to toggle div ---*/
         e.preventDefault();
         e.stopPropagation();
         $('.ss_trading_box').fadeToggle(); /*--- Content div id and class you want to be toggle ---*/
     });
 });
 
-$(document).click(function () {
+$(document).click(function() {
     $('.ss_trading_box').hide(); /*--- Content div id and class you want to be toggle ---*/
 });
 
+var category_ids = $('#category_ids').val();
+for (let i = 0; i < category_ids; i++) {
+    $('#ss_livechatings' + i).owlCarousel({
+        loop: false,
+        margin: 30,
+        dots: false,
+        nav: true,
+        navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 2
+            },
+            1000: {
+                items: 3
+            },
+            1200: {
+                items: 4
+            },
+            1500: {
+                items: 5
+            }
+        }
+    });
+}
 
 $('#ss_livechatings').owlCarousel({
     loop: false,
@@ -776,34 +803,34 @@ $('#ss_category').owlCarousel({
 });
 
 
-$(document).ready(function () {
-    $('.dropdown-content').click(function (e) {  /*--- Content div id and class you want to be toggle ---*/
+$(document).ready(function() {
+    $('.dropdown-content').click(function(e) { /*--- Content div id and class you want to be toggle ---*/
         e.stopPropagation();
     });
-    $('.dropbtn').click(function (e) { /*--- That div(Button) id and class you want to click to toggle div ---*/
+    $('.dropbtn').click(function(e) { /*--- That div(Button) id and class you want to click to toggle div ---*/
         e.preventDefault();
         e.stopPropagation();
         $('.dropdown-content').fadeToggle(); /*--- Content div id and class you want to be toggle ---*/
     });
 });
 
-$(document).click(function () {
+$(document).click(function() {
     $('.dropdown-content').hide(); /*--- Content div id and class you want to be toggle ---*/
 });
 
 
-$(document).ready(function () {
-    $('.ss_donation_now').click(function (e) {  /*--- Content div id and class you want to be toggle ---*/
+$(document).ready(function() {
+    $('.ss_donation_now').click(function(e) { /*--- Content div id and class you want to be toggle ---*/
         e.stopPropagation();
     });
-    $('.ssdonate_button').click(function (e) { /*--- That div(Button) id and class you want to click to toggle div ---*/
+    $('.ssdonate_button').click(function(e) { /*--- That div(Button) id and class you want to click to toggle div ---*/
         e.preventDefault();
         e.stopPropagation();
         $('.ss_donation_now').fadeToggle(); /*--- Content div id and class you want to be toggle ---*/
     });
 });
 
-$(document).click(function () {
+$(document).click(function() {
     $('.ss_donation_now').hide(); /*--- Content div id and class you want to be toggle ---*/
 });
 
@@ -815,7 +842,7 @@ $("[id^=carousel-thumbs]").carousel({
 });
 
 /** Pause/Play Button **/
-$(".carousel-pause").click(function () {
+$(".carousel-pause").click(function() {
     var id = $(this).attr("href");
     if ($(this).hasClass("pause")) {
         $(this).removeClass("pause").toggleClass("play");
@@ -830,7 +857,7 @@ $(".carousel-pause").click(function () {
 });
 
 /** Fullscreen Buttun **/
-$(".carousel-fullscreen").click(function () {
+$(".carousel-fullscreen").click(function() {
     var id = $(this).attr("href");
     $(id).find(".active").ekkoLightbox({
         type: "image"
@@ -842,13 +869,13 @@ if ($("[id^=carousel-thumbs] .carousel-item").length < 2) {
     $("#carousel-thumbs").css("padding", "0 5px");
 }
 
-$("#carousel").on("slide.bs.carousel", function (e) {
+$("#carousel").on("slide.bs.carousel", function(e) {
     var id = parseInt($(e.relatedTarget).attr("data-slide-number"));
     var thumbNum = parseInt(
         $("[id=carousel-selector-" + id + "]")
-            .parent()
-            .parent()
-            .attr("data-slide-number")
+        .parent()
+        .parent()
+        .attr("data-slide-number")
     );
     $("[id^=carousel-selector-]").removeClass("selected");
     $("[id=carousel-selector-" + id + "]").addClass("selected");
@@ -856,27 +883,27 @@ $("#carousel").on("slide.bs.carousel", function (e) {
 });
 
 
-$(document).ready(function () {
-    $('.ss_earn_rewards_ab').click(function (e) {  /*--- Content div id and class you want to be toggle ---*/
+$(document).ready(function() {
+    $('.ss_earn_rewards_ab').click(function(e) { /*--- Content div id and class you want to be toggle ---*/
         e.stopPropagation();
     });
-    $('.ss_footer_fix_button').click(function (e) { /*--- That div(Button) id and class you want to click to toggle div ---*/
+    $('.ss_footer_fix_button').click(function(e) { /*--- That div(Button) id and class you want to click to toggle div ---*/
         e.preventDefault();
         e.stopPropagation();
         $('.ss_earn_rewards_ab').fadeToggle(); /*--- Content div id and class you want to be toggle ---*/
     });
 });
 
-$(".ss_close_fix_button").click(function () {
+$(".ss_close_fix_button").click(function() {
     $(".ss_earn_rewards_ab").hide();
 });
 
-$("#close_button_ss").click(function () {
+$("#close_button_ss").click(function() {
     $(".ss_livechat_pay").hide();
 });
 
 
-var accordion = (function () {
+var accordion = (function() {
 
     var $accordion = $('.js-accordion');
     var $accordion_header = $accordion.find('.js-accordion-header');
@@ -893,8 +920,8 @@ var accordion = (function () {
 
     return {
         // pass configurable object literal
-        init: function ($settings) {
-            $accordion_header.on('click', function () {
+        init: function($settings) {
+            $accordion_header.on('click', function() {
                 accordion.toggle($(this));
             });
 
@@ -908,7 +935,7 @@ var accordion = (function () {
             // reveal the active accordion bodies
             $('.js-accordion-item.active').find('> .js-accordion-body').show();
         },
-        toggle: function ($this) {
+        toggle: function($this) {
 
             if (settings.oneOpen && $this[0] != $this.closest('.js-accordion').find('> .js-accordion-item.active > .js-accordion-header')[0]) {
                 $this.closest('.js-accordion')
@@ -925,43 +952,43 @@ var accordion = (function () {
     }
 })();
 
-$(document).ready(function () {
-    accordion.init({speed: 300, oneOpen: true});
+$(document).ready(function() {
+    accordion.init({ speed: 300, oneOpen: true });
 });
 
 
 // super stickers
 
-$(document).ready(function () {
-    $('.ss_super_sticker').click(function (e) {  /*--- Content div id and class you want to be toggle ---*/
+$(document).ready(function() {
+    $('.ss_super_sticker').click(function(e) { /*--- Content div id and class you want to be toggle ---*/
         e.stopPropagation();
     });
-    $('#ss_super_sticker_icons_id').click(function (e) { /*--- That div(Button) id and class you want to click to toggle div ---*/
+    $('#ss_super_sticker_icons_id').click(function(e) { /*--- That div(Button) id and class you want to click to toggle div ---*/
         e.preventDefault();
         e.stopPropagation();
         $('.ss_super_sticker').fadeToggle(); /*--- Content div id and class you want to be toggle ---*/
     });
 });
 
-$(".ss_super_sticker_close").click(function () {
+$(".ss_super_sticker_close").click(function() {
     $(".ss_super_sticker").hide();
 });
 
 
 // super stickers
 
-$(document).ready(function () {
-    $('.ss_donate_super_chat').click(function (e) {  /*--- Content div id and class you want to be toggle ---*/
+$(document).ready(function() {
+    $('.ss_donate_super_chat').click(function(e) { /*--- Content div id and class you want to be toggle ---*/
         e.stopPropagation();
     });
-    $('#super_hats_ss').click(function (e) { /*--- That div(Button) id and class you want to click to toggle div ---*/
+    $('#super_hats_ss').click(function(e) { /*--- That div(Button) id and class you want to click to toggle div ---*/
         e.preventDefault();
         e.stopPropagation();
         $('.ss_donate_super_chat').fadeToggle(); /*--- Content div id and class you want to be toggle ---*/
     });
 });
 
-$("#ss_message_close").click(function () {
+$("#ss_message_close").click(function() {
     $(".ss_donate_super_chat").hide();
 });
 
@@ -969,18 +996,18 @@ $("#ss_message_close").click(function () {
 
 // emoji stickers
 
-$(document).ready(function () {
-    $('.ss_emoji_messages_box').click(function (e) {  /*--- Content div id and class you want to be toggle ---*/
+$(document).ready(function() {
+    $('.ss_emoji_messages_box').click(function(e) { /*--- Content div id and class you want to be toggle ---*/
         e.stopPropagation();
     });
-    $('.ss_emoji_icons').click(function (e) { /*--- That div(Button) id and class you want to click to toggle div ---*/
+    $('.ss_emoji_icons').click(function(e) { /*--- That div(Button) id and class you want to click to toggle div ---*/
         e.preventDefault();
         e.stopPropagation();
         $('.ss_emoji_messages_box').fadeToggle(); /*--- Content div id and class you want to be toggle ---*/
     });
 });
 
-$("#ss_message_close_emojo").click(function () {
+$("#ss_message_close_emojo").click(function() {
     $(".ss_emoji_messages_box").hide();
 });
 
