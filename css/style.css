@@ -8814,3 +8814,43 @@ form .error {
 .order-wrapper-bottom{
     padding-bottom: 30px;
 }
+
+/* 13.05.2022 */
+
+.ss_musi .ss_pod_contents h2 {
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.ss_musi .ss_pod_contents .liness {
+    height: 4px;
+    width: 60px;
+    border-radius: 50px;
+    background: #0099ff;
+    display: inline-block;
+}
+
+.ss_pod_contents h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.ss_pod_contents .ss_profiles_creatr {
+    height: 35px;
+    width: 35px;
+    border-radius: 40px;
+}
+
+
+.ss_pod_contents .ss_profiles_creatr img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 40px;
+}
+.ss_pod_contents p{
+    margin-bottom: 0;
+    font-weight: 500;
+    word-break: normal;
+}
