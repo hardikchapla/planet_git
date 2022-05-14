@@ -2766,3 +2766,33 @@
     display: inline-block;
   }
 }
+
+@media (min-width: 2000px) {
+
+  #album_slider .owl-next
+  {
+    top: 45%;
+    font-size: 150px;
+    right: -133px;
+  }
+
+  #album_slider .owl-prev
+  {
+    top: 45%;
+    font-size: 150px;
+    left: -133px;
+  }
+
+  #album_slider1 .owl-next, #album_slider2 .owl-next, #album_slider3 .owl-next, #exciting_slider .owl-next, #featured_slider .owl-next, #top_slider .owl-next, #coming_slider .owl-next, #documentaries_slider .owl-next, #animated_slider .owl-next, #cinematics_slider .owl-next, #cartoons_slider .owl-next, #video_slider .owl-next{
+    top: 45%;
+    font-size: 150px;
+    right: -133px;
+  }
+
+  #album_slider1 .owl-prev, #album_slider2 .owl-prev, #album_slider3 .owl-prev, #exciting_slider .owl-prev, #featured_slider .owl-prev, #top_slider .owl-prev, #coming_slider .owl-prev, #documentaries_slider .owl-prev, #animated_slider .owl-prev, #cinematics_slider .owl-prev, #cartoons_slider .owl-prev, #video_slider .owl-prev{
+    top: 45%;
+    font-size: 150px;
+    left: -133px;
+  }
+
+}
