@@ -103,6 +103,15 @@
                         </div>
                     </div>
                     <div class="row mb-1">
+                        <div class="col">
+                            <label>Title: </label>
+                            <div class="form-group mb-0">
+                                <input type="text" name="podcast_episode_description" id="podcast_episode_description"
+                                       placeholder="Enter podcast episode description" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-1">
                         <div class="col mb-0">
                             <label for="selectPodcast" class="form-label">Select Podcast:</label>
                             <select class="select2 form-control" name="selectPodcast" id="selectPodcast">

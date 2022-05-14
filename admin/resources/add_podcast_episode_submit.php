@@ -6,6 +6,7 @@
     if($_REQUEST['action'] == 'Add'){
         $reoutput = array();
         $podcast_episode_title = addslashes($_REQUEST['podcast_episode_title']);
+        $podcast_episode_description = addslashes($_REQUEST['podcast_episode_description']);
         $selectPodcast = $_REQUEST['selectPodcast'];
         $created = date("Y-m-d H:i:s");
         if(!empty($_FILES['podcast_episode_mp3_file']['name']))
@@ -13,7 +14,7 @@
             $file = $_FILES['podcast_episode_mp3_file']['name'];
             $tmp = $_FILES['podcast_episode_mp3_file']['tmp_name'];
             $ext = pathinfo($file, PATHINFO_EXTENSION);
-            $photo = rand(1000,1000000).$file; 
+            $photo = rand(1000,1000000).$file;
             $path = '../../images/podcast_mp3/'.$photo;
             move_uploaded_file($tmp,$path);
             
@@ -22,7 +23,7 @@
             $duration2 = $mp3file->getDuration();
             $length = MP3File::formatTime($duration2);
             
-            $statement = $db->query("INSERT INTO phtv_podcast_episode SET `podcast_id` = '$selectPodcast',`title` = '$podcast_episode_title', `mp3_file` = '$photo', `length` = '$length', `created_at` = '$created'");
+            $statement = $db->query("INSERT INTO phtv_podcast_episode SET `podcast_id` = '$selectPodcast',`title` = '$podcast_episode_title',`short_description` = '$podcast_episode_description', `mp3_file` = '$photo', `length` = '$length', `created_at` = '$created'");
             if(!empty($statement))
             {
                 $reoutput['success'] = 'success';
@@ -43,6 +44,7 @@
         $reoutput = array();
         $podcast_episode_id = $_REQUEST['podcast_episode_id'];
         $podcast_episode_title = addslashes($_REQUEST['podcast_episode_title']);
+        $podcast_episode_description = addslashes($_REQUEST['podcast_episode_description']);
         $selectPodcast = $_REQUEST['selectPodcast'];
         if(!empty($_FILES['podcast_episode_mp3_file']['name']))
         {
@@ -70,7 +72,7 @@
             $duration2 = $mp3file->getDuration();
             $length = MP3File::formatTime($duration2);
         }
-        $statement = $db->query("UPDATE phtv_podcast_episode SET `podcast_id` = '$selectPodcast',`title` = '$podcast_episode_title', `mp3_file` = '$photo', `length` = '$length' WHERE id = '$podcast_episode_id'");
+        $statement = $db->query("UPDATE phtv_podcast_episode SET `podcast_id` = '$selectPodcast',`title` = '$podcast_episode_title',`short_description` = '$podcast_episode_description', `mp3_file` = '$photo', `length` = '$length' WHERE id = '$podcast_episode_id'");
         if(!empty($statement))
         {
             $reoutput['success'] = 'success';

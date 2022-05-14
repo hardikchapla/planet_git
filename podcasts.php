@@ -1,6 +1,6 @@
 <?php
 include('header.php');
-$podcast = $db->query("SELECT a.*,b.name as host_name, c.name as created_by_name, d.name as sponsored_by_name FROM phtv_podcast a LEFT JOIN phtv_hosted_by b ON a.hosts_id = b.id LEFT JOIN phtv_created_by c ON a.created_by_id = c.id LEFT JOIN phtv_sponsored_by d ON a.sponsored_by_id = d.id");
+$podcast = $db->query("SELECT a.*,b.name as host_name, b.image as host_image, c.name as created_by_name, c.image as created_image, d.name as sponsored_by_name, d.image as sponsored_image FROM phtv_podcast a LEFT JOIN phtv_hosted_by b ON a.hosts_id = b.id LEFT JOIN phtv_created_by c ON a.created_by_id = c.id LEFT JOIN phtv_sponsored_by d ON a.sponsored_by_id = d.id");
 ?>
 
 <div class="container-fluid ss_podcast_audiocasts ss_height100vh">
@@ -58,20 +58,11 @@ $podcast = $db->query("SELECT a.*,b.name as host_name, c.name as created_by_name
                                                     </div>
                                                     <div class="p-2  bd-highlight align-self-center">
                                                         <div class="ss_profiles_creatr">
-                                                            <img src="images/profilesA.jpg" alt="images"/>
+                                                            <img src="images/created_by/<?= $fepodcast['created_image'] ?>" alt="images"/>
                                                         </div>
                                                     </div>
                                                     <div class=" bd-highlight align-self-center">
-                                                        <p>John T</p>
-                                                    </div>
-
-                                                    <div class="p-2 bd-highlight align-self-center">
-                                                        <div class="ss_profiles_creatr">
-                                                            <img src="images/me3.jpg" alt="images"/>
-                                                        </div>
-                                                    </div>
-                                                    <div class=" bd-highlight align-self-center">
-                                                        <p>John T</p>
+                                                        <p><?= $fepodcast['host_name'] ?></p>
                                                     </div>
 
                                                     <div class="pl-3 pr-2 bd-highlight align-self-center">
@@ -83,20 +74,11 @@ $podcast = $db->query("SELECT a.*,b.name as host_name, c.name as created_by_name
                                                     </div>
                                                     <div class="p-2  bd-highlight align-self-center">
                                                         <div class="ss_profiles_creatr">
-                                                            <img src="images/profilesA.jpg" alt="images"/>
+                                                            <img src="images/hosted_by/<?= $fepodcast['host_image'] ?>" alt="images"/>
                                                         </div>
                                                     </div>
                                                     <div class=" bd-highlight align-self-center">
-                                                        <p>John T</p>
-                                                    </div>
-
-                                                    <div class="p-2 bd-highlight align-self-center">
-                                                        <div class="ss_profiles_creatr">
-                                                            <img src="images/me3.jpg" alt="images"/>
-                                                        </div>
-                                                    </div>
-                                                    <div class=" bd-highlight align-self-center">
-                                                        <p>John T</p>
+                                                        <p><?= $fepodcast['created_by_name'] ?></p>
                                                     </div>
                                                     <div class="pl-3 pr-2 bd-highlight align-self-center">
                                                         <h4> | </h4>
@@ -107,25 +89,90 @@ $podcast = $db->query("SELECT a.*,b.name as host_name, c.name as created_by_name
                                                     </div>
                                                     <div class="p-2  bd-highlight align-self-center">
                                                         <div class="ss_profiles_creatr">
-                                                            <img src="images/profilesA.jpg" alt="images"/>
+                                                            <img src="images/sponsored_by/<?= $fepodcast['sponsored_image'] ?>" alt="images"/>
                                                         </div>
                                                     </div>
                                                     <div class=" bd-highlight align-self-center">
-                                                        <p>John T</p>
-                                                    </div>
-
-                                                    <div class="p-2 bd-highlight align-self-center">
-                                                        <div class="ss_profiles_creatr">
-                                                            <img src="images/me3.jpg" alt="images"/>
-                                                        </div>
-                                                    </div>
-                                                    <div class=" bd-highlight align-self-center">
-                                                        <p>John T</p>
+                                                        <p><?= $fepodcast['sponsored_by_name'] ?></p>
                                                     </div>
 
                                                 </div>
 
                                             </div>
+                                            <!-- <div class="d-flex bd-highlight">
+                                                <div class="p-2 bd-highlight align-self-center">
+                                                    <h4> Creator/S </h4>
+                                                </div>
+                                                <div class="p-2  bd-highlight align-self-center">
+                                                    <div class="ss_profiles_creatr">
+                                                        <img src="images/profilesA.jpg" alt="images"/>
+                                                    </div>
+                                                </div>
+                                                <div class=" bd-highlight align-self-center">
+                                                    <p>John T</p>
+                                                </div>
+
+                                                <div class="p-2 bd-highlight align-self-center">
+                                                    <div class="ss_profiles_creatr">
+                                                        <img src="images/me3.jpg" alt="images"/>
+                                                    </div>
+                                                </div>
+                                                <div class=" bd-highlight align-self-center">
+                                                    <p>John T</p>
+                                                </div>
+
+                                                <div class="pl-3 pr-2 bd-highlight align-self-center">
+                                                    <h4> | </h4>
+                                                </div>
+
+                                                <div class="p-2 bd-highlight align-self-center">
+                                                    <h4> Hots/s </h4>
+                                                </div>
+                                                <div class="p-2  bd-highlight align-self-center">
+                                                    <div class="ss_profiles_creatr">
+                                                        <img src="images/profilesA.jpg" alt="images"/>
+                                                    </div>
+                                                </div>
+                                                <div class=" bd-highlight align-self-center">
+                                                    <p>John T</p>
+                                                </div>
+
+                                                <div class="p-2 bd-highlight align-self-center">
+                                                    <div class="ss_profiles_creatr">
+                                                        <img src="images/me3.jpg" alt="images"/>
+                                                    </div>
+                                                </div>
+                                                <div class=" bd-highlight align-self-center">
+                                                    <p>John T</p>
+                                                </div>
+                                                <div class="pl-3 pr-2 bd-highlight align-self-center">
+                                                    <h4> | </h4>
+                                                </div>
+
+                                                <div class="p-2 bd-highlight align-self-center">
+                                                    <h4> Sponsor/s </h4>
+                                                </div>
+                                                <div class="p-2  bd-highlight align-self-center">
+                                                    <div class="ss_profiles_creatr">
+                                                        <img src="images/profilesA.jpg" alt="images"/>
+                                                    </div>
+                                                </div>
+                                                <div class=" bd-highlight align-self-center">
+                                                    <p>John T</p>
+                                                </div>
+
+                                                <div class="p-2 bd-highlight align-self-center">
+                                                    <div class="ss_profiles_creatr">
+                                                        <img src="images/me3.jpg" alt="images"/>
+                                                    </div>
+                                                </div>
+                                                <div class=" bd-highlight align-self-center">
+                                                    <p>John T</p>
+                                                </div>
+
+                                            </div>
+
+                                        </div> -->
 
 
                                             <div class="ss_music_tags">
@@ -190,10 +237,7 @@ $podcast = $db->query("SELECT a.*,b.name as host_name, c.name as created_by_name
                                     <div class="mr-auto  bd-highlight align-self-center">
                                         <div class="ss_des_play">
                                             <h3 id="audiocast_title"><?= $oneepisode['title'] ?></h3>
-                                            <p id="audiocast_authername">Host/s : <?= $fepodcast['host_name'] ?>,
-                                                Creator/s :
-                                                <?= $fepodcast['created_by_name'] ?>,
-                                                Sponsor/s : <?= $fepodcast['sponsored_by_name'] ?></p>
+                                            <p id="audiocast_authername<?= $fepodcast['id'] ?>"><?= $oneepisode['short_description'] ?></p>
                                         </div>
                                     </div>
                                     <div class="p-2 bd-highlight align-self-center ss_social_media_relative">
@@ -248,7 +292,7 @@ $podcast = $db->query("SELECT a.*,b.name as host_name, c.name as created_by_name
                                                         <div class=" bd-highlight align-self-center">
                                                             <button type="button"
                                                                     audiocast_title="<?= $fepisode['title'] ?>"
-                                                                    audiocast_auther="Host/s : <?= $fepodcast['host_name'] ?>, Creator/s : <?= $fepodcast['created_by_name'] ?>, Sponsor/s : <?= $fepodcast['sponsored_by_name'] ?>"
+                                                                    audiocast_auther="<?= $fepisode['short_description'] ?>"
                                                                     class="ss_play podcast_start"
                                                                     id="images/podcast_mp3/<?= $fepisode['mp3_file'] ?>"
                                                                     key="<?= $fepodcast['id'] ?>">
@@ -1151,16 +1195,16 @@ include('footer.php');
             $('#buzzer' + id).trigger("play");
             $(this).removeClass('fa-play');
             $(this).addClass('fa-pause');
-            $('#startplayer' + id).addClass("stopplayer");
-            $('#startplayer' + id).removeClass("startplayer");
+            $('#startplayer_' + id).addClass("stopplayer");
+            $('#startplayer_' + id).removeClass("startplayer");
         });
         $(document).on('click', '.stopplayer', function () {
             var id = $(this).attr('key');
             $('#buzzer' + id).trigger("pause");
             $(this).addClass('fa-play');
             $(this).removeClass('fa-pause');
-            $('#startplayer' + id).addClass("startplayer");
-            $('#startplayer' + id).removeClass("stopplayer");
+            $('#startplayer_' + id).addClass("startplayer");
+            $('#startplayer_' + id).removeClass("stopplayer");
         });
         $(document).on('click', '.podcast_start', function () {
             var audio_url = $(this).attr('id');
@@ -1168,7 +1212,7 @@ include('footer.php');
             var audiocast_title = $(this).attr('audiocast_title');
             $('#audiocast_title').html(audiocast_title);
             var audiocast_auther = $(this).attr('audiocast_auther');
-            $('#audiocast_authername').html(audiocast_auther);
+            $('#audiocast_authername'+ audio_key).html(audiocast_auther);
             $('#facebooklink').attr('href', 'https://www.facebook.com/sharer/sharer.php?u=<?= BASE_URL ?>' +
                 audio_url);
             $('#twitterlink').attr('href', 'http://twitter.com/share?url=<?= BASE_URL ?>' +
@@ -1190,7 +1234,7 @@ include('footer.php');
             var audiocast_title = $(this).attr('audiocast_title');
             $('#audiocast_title').html(audiocast_title);
             var audiocast_auther = $(this).attr('audiocast_auther');
-            $('#audiocast_authername').html(audiocast_auther);
+            $('#audiocast_authername'+ audio_key).html(audiocast_auther);
             pause(audio_url, audio_key);
             $('#startplayer_' + audio_key).addClass('fa-play');
             $('#startplayer_' + audio_key).removeClass('fa-pause');

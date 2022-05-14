@@ -28,6 +28,7 @@ $(document).ready(function() {
                 hideLoading();
                 $("#old_podcast_episode_mp3_file").val(data.podcast_episode_file);
                 $("#podcast_episode_title").val(data.podcast_episode_title);
+                $("#podcast_episode_description").val(data.podcast_episode_description);
                 $("#selectPodcast").select2("val", data.podcast_id);
                 $("#podcast_episode_id").val(podcast_episode_id);
                 $("#action").val("Edit");
@@ -79,12 +80,18 @@ $(document).ready(function() {
             podcast_episode_title: {
                 required: true,
             },
+            podcast_episode_description: {
+                required: true,
+            },
             selectPodcast: {
                 required: true,
             },
         },
         messages: {
             podcast_episode_title: {
+                required: "Please provide a title",
+            },
+            podcast_episode_description: {
                 required: "Please provide a title",
             },
             selectPodcast: {

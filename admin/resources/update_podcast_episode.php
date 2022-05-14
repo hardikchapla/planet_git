@@ -15,6 +15,7 @@
 		{
 			$reoutput["podcast_id"] = $row["podcast_id"];
 			$reoutput["podcast_episode_title"] = $row["title"];
+			$reoutput["podcast_episode_description"] = $row["short_description"];
 			$reoutput["podcast_episode_file"] = $row["mp3_file"];
 		}
 		echo json_encode($reoutput);
