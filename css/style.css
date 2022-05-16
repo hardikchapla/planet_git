@@ -3042,7 +3042,7 @@ a:hover {
     position: relative;
     overflow: hidden;
     border-radius: 5px;
-    height: calc(100vh - 200px)!important;
+    height: 100vh!important;
 }
 
 .ss_live_video .video_images img {
