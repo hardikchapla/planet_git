@@ -240,7 +240,7 @@ $podcast = $db->query("SELECT * FROM phtv_podcast");
                         </div>
                         <div class="mr-auto  bd-highlight align-self-center">
                             <div class="ss_des_play">
-                                <h3 id="audiocast_title"><?= $oneepisode['title'] ?></h3>
+                                <h3 id="audiocast_title<?= $fepodcast['id'] ?>"><?= $oneepisode['title'] ?></h3>
                                 <p id="audiocast_authername<?= $fepodcast['id'] ?>">
                                     <?= $oneepisode['short_description'] ?></p>
                             </div>
@@ -1202,7 +1202,7 @@ $(document).ready(function() {
         var audio_url = $(this).attr('id');
         var audio_key = $(this).attr('key');
         var audiocast_title = $(this).attr('audiocast_title');
-        $('#audiocast_title').html(audiocast_title);
+        $('#audiocast_title'+ audio_key).html(audiocast_title);
         var audiocast_auther = $(this).attr('audiocast_auther');
         $('#audiocast_authername' + audio_key).html(audiocast_auther);
         $('#facebooklink').attr('href', 'https://www.facebook.com/sharer/sharer.php?u=<?= BASE_URL ?>' +
@@ -1224,7 +1224,7 @@ $(document).ready(function() {
         var audio_url = $(this).attr('id');
         var audio_key = $(this).attr('key');
         var audiocast_title = $(this).attr('audiocast_title');
-        $('#audiocast_title').html(audiocast_title);
+        $('#audiocast_title'+ audio_key).html(audiocast_title);
         var audiocast_auther = $(this).attr('audiocast_auther');
         $('#audiocast_authername' + audio_key).html(audiocast_auther);
         pause(audio_url, audio_key);
