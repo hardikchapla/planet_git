@@ -1,6 +1,6 @@
 <?php
 include('header.php');
-$podcast = $db->query("SELECT a.*,b.name as host_name, b.image as host_image, c.name as created_by_name, c.image as created_image, d.name as sponsored_by_name, d.image as sponsored_image FROM phtv_podcast a LEFT JOIN phtv_hosted_by b ON a.hosts_id = b.id LEFT JOIN phtv_created_by c ON a.created_by_id = c.id LEFT JOIN phtv_sponsored_by d ON a.sponsored_by_id = d.id");
+$podcast = $db->query("SELECT * FROM phtv_podcast");
 ?>
 <div class="container-fluid ss_podcast_audiocasts ss_height100vh">
     <div class="verticle_middle">
@@ -28,7 +28,11 @@ $podcast = $db->query("SELECT a.*,b.name as host_name, b.image as host_image, c.
         $episode = $db->query("SELECT * FROM phtv_podcast_episode WHERE podcast_id = '" . $fepodcast['id'] . "'");
         $episode1 = $db->query("SELECT * FROM phtv_podcast_episode WHERE podcast_id = '" . $fepodcast['id'] . "' LIMIT 0,1");
         $oneepisode = $episode1->fetch(PDO::FETCH_ASSOC);
-        ?>
+
+        $create = $db->query("SELECT * FROM phtv_created_by WHERE id IN (".$fepodcast['created_by_id'].")");
+        $hosted = $db->query("SELECT * FROM phtv_hosted_by WHERE id IN (".$fepodcast['hosts_id'].")");
+        $sponsored = $db->query("SELECT * FROM phtv_sponsored_by WHERE id IN (".$fepodcast['sponsored_by_id'].")");
+?>
 <div class="container-fluid ss_musi">
     <div class="container">
         <div class="row">
@@ -52,47 +56,59 @@ $podcast = $db->query("SELECT a.*,b.name as host_name, b.image as host_image, c.
                                                     <div class=" bd-highlight align-self-center">
                                                         <h4> Created by </h4>
                                                     </div>
+                                                    <?php while($fecreated = $create->fetch(PDO::FETCH_ASSOC)){ ?>
                                                     <div class=" bd-highlight px-2 align-self-center">
                                                         <div class="ss_profiles_creatr">
-                                                            <img src="images/created_by/<?= $fepodcast['created_image'] ?>"
+                                                            <img src="images/created_by/<?= $fecreated['image'] ?>"
                                                                 alt="images" />
                                                         </div>
                                                     </div>
                                                     <div class=" bd-highlight align-self-center">
-                                                        <p><?= $fepodcast['host_name'] ?></p>
+                                                        <p><?= $fecreated['name'] ?></p>
                                                     </div>
+                                                    <?php } ?>
                                                 </div>
+                                            </div>
+                                            <div class="pl-3 pr-2 bd-highlight align-self-center">
+                                                <h4> | </h4>
                                             </div>
                                             <div class="p-2 bd-highlight">
                                                 <div class="d-flex bd-highlight">
                                                     <div class=" bd-highlight align-self-center">
                                                         <h4> Hosted by </h4>
                                                     </div>
+                                                    <?php while($fehosted = $hosted->fetch(PDO::FETCH_ASSOC)){ ?>
                                                     <div class=" bd-highlight px-2 align-self-center">
                                                         <div class="ss_profiles_creatr">
-                                                            <img src="images/hosted_by/<?= $fepodcast['host_image'] ?>"
+                                                            <img src="images/hosted_by/<?= $fehosted['image'] ?>"
                                                                 alt="images" />
                                                         </div>
                                                     </div>
                                                     <div class=" bd-highlight align-self-center">
-                                                        <p><?= $fepodcast['created_by_name'] ?></p>
+                                                        <p><?= $fehosted['name'] ?></p>
                                                     </div>
+                                                    <?php } ?>
                                                 </div>
+                                            </div>
+                                            <div class="pl-3 pr-2 bd-highlight align-self-center">
+                                                <h4> | </h4>
                                             </div>
                                             <div class="p-2 bd-highlight">
                                                 <div class="d-flex bd-highlight ">
                                                     <div class=" bd-highlight align-self-center">
                                                         <h4> Sponsored by </h4>
                                                     </div>
+                                                    <?php while($fesponsored = $sponsored->fetch(PDO::FETCH_ASSOC)){ ?>
                                                     <div class=" bd-highlight px-2 align-self-center">
                                                         <div class="ss_profiles_creatr">
-                                                            <img src="images/sponsored_by/<?= $fepodcast['sponsored_image'] ?>"
+                                                            <img src="images/sponsored_by/<?= $fesponsored['image'] ?>"
                                                                 alt="images" />
                                                         </div>
                                                     </div>
                                                     <div class=" bd-highlight align-self-center">
-                                                        <p><?= $fepodcast['sponsored_by_name'] ?></p>
+                                                        <p><?= $fesponsored['name'] ?></p>
                                                     </div>
+                                                    <?php } ?>
                                                 </div>
                                             </div>
                                         </div>

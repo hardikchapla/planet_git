@@ -46,9 +46,9 @@ $(document).ready(function() {
                 $('#podcast_insta_link').val(data.podcast_insta_link);
                 $('#podcast_description').val(data.podcast_description);
                 podcast_description.setData(data.podcast_description);
-                $('#selectAuter').select2("val", data.auther_id);
-                $('#selectCreatedBy').select2("val", data.created_by_id);
-                $('#selectSponsoredBy').select2("val", data.sponsored_by_id);
+                $('#selectAuter').val(data.auther_id).trigger('change');
+                $('#selectCreatedBy').val(data.created_by_id).trigger('change');
+                $('#selectSponsoredBy').val(data.sponsored_by_id).trigger('change');
                 $('#podcast_id').val(podcast_id);
                 $('#action').val("Edit");
                 $('#podcast_form_title').html("Update Podcast");
@@ -74,28 +74,27 @@ $(document).ready(function() {
             if (result.isConfirmed) {
                 showLoading();
                 $.ajax({
-                        url: 'resources/delete_podcast',
-                        type: 'POST',
-                        data: 'podcast_id=' + podcast_id,
-                        dataType: 'json'
-                    })
-                    .done(function(response) {
-                        if (response.success == 'success') {
-                            toastr.options.onHidden = function() {
-                                window.location.href = 'podcast';
-                                hideLoading();
-                            }
-                            toastr.success(response.message).delay(1000).fadeOut(1000);
-                        } else {
+                    url: 'resources/delete_podcast',
+                    type: 'POST',
+                    data: 'podcast_id=' + podcast_id,
+                    dataType: 'json'
+                })
+                .done(function(response) {
+                    if (response.success == 'success') {
+                        toastr.options.onHidden = function() {
+                            window.location.href = 'podcast';
                             hideLoading();
-                            toastr.warning(output.message).delay(1000).fadeOut(1000);
                         }
-
-                    })
-                    .fail(function() {
+                        toastr.success(response.message).delay(1000).fadeOut(1000);
+                    } else {
                         hideLoading();
-                        swal('Oops...', 'Something went wrong with ajax !', 'error');
-                    });
+                        toastr.warning(output.message).delay(1000).fadeOut(1000);
+                    }
+                })
+                .fail(function() {
+                    hideLoading();
+                    swal('Oops...', 'Something went wrong with ajax !', 'error');
+                });
             }
         });
     });

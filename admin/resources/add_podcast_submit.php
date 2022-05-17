@@ -7,9 +7,9 @@
         $reoutput = array();
         $podcast_title = addslashes($_REQUEST['podcast_title']);
         $podcast_description = addslashes($_REQUEST['podcast_description']);
-        $selectAuter = $_REQUEST['selectAuter'];
-        $selectCreatedBy = $_REQUEST['selectCreatedBy'];
-        $selectSponsoredBy = $_REQUEST['selectSponsoredBy'];
+        $selectAuter = !empty($_REQUEST['selectAuter']) ? implode(',', $_REQUEST['selectAuter']):'';
+        $selectCreatedBy = !empty($_REQUEST['selectCreatedBy']) ? implode(',', $_REQUEST['selectCreatedBy']):'';
+        $selectSponsoredBy = !empty($_REQUEST['selectSponsoredBy']) ? implode(',', $_REQUEST['selectSponsoredBy']):'';
         $podcast_fb_link = addslashes($_REQUEST['podcast_fb_link']);
         $podcast_twiter_link = addslashes($_REQUEST['podcast_twiter_link']);
         $podcast_google_link = addslashes($_REQUEST['podcast_google_link']);
@@ -46,9 +46,9 @@
         $podcast_id = $_REQUEST['podcast_id'];
         $podcast_title = addslashes($_REQUEST['podcast_title']);
         $podcast_description = addslashes($_REQUEST['podcast_description']);
-        $selectAuter = $_REQUEST['selectAuter'];
-        $selectCreatedBy = $_REQUEST['selectCreatedBy'];
-        $selectSponsoredBy = $_REQUEST['selectSponsoredBy'];
+        $selectAuter = !empty($_REQUEST['selectAuter']) ? implode(',', $_REQUEST['selectAuter']):'';
+        $selectCreatedBy = !empty($_REQUEST['selectCreatedBy']) ? implode(',', $_REQUEST['selectCreatedBy']):'';
+        $selectSponsoredBy = !empty($_REQUEST['selectSponsoredBy']) ? implode(',', $_REQUEST['selectSponsoredBy']):'';
         $podcast_fb_link = addslashes($_REQUEST['podcast_fb_link']);
         $podcast_twiter_link = addslashes($_REQUEST['podcast_twiter_link']);
         $podcast_google_link = addslashes($_REQUEST['podcast_google_link']);

@@ -116,8 +116,8 @@
                     <div class="row mb-1">
                         <div class="col mb-0">
                             <label for="selectAuter" class="form-label">Select Hosts:</label>
-                            <select class="select2 form-control" name="selectAuter" id="selectAuter">
-                                <option value="">Select Hosts</option>
+                            <select class="select2 form-control" name="selectAuter[]" id="selectAuter" placeholder="Select Hosts" multiple>
+<!--                                <option value="">Select Hosts</option>-->
                                 <?php while ($feauther = $auther->fetch(PDO::FETCH_ASSOC)) { ?>
                                 <option value="<?= $feauther['id'] ?>"><?= $feauther['name'] ?></option>
                                 <?php } ?>
@@ -127,8 +127,8 @@
                     <div class="row mb-1">
                         <div class="col mb-0">
                             <label for="selectCreatedBy" class="form-label">Select Created By:</label>
-                            <select class="select2 form-control" name="selectCreatedBy" id="selectCreatedBy">
-                                <option value="">Select Created By</option>
+                            <select class="select2 form-control" name="selectCreatedBy[]" id="selectCreatedBy" multiple>
+<!--                                <option value="">Select Created By</option>-->
                                 <?php while ($fecreated_by = $created_by->fetch(PDO::FETCH_ASSOC)) { ?>
                                 <option value="<?= $fecreated_by['id'] ?>"><?= $fecreated_by['name'] ?></option>
                                 <?php } ?>
@@ -138,8 +138,8 @@
                     <div class="row mb-1">
                         <div class="col mb-0">
                             <label for="selectSponsoredBy" class="form-label">Select Sponsored By:</label>
-                            <select class="select2 form-control" name="selectSponsoredBy" id="selectSponsoredBy">
-                                <option value="">Select Sponsored By</option>
+                            <select class="select2 form-control" name="selectSponsoredBy[]" id="selectSponsoredBy" multiple>
+<!--                                <option value="">Select Sponsored By</option>-->
                                 <?php while ($fesponsered_by = $sponsered_bys->fetch(PDO::FETCH_ASSOC)) { ?>
                                 <option value="<?= $fesponsered_by['id'] ?>"><?= $fesponsered_by['name'] ?></option>
                                 <?php } ?>
