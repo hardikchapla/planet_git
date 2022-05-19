@@ -69,7 +69,7 @@ $podcast = $db->query("SELECT * FROM phtv_podcast");
                                                     <?php } ?>
                                                 </div>
                                             </div>
-                                            <div class="pl-3 pr-2 bd-highlight align-self-center">
+                                            <div class="pl-3 pr-2 bd-highlight align-self-center remove-mobile">
                                                 <h4> | </h4>
                                             </div>
                                             <div class="p-2 bd-highlight">
@@ -90,7 +90,7 @@ $podcast = $db->query("SELECT * FROM phtv_podcast");
                                                     <?php } ?>
                                                 </div>
                                             </div>
-                                            <div class="pl-3 pr-2 bd-highlight align-self-center">
+                                            <div class="pl-3 pr-2 bd-highlight align-self-center remove-mobile">
                                                 <h4> | </h4>
                                             </div>
                                             <div class="p-2 bd-highlight">
@@ -1202,7 +1202,7 @@ $(document).ready(function() {
         var audio_url = $(this).attr('id');
         var audio_key = $(this).attr('key');
         var audiocast_title = $(this).attr('audiocast_title');
-        $('#audiocast_title'+ audio_key).html(audiocast_title);
+        $('#audiocast_title' + audio_key).html(audiocast_title);
         var audiocast_auther = $(this).attr('audiocast_auther');
         $('#audiocast_authername' + audio_key).html(audiocast_auther);
         $('#facebooklink').attr('href', 'https://www.facebook.com/sharer/sharer.php?u=<?= BASE_URL ?>' +
@@ -1224,7 +1224,7 @@ $(document).ready(function() {
         var audio_url = $(this).attr('id');
         var audio_key = $(this).attr('key');
         var audiocast_title = $(this).attr('audiocast_title');
-        $('#audiocast_title'+ audio_key).html(audiocast_title);
+        $('#audiocast_title' + audio_key).html(audiocast_title);
         var audiocast_auther = $(this).attr('audiocast_auther');
         $('#audiocast_authername' + audio_key).html(audiocast_auther);
         pause(audio_url, audio_key);
