@@ -106,6 +106,9 @@
     if($cur_page == 'hosts'){
         $titleName = 'Hosts';
     }
+    if($cur_page == 'earn_rewards'){
+        $titleName = 'Earn Rewards';
+    }
    
     $admin = $db->query("SELECT * FROM phtv_admin WHERE id = 1");
     $feadmin = $admin->fetch();
@@ -404,6 +407,12 @@
                     <a href="pages">
                         <i class="fa fa-file" aria-hidden="true"></i>
                         <span class="menu-title text-truncate" data-i18n="bxs-dashboard">Pages</span>
+                    </a>
+                </li>
+                <li class="nav-item <?php if($cur_page == 'earn_rewards') {echo 'active';} ?>">
+                    <a href="earn_rewards">
+                        <i class="fa fa-trophy" aria-hidden="true"></i>
+                        <span class="menu-title text-truncate" data-i18n="bxs-dashboard">Earn Rewards</span>
                     </a>
                 </li>
                 <li class="nav-item <?php if($cur_page == 'price_type') {echo 'active';} ?>">

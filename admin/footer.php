@@ -45,6 +45,7 @@
 <script src="assets/js/nft_logos.js"></script>
 <script src="assets/js/nft_info.js"></script>
 <script src="assets/js/pages.js"></script>
+<script src="assets/js/earn_rewards.js"></script>
 <script src="assets/js/banner.js"></script>
 <script src="assets/js/price_type.js"></script>
 <script src="assets/js/live_24_7.js"></script>

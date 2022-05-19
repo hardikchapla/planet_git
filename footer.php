@@ -24,6 +24,12 @@
     </div>
 </div>
 <?php }
+
+$earn_reward = $db->query("SELECT * FROM phtv_earn_rewards");
+$rewards = array();
+while ($feearn = $earn_reward->fetch(PDO::FETCH_ASSOC)) {
+    $rewards[$feearn['slug']] = $feearn['description'];
+}
 ?>
 
 <div class="container-fluid ss_main_fotter_links">
@@ -48,71 +54,70 @@
                     <a class="cursor-pointer"> <img src="images/closea.svg" alt="images" /> </a>
                 </div>
                 <div class="ss_des">
-                    <h1> Welcome Aboard </h1>
-                    <h4> Planet Hopper One </h4>
+                    <h1> <?= $rewards['header'] ?> </h1>
+                    <h4> <?= $rewards['header_title'] ?> </h4>
                 </div>
-                <p> May your journey be free of atmospheric hazards </p>
+                <p> <?= $rewards['header_description'] ?> </p>
                 <div class="ss_aboard">
-                    <p>Earn points as you consume and share content.Trade Points in for awesome gifts in the Star
-                        Outpost! Also use points to enter quarterly "Mystery Gift" raffle and more</p>
+                    <p><?= $rewards['header_details'] ?></p>
                 </div>
                 <div class="accordion js-accordion">
                     <div class="accordion__item js-accordion-item">
-                        <div class="accordion-header js-accordion-header"> Questions</div>
+                        <div class="accordion-header js-accordion-header"> <?= $rewards['questions_title'] ?></div>
                         <div class="accordion-body js-accordion-body">
                             <div class="accordion-body__contents">
-                                What planet are you from?
+                                <?= $rewards['questions'] ?>
                             </div>
                         </div><!-- end of accordion body -->
                     </div><!-- end of accordion item -->
                     <div class="accordion__item js-accordion-item ">
-                        <div class="accordion-header js-accordion-header"> Rules</div>
+                        <div class="accordion-header js-accordion-header"> <?= $rewards['rules'] ?></div>
                         <div class="accordion-body js-accordion-body">
                             <div class="accordion-body__contents">
                                 <ul>
-                                    <li> Emoji Reaction 1pts</li>
-                                    <li> Sharing Articles to Twitter 10 pts</li>
-                                    <li> Sharing Articles to Facebook 10 pts</li>
-                                    <li> Sharing Articles to Pinterest 10 pts</li>
-                                    <li> Sharing Articles to other platforms 5 pts</li>
-                                    <li> Watching videos 10 pts</li>
-                                    <li> Watching Specific video 20 pts</li>
-                                    <li> Reading articles 5 pts</li>
-                                    <li> Reading Specific articles 10 pts</li>
-                                    <li> 15 consecutive logins 30 bonus pts</li>
-                                    <li> 30 consecutive logins 70 bonus pts</li>
+                                    <li> <?= $rewards['rules1'] ?></li>
+                                    <li> <?= $rewards['rules2'] ?></li>
+                                    <li> <?= $rewards['rules3'] ?></li>
+                                    <li> <?= $rewards['rules4'] ?></li>
+                                    <li> <?= $rewards['rules5'] ?></li>
+                                    <li> <?= $rewards['rules6'] ?></li>
+                                    <li> <?= $rewards['rules7'] ?></li>
+                                    <li> <?= $rewards['rules8'] ?></li>
+                                    <li> <?= $rewards['rules9'] ?></li>
+                                    <li> <?= $rewards['rules10'] ?></li>
+                                    <li> <?= $rewards['rules11'] ?></li>
                                 </ul>
                             </div>
                         </div><!-- end of accordion body -->
                     </div><!-- end of accordion item -->
                     <div class="accordion__item js-accordion-item">
-                        <div class="accordion-header js-accordion-header">Points</div>
+                        <div class="accordion-header js-accordion-header"><?= $rewards['points_title'] ?></div>
                         <div class="accordion-body js-accordion-body">
                             <div class="accordion-body__contents">
-                                <div class="ss_login_firstss">200 Points (First Login)</div>
-                                <div class="ss_login_firstss">Logging in 10pts (Daily)</div>
+                                <div class="ss_login_firstss"><?= $rewards['points_title1'] ?></div>
+                                <div class="ss_login_firstss"><?= $rewards['points_title2'] ?></div>
                                 <ul>
-                                    <li> Not logging in within 15 days you loose 20pt</li>
-                                    <li> Not logging on within 30 days you loose 50 pts</li>
-                                    <li> Not logging on within 45 days you loose 150 pts</li>
-                                    <li> and 50 pts per day til disqualified</li>
+                                    <li> <?= $rewards['points_description1'] ?></li>
+                                    <li> <?= $rewards['points_description2'] ?></li>
+                                    <li> <?= $rewards['points_description3'] ?></li>
+                                    <li> <?= $rewards['points_description4'] ?></li>
                                 </ul>
                             </div>
                         </div><!-- end of accordion body -->
                     </div><!-- end of accordion item -->
                     <div class="accordion__item js-accordion-item">
-                        <div class="accordion-header js-accordion-header"> Rewards</div>
+                        <div class="accordion-header js-accordion-header"> <?= $rewards['rewards_title'] ?></div>
                         <div class="accordion-body js-accordion-body">
                             <div class="accordion-body__contents">
-                                <h2> Basic Rewards </h2>
+                                <h2> <?= $rewards['rewards_description'] ?> </h2>
                                 <ul>
-                                    <li> T Shirts</li>
-                                    <li> Mugs</li>
-                                    <li> Trading Pins</li>
-                                    <li> Sticker Packs</li>
-                                    <li> Hats</li>
-                                    <li> Tournament Passes</li>
-                                    <li> Event Passes</li>
+                                    <li> <?= $rewards['rewards_1'] ?></li>
+                                    <li> <?= $rewards['rewards_2'] ?></li>
+                                    <li> <?= $rewards['rewards_3'] ?></li>
+                                    <li> <?= $rewards['rewards_4'] ?></li>
+                                    <li> <?= $rewards['rewards_5'] ?></li>
+                                    <li> <?= $rewards['rewards_6'] ?></li>
+                                    <li> <?= $rewards['rewards_7'] ?></li>
                                 </ul>
                             </div>
                         </div><!-- end of accordion body -->
@@ -123,8 +128,8 @@
                 </div>
                 <div class="ss_link_footer_fix">
                     <p> Already have account ? <a href="#"> Sign In </a></p>
-                    <p> Lift off 85000 passengers </p>
-                    <p class="mb-0"> 76 </p>
+                    <p> <?= $rewards['footer_title'] ?> </p>
+                    <p class="mb-0"> <?= $rewards['footer_points'] ?> </p>
                 </div>
             </div>
             <div class="p-2 bd-highlight ">
