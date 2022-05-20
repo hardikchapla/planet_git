@@ -438,7 +438,7 @@
     $banner = $db->query("SELECT * FROM phtv_banner WHERE page_id = '".$fepages['id']."' AND banner_type = 2");
     if($banner->rowCount() > 0){
     $febanner = $banner->fetch(PDO::FETCH_ASSOC);
-        if ($febanner['link_type' == 1]) {
+        if ($febanner['link_type'] == 1) {
 ?>
 <div class="container-fluid">
     <div class="container">
