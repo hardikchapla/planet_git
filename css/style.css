@@ -8861,3 +8861,8 @@ form .error {
         display: none;
     }
 }
+
+.cc-banner-image-size {
+    overflow: hidden;
+    height: 250px !important;
+}
