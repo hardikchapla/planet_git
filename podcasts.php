@@ -28,10 +28,21 @@ $podcast = $db->query("SELECT * FROM phtv_podcast");
         $episode = $db->query("SELECT * FROM phtv_podcast_episode WHERE podcast_id = '" . $fepodcast['id'] . "'");
         $episode1 = $db->query("SELECT * FROM phtv_podcast_episode WHERE podcast_id = '" . $fepodcast['id'] . "' LIMIT 0,1");
         $oneepisode = $episode1->fetch(PDO::FETCH_ASSOC);
-
-        $create = $db->query("SELECT * FROM phtv_created_by WHERE id IN (".$fepodcast['created_by_id'].")");
-        $hosted = $db->query("SELECT * FROM phtv_hosted_by WHERE id IN (".$fepodcast['hosts_id'].")");
-        $sponsored = $db->query("SELECT * FROM phtv_sponsored_by WHERE id IN (".$fepodcast['sponsored_by_id'].")");
+        if(!empty($fepodcast['created_by_id'])){
+            $create = $db->query("SELECT * FROM phtv_created_by WHERE id IN (".$fepodcast['created_by_id'].")");
+        } else {
+            $create = $db->query("SELECT * FROM phtv_created_by WHERE id = 0");
+        }
+        if(!empty($fepodcast['hosts_id'])){
+            $hosted = $db->query("SELECT * FROM phtv_hosted_by WHERE id IN (".$fepodcast['hosts_id'].")");
+        } else {
+            $hosted = $db->query("SELECT * FROM phtv_hosted_by WHERE id = 0");
+        }
+        if(!empty($fepodcast['sponsored_by_id'])){
+            $sponsored = $db->query("SELECT * FROM phtv_sponsored_by WHERE id IN (".$fepodcast['sponsored_by_id'].")");
+        } else {
+            $sponsored = $db->query("SELECT * FROM phtv_sponsored_by WHERE id = 0");
+        }
 ?>
 <div class="container-fluid ss_musi">
     <div class="container">
@@ -51,6 +62,7 @@ $podcast = $db->query("SELECT * FROM phtv_podcast");
                                     <div class="liness"></div>
                                     <div class="py-2">
                                         <div class="d-flex bd-highlight ss_mobiles_inlines">
+                                            <?php if($create->rowCount() > 0){ ?>
                                             <div class="p-2 bd-highlight">
                                                 <div class="d-flex bd-highlight">
                                                     <div class=" bd-highlight align-self-center">
@@ -72,6 +84,7 @@ $podcast = $db->query("SELECT * FROM phtv_podcast");
                                             <div class="pl-3 pr-2 bd-highlight align-self-center remove-mobile">
                                                 <h4> | </h4>
                                             </div>
+                                            <?php } if($hosted->rowCount() > 0){ ?>
                                             <div class="p-2 bd-highlight">
                                                 <div class="d-flex bd-highlight">
                                                     <div class=" bd-highlight align-self-center">
@@ -93,6 +106,7 @@ $podcast = $db->query("SELECT * FROM phtv_podcast");
                                             <div class="pl-3 pr-2 bd-highlight align-self-center remove-mobile">
                                                 <h4> | </h4>
                                             </div>
+                                            <?php } if($sponsored->rowCount() > 0){ ?>
                                             <div class="p-2 bd-highlight">
                                                 <div class="d-flex bd-highlight ">
                                                     <div class=" bd-highlight align-self-center">
@@ -111,6 +125,7 @@ $podcast = $db->query("SELECT * FROM phtv_podcast");
                                                     <?php } ?>
                                                 </div>
                                             </div>
+                                            <?php } ?>
                                         </div>
                                     </div>
                                     <!-- <div class="d-flex bd-highlight">
