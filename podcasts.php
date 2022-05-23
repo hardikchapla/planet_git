@@ -110,7 +110,7 @@ $podcast = $db->query("SELECT * FROM phtv_podcast");
                                             <div class="p-2 bd-highlight">
                                                 <div class="d-flex bd-highlight ">
                                                     <div class=" bd-highlight align-self-center">
-                                                        <h4> Sponsored by </h4>
+                                                        <h4> Sponsor by </h4>
                                                     </div>
                                                     <?php while($fesponsored = $sponsored->fetch(PDO::FETCH_ASSOC)){ ?>
                                                     <div class=" bd-highlight px-2 align-self-center">
@@ -1198,6 +1198,7 @@ $(document).ready(function() {
         $('.ss_music').fadeToggle(); /*--- Content div id and class you want to be toggle ---*/
     });
     $(document).on('click', '.startplayer', function() {
+        pauseAll();
         var id = $(this).attr('key');
         $('#buzzer' + id).trigger("play");
         $(this).removeClass('fa-play');
@@ -1206,6 +1207,7 @@ $(document).ready(function() {
         $('#startplayer_' + id).removeClass("startplayer");
     });
     $(document).on('click', '.stopplayer', function() {
+        pauseAll();
         var id = $(this).attr('key');
         $('#buzzer' + id).trigger("pause");
         $(this).addClass('fa-play');
@@ -1214,6 +1216,7 @@ $(document).ready(function() {
         $('#startplayer_' + id).removeClass("stopplayer");
     });
     $(document).on('click', '.podcast_start', function() {
+        pauseAll();
         var audio_url = $(this).attr('id');
         var audio_key = $(this).attr('key');
         var audiocast_title = $(this).attr('audiocast_title');
@@ -1227,6 +1230,8 @@ $(document).ready(function() {
         change(audio_url, audio_key);
         $('#startplayer_' + audio_key).addClass('fa-pause');
         $('#startplayer_' + audio_key).removeClass('fa-play');
+        $('#startplayer_' + audio_key).addClass("stopplayer");
+        $('#startplayer_' + audio_key).removeClass("startplayer");
         $(this).addClass('podcast_pause');
         $(this).removeClass('podcast_start');
         $('.podcast_start').find('i').removeClass('fa-pause').addClass('fa-play');
@@ -1236,6 +1241,7 @@ $(document).ready(function() {
         $(this).closest('div.ss_list').addClass('ss_active');
     });
     $(document).on('click', '.podcast_pause', function() {
+        pauseAll();
         var audio_url = $(this).attr('id');
         var audio_key = $(this).attr('key');
         var audiocast_title = $(this).attr('audiocast_title');
@@ -1245,6 +1251,8 @@ $(document).ready(function() {
         pause(audio_url, audio_key);
         $('#startplayer_' + audio_key).addClass('fa-play');
         $('#startplayer_' + audio_key).removeClass('fa-pause');
+        $('#startplayer_' + audio_key).addClass("startplayer");
+        $('#startplayer_' + audio_key).removeClass("stopplayer");
         $(this).addClass('podcast_start');
         $(this).removeClass('podcast_pause');
         $('.podcast_start').find('i').removeClass('fa-pause').addClass('fa-play');
@@ -1268,6 +1276,53 @@ $(document).ready(function() {
         audio[0].play();
         audio[0].load();
         audio[0].oncanplaythrough = audio[0].pause();
+    }
+
+    function pauseAll() {
+        $('audio').each(function() {
+            this.pause(); // Stop playing
+            this.currentTime = 0; // Reset time
+        });
+        $('.startplayer').each(function() {
+            var id = $(this).attr('key');
+            $('#startplayer_' + id).addClass("startplayer");
+            $('#startplayer_' + id).removeClass("stopplayer");
+            $(this).addClass('fa-play');
+            $(this).removeClass('fa-pause');
+        });
+        $('.stopplayer').each(function() {
+            var id = $(this).attr('key');
+            $('#startplayer_' + id).addClass("startplayer");
+            $('#startplayer_' + id).removeClass("stopplayer");
+            $(this).addClass('fa-play');
+            $(this).removeClass('fa-pause');
+        });
+        $('.podcast_start').each(function() {
+            var audio_url = $(this).attr('id');
+            var audio_key = $(this).attr('key');
+            $('#startplayer_' + audio_key).addClass('fa-play');
+            $('#startplayer_' + audio_key).removeClass('fa-pause');
+            $(this).addClass('podcast_start');
+            $(this).removeClass('podcast_pause');
+            $('.podcast_start').find('i').removeClass('fa-pause').addClass('fa-play');
+            $('.podcast_pause').find('i').removeClass('fa-pause').addClass('fa-play');
+            var itag = $(this).find('i').removeClass('fa-pause').addClass('fa-play');
+            $('div').removeClass('ss_active');
+            $(this).closest('div.ss_list').addClass('ss_active');
+        });
+        $('.podcast_pause').each(function() {
+            var audio_url = $(this).attr('id');
+            var audio_key = $(this).attr('key');
+            $('#startplayer_' + audio_key).addClass('fa-play');
+            $('#startplayer_' + audio_key).removeClass('fa-pause');
+            $(this).addClass('podcast_start');
+            $(this).removeClass('podcast_pause');
+            $('.podcast_start').find('i').removeClass('fa-pause').addClass('fa-play');
+            $('.podcast_pause').find('i').removeClass('fa-pause').addClass('fa-play');
+            var itag = $(this).find('i').removeClass('fa-pause').addClass('fa-play');
+            $('div').removeClass('ss_active');
+            $(this).closest('div.ss_list').addClass('ss_active');
+        });
     }
 });
 $(document).click(function() {
