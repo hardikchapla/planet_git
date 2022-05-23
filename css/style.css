@@ -5610,10 +5610,11 @@ a:hover {
 }
 
 .ss_music_tags .ss_tags a {
-    font-size: 20px;
+    font-size: 18px;
     color: #ffffff;
-    padding: 0 0px;
+    padding: 5px 0px;
     font-weight: 600;
+    display: inherit;
 }
 
 .ss_play {
@@ -5630,11 +5631,11 @@ a:hover {
 }
 
 .ss_playstore_music {
-    padding: 70px 0 0px 0;
+    padding: 10px 0 0px 0;
 }
 
 .ss_des_play h3 {
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 600;
     margin-bottom: 0px;
 }
@@ -7207,6 +7208,8 @@ a:hover {
     font-weight: 700;
     display: inline-block;
     margin-bottom: 0px;
+    min-width: 180px;
+    text-align: center;
 }
 
 .ss_music {
@@ -7221,7 +7224,7 @@ a:hover {
 
 .ss_social_media_relative {
     position: relative;
-    width: 30%;
+    width: 100%;
 }
 
 .ss_close_bua>img {

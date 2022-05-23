@@ -916,8 +916,9 @@
     }
 
     .ss_music_tags .ss_tags a {
-        padding: 4px 8px;
+        padding: 4px 0px;
         display: inline-block;
+        font-size: 16px;
     }
 
     .ss_list .ss_play {
@@ -1079,9 +1080,18 @@
         top: 10px;
     }
 
-    .ss_playstore_music .d-flex {
+    /*.ss_playstore_music .d-flex {*/
+    /*    display: inline-block !important;*/
+    /*    width: 100% !important;*/
+    /*}*/
+
+    .ss_playstore_music >.d-flex{
         display: inline-block !important;
-        width: 100% !important;
+        width: 100%;
+    }
+
+    .ss_playstore_music {
+        padding: 10px 0 0px 0;
     }
 
     .ss_podcasts_section_main_images .images {
@@ -1096,7 +1106,7 @@
     }
 
     .ss_des_play {
-        padding: 10px 0 0 0px;
+        padding: 10px 0 0 10px;
     }
 
     .ss_best_products {
@@ -1378,6 +1388,15 @@
     .images_sspatload img {
         height: 71px;
         display: inline-block;
+    }
+
+    .ss_playstore_music >.d-flex{
+        display: inline-block !important;
+        width: 100%;
+    }
+
+    .ss_playstore_music {
+        padding: 10px 0 0px 0;
     }
 
     .ss_height100vh {
