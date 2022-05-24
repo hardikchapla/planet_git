@@ -21,8 +21,46 @@
         </div>
     </div>
 </div>
-
-<div class="container-fluid ss_padding_100top">
+<?php 
+    $pages = $db->query("SELECT * FROM phtv_pages WHERE slug = 'blog'");
+    $fepages = $pages->fetch(PDO::FETCH_ASSOC);
+    
+    $banner = $db->query("SELECT * FROM phtv_banner WHERE page_id = '".$fepages['id']."' AND banner_type = 1");
+    if($banner->rowCount() > 0){
+    $febanner = $banner->fetch(PDO::FETCH_ASSOC);
+        if ($febanner['link_type'] == 1) {
+?>
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ss_advertise cc-banner-image-size">
+                    <!-- <h2>Add Banner</h2> -->
+                    <a href="<?= $febanner['link'] ?>" target="_Blank"><img
+                            src="images/banner_image/<?= $febanner['image'] ?>" width="100%" alt="episodes" /></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<?php } else { ?>
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ss_advertise">
+                    <a href="<?= $febanner['link'] ?>" target="_Blank">
+                        <h2><?= $febanner['title'] ?></h2>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<?php
+} 
+} else { ?>
+<div class="container-fluid">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -33,6 +71,18 @@
         </div>
     </div>
 </div>
+<?php } ?>
+<!-- <div class="container-fluid ss_padding_100top">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ss_advertise">
+                    <h2>Add Banner</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
 <?php
     if (isset($_GET['pageno'])) {
         $pageno = $_GET['pageno'];
@@ -130,6 +180,46 @@
         </div>
     </div>
 </div>
+
+<?php 
+    $pages = $db->query("SELECT * FROM phtv_pages WHERE slug = 'blog'");
+    $fepages = $pages->fetch(PDO::FETCH_ASSOC);
+    
+    $banner = $db->query("SELECT * FROM phtv_banner WHERE page_id = '".$fepages['id']."' AND banner_type = 2");
+    if($banner->rowCount() > 0){
+    $febanner = $banner->fetch(PDO::FETCH_ASSOC);
+        if ($febanner['link_type'] == 1) {
+?>
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ss_advertise cc-banner-image-size">
+                    <!-- <h2>Add Banner</h2> -->
+                    <a href="<?= $febanner['link'] ?>" target="_Blank"><img
+                            src="images/banner_image/<?= $febanner['image'] ?>" width="100%" alt="episodes" /></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<?php } else { ?>
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ss_advertise">
+                    <a href="<?= $febanner['link'] ?>" target="_Blank">
+                        <h2><?= $febanner['title'] ?></h2>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<?php
+} 
+} else { ?>
 <div class="container-fluid">
     <div class="container">
         <div class="row">
@@ -141,6 +231,18 @@
         </div>
     </div>
 </div>
+<?php } ?>
+<!-- <div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ss_advertise">
+                    <h2>Add Banner</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
 
 <?php
     include('footer.php');
