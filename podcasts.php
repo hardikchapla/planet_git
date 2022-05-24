@@ -246,41 +246,61 @@ $podcast = $db->query("SELECT * FROM phtv_podcast");
             <?php if ($episode->rowCount() > 0) { ?>
             <div class="col-lg-12">
                 <div class="ss_playstore_music">
-                    <div class="d-flex bd-highlight">
-                        <div class=" bd-highlight align-self-center">
-                            <div class="ss_play">
-                                <i class="fa fa-play startplayer" key="<?= $fepodcast['id'] ?>"
-                                    id="startplayer_<?= $fepodcast['id'] ?>" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                        <div class="mr-auto  bd-highlight align-self-center">
-                            <div class="ss_des_play">
-                                <h3 id="audiocast_title<?= $fepodcast['id'] ?>"><?= $oneepisode['title'] ?></h3>
-                                <p id="audiocast_authername<?= $fepodcast['id'] ?>">
-                                    <?= $oneepisode['short_description'] ?></p>
-                            </div>
-                        </div>
-                        <div class="p-2 bd-highlight align-self-center ss_social_media_relative">
-                            <div class="ss_social_media_button">
-                                <a href="#" class="share_button"> Share this Episode </a>
-                            </div>
-                            <div class="ss_music">
-                                <div class="ss_social_media">
-                                    <a id="twitterlink"
-                                        href="http://twitter.com/share?url=<?= BASE_URL ?>images/podcast_mp3/<?= $oneepisode['mp3_file'] ?>"
-                                        target="_blank">
-                                        <img src="images/twitterA.svg" alt="youtube"> </a>
-                                    <a href="<?= ($fepodcast['twiter_link']) ? $fepodcast['twiter_link'] : '#' ?>">
-                                        <img src="images/youtubeshaA.svg" alt="youtube"> </a>
-                                    <a id="facebooklink"
-                                        href="https://www.facebook.com/sharer/sharer.php?u=<?= BASE_URL ?>images/podcast_mp3/<?= $oneepisode['mp3_file'] ?>"
-                                        target="_blank"> <img src="images/fb.svg" alt="youtube"> </a>
-                                    <a href="<?= ($fepodcast['insta_link']) ? $fepodcast['insta_link'] : '#' ?>">
-                                        <img src="images/instagram.svg" alt="youtube"> </a>
+
+                    <div class="d-flex bd-highlight mb-3">
+                        <div class="p-2 bd-highlight align-self-center">
+
+                            <div class="d-flex bd-highlight  align-self-center">
+                                <div class=" bd-highlight align-self-center">
+
+                                    <div class=" bd-highlight align-self-center">
+                                        <div class="ss_play">
+                                            <i class="fa fa-play startplayer" key="<?= $fepodcast['id'] ?>"
+                                               id="startplayer_<?= $fepodcast['id'] ?>" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class=" bd-highlight align-self-center">
+
+                                    <div class="mr-auto  bd-highlight align-self-center">
+                                        <div class="ss_des_play">
+                                            <h3 id="audiocast_title<?= $fepodcast['id'] ?>"><?= $oneepisode['title'] ?></h3>
+                                            <p id="audiocast_authername<?= $fepodcast['id'] ?>">
+                                                <?= $oneepisode['short_description'] ?></p>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
+
+                        </div>
+                        <div class="ml-auto p-2 bd-highlight align-self-center">
+
+                            <div class="p-2 bd-highlight align-self-center ss_social_media_relative">
+                                <div class="ss_social_media_button">
+                                    <a href="#" class="share_button"> Share this Episode </a>
+                                </div>
+                                <div class="ss_music">
+                                    <div class="ss_social_media">
+                                        <a id="twitterlink"
+                                           href="http://twitter.com/share?url=<?= BASE_URL ?>images/podcast_mp3/<?= $oneepisode['mp3_file'] ?>"
+                                           target="_blank">
+                                            <img src="images/twitterA.svg" alt="youtube"> </a>
+                                        <a href="<?= ($fepodcast['twiter_link']) ? $fepodcast['twiter_link'] : '#' ?>">
+                                            <img src="images/youtubeshaA.svg" alt="youtube"> </a>
+                                        <a id="facebooklink"
+                                           href="https://www.facebook.com/sharer/sharer.php?u=<?= BASE_URL ?>images/podcast_mp3/<?= $oneepisode['mp3_file'] ?>"
+                                           target="_blank"> <img src="images/fb.svg" alt="youtube"> </a>
+                                        <a href="<?= ($fepodcast['insta_link']) ? $fepodcast['insta_link'] : '#' ?>">
+                                            <img src="images/instagram.svg" alt="youtube"> </a>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
+
                     <div class="py-3">
                         <div class="rSlider">
                             <audio id="buzzer<?= $fepodcast['id'] ?>" controls style="border-radius: 40px;width:100%">
