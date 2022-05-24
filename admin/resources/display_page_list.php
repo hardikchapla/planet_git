@@ -13,7 +13,7 @@
 		$sub_array[] = $row["page_name"];
 		$sub_array[] = $row["slug"];
 		$sub_array[] = '<button class="btn btn-primary fa fa-pencil updatePages" data-toggle="modal" data-target="#updatePages" type="button" id="'.$row["id"].'"></button>';
-		$sub_array[] = '<button class="btn btn-danger fa fa-trash deletePages" type="button" id="'.$row["id"].'" ></button>';
+		// $sub_array[] = '<button class="btn btn-danger fa fa-trash deletePages" type="button" id="'.$row["id"].'" ></button>';
 		$data[] = $sub_array;
 		$i++;
 	}

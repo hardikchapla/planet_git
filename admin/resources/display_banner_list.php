@@ -36,7 +36,7 @@
             $sub_array[] = "Footer";
         }
 		$sub_array[] = '<button class="btn btn-primary fa fa-pencil updateBanner" data-toggle="modal" data-target="#updateBanner" type="button" id="'.$row["id"].'"></button>';
-		$sub_array[] = '<button class="btn btn-danger fa fa-trash deleteBanner" type="button" id="'.$row["id"].'" ></button>';
+		// $sub_array[] = '<button class="btn btn-danger fa fa-trash deleteBanner" type="button" id="'.$row["id"].'" ></button>';
 		$data[] = $sub_array;
 		$i++;
 	}

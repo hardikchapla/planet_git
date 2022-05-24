@@ -26,9 +26,11 @@
                         <div class="card">
                             <div class="card-header">
                                 <h4 class="card-title">Pages List</h4>
-                                <div class="card-title"><button type="button" data-toggle="modal"
+                                <div class="card-title">
+                                    <!-- <button type="button" data-toggle="modal"
                                         data-target="#updatePages" class="btn btn-success text-white">Add
-                                        New</button></div>
+                                        New</button> -->
+                                </div>
                             </div>
                             <div class="card-body card-dashboard">
                                 <div class="table-responsive">
@@ -39,7 +41,7 @@
                                                 <th>Name</th>
                                                 <th>Slug</th>
                                                 <th>Update</th>
-                                                <th>Delete</th>
+                                                <!-- <th>Delete</th> -->
                                             </tr>
                                         </thead>
                                         <tfoot>
@@ -48,7 +50,7 @@
                                                 <th>Name</th>
                                                 <th>Slug</th>
                                                 <th>Update</th>
-                                                <th>Delete</th>
+                                                <!-- <th>Delete</th> -->
                                             </tr>
                                         </tfoot>
                                     </table>
@@ -83,7 +85,7 @@
                     </div>
                     <label>Page Slug: </label>
                     <div class="form-group mb-0">
-                        <input type="text" name="page_slug" id="page_slug" placeholder="Enter page slug"
+                        <input type="text" name="page_slug" disabled id="page_slug" placeholder="Enter page slug"
                             class="form-control">
                     </div>
                 </div>

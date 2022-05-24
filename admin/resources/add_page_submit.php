@@ -23,8 +23,9 @@
         $reoutput = array();
         $page_id = $_REQUEST['page_id'];
         $page_name = addslashes($_REQUEST['page_name']);
-        $page_slug = addslashes($_REQUEST['page_slug']);
-        $statement = $db->query("UPDATE phtv_pages SET `page_name` = '$page_name',`slug` = '$page_slug' WHERE id = '$page_id'");
+        // $page_slug = addslashes($_REQUEST['page_slug']);
+        // $statement = $db->query("UPDATE phtv_pages SET `page_name` = '$page_name',`slug` = '$page_slug' WHERE id = '$page_id'");
+        $statement = $db->query("UPDATE phtv_pages SET `page_name` = '$page_name' WHERE id = '$page_id'");
         if(!empty($statement))
         {
             $reoutput['success'] = 'success';

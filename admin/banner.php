@@ -27,9 +27,11 @@
                         <div class="card">
                             <div class="card-header">
                                 <h4 class="card-title">Banner List</h4>
-                                <div class="card-title"><button type="button" data-toggle="modal"
+                                <div class="card-title">
+                                    <!-- <button type="button" data-toggle="modal"
                                         data-target="#updateBanner" class="btn btn-success text-white">Add
-                                        New</button></div>
+                                        New</button> -->
+                                </div>
                             </div>
                             <div class="card-body card-dashboard">
                                 <div class="table-responsive">
@@ -45,7 +47,7 @@
                                                 <th>Link Type</th>
                                                 <th>Banner Type</th>
                                                 <th>Update</th>
-                                                <th>Delete</th>
+                                                <!-- <th>Delete</th> -->
                                             </tr>
                                         </thead>
                                         <tfoot>
@@ -59,7 +61,7 @@
                                                 <th>Link Type</th>
                                                 <th>Banner Type</th>
                                                 <th>Update</th>
-                                                <th>Delete</th>
+                                                <!-- <th>Delete</th> -->
                                             </tr>
                                         </tfoot>
                                     </table>
