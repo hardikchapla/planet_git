@@ -8,7 +8,8 @@
             <div class="col-lg-8 text-center">
                 <h2> My Profile </h2>
                 <div class="liness"></div>
-                <p> The hype cycle for bots exploded in 2016 as developers poured time and money into the dream of <br/>
+                <p> The hype cycle for bots exploded in 2016 as developers poured time and money into the dream of
+                    <br />
                     personal digital assistants.
                 </p>
             </div>
@@ -66,7 +67,7 @@
                         <ul class="nav nav-tabs chat_members_ss" id="myTab" role="tablist">
                             <li class="nav-item">
                                 <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
-                                   aria-controls="home" aria-selected="true">
+                                    aria-controls="home" aria-selected="true">
                                     <div class="d-flex bd-highlight">
                                         <div class="py-2 bd-highlight align-self-center">
                                             <div class="ss_profile_imges">
@@ -83,7 +84,7 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
-                                   aria-controls="profile" aria-selected="false">
+                                    aria-controls="profile" aria-selected="false">
                                     <div class="d-flex bd-highlight">
                                         <div class="py-2 bd-highlight align-self-center">
                                             <div class="ss_profile_imges">
@@ -100,7 +101,7 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
-                                   aria-controls="contact" aria-selected="false">
+                                    aria-controls="contact" aria-selected="false">
                                     <div class="d-flex bd-highlight">
                                         <div class="py-2 bd-highlight align-self-center">
                                             <div class="ss_profile_imges">
@@ -193,10 +194,10 @@
                                         <div class="ss_message_type">
                                             <div class="input-group">
                                                 <input type="text" class="form-control" placeholder="Message"
-                                                       aria-label="Username" aria-describedby="basic-addon1">
+                                                    aria-label="Username" aria-describedby="basic-addon1">
                                                 <div class="input-group-prepend ss_message_paper">
-                                            <span class="input-group-text" id="basic-addon1"> <i
-                                                    class="fa fa-paper-plane" aria-hidden="true"></i> </span>
+                                                    <span class="input-group-text" id="basic-addon1"> <i
+                                                            class="fa fa-paper-plane" aria-hidden="true"></i> </span>
                                                 </div>
                                             </div>
                                         </div>
@@ -277,10 +278,10 @@
                                         <div class="ss_message_type">
                                             <div class="input-group">
                                                 <input type="text" class="form-control" placeholder="Message"
-                                                       aria-label="Username" aria-describedby="basic-addon1">
+                                                    aria-label="Username" aria-describedby="basic-addon1">
                                                 <div class="input-group-prepend ss_message_paper">
-                                            <span class="input-group-text" id="basic-addon1"> <i
-                                                    class="fa fa-paper-plane" aria-hidden="true"></i> </span>
+                                                    <span class="input-group-text" id="basic-addon1"> <i
+                                                            class="fa fa-paper-plane" aria-hidden="true"></i> </span>
                                                 </div>
                                             </div>
                                         </div>
@@ -361,10 +362,10 @@
                                         <div class="ss_message_type">
                                             <div class="input-group">
                                                 <input type="text" class="form-control" placeholder="Message"
-                                                       aria-label="Username" aria-describedby="basic-addon1">
+                                                    aria-label="Username" aria-describedby="basic-addon1">
                                                 <div class="input-group-prepend ss_message_paper">
-                                            <span class="input-group-text" id="basic-addon1"> <i
-                                                    class="fa fa-paper-plane" aria-hidden="true"></i> </span>
+                                                    <span class="input-group-text" id="basic-addon1"> <i
+                                                            class="fa fa-paper-plane" aria-hidden="true"></i> </span>
                                                 </div>
                                             </div>
                                         </div>
@@ -378,6 +379,45 @@
         </div>
     </div>
 </div>
+<?php 
+    $pages = $db->query("SELECT * FROM phtv_pages WHERE slug = 'message'");
+    $fepages = $pages->fetch(PDO::FETCH_ASSOC);
+    
+    $banner = $db->query("SELECT * FROM phtv_banner WHERE page_id = '".$fepages['id']."' AND banner_type = 2");
+    if($banner->rowCount() > 0){
+    $febanner = $banner->fetch(PDO::FETCH_ASSOC);
+        if ($febanner['link_type'] == 1) {
+?>
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ss_advertise cc-banner-image-size">
+                    <!-- <h2>Add Banner</h2> -->
+                    <a href="<?= $febanner['link'] ?>" target="_Blank"><img
+                            src="images/banner_image/<?= $febanner['image'] ?>" width="100%" alt="episodes" /></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<?php } else { ?>
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ss_advertise">
+                    <a href="<?= $febanner['link'] ?>" target="_Blank">
+                        <h2><?= $febanner['title'] ?></h2>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<?php
+} 
+} else { ?>
 <div class="container-fluid">
     <div class="container">
         <div class="row">
@@ -389,10 +429,23 @@
         </div>
     </div>
 </div>
+<?php } ?>
+<!-- <div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ss_advertise">
+                    <h2>Add Banner</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
 
 <?php
     include('footer.php');
 ?>
 
 </body>
+
 </html>

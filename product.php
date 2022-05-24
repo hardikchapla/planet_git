@@ -714,7 +714,7 @@ $product = $db->query("SELECT a.*, b.* FROM phtv_product a LEFT JOIN phtv_produc
 <div class="container-fluid ss_hot_deal_section">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-4 col-sm-6" >
+            <div class="col-lg-4 col-sm-6">
                 <div class="ss_hotdeal">
                     <div class="images">
                         <img src="images/hot_deal.png" alt="image" />
@@ -855,6 +855,45 @@ $product = $db->query("SELECT a.*, b.* FROM phtv_product a LEFT JOIN phtv_produc
         </div>
     </div>
 </div>
+<?php 
+    $pages = $db->query("SELECT * FROM phtv_pages WHERE slug = 'product'");
+    $fepages = $pages->fetch(PDO::FETCH_ASSOC);
+    
+    $banner = $db->query("SELECT * FROM phtv_banner WHERE page_id = '".$fepages['id']."' AND banner_type = 2");
+    if($banner->rowCount() > 0){
+    $febanner = $banner->fetch(PDO::FETCH_ASSOC);
+        if ($febanner['link_type'] == 1) {
+?>
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ss_advertise cc-banner-image-size">
+                    <!-- <h2>Add Banner</h2> -->
+                    <a href="<?= $febanner['link'] ?>" target="_Blank"><img
+                            src="images/banner_image/<?= $febanner['image'] ?>" width="100%" alt="episodes" /></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<?php } else { ?>
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ss_advertise">
+                    <a href="<?= $febanner['link'] ?>" target="_Blank">
+                        <h2><?= $febanner['title'] ?></h2>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<?php
+} 
+} else { ?>
 <div class="container-fluid">
     <div class="container">
         <div class="row">
@@ -866,6 +905,18 @@ $product = $db->query("SELECT a.*, b.* FROM phtv_product a LEFT JOIN phtv_produc
         </div>
     </div>
 </div>
+<?php } ?>
+<!-- <div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ss_advertise">
+                    <h2>Add Banner</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
 
 <?php
 include('footer.php');
