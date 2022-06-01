@@ -284,7 +284,7 @@
                 <li class=" nav-item <?php if($cur_page_main == 'product') {echo 'active';} ?>">
                     <a href="#">
                         <i class="fa fa-cube" aria-hidden="true"></i>
-                        <span class="menu-title text-truncate" data-i18n="Starter kit">Product</span>
+                        <span class="menu-title text-truncate" data-i18n="Starter kit">Star Outpost Store</span>
                     </a>
                     <ul class="menu-content">
                         <li class="<?php if($cur_page == 'product_category') {echo 'active';} ?>">
@@ -327,8 +327,8 @@
                 </li>
                 <li class=" nav-item <?php if($cur_page_main == 'blog') {echo 'active';} ?>">
                     <a href="#">
-                        <i class="fa fa-cube" aria-hidden="true"></i>
-                        <span class="menu-title text-truncate" data-i18n="Starter kit">Blog</span>
+                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                        <span class="menu-title text-truncate" data-i18n="Starter kit">Paraverse</span>
                     </a>
                     <ul class="menu-content">
                         <li class="<?php if($cur_page == 'blog_category') {echo 'active';} ?>">
@@ -347,7 +347,7 @@
                 </li>
                 <li class=" nav-item <?php if($cur_page_main == 'Podcast') {echo 'active';} ?>">
                     <a href="#">
-                        <i class="fa fa-cube" aria-hidden="true"></i>
+                        <i class="fa fa-microphone" aria-hidden="true"></i>
                         <span class="menu-title text-truncate" data-i18n="Starter kit">Audiocast</span>
                     </a>
                     <ul class="menu-content">
@@ -424,19 +424,19 @@
                 <li class=" nav-item <?php if($cur_page_main == 'phtv_24_7') {echo 'active';} ?>">
                     <a href="#">
                         <i class="fa fa-cube" aria-hidden="true"></i>
-                        <span class="menu-title text-truncate" data-i18n="Starter kit">PHTV 24/7</span>
+                        <span class="menu-title text-truncate" data-i18n="Starter kit">PHTV Live</span>
                     </a>
                     <ul class="menu-content">
                         <li class="nav-item <?php if($cur_page == 'live_24_7') {echo 'active';} ?>">
                             <a href="live_24_7">
                                 <i class="bx bx-right-arrow-alt"></i>
-                                <span class="menu-title text-truncate" data-i18n="bxs-dashboard">Live 24/7</span>
+                                <span class="menu-title text-truncate" data-i18n="bxs-dashboard">PHTV Live</span>
                             </a>
                         </li>
                         <li class="nav-item <?php if($cur_page == 'live_24_7_category') {echo 'active';} ?>">
                             <a href="live_24_7_category">
                                 <i class="bx bx-right-arrow-alt"></i>
-                                <span class="menu-title text-truncate" data-i18n="bxs-dashboard">Live 24/7
+                                <span class="menu-title text-truncate" data-i18n="bxs-dashboard">PHTV Live
                                     Category</span>
                             </a>
                         </li>
@@ -508,7 +508,7 @@
                 </li> -->
                 <li class=" nav-item <?php if($cur_page_main == 'high_voltage_show') {echo 'active';} ?>">
                     <a href="#">
-                        <i class="fa fa-video-camera" aria-hidden="true"></i>
+                        <i class="fa fa-bolt" aria-hidden="true"></i>
                         <span class="menu-title text-truncate" data-i18n="Starter kit">High Voltage Show</span>
                     </a>
                     <ul class="menu-content">
