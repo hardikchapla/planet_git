@@ -298,30 +298,45 @@
         <div class="owl-carousel owl-theme" id="ss_product_slider">
             <?php 
                 while ($feinfo = $nft_info->fetch(PDO::FETCH_ASSOC)) {
-                    $date1 = new DateTime(date('Y-m-d'));
-                    $date2 = new DateTime(date('Y-m-d', strtotime($feinfo['created_at'])));
-                    $interval = $date1->diff($date2);
+                    // $date1 = new DateTime(date('Y-m-d'));
+                    // $date2 = new DateTime(date('Y-m-d', strtotime($feinfo['created_at'])));
+                    // $interval = $date1->diff($date2);
             ?>
             <div class="item">
                 <div class="ss_product">
                     <div class="images">
                         <div class="ss_vertical_align_middle">
-                            <?php if(empty($feinfo['image']) || $feinfo['image_type'] != 'image'){ ?>
+                            <?php if($feinfo['image_type'] == 'image'){ ?>
+                            <img src="images/nft_info_image/<?= $feinfo['image'] ?>" alt="images" />
+                            <?php } else if($feinfo['image_type'] == 'gif'){ ?>
+                            <img src="images/nft_info_image/<?= $feinfo['image'] ?>" alt="images" />
+                            <?php } else if($feinfo['image_type'] == 'video'){ ?>
+                            <video width="400" height="530" controls>
+                                <source src="images/nft_info_image/<?= $feinfo['image'] ?>" type="video/mp4">
+                            </video>
+                            <?php } else if($feinfo['image_type'] == 'audio'){ ?>
+                            <audio controls poster='images/planethopper-TV-logo.png'>
+                                <source src="images/nft_info_image/<?= $feinfo['image'] ?>" type="audio/mpeg">
+                            </audio>
+                            <?php } else { ?>
+                            <img src="images/planethopper-TV-logo.png" alt="images" />
+                            <?php } ?>
+                            <!-- <?php if(empty($feinfo['image']) || $feinfo['image_type'] != 'image'){ ?>
                             <img src="images/planethopper-TV-logo.png" alt="images" />
                             <?php } else { ?>
                             <img src="images/nft_info_image/<?= $feinfo['image'] ?>" alt="images" />
-                            <?php } ?>
-                            <?php if($interval->days <= 10){ ?>
+                            <?php } ?> -->
+                            <?php if($feinfo['duration'] <= 10){ ?>
                             <div class="ss_tabgs ss_tabgs_green">
                                 New Drop
                             </div>
-                            <?php } elseif ($interval->days <= 60) { ?>
+                            <?php } elseif ($feinfo['duration'] <= 60) { ?>
                             <div class="ss_tabgs ss_tabgs_orange">
-                                <?= $interval->days ?> Days Left
+                                <?= $feinfo['duration'] ?> Days Left
                             </div>
-                            <?php } elseif ($interval->days <= 90) { ?>
+                            <?php } elseif ($feinfo['duration'] <= 90) { ?>
                             <div class="ss_tabgs ss_tabgs_yellow">
-                                <?= $interval->days ?> Days Left
+                                <?= $feinfo['duration'] ?> Days Left
                             </div>
                             <?php } else { ?>
                             <div class="ss_tabgs ss_tabgs_red">
@@ -493,22 +508,37 @@
                 <div class="ss_product">
                     <div class="images">
                         <div class="ss_vertical_align_middle">
-                            <?php if(empty($feinfo1['image']) || $feinfo1['image_type'] != 'image'){ ?>
+                            <?php if($feinfo1['image_type'] == 'image'){ ?>
+                            <img src="images/nft_info_image/<?= $feinfo1['image'] ?>" alt="images" />
+                            <?php } else if($feinfo1['image_type'] == 'gif'){ ?>
+                            <img src="images/nft_info_image/<?= $feinfo1['image'] ?>" alt="images" />
+                            <?php } else if($feinfo1['image_type'] == 'video'){ ?>
+                            <video width="400" height="530" controls>
+                                <source src="images/nft_info_image/<?= $feinfo1['image'] ?>" type="video/mp4">
+                            </video>
+                            <?php } else if($feinfo1['image_type'] == 'audio'){ ?>
+                            <audio controls poster='images/planethopper-TV-logo.png'>
+                                <source src="images/nft_info_image/<?= $feinfo1['image'] ?>" type="audio/mpeg">
+                            </audio>
+                            <?php } else { ?>
+                            <img src="images/planethopper-TV-logo.png" alt="images" />
+                            <?php } ?>
+                            <!-- <?php if(empty($feinfo1['image']) || $feinfo1['image_type'] != 'image'){ ?>
                             <img src="images/planethopper-TV-logo.png" alt="images" />
                             <?php } else { ?>
                             <img src="images/nft_info_image/<?= $feinfo1['image'] ?>" alt="images" />
-                            <?php } ?>
-                            <?php if($interval1->days <= 10){ ?>
+                            <?php } ?> -->
+                            <?php if($feinfo1['duration'] <= 10){ ?>
                             <div class="ss_tabgs ss_tabgs_green">
                                 New Drop
                             </div>
-                            <?php } elseif ($interval1->days <= 60) { ?>
+                            <?php } elseif ($feinfo1['duration'] <= 60) { ?>
                             <div class="ss_tabgs ss_tabgs_orange">
-                                <?= $interval1->days ?> Days Left
+                                <?= $feinfo1['duration'] ?> Days Left
                             </div>
-                            <?php } elseif ($interval1->days <= 90) { ?>
+                            <?php } elseif ($feinfo1['duration'] <= 90) { ?>
                             <div class="ss_tabgs ss_tabgs_yellow">
-                                <?= $interval1->days ?> Days Left
+                                <?= $feinfo1['duration'] ?> Days Left
                             </div>
                             <?php } else { ?>
                             <div class="ss_tabgs ss_tabgs_red">
