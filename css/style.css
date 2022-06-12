@@ -528,7 +528,7 @@ button:focus {
 }
 
 .ss_drops_blogs h2 {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     margin-bottom: 0;
     line-height: 30px;
@@ -1628,6 +1628,7 @@ a:hover {
     display: table;
     height: 280px;
     width: 100%;
+    margin-bottom: 30px;
 }
 
 .nss_new_chinema:before {
@@ -4271,6 +4272,7 @@ a:hover {
 
 .album_img {
     position: relative;
+    overflow: hidden;
 }
 
 .album_img:before {
@@ -4393,7 +4395,7 @@ a:hover {
 }
 
 .model_youhave_images>img {
-    height: 80px;
+    height: 60px;
 }
 
 .modal {
@@ -5649,6 +5651,7 @@ a:hover {
     font-weight: 600;
     color: rgba(255, 255, 255, 0.7);
     margin-bottom: 0;
+    word-break: break-word;
 }
 
 .ss_player_music h3 {
@@ -8838,6 +8841,7 @@ form .error {
     font-size: 16px;
     font-weight: 700;
     margin-bottom: 0;
+    word-break: break-word;
 }
 
 .ss_pod_contents .ss_profiles_creatr {
@@ -8868,4 +8872,13 @@ form .error {
 .cc-banner-image-size {
     overflow: hidden;
     height: 250px !important;
+}
+
+.ss_new_otf .d-flex{
+    display: inline-block!important;
+}
+
+.ss_new_otf{
+    text-align: center;
+    min-height: 220px;
 }

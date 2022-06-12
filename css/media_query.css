@@ -3486,3 +3486,34 @@
     }
 
 }
+
+
+@media (max-width: 1300px) {
+    .album_con {
+        padding: 0px 0px 0px 0px;
+    }
+
+    .album_btn {
+        height: 35px;
+        width: 35px;
+        line-height: 35px;
+    }
+
+    .album_btn i {
+        font-size: 16px;
+    }
+
+    .link_bg {
+        background-color: #161615;
+        height: 35px;
+        width: 35px;
+        border-radius: 35px;
+        text-align: center;
+        line-height: 35px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .model_youhave_images>img {
+        height: 50px;
+    }
+}

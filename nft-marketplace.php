@@ -48,7 +48,7 @@
         <div class="row">
             <?php while ($felogos = $logos->fetch(PDO::FETCH_ASSOC)) { ?>
             <div class="col-lg-3">
-                <div class="ss_drops_blogs">
+                <div class="ss_drops_blogs ss_new_otf">
                     <div class="d-flex bd-highlight align-self-center">
                         <div class="p-2 bd-highlight">
                             <div class="ss_drops_images">
@@ -133,6 +133,17 @@
                     </div>
                 </div>
             </div>
+
+                <div class="col-lg-6">
+                    <div class="nss_new_chinema"
+                         style="background-image:url(images/nft_listing_thumbnail/<?= $felisting['thumbnail'] ?>)">
+                        <div class="ss_des">
+                            <h2> <?= $felisting['title'] ?> </h2>
+                            <?= ($felisting['description'] != '') ? $felisting['description']:'' ?>
+                        </div>
+                    </div>
+                </div>
+
             <?php } ?>
             <!-- <div class="col-lg-6">
                 <div class="nss_new_chinemaB ">

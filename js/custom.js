@@ -126,7 +126,7 @@ $('#album_slider').owlCarousel({
             items: 2
         },
         1000: {
-            items: 2
+            items: 3
         },
         1500: {
             items: 3
@@ -241,7 +241,7 @@ $('#album_slider1').owlCarousel({
             items: 2
         },
         1000: {
-            items: 2
+            items: 3
         },
         1500: {
             items: 3
@@ -266,7 +266,7 @@ $('#album_slider2').owlCarousel({
             items: 2
         },
         1000: {
-            items: 2
+            items: 3
         },
         1500: {
             items: 3
@@ -291,7 +291,7 @@ $('#album_slider3').owlCarousel({
             items: 2
         },
         1000: {
-            items: 2
+            items: 3
         },
         1500: {
             items: 3
@@ -315,7 +315,7 @@ $('#exciting_slider').owlCarousel({
             items: 2
         },
         1000: {
-            items: 2
+            items: 3
         },
         1500: {
             items: 3
@@ -339,7 +339,7 @@ $('#featured_slider').owlCarousel({
             items: 2
         },
         1000: {
-            items: 2
+            items: 3
         },
         1500: {
             items: 3
@@ -363,7 +363,7 @@ $('#top_slider').owlCarousel({
             items: 2
         },
         1000: {
-            items: 2
+            items: 3
         },
         1500: {
             items: 3
@@ -387,7 +387,7 @@ $('#coming_slider').owlCarousel({
             items: 2
         },
         1000: {
-            items: 2
+            items: 3
         },
         1500: {
             items: 3
@@ -411,7 +411,7 @@ $('#documentaries_slider').owlCarousel({
             items: 2
         },
         1000: {
-            items: 2
+            items: 3
         },
         1500: {
             items: 3
@@ -435,7 +435,7 @@ $('#animated_slider').owlCarousel({
             items: 2
         },
         1000: {
-            items: 2
+            items: 3
         },
         1500: {
             items: 3
@@ -459,7 +459,7 @@ $('#cinematics_slider').owlCarousel({
             items: 2
         },
         1000: {
-            items: 2
+            items: 3
         },
         1500: {
             items: 3
@@ -483,7 +483,7 @@ $('#cartoons_slider').owlCarousel({
             items: 2
         },
         1000: {
-            items: 2
+            items: 3
         },
         1500: {
             items: 3
@@ -507,7 +507,7 @@ $('#video_slider').owlCarousel({
             items: 2
         },
         1000: {
-            items: 2
+            items: 3
         },
         1500: {
             items: 3
@@ -517,12 +517,12 @@ $('#video_slider').owlCarousel({
 
 
 $('#planet_logo_show').owlCarousel({
-    loop: false,
+    loop: true,
     margin: 10,
     dots: false,
     nav: false,
     autoplay: true,
-    autoplayTimeout: 1000,
+    autoplayTimeout: 2000,
     autoplayHoverPause: true,
     navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
     responsive: {
