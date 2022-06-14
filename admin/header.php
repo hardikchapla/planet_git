@@ -386,7 +386,7 @@
                         <li class="<?php if($cur_page == 'nft_listing') {echo 'active';} ?>">
                             <a class="d-flex align-items-center" href="nft_listing">
                                 <i class="bx bx-right-arrow-alt"></i>
-                                <span class="menu-item text-truncate" data-i18n="1 column">NFT Listing</span>
+                                <span class="menu-item text-truncate" data-i18n="1 column">NFT Banner</span>
                             </a>
                         </li>
                         <li class="<?php if($cur_page == 'nft_logos') {echo 'active';} ?>">
@@ -398,7 +398,7 @@
                         <li class="<?php if($cur_page == 'nft_info') {echo 'active';} ?>">
                             <a class="d-flex align-items-center" href="nft_info">
                                 <i class="bx bx-right-arrow-alt"></i>
-                                <span class="menu-item text-truncate" data-i18n="1 column">NFT Info</span>
+                                <span class="menu-item text-truncate" data-i18n="1 column">NFT Listing</span>
                             </a>
                         </li>
                     </ul>

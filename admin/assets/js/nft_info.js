@@ -61,7 +61,7 @@ $(document).ready(function() {
                 $('#nft_info_attribute_border_type').val(data.nft_info_attribute_border_type);
                 $('#nft_info_id').val(nft_info_id);
                 $('#action').val("Edit");
-                $('#nft_info_form_title').html("Update NFT Info");
+                $('#nft_info_form_title').html("Update NFT Listing");
             }
         })
     });

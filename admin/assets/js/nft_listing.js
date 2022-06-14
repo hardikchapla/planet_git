@@ -42,7 +42,7 @@ $(document).ready(function() {
                 nft_listing_description.setData(data.nft_listing_description);
                 $('#nft_listing_id').val(nft_listing_id);
                 $('#action').val("Edit");
-                $('#nft_listing_form_title').html("Update NFT Listing");
+                $('#nft_listing_form_title').html("Update NFT Banner");
             }
         })
     });
@@ -51,7 +51,7 @@ $(document).ready(function() {
         e.preventDefault();
         Swal.fire({
             title: 'Are you sure?',
-            text: 'You will not be able to recover this nft listing!',
+            text: 'You will not be able to recover this nft banner!',
             type: "warning",
             showCancelButton: true,
             confirmButtonClass: 'btn-danger',
