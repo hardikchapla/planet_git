@@ -134,7 +134,7 @@
                 </div>
             </div>
 
-                <div class="col-lg-6">
+            <!-- <div class="col-lg-6">
                     <div class="nss_new_chinema"
                          style="background-image:url(images/nft_listing_thumbnail/<?= $felisting['thumbnail'] ?>)">
                         <div class="ss_des">
@@ -142,7 +142,7 @@
                             <?= ($felisting['description'] != '') ? $felisting['description']:'' ?>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
             <?php } ?>
             <!-- <div class="col-lg-6">

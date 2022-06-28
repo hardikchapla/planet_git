@@ -368,7 +368,7 @@
                 <li class=" nav-item <?php if($cur_page_main == 'NFT') {echo 'active';} ?>">
                     <a href="#">
                         <i class="fa fa-cube" aria-hidden="true"></i>
-                        <span class="menu-title text-truncate" data-i18n="Starter kit">NFT Market Place</span>
+                        <span class="menu-title text-truncate" data-i18n="Starter kit">NFT Marketplace</span>
                     </a>
                     <ul class="menu-content">
                         <li class="<?php if($cur_page == 'nft_category') {echo 'active';} ?>">
@@ -386,7 +386,7 @@
                         <li class="<?php if($cur_page == 'nft_listing') {echo 'active';} ?>">
                             <a class="d-flex align-items-center" href="nft_listing">
                                 <i class="bx bx-right-arrow-alt"></i>
-                                <span class="menu-item text-truncate" data-i18n="1 column">NFT Banner</span>
+                                <span class="menu-item text-truncate" data-i18n="1 column">NFT Banners</span>
                             </a>
                         </li>
                         <li class="<?php if($cur_page == 'nft_logos') {echo 'active';} ?>">
@@ -445,7 +445,7 @@
                 <li class="nav-item <?php if($cur_page == 'live_tv') {echo 'active';} ?>">
                     <a href="live_tv">
                         <i class="fa fa-video-camera" aria-hidden="true"></i>
-                        <span class="menu-title text-truncate" data-i18n="bxs-dashboard">Live TV</span>
+                        <span class="menu-title text-truncate" data-i18n="bxs-dashboard">PHTV 24/7</span>
                     </a>
                 </li>
                 <li class="nav-item <?php if($cur_page == 'banner') {echo 'active';} ?>">
