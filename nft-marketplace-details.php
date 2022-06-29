@@ -9,25 +9,27 @@
     <div class="container">
         <div class="ss_details_model">
             <div class="row">
-                <div class="col-lg-5 align-self-center">
+                <div class="col-lg-3 align-self-center">
                     <div class="owl-carousel owl-theme" id="ss_slider_details">
                         <div class="item">
                             <?php if($fenft['image_type'] == 'image'){ ?>
-                            <div class="ss_model_images">
+                            <div class="ss_model_images ss_nft_marketplace_images">
                                 <img src="images/nft_info_image/<?= $fenft['image'] ?>" alt="details" />
                             </div>
                             <?php } else if($fenft['image_type'] == 'gif'){ ?>
-                            <div class="ss_model_images">
+                            <div class="ss_model_images ss_nft_marketplace_images">
                                 <img src="images/nft_info_image/<?= $fenft['image'] ?>" alt="details" />
                             </div>
                             <?php } else if($fenft['image_type'] == 'video'){ ?>
-                            <div class="ss_model_images">
+                            <div class="ss_model_images ss_nft_marketplace_images">
+                                <div class="ss_nft_middles">
                                 <video width="670" height="500" controls>
                                     <source src="images/nft_info_image/<?= $fenft['image'] ?>" type="video/mp4">
                                 </video>
+                                </div>
                             </div>
                             <?php } else if($fenft['image_type'] == 'audio'){ ?>
-                            <div class="ss_model_images audioPlayer">
+                            <div class="ss_model_images audioPlayer ss_nft_marketplace_images">
                                 <audio controls poster='images/planethopper-TV-logo.png'>
                                     <source src="images/nft_info_image/<?= $fenft['image'] ?>" type="audio/mpeg">
                                 </audio>
@@ -50,7 +52,7 @@
                         </div> -->
                     </div>
                 </div>
-                <div class="col-lg-7 align-self-center">
+                <div class="col-lg-9 align-self-center">
                     <div class="ss_blog_details_des">
                         <h2> <?= $fenft['name'] ?> </h2>
                         <h5> <?= $fenft['price'] ?> <?= $fenft['price_type'] ?> <span> ($58.64) </span></h5>

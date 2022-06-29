@@ -42,7 +42,7 @@
                                             <tr>
                                                 <th>No.</th>
                                                 <th>Image</th>
-                                                <th>Name</th>
+                                                <th class="name_tables_width">Name</th>
                                                 <th>Price</th>
                                                 <th>Price type</th>
                                                 <th>Sale Id</th>

@@ -166,3 +166,7 @@ form .error {
     background: -webkit-linear-gradient(#292b2b 41%,rgba(41,43,43,.11) 95%,rgba(41,43,43,0));
     background: linear-gradient(#292b2b 41%,rgba(41,43,43,.11) 95%,rgba(41,43,43,0));
 }
+
+.name_tables_width{
+    width: 150px;
+}
