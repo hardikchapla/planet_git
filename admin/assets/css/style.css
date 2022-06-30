@@ -168,5 +168,5 @@ form .error {
 }
 
 .name_tables_width{
-    width: 150px;
+    min-width: 200px!important;
 }
