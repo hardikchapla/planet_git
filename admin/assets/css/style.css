@@ -170,3 +170,7 @@ form .error {
 .name_tables_width{
     min-width: 200px!important;
 }
+
+.bloglist .name_tables_width{
+    min-width: 200px!important;
+}

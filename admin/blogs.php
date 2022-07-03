@@ -42,8 +42,8 @@
                                                 <th>No.</th>
                                                 <th>Image</th>
                                                 <!-- <th>Type</th> -->
-                                                <th>Title</th>
-                                                <th>Subtitle</th>
+                                                <th class="name_tables_width">Title</th>
+                                                <th class="name_tables_width">Subtitle</th>
                                                 <!-- <th>Description</th> -->
                                                 <th>Auther</th>
                                                 <th>Category</th>
@@ -57,8 +57,8 @@
                                                 <th>No.</th>
                                                 <th>Image</th>
                                                 <!-- <th>Type</th> -->
-                                                <th>Title</th>
-                                                <th>Subtitle</th>
+                                                <th class="name_tables_width">Title</th>
+                                                <th class="name_tables_width">Subtitle</th>
                                                 <!-- <th>Description</th> -->
                                                 <th>Auther</th>
                                                 <th>Category</th>

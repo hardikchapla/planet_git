@@ -1,5 +1,6 @@
 <?php
 	include('../../inc/connection/connection.php');
+error_reporting(0);
 	$reoutput = array();
 	$query = "SELECT a.*,b.name,c.category_name FROM phtv_blog a, phtv_blog_auther b, phtv_blog_category c WHERE a.auther_id = b.id AND a.category_id = c.id";
 	$statement = $db->query($query);
