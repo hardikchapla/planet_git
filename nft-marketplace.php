@@ -4,7 +4,7 @@
    $collection_id = (isset($_REQUEST['collection_id']) && !empty($_REQUEST['collection_id'])) ? base64_decode($_REQUEST['collection_id']):'';
    $category = $db->query("SELECT * FROM phtv_nft_categories");
    $collection = $db->query("SELECT * FROM phtv_nft_collection");
-   $listing = $db->query("SELECT * FROM phtv_nft_listing");
+   $listing = $db->query("SELECT * FROM phtv_nft_listing ORDER BY id DESC LIMIT 4");
    $logos = $db->query("SELECT * FROM phtv_nft_logos");
    if(!empty($category_id) && !empty($collection_id)){
         $nft_info = $db->query("SELECT * FROM phtv_nft_info WHERE category_id = '$category_id' AND collection_id = '$collection_id'");
@@ -360,10 +360,17 @@
                         <h5><?= $feinfo['name'] ?></h5>
                         <div class="d-flex bd-highlight">
                             <div class=" flex-grow-1 bd-highlight">
-                                <p> <?= $feinfo['price'] ?> <?= $feinfo['price_type'] ?> <span> ($58.64) </span></p>
+                                <p> <?= $feinfo['price'] ?> <?= $feinfo['price_type'] ?>
+                                    <?php
+                                    if (!empty($_SESSION['userid'])) { ?>
+                                    <span> ($58.64) </span>
+                                    <?php }
+                                    ?>
+
+                                </p>
                             </div>
                             <div class=" bd-highlight">
-                                <p><span> M#154 | 200 </span></p>
+                                <p><span> CA#154 | 200 </span></p>
                             </div>
                         </div>
                         <div class="d-flex bd-highlight ss_btn">
