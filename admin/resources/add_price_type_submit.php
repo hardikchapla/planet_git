@@ -11,10 +11,10 @@
         if(!empty($statement))
         {
             $reoutput['success'] = 'success';
-            $reoutput['message'] = 'Price type added successfully';
+            $reoutput['message'] = 'Asset type added successfully';
         } else {
             $reoutput['success'] = 'fail';
-            $reoutput['message'] = 'Price type not added';
+            $reoutput['message'] = 'Asset type not added';
         }
         echo json_encode($reoutput);
     }
@@ -26,10 +26,10 @@
         if(!empty($statement))
         {
             $reoutput['success'] = 'success';
-            $reoutput['message'] = 'Price type updated successfully';
+            $reoutput['message'] = 'Asset type updated successfully';
         } else {
             $reoutput['success'] = 'fail';
-            $reoutput['message'] = 'Price type not updated';
+            $reoutput['message'] = 'Asset type not updated';
         }
         echo json_encode($reoutput);
     }

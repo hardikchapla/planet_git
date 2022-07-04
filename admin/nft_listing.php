@@ -8,12 +8,12 @@
         <div class="content-header row">
             <div class="content-header-left col-12 mb-2 mt-1">
                 <div class="breadcrumbs-top">
-                    <h5 class="content-header-title float-left pr-1 mb-0">NFT Banner</h5>
+                    <h5 class="content-header-title float-left pr-1 mb-0">DA Banner</h5>
                     <div class="breadcrumb-wrapper d-none d-sm-block">
                         <ol class="breadcrumb p-0 mb-0 pl-1">
                             <li class="breadcrumb-item"><a href="dashboard"><i class="bx bx-home-alt"></i></a>
                             </li>
-                            <li class="breadcrumb-item active">NFT Banner
+                            <li class="breadcrumb-item active">DA Banner
                             </li>
                         </ol>
                     </div>
@@ -27,7 +27,7 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">NFT Banner List</h4>
+                                <h4 class="card-title">DA Banner List</h4>
                                 <div class="card-title"><button type="button" data-toggle="modal"
                                         data-target="#updateNFTListing" class="btn btn-success text-white">Add
                                         New</button></div>
@@ -72,7 +72,7 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="nft_listing_form_title">Add NFT Banner</h4>
+                <h4 class="modal-title" id="nft_listing_form_title">Add DA Banner</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <i class="bx bx-x"></i>
                 </button>
@@ -95,7 +95,7 @@
                             <label>Title: </label>
                             <div class="form-group mb-0">
                                 <input type="text" name="nft_listing_title" id="nft_listing_title"
-                                    placeholder="Enter nft listing title" class="form-control">
+                                    placeholder="Enter DA listing title" class="form-control">
                             </div>
                         </div>
                     </div>

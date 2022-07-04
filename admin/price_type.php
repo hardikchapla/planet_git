@@ -8,11 +8,11 @@
         <div class="content-header row">
             <div class="content-header-left col-12 mb-2 mt-1">
                 <div class="breadcrumbs-top">
-                    <h5 class="content-header-title float-left pr-1 mb-0">Price Type</h5>
+                    <h5 class="content-header-title float-left pr-1 mb-0">Asset Type</h5>
                     <div class="breadcrumb-wrapper d-none d-sm-block">
                         <ol class="breadcrumb p-0 mb-0 pl-1">
                             <li class="breadcrumb-item"><a href="dashboard"><i class="bx bx-home-alt"></i></a></li>
-                            <li class="breadcrumb-item active">Price Type</li>
+                            <li class="breadcrumb-item active">Asset Type</li>
                         </ol>
                     </div>
                 </div>
@@ -25,7 +25,7 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">Price Type List</h4>
+                                <h4 class="card-title">Asset Type List</h4>
                                 <div class="card-title"><button type="button" data-toggle="modal"
                                         data-target="#updatePriceType" class="btn btn-success text-white">Add
                                         New</button></div>
@@ -66,7 +66,7 @@
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="price_type_form_title">Add Price Type</h4>
+                <h4 class="modal-title" id="price_type_form_title">Add Asset Type</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <i class="bx bx-x"></i>
                 </button>
@@ -74,9 +74,9 @@
             <form id="updatePriceTypeForm" method="post" enctype="multipart/form-data">
                 <input type="hidden" name="price_type_id" id="price_type_id">
                 <div class="modal-body">
-                    <label>Price Type: </label>
+                    <label>Asset Type: </label>
                     <div class="form-group mb-0">
-                        <input type="text" name="price_type" id="price_type" placeholder="Enter price type"
+                        <input type="text" name="price_type" id="price_type" placeholder="Enter asset type"
                             class="form-control">
                     </div>
                 </div>

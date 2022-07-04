@@ -11,12 +11,12 @@
         <div class="content-header row">
             <div class="content-header-left col-12 mb-2 mt-1">
                 <div class="breadcrumbs-top">
-                    <h5 class="content-header-title float-left pr-1 mb-0">NFT Listing</h5>
+                    <h5 class="content-header-title float-left pr-1 mb-0">DA Listing</h5>
                     <div class="breadcrumb-wrapper d-none d-sm-block">
                         <ol class="breadcrumb p-0 mb-0 pl-1">
                             <li class="breadcrumb-item"><a href="dashboard"><i class="bx bx-home-alt"></i></a>
                             </li>
-                            <li class="breadcrumb-item active">NFT Listing
+                            <li class="breadcrumb-item active">DA Listing
                             </li>
                         </ol>
                     </div>
@@ -30,7 +30,7 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">NFT Listing List</h4>
+                                <h4 class="card-title">DA Listing List</h4>
                                 <div class="card-title"><button type="button" data-toggle="modal"
                                         data-target="#updateNFTInfo" class="btn btn-success text-white">Add
                                         New</button></div>
@@ -44,7 +44,7 @@
                                                 <th>Image</th>
                                                 <th class="name_tables_width">Name</th>
                                                 <th>Price</th>
-                                                <th>Price type</th>
+                                                <th>Type</th>
                                                 <th>Sale Id</th>
                                                 <th>Assets Name</th>
                                                 <th>Assets Id</th>
@@ -60,7 +60,7 @@
                                                 <th>Image</th>
                                                 <th>Name</th>
                                                 <th>Price</th>
-                                                <th>Price Type</th>
+                                                <th>Type</th>
                                                 <th>Sale Id</th>
                                                 <th>Assets Name</th>
                                                 <th>Assets Id</th>
@@ -87,7 +87,7 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="nft_info_form_title">Add NFT Listing</h4>
+                <h4 class="modal-title" id="nft_info_form_title">Add DA Listing</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <i class="bx bx-x"></i>
                 </button>
@@ -111,7 +111,7 @@
                             <label>Name: </label>
                             <div class="form-group mb-0">
                                 <input type="text" name="nft_info_name" id="nft_info_name"
-                                    placeholder="Enter nft info name" class="form-control">
+                                    placeholder="Enter DA info name" class="form-control">
                             </div>
                         </div>
                     </div>
@@ -120,7 +120,7 @@
                             <label>Price: </label>
                             <div class="form-group mb-0">
                                 <input type="number" name="nft_info_price" id="nft_info_price"
-                                    placeholder="Enter nft info price" class="form-control">
+                                    placeholder="Enter DA info price" class="form-control">
                             </div>
                         </div>
                     </div>
@@ -167,63 +167,63 @@
                         <div class="col">
                             <label for="nft_info_sale_id" class="form-label">Sale Id:</label>
                             <input type="text" name="nft_info_sale_id" id="nft_info_sale_id"
-                                placeholder="Enter nft info sale id" class="form-control">
+                                placeholder="Enter DA info sale id" class="form-control">
                         </div>
                     </div>
                     <div class="row mb-1">
                         <div class="col">
                             <label for="nft_info_assets_name" class="form-label">Assets Name:</label>
                             <input type="text" name="nft_info_assets_name" id="nft_info_assets_name"
-                                placeholder="Enter nft info assets name" class="form-control">
+                                placeholder="Enter DA info assets name" class="form-control">
                         </div>
                     </div>
                     <div class="row mb-1">
                         <div class="col">
                             <label for="nft_info_assets_id" class="form-label">Assets Id:</label>
                             <input type="text" name="nft_info_assets_id" id="nft_info_assets_id"
-                                placeholder="Enter nft info assets Id" class="form-control">
+                                placeholder="Enter DA info assets Id" class="form-control">
                         </div>
                     </div>
                     <div class="row mb-1">
                         <div class="col">
                             <label for="nft_info_meant_no" class="form-label">Mint No. :</label>
                             <input type="text" name="nft_info_meant_no" id="nft_info_meant_no"
-                                placeholder="Enter nft info meant no" class="form-control">
+                                placeholder="Enter DA info meant no" class="form-control">
                         </div>
                     </div>
                     <div class="row mb-1">
                         <div class="col">
                             <label for="nft_info_duration" class="form-label">Duration:</label>
                             <input type="text" name="nft_info_duration" id="nft_info_duration"
-                                placeholder="Enter nft info duration" class="form-control">
+                                placeholder="Enter DA info duration" class="form-control">
                         </div>
                     </div>
                     <div class="row mb-1">
                         <div class="col">
                             <label for="nft_info_attribute_name" class="form-label">Attribute Name:</label>
                             <input type="text" name="nft_info_attribute_name" id="nft_info_attribute_name"
-                                placeholder="Enter nft info attribute name" class="form-control">
+                                placeholder="Enter DA info attribute name" class="form-control">
                         </div>
                     </div>
                     <div class="row mb-1">
                         <div class="col">
                             <label for="nft_info_attribute_image" class="form-label">Attribute Image:</label>
                             <input type="text" name="nft_info_attribute_image" id="nft_info_attribute_image"
-                                placeholder="Enter nft info attribute image" class="form-control">
+                                placeholder="Enter DA info attribute image" class="form-control">
                         </div>
                     </div>
                     <div class="row mb-1">
                         <div class="col">
                             <label for="nft_info_attribute_bg_image" class="form-label">Attribute BG Image:</label>
                             <input type="text" name="nft_info_attribute_bg_image" id="nft_info_attribute_bg_image"
-                                placeholder="Enter nft info attribute bg image" class="form-control">
+                                placeholder="Enter DA info attribute bg image" class="form-control">
                         </div>
                     </div>
                     <div class="row mb-1">
                         <div class="col">
                             <label for="nft_info_attribute_object" class="form-label">Attribute Object:</label>
                             <input type="text" name="nft_info_attribute_object" id="nft_info_attribute_object"
-                                placeholder="Enter nft info attribute object" class="form-control">
+                                placeholder="Enter DA info attribute object" class="form-control">
                         </div>
                     </div>
                     <div class="row mb-1">
@@ -232,7 +232,7 @@
                                 Collection:</label>
                             <input type="text" name="nft_info_attribute_object_collection"
                                 id="nft_info_attribute_object_collection"
-                                placeholder="Enter nft info attribute object collection" class="form-control">
+                                placeholder="Enter DA info attribute object collection" class="form-control">
                         </div>
                     </div>
                     <div class="row mb-1">
@@ -240,7 +240,7 @@
                             <label for="nft_info_attribute_object_no" class="form-label">Attribute Object
                                 No:</label>
                             <input type="text" name="nft_info_attribute_object_no" id="nft_info_attribute_object_no"
-                                placeholder="Enter nft info attribute object no" class="form-control">
+                                placeholder="Enter DA info attribute object no" class="form-control">
                         </div>
                     </div>
                     <div class="row mb-1">
@@ -248,7 +248,7 @@
                             <label for="nft_info_attribute_border_color" class="form-label">Attribute Border
                                 Color:</label>
                             <input type="text" name="nft_info_attribute_border_color"
-                                id="nft_info_attribute_border_color" placeholder="Enter nft info attribute border color"
+                                id="nft_info_attribute_border_color" placeholder="Enter DA info attribute border color"
                                 class="form-control">
                         </div>
                     </div>
@@ -257,7 +257,7 @@
                             <label for="nft_info_attribute_border_type" class="form-label">Attribute Border
                                 Type:</label>
                             <input type="text" name="nft_info_attribute_border_type" id="nft_info_attribute_border_type"
-                                placeholder="Enter nft info attribute border type" class="form-control">
+                                placeholder="Enter DA info attribute border type" class="form-control">
                         </div>
                     </div>
                 </div>

@@ -13,7 +13,7 @@
 		if ($stmt) 
 		{
 			$response['success']  = 'success';
-			$response['message'] = 'Price type deleted successfully';
+			$response['message'] = 'Asset type deleted successfully';
 		} else {
 			$response['success']  = 'fail';
 			$response['message'] = 'Oops! Something went wrong';

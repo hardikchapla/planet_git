@@ -25,7 +25,7 @@
 		$sub_array[] = $image;
 		$sub_array[] = $row['name'];
 		$sub_array[] = $row['price'];
-		$sub_array[] = $row['price_type'];
+		$sub_array[] = $row['image_type'];
 		$sub_array[] = $row['sale_id'];
 		$sub_array[] = $row['assets_name'];
 		$sub_array[] = $row['assets_id'];
