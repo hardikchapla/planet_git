@@ -68,7 +68,7 @@ $(document).ready(function() {
                 );
                 $("#nft_info_id").val(nft_info_id);
                 $("#action").val("Edit");
-                $("#nft_info_form_title").html("Update DA Listing");
+                $("#nft_info_form_title").html("Update Asset Listing");
             },
         });
     });
@@ -77,7 +77,7 @@ $(document).ready(function() {
         e.preventDefault();
         Swal.fire({
             title: "Are you sure?",
-            text: "You will not be able to recover this DA info!",
+            text: "You will not be able to recover this Asset info!",
             type: "warning",
             showCancelButton: true,
             confirmButtonClass: "btn-danger",
@@ -171,59 +171,59 @@ $(document).ready(function() {
         },
         messages: {
             nft_info_name: {
-                required: "Please provide a DA info name",
+                required: "Please provide a Asset info name",
             },
             nft_info_price: {
-                required: "Please provide a DA info price",
+                required: "Please provide a Asset info price",
             },
             nft_info_description: {
                 required: "Please enter podcast description",
                 minlength: "Please enter minimum 10 characters",
             },
             selectCategory: {
-                required: "Please select DA cotegory",
+                required: "Please select Asset cotegory",
             },
             selectCollections: {
-                required: "Please select DA collections",
+                required: "Please select Asset collections",
             },
             nft_info_sale_id: {
-                required: "Please provide a DA info sale id",
+                required: "Please provide a Asset info sale id",
             },
             nft_info_assets_name: {
-                required: "Please provide a DA info assets name",
+                required: "Please provide a Asset info assets name",
             },
             nft_info_assets_id: {
-                required: "Please provide a DA info assets id",
+                required: "Please provide a Asset info assets id",
             },
             nft_info_meant_no: {
-                required: "Please provide a DA info meant no",
+                required: "Please provide a Asset info meant no",
             },
             nft_info_duration: {
-                required: "Please provide a DA info duration",
+                required: "Please provide a Asset info duration",
             },
             nft_info_attribute_name: {
-                required: "Please provide a DA info attribute name",
+                required: "Please provide a Asset info attribute name",
             },
             nft_info_attribute_image: {
-                required: "Please provide a DA info attribute image",
+                required: "Please provide a Asset info attribute image",
             },
             nft_info_attribute_bg_image: {
-                required: "Please provide a DA info attribute bg image",
+                required: "Please provide a Asset info attribute bg image",
             },
             nft_info_attribute_object: {
-                required: "Please provide a DA info attribute object",
+                required: "Please provide a Asset info attribute object",
             },
             nft_info_attribute_object_collection: {
-                required: "Please provide a DA info attribute object collection",
+                required: "Please provide a Asset info attribute object collection",
             },
             nft_info_attribute_object_no: {
-                required: "Please provide a DA info attribute object no",
+                required: "Please provide a Asset info attribute object no",
             },
             nft_info_attribute_border_color: {
-                required: "Please provide a DA info attribute border color",
+                required: "Please provide a Asset info attribute border color",
             },
             nft_info_attribute_border_type: {
-                required: "Please provide a DA info attribute border type",
+                required: "Please provide a Asset info attribute border type",
             },
         },
         submitHandler: function(form) {

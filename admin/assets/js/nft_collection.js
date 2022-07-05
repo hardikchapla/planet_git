@@ -30,7 +30,7 @@ $(document).ready(function() {
                 $("#nft_collection_name").val(data.nft_collection_name);
                 $("#nft_collection_id").val(nft_collection_id);
                 $("#action").val("Edit");
-                $("#nft_collection_title").html("Update DA Collection");
+                $("#nft_collection_title").html("Update Asset Collection");
             },
         });
     });
@@ -39,7 +39,7 @@ $(document).ready(function() {
         e.preventDefault();
         Swal.fire({
             title: "Are you sure?",
-            text: "You will not be able to recover this Product brand!",
+            text: "You will not be able to recover this asset Collections!",
             type: "warning",
             showCancelButton: true,
             confirmButtonClass: "btn-danger",
@@ -81,7 +81,7 @@ $(document).ready(function() {
         },
         messages: {
             nft_collection_name: {
-                required: "Please provide a DA collection name",
+                required: "Please provide a Asset collection name",
             },
         },
         submitHandler: function(form) {

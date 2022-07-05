@@ -41,7 +41,7 @@ $(document).ready(function() {
                 nft_listing_description.setData(data.nft_listing_description);
                 $("#nft_listing_id").val(nft_listing_id);
                 $("#action").val("Edit");
-                $("#nft_listing_form_title").html("Update DA Banner");
+                $("#nft_listing_form_title").html("Update Asset Banner");
             },
         });
     });
@@ -50,7 +50,7 @@ $(document).ready(function() {
         e.preventDefault();
         Swal.fire({
             title: "Are you sure?",
-            text: "You will not be able to recover this DA banner!",
+            text: "You will not be able to recover this Asset banner!",
             type: "warning",
             showCancelButton: true,
             confirmButtonClass: "btn-danger",
@@ -92,7 +92,7 @@ $(document).ready(function() {
         },
         messages: {
             nft_listing_title: {
-                required: "Please provide a DA listing title",
+                required: "Please provide a Asset listing title",
             },
         },
         submitHandler: function(form) {

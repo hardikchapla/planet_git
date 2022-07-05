@@ -30,7 +30,7 @@ $(document).ready(function() {
                 $("#nft_logos_name").val(data.nft_logos_name);
                 $("#nft_logos_id").val(nft_logos_id);
                 $("#action").val("Edit");
-                $("#nft_logos_form_title").html("Update DA Logos");
+                $("#nft_logos_form_title").html("Update Asset Logos");
             },
         });
     });
@@ -39,7 +39,7 @@ $(document).ready(function() {
         e.preventDefault();
         Swal.fire({
             title: "Are you sure?",
-            text: "You will not be able to recover this DA listing!",
+            text: "You will not be able to recover this Asset listing!",
             type: "warning",
             showCancelButton: true,
             confirmButtonClass: "btn-danger",
@@ -81,7 +81,7 @@ $(document).ready(function() {
         },
         messages: {
             nft_logos_name: {
-                required: "Please provide a DA logo name",
+                required: "Please provide a Asset logo name",
             },
         },
         submitHandler: function(form) {

@@ -29,7 +29,7 @@ $(document).ready(function() {
                 $("#nft_category_name").val(data.nft_category_name);
                 $("#nft_category_id").val(nft_category_id);
                 $("#action").val("Edit");
-                $("#nft_category_form_title").html("Update DA Category");
+                $("#nft_category_form_title").html("Update Asset Category");
             },
         });
     });
@@ -38,7 +38,7 @@ $(document).ready(function() {
         e.preventDefault();
         Swal.fire({
             title: "Are you sure?",
-            text: "You will not be able to recover this DA category!",
+            text: "You will not be able to recover this Asset category!",
             type: "warning",
             showCancelButton: true,
             confirmButtonClass: "btn-danger",

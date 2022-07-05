@@ -8,12 +8,12 @@
         <div class="content-header row">
             <div class="content-header-left col-12 mb-2 mt-1">
                 <div class="breadcrumbs-top">
-                    <h5 class="content-header-title float-left pr-1 mb-0">DA Category</h5>
+                    <h5 class="content-header-title float-left pr-1 mb-0">Asset Category</h5>
                     <div class="breadcrumb-wrapper d-none d-sm-block">
                         <ol class="breadcrumb p-0 mb-0 pl-1">
                             <li class="breadcrumb-item"><a href="dashboard"><i class="bx bx-home-alt"></i></a>
                             </li>
-                            <li class="breadcrumb-item active">DA Category
+                            <li class="breadcrumb-item active">Asset Category
                             </li>
                         </ol>
                     </div>
@@ -27,7 +27,7 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">DA Category List</h4>
+                                <h4 class="card-title">Asset Category List</h4>
                                 <div class="card-title"><button type="button" data-toggle="modal"
                                         data-target="#updateNftCategory" class="btn btn-success text-white">Add
                                         New</button></div>
@@ -68,7 +68,7 @@
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="nft_category_form_title">Add DA Category</h4>
+                <h4 class="modal-title" id="nft_category_form_title">Add Asset Category</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <i class="bx bx-x"></i>
                 </button>

@@ -53,19 +53,19 @@
         $titleName = 'Audiocast Episode';
     }
     if($cur_page == 'nft_category'){
-        $titleName = 'DA Category';
+        $titleName = 'Asset Category';
     }
     if($cur_page == 'nft_collection'){
-        $titleName = 'DA Collection';
+        $titleName = 'Asset Collection';
     }
     if($cur_page == 'nft_listing'){
-        $titleName = 'DA Listing';
+        $titleName = 'Asset Listing';
     }
     if($cur_page == 'nft_logos'){
-        $titleName = 'DA Logos';
+        $titleName = 'Asset Logos';
     }
     if($cur_page == 'nft_info'){
-        $titleName = 'DA Info';
+        $titleName = 'Asset Info';
     }
     if($cur_page == 'pages'){
         $titleName = 'Pages';
@@ -374,31 +374,37 @@
                         <li class="<?php if($cur_page == 'nft_category') {echo 'active';} ?>">
                             <a class="d-flex align-items-center" href="nft_category">
                                 <i class="bx bx-right-arrow-alt"></i>
-                                <span class="menu-item text-truncate" data-i18n="1 column">DA Category</span>
+                                <span class="menu-item text-truncate" data-i18n="1 column">Asset Category</span>
                             </a>
                         </li>
                         <li class="<?php if($cur_page == 'nft_collection') {echo 'active';} ?>">
                             <a class="d-flex align-items-center" href="nft_collection">
                                 <i class="bx bx-right-arrow-alt"></i>
-                                <span class="menu-item text-truncate" data-i18n="1 column">DA Collection</span>
+                                <span class="menu-item text-truncate" data-i18n="1 column">Asset Collection</span>
                             </a>
                         </li>
                         <li class="<?php if($cur_page == 'nft_listing') {echo 'active';} ?>">
                             <a class="d-flex align-items-center" href="nft_listing">
                                 <i class="bx bx-right-arrow-alt"></i>
-                                <span class="menu-item text-truncate" data-i18n="1 column">DA Banners</span>
+                                <span class="menu-item text-truncate" data-i18n="1 column">Asset Banners</span>
                             </a>
                         </li>
                         <li class="<?php if($cur_page == 'nft_logos') {echo 'active';} ?>">
                             <a class="d-flex align-items-center" href="nft_logos">
                                 <i class="bx bx-right-arrow-alt"></i>
-                                <span class="menu-item text-truncate" data-i18n="1 column">DA Logos</span>
+                                <span class="menu-item text-truncate" data-i18n="1 column">Asset Logos</span>
                             </a>
                         </li>
                         <li class="<?php if($cur_page == 'nft_info') {echo 'active';} ?>">
                             <a class="d-flex align-items-center" href="nft_info">
                                 <i class="bx bx-right-arrow-alt"></i>
-                                <span class="menu-item text-truncate" data-i18n="1 column">DA Listing</span>
+                                <span class="menu-item text-truncate" data-i18n="1 column">Asset Listing</span>
+                            </a>
+                        </li>
+                        <li class="<?php if($cur_page == 'price_type') {echo 'active';} ?>">
+                            <a class="d-flex align-items-center" href="price_type">
+                                <i class="bx bx-right-arrow-alt"></i>
+                                <span class="menu-item text-truncate" data-i18n="1 column">Asset Type</span>
                             </a>
                         </li>
                     </ul>
@@ -413,12 +419,6 @@
                     <a href="earn_rewards">
                         <i class="fa fa-trophy" aria-hidden="true"></i>
                         <span class="menu-title text-truncate" data-i18n="bxs-dashboard">Earn Rewards</span>
-                    </a>
-                </li>
-                <li class="nav-item <?php if($cur_page == 'price_type') {echo 'active';} ?>">
-                    <a href="price_type">
-                        <i class="fa fa-money" aria-hidden="true"></i>
-                        <span class="menu-title text-truncate" data-i18n="bxs-dashboard">Asset Type</span>
                     </a>
                 </li>
                 <li class=" nav-item <?php if($cur_page_main == 'phtv_24_7') {echo 'active';} ?>">
