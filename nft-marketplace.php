@@ -153,6 +153,8 @@
         <div class="owl-carousel owl-theme" id="ss_product_slider">
             <?php 
                 while ($feinfo = $nft_info->fetch(PDO::FETCH_ASSOC)) {
+                    $total_collection = $db->query("SELECT count('id') as total_collection FROM phtv_nft_info WHERE collection_id = '".$feinfo['collection_id']."'");
+                    $fetotal = $total_collection->fetch(PDO::FETCH_ASSOC);
                     // $date1 = new DateTime(date('Y-m-d'));
                     // $date2 = new DateTime(date('Y-m-d', strtotime($feinfo['created_at'])));
                     // $interval = $date1->diff($date2);
@@ -213,7 +215,7 @@
                                 </p>
                             </div>
                             <div class=" bd-highlight">
-                                <p><span> CA#154 | 200 </span></p>
+                                <p><span> CA#154 | <?= $fetotal['total_collection'] ?> </span></p>
                             </div>
                         </div>
                         <div class="d-flex bd-highlight ss_btn">
@@ -245,9 +247,11 @@
             </div>
             <?php 
                 while ($feinfo1 = $nft_info1->fetch(PDO::FETCH_ASSOC)) {
-                    $date1 = new DateTime(date('Y-m-d'));
-                    $date2 = new DateTime(date('Y-m-d', strtotime($feinfo1['created_at'])));
-                    $interval1 = $date1->diff($date2);
+                    // $date1 = new DateTime(date('Y-m-d'));
+                    // $date2 = new DateTime(date('Y-m-d', strtotime($feinfo1['created_at'])));
+                    // $interval1 = $date1->diff($date2);
+                    $total_collection = $db->query("SELECT count('id') as total_collection FROM phtv_nft_info WHERE collection_id = '".$feinfo1['collection_id']."'");
+                    $fetotal = $total_collection->fetch(PDO::FETCH_ASSOC);
             ?>
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="ss_product">
@@ -305,7 +309,7 @@
                                 </p>
                             </div>
                             <div class=" bd-highlight">
-                                <p><span> CA#154 | 200 </span></p>
+                                <p><span> CA#154 | <?= $fetotal['total_collection'] ?> </span></p>
                             </div>
                         </div>
                         <div class="d-flex bd-highlight ss_btn">
