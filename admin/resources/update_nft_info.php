@@ -35,6 +35,7 @@
 			$reoutput["nft_info_attribute_object_no"] = $row["attribute_object_no"];
 			$reoutput["nft_info_attribute_border_color"] = $row["attribute_border_color"];
 			$reoutput["nft_info_attribute_border_type"] = $row["attribute_border_type"];
+			$reoutput["nft_info_mint"] = $row["mint"];
 		}
 		echo json_encode($reoutput);
 	}

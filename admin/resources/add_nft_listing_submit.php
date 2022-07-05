@@ -21,16 +21,16 @@
             if(!empty($statement))
             {
                 $reoutput['success'] = 'success';
-                $reoutput['message'] = 'NFT Listing added successfully';
+                $reoutput['message'] = 'Asset Banner added successfully';
             } else {
                 $reoutput['success'] = 'fail';
-                $reoutput['message'] = 'NFT Listing not added';
+                $reoutput['message'] = 'Asset v not added';
             }
         }
         else
         {
             $reoutput['success'] = 'fail';
-            $reoutput['message'] = 'Please select NFT Listing Thumbnail';
+            $reoutput['message'] = 'Please select Asset Banner Thumbnail';
         }
         echo json_encode($reoutput);
     }
@@ -60,10 +60,10 @@
         if(!empty($statement))
         {
             $reoutput['success'] = 'success';
-            $reoutput['message'] = 'NFT Listing updated successfully';
+            $reoutput['message'] = 'Asset Banner updated successfully';
         } else {
             $reoutput['success'] = 'fail';
-            $reoutput['message'] = 'NFT Listing not updated';
+            $reoutput['message'] = 'Asset Banner not updated';
         }
         echo json_encode($reoutput);
     }

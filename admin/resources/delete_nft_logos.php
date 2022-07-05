@@ -16,7 +16,7 @@
 		{
             @unlink('../../images/nft_logos/'.$fepodcast['image']);
 			$response['success']  = 'success';
-			$response['message'] = 'NFT Logos deleted successfully';
+			$response['message'] = 'Asset Logos deleted successfully';
 		} else {
 			$response['success']  = 'fail';
 			$response['message'] = 'Oops! Something went wrong';

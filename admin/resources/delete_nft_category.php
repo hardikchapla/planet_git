@@ -13,7 +13,7 @@
 		if ($stmt) 
 		{
 			$response['success']  = 'success';
-			$response['message'] = 'NFT category deleted successfully';
+			$response['message'] = 'Asset category deleted successfully';
 		} else {
 			$response['success']  = 'fail';
 			$response['message'] = 'Oops! Something went wrong';

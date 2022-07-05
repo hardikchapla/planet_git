@@ -16,7 +16,7 @@ if ($_POST['nft_collection_id']) {
     $stmt->execute(array(':nft_collection_id' => $nft_collection_id));
     if ($stmt) {
         $response['success']  = 'success';
-        $response['message'] = 'NFT Collection deleted successfully';
+        $response['message'] = 'Asset Collection deleted successfully';
     } else {
         $response['success']  = 'fail';
         $response['message'] = 'Oops! Something went wrong';

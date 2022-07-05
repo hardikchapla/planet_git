@@ -188,7 +188,7 @@
                         <div class="col">
                             <label for="nft_info_meant_no" class="form-label">Mint No. :</label>
                             <input type="text" name="nft_info_meant_no" id="nft_info_meant_no"
-                                placeholder="Enter Asset info meant no" class="form-control">
+                                placeholder="Enter Asset info mint no" class="form-control">
                         </div>
                     </div>
                     <div class="row mb-1">
@@ -200,33 +200,48 @@
                     </div>
                     <div class="row mb-1">
                         <div class="col">
+                            <label for="nft_info_mint" class="form-label">Mint:</label><br>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="nft_info_mint" id="nft_info_mint1"
+                                    value="1">
+                                <label class="form-check-label" for="nft_info_mint1">Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="nft_info_mint" id="nft_info_mint2"
+                                    value="0" checked>
+                                <label class="form-check-label" for="nft_info_mint2">No</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-1 hide-mint-data">
+                        <div class="col">
                             <label for="nft_info_attribute_name" class="form-label">Attribute Name:</label>
                             <input type="text" name="nft_info_attribute_name" id="nft_info_attribute_name"
                                 placeholder="Enter Asset info attribute name" class="form-control">
                         </div>
                     </div>
-                    <div class="row mb-1">
+                    <div class="row mb-1 hide-mint-data">
                         <div class="col">
                             <label for="nft_info_attribute_image" class="form-label">Attribute Image:</label>
                             <input type="text" name="nft_info_attribute_image" id="nft_info_attribute_image"
                                 placeholder="Enter Asset info attribute image" class="form-control">
                         </div>
                     </div>
-                    <div class="row mb-1">
+                    <div class="row mb-1 hide-mint-data">
                         <div class="col">
                             <label for="nft_info_attribute_bg_image" class="form-label">Attribute BG Image:</label>
                             <input type="text" name="nft_info_attribute_bg_image" id="nft_info_attribute_bg_image"
                                 placeholder="Enter Asset info attribute bg image" class="form-control">
                         </div>
                     </div>
-                    <div class="row mb-1">
+                    <div class="row mb-1 hide-mint-data">
                         <div class="col">
                             <label for="nft_info_attribute_object" class="form-label">Attribute Object:</label>
                             <input type="text" name="nft_info_attribute_object" id="nft_info_attribute_object"
                                 placeholder="Enter Asset info attribute object" class="form-control">
                         </div>
                     </div>
-                    <div class="row mb-1">
+                    <div class="row mb-1 hide-mint-data">
                         <div class="col">
                             <label for="nft_info_attribute_object_collection" class="form-label">Attribute Object
                                 Collection:</label>
@@ -235,7 +250,7 @@
                                 placeholder="Enter Asset info attribute object collection" class="form-control">
                         </div>
                     </div>
-                    <div class="row mb-1">
+                    <div class="row mb-1 hide-mint-data">
                         <div class="col">
                             <label for="nft_info_attribute_object_no" class="form-label">Attribute Object
                                 No:</label>
@@ -243,7 +258,7 @@
                                 placeholder="Enter Asset info attribute object no" class="form-control">
                         </div>
                     </div>
-                    <div class="row mb-1">
+                    <div class="row mb-1 hide-mint-data">
                         <div class="col">
                             <label for="nft_info_attribute_border_color" class="form-label">Attribute Border
                                 Color:</label>
@@ -252,7 +267,7 @@
                                 placeholder="Enter Asset info attribute border color" class="form-control">
                         </div>
                     </div>
-                    <div class="row mb-1">
+                    <div class="row mb-1 hide-mint-data">
                         <div class="col">
                             <label for="nft_info_attribute_border_type" class="form-label">Attribute Border
                                 Type:</label>

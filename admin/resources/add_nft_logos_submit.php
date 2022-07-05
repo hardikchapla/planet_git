@@ -20,16 +20,16 @@
             if(!empty($statement))
             {
                 $reoutput['success'] = 'success';
-                $reoutput['message'] = 'NFT Logos added successfully';
+                $reoutput['message'] = 'Asset Logos added successfully';
             } else {
                 $reoutput['success'] = 'fail';
-                $reoutput['message'] = 'NFT Logos not added';
+                $reoutput['message'] = 'Asset Logos not added';
             }
         }
         else
         {
             $reoutput['success'] = 'fail';
-            $reoutput['message'] = 'Please select NFT Logos Image';
+            $reoutput['message'] = 'Please select Asset Logos Image';
         }
         echo json_encode($reoutput);
     }
@@ -58,10 +58,10 @@
         if(!empty($statement))
         {
             $reoutput['success'] = 'success';
-            $reoutput['message'] = 'NFT Logos updated successfully';
+            $reoutput['message'] = 'Asset Logos updated successfully';
         } else {
             $reoutput['success'] = 'fail';
-            $reoutput['message'] = 'NFT Logos not updated';
+            $reoutput['message'] = 'Asset Logos not updated';
         }
         echo json_encode($reoutput);
     }

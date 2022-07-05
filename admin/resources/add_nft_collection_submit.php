@@ -20,16 +20,16 @@
             if(!empty($statement))
             {
                 $reoutput['success'] = 'success';
-                $reoutput['message'] = 'NFT Collection added successfully';
+                $reoutput['message'] = 'Asset Collection added successfully';
             } else {
                 $reoutput['success'] = 'fail';
-                $reoutput['message'] = 'NFT Collection not added';
+                $reoutput['message'] = 'Asset Collection not added';
             }
         }
         else
         {
             $reoutput['success'] = 'fail';
-            $reoutput['message'] = 'Please select NFT collection logo';
+            $reoutput['message'] = 'Please select Asset collection logo';
         }
         echo json_encode($reoutput);
     }
@@ -58,10 +58,10 @@
         if(!empty($statement))
         {
             $reoutput['success'] = 'success';
-            $reoutput['message'] = 'NFT Collection updated successfully';
+            $reoutput['message'] = 'Asset Collection updated successfully';
         } else {
             $reoutput['success'] = 'fail';
-            $reoutput['message'] = 'NFT Collection not updated';
+            $reoutput['message'] = 'Asset Collection not updated';
         }
         echo json_encode($reoutput);
     }

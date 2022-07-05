@@ -18,6 +18,14 @@ function hideLoading() {
 }
 
 $(document).ready(function() {
+    $('.hide-mint-data').hide();
+    $('input[type=radio][name=nft_info_mint]').change(function() {
+        if (this.value == 1) {
+            $('.hide-mint-data').show();
+        } else if (this.value == 0) {
+            $('.hide-mint-data').hide();
+        }
+    });
     var dataTable = $("#nft_info_list").DataTable({
         ajax: {
             url: "resources/display_nft_list",
@@ -66,6 +74,15 @@ $(document).ready(function() {
                 $("#nft_info_attribute_border_type").val(
                     data.nft_info_attribute_border_type
                 );
+                if (data.nft_info_mint == 1) {
+                    $('#nft_info_mint1').attr('checked', 'checked');
+                    $("#nft_info_mint2").removeAttr("checked");
+                    $('.hide-mint-data').show();
+                } else {
+                    $('#nft_info_mint2').attr('checked', 'checked');
+                    $("#nft_info_mint1").removeAttr("checked");
+                    $('.hide-mint-data').hide();
+                }
                 $("#nft_info_id").val(nft_info_id);
                 $("#action").val("Edit");
                 $("#nft_info_form_title").html("Update Asset Listing");
