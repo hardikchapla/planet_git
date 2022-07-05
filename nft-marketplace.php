@@ -62,54 +62,6 @@
                 </div>
             </div>
             <?php } ?>
-            <!-- <div class="col-lg-3">
-                <div class="ss_drops_blogs">
-                    <div class="d-flex bd-highlight align-self-center">
-                        <div class="p-2 bd-highlight">
-                            <div class="ss_drops_images">
-                                <img src="images/ss_drops_blogsB.png" alt="images" />
-                            </div>
-                        </div>
-                        <div class="p-2 flex-fill bd-highlight align-self-center">
-                            <h2> 5 New Drops
-                                this Week
-                            </h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="ss_drops_blogs">
-                    <div class="d-flex bd-highlight align-self-center">
-                        <div class="p-2 bd-highlight">
-                            <div class="ss_drops_images">
-                                <img src="images/ss_drops_blogsC.png" alt="images" />
-                            </div>
-                        </div>
-                        <div class="p-2 flex-fill bd-highlight align-self-center">
-                            <h2> We've Purchased
-                                10 NFTs
-                            </h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="ss_drops_blogs">
-                    <div class="d-flex bd-highlight align-self-center">
-                        <div class="p-2 bd-highlight">
-                            <div class="ss_drops_images">
-                                <img src="images/ss_drops_blogsD.png" alt="images" />
-                            </div>
-                        </div>
-                        <div class="p-2 flex-fill bd-highlight align-self-center">
-                            <h2> 5 New Artists
-                                this week
-                            </h2>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
         </div>
     </div>
 </div>
@@ -145,13 +97,6 @@
                 </div> -->
 
             <?php } ?>
-            <!-- <div class="col-lg-6">
-                <div class="nss_new_chinemaB ">
-                    <div class="ss_des">
-                        <h2> The Payload Marketplace </h2>
-                    </div>
-                </div>
-            </div> -->
         </div>
     </div>
 </div>
@@ -174,51 +119,6 @@
                     </a>
                 </div>
                 <?php } ?>
-                <!-- <div class="item">
-                    <a href="#" class="ss_experiences">
-                        <h2>Music</h2>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="#" class="ss_experiences">
-                        <h2>Street Art</h2>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="#" class="ss_experiences">
-                        <h2>Cards</h2>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="#" class="ss_experiences">
-                        <h2>Poems</h2>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="#" class="ss_experiences">
-                        <h2> Audio Clips </h2>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="#" class="ss_experiences">
-                        <h2>Video Clips</h2>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="#" class="ss_experiences">
-                        <h2> Beats </h2>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="#" class="ss_experiences">
-                        <h2> Photography </h2>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="#" class="ss_experiences">
-                        <h2> NFTP (Physical) </h2>
-                    </a>
-                </div> -->
             </div>
         </div>
     </div>
@@ -244,62 +144,6 @@
                     </a>
                 </div>
                 <?php } ?>
-                <!-- <div class="item">
-                    <a href="#" class="ss_experiences">
-                        <div class="verticle_middle">
-                            <img src="images/logo-studioA.svg" alt="images" />
-                        </div>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="#" class="ss_experiences">
-                        <div class="verticle_middle">
-                            <img src="images/logo-studioB.svg" alt="images" />
-                        </div>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="#" class="ss_experiences">
-                        <div class="verticle_middle">
-                            <img src="images/logo-studioC.svg" alt="images" />
-                        </div>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="#" class="ss_experiences">
-                        <div class="verticle_middle">
-                            <img src="images/logo-studioD.svg" alt="images" />
-                        </div>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="#" class="ss_experiences">
-                        <div class="verticle_middle">
-                            <img src="images/logo-studioE.svg" alt="images" />
-                        </div>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="#" class="ss_experiences">
-                        <div class="verticle_middle">
-                            <img src="images/logo-studioF.svg" alt="images" />
-                        </div>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="#" class="ss_experiences">
-                        <div class="verticle_middle">
-                            <img src="images/logo-studioG.svg" alt="images" />
-                        </div>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="#" class="ss_experiences">
-                        <div class="verticle_middle">
-                            <img src="images/logo-studioC.svg" alt="images" />
-                        </div>
-                    </a>
-                </div> -->
             </div>
         </div>
     </div>
@@ -366,7 +210,6 @@
                                     <span> ($58.64) </span>
                                     <?php }
                                     ?>
-
                                 </p>
                             </div>
                             <div class=" bd-highlight">
@@ -389,122 +232,6 @@
                 </div>
             </div>
             <?php } ?>
-            <!-- <div class="item">
-                <div class="ss_product">
-                    <div class="images">
-                        <img src="images/episodesE.jpg" alt="images" />
-                        <div class="ss_tabgs ss_tabgs_yellow">
-                            90 Days Left
-                        </div>
-                    </div>
-                    <div class="ss_main_des">
-                        <h5>Mona Loser <span>|</span> <span> The Studio </span></h5>
-                        <div class="d-flex bd-highlight">
-                            <div class=" flex-grow-1 bd-highlight">
-                                <p> 200.00 PAY <span> ($58.64) </span></p>
-                            </div>
-                            <div class=" bd-highlight">
-                                <p><span> M#154 | 200 </span></p>
-                            </div>
-                        </div>
-                        <div class="d-flex bd-highlight ss_btn">
-                            <div class=" flex-fill mr-4 bd-highlight">
-                                <a href="nft-marketplace-details" class="ss_details"> Details </a>
-                            </div>
-                            <div class=" flex-fill bd-highlight">
-                                <a href="#" class="ss_buy"> Buy </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ss_product">
-                    <div class="images">
-                        <img src="images/episodesC.jpg" alt="images" />
-                        <div class="ss_tabgs ss_tabgs_red">
-                            Ended
-                        </div>
-                    </div>
-                    <div class="ss_main_des">
-                        <h5>Mona Loser <span>|</span> <span> The Studio </span></h5>
-                        <div class="d-flex bd-highlight">
-                            <div class=" flex-grow-1 bd-highlight">
-                                <p> 200.00 PAY <span> ($58.64) </span></p>
-                            </div>
-                            <div class=" bd-highlight">
-                                <p><span> M#154 | 200 </span></p>
-                            </div>
-                        </div>
-                        <div class="d-flex bd-highlight ss_btn">
-                            <div class=" flex-fill mr-4 bd-highlight">
-                                <a href="nft-marketplace-details" class="ss_details"> Details </a>
-                            </div>
-                            <div class=" flex-fill bd-highlight">
-                                <a href="#" class="ss_buy"> Buy </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ss_product">
-                    <div class="images">
-                        <img src="images/SAB.jpg" alt="images" />
-                        <div class="ss_tabgs ss_tabgs_green">
-                            New Drop
-                        </div>
-                    </div>
-                    <div class="ss_main_des">
-                        <h5>Mona Loser <span>|</span> <span> The Studio </span></h5>
-                        <div class="d-flex bd-highlight">
-                            <div class=" flex-grow-1 bd-highlight">
-                                <p> 200.00 PAY <span> ($58.64) </span></p>
-                            </div>
-                            <div class=" bd-highlight">
-                                <p><span> M#154 | 200 </span></p>
-                            </div>
-                        </div>
-                        <div class="d-flex bd-highlight ss_btn">
-                            <div class=" flex-fill mr-4 bd-highlight">
-                                <a href="nft-marketplace-details" class="ss_details"> Details </a>
-                            </div>
-                            <div class=" flex-fill bd-highlight">
-                                <a href="#" class="ss_buy"> Buy </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ss_product">
-                    <div class="images">
-                        <img src="images/episodesA.jpg" alt="images" />
-                        <div class="ss_tabgs ss_tabgs_red">
-                            Ended
-                        </div>
-                    </div>
-                    <div class="ss_main_des">
-                        <h5>Mona Loser <span>|</span> <span> The Studio </span></h5>
-                        <div class="d-flex bd-highlight">
-                            <div class=" flex-grow-1 bd-highlight">
-                                <p> 200.00 PAY <span> ($58.64) </span></p>
-                            </div>
-                            <div class=" bd-highlight">
-                                <p><span> M#154 | 200 </span></p>
-                            </div>
-                        </div>
-                        <div class="d-flex bd-highlight ss_btn">
-                            <div class=" flex-fill mr-4 bd-highlight">
-                                <a href="nft-marketplace-details" class="ss_details"> Details </a>
-                            </div>
-                            <div class=" flex-fill bd-highlight">
-                                <a href="#" class="ss_buy"> Buy </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
         </div>
     </div>
 </div>
@@ -569,10 +296,16 @@
                         <h5><?= $feinfo1['name'] ?></span></h5>
                         <div class="d-flex bd-highlight">
                             <div class=" flex-grow-1 bd-highlight">
-                                <p> <?= $feinfo1['price'] ?> <?= $feinfo1['price_type'] ?> <span> ($58.64) </span></p>
+                                <p> <?= $feinfo1['price'] ?> <?= $feinfo1['price_type'] ?>
+                                    <?php
+                                    if (!empty($_SESSION['userid'])) { ?>
+                                    <span> ($58.64) </span>
+                                    <?php }
+                                    ?>
+                                </p>
                             </div>
                             <div class=" bd-highlight">
-                                <p><span> M#154 | 200 </span></p>
+                                <p><span> CA#154 | 200 </span></p>
                             </div>
                         </div>
                         <div class="d-flex bd-highlight ss_btn">
@@ -589,151 +322,6 @@
                 </div>
             </div>
             <?php } ?>
-            <!-- <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="ss_product">
-                    <div class="images">
-                        <img src="images/episodesE.jpg" alt="images" />
-                        <div class="ss_tabgs ss_tabgs_yellow">
-                            90 Days Left
-                        </div>
-                    </div>
-                    <div class="ss_main_des">
-                        <h5>Mona Loser <span>|</span> <span> The Studio </span></h5>
-                        <div class="d-flex bd-highlight">
-                            <div class=" flex-grow-1 bd-highlight">
-                                <p> 200.00 PAY <span> ($58.64) </span></p>
-                            </div>
-                            <div class=" bd-highlight">
-                                <p><span> M#154 | 200 </span></p>
-                            </div>
-                        </div>
-                        <div class="d-flex bd-highlight ss_btn">
-                            <div class=" flex-fill mr-4 bd-highlight">
-                                <a href="nft-marketplace-details" class="ss_details"> Details </a>
-                            </div>
-                            <div class=" flex-fill bd-highlight">
-                                <a href="#" class="ss_buy"> Buy </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="ss_product">
-                    <div class="images">
-                        <img src="images/episodesC.jpg" alt="images" />
-                        <div class="ss_tabgs ss_tabgs_red">
-                            Ended
-                        </div>
-                    </div>
-                    <div class="ss_main_des">
-                        <h5>Mona Loser <span>|</span> <span> The Studio </span></h5>
-                        <div class="d-flex bd-highlight">
-                            <div class=" flex-grow-1 bd-highlight">
-                                <p> 200.00 PAY <span> ($58.64) </span></p>
-                            </div>
-                            <div class=" bd-highlight">
-                                <p><span> M#154 | 200 </span></p>
-                            </div>
-                        </div>
-                        <div class="d-flex bd-highlight ss_btn">
-                            <div class=" flex-fill mr-4 bd-highlight">
-                                <a href="nft-marketplace-details" class="ss_details"> Details </a>
-                            </div>
-                            <div class=" flex-fill bd-highlight">
-                                <a href="#" class="ss_buy"> Buy </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="ss_product">
-                    <div class="images">
-                        <img src="images/SAB.jpg" alt="images" />
-                        <div class="ss_tabgs ss_tabgs_green">
-                            New Drop
-                        </div>
-                    </div>
-                    <div class="ss_main_des">
-                        <h5>Mona Loser <span>|</span> <span> The Studio </span></h5>
-                        <div class="d-flex bd-highlight">
-                            <div class=" flex-grow-1 bd-highlight">
-                                <p> 200.00 PAY <span> ($58.64) </span></p>
-                            </div>
-                            <div class=" bd-highlight">
-                                <p><span> M#154 | 200 </span></p>
-                            </div>
-                        </div>
-                        <div class="d-flex bd-highlight ss_btn">
-                            <div class=" flex-fill mr-4 bd-highlight">
-                                <a href="nft-marketplace-details" class="ss_details"> Details </a>
-                            </div>
-                            <div class=" flex-fill bd-highlight">
-                                <a href="#" class="ss_buy"> Buy </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="ss_product">
-                    <div class="images">
-                        <img src="images/SAA.jpg" alt="images" />
-                        <div class="ss_tabgs ss_tabgs_red">
-                            Ended
-                        </div>
-                    </div>
-                    <div class="ss_main_des">
-                        <h5>Mona Loser <span>|</span> <span> The Studio </span></h5>
-                        <div class="d-flex bd-highlight">
-                            <div class=" flex-grow-1 bd-highlight">
-                                <p> 200.00 PAY <span> ($58.64) </span></p>
-                            </div>
-                            <div class=" bd-highlight">
-                                <p><span> M#154 | 200 </span></p>
-                            </div>
-                        </div>
-                        <div class="d-flex bd-highlight ss_btn">
-                            <div class=" flex-fill mr-4 bd-highlight">
-                                <a href="nft-marketplace-details" class="ss_details"> Details </a>
-                            </div>
-                            <div class=" flex-fill bd-highlight">
-                                <a href="#" class="ss_buy"> Buy </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="ss_product">
-                    <div class="images">
-                        <img src="images/SAC.jpg" alt="images" />
-                        <div class="ss_tabgs ss_tabgs_green">
-                            New Drop
-                        </div>
-                    </div>
-                    <div class="ss_main_des">
-                        <h5>Mona Loser <span>|</span> <span> The Studio </span></h5>
-                        <div class="d-flex bd-highlight">
-                            <div class=" flex-grow-1 bd-highlight">
-                                <p> 200.00 PAY <span> ($58.64) </span></p>
-                            </div>
-                            <div class=" bd-highlight">
-                                <p><span> M#154 | 200 </span></p>
-                            </div>
-                        </div>
-                        <div class="d-flex bd-highlight ss_btn">
-                            <div class=" flex-fill mr-4 bd-highlight">
-                                <a href="nft-marketplace-details" class="ss_details"> Details </a>
-                            </div>
-                            <div class=" flex-fill bd-highlight">
-                                <a href="#" class="ss_buy"> Buy </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
         </div>
     </div>
 </div>
@@ -788,17 +376,6 @@
     </div>
 </div>
 <?php } ?>
-<!-- <div class="container-fluid">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="ss_advertise">
-                    <h2>Add Banner</h2>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
 <!-- Modal -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
     aria-hidden="true">
