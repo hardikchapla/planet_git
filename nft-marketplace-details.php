@@ -23,9 +23,9 @@
                             <?php } else if($fenft['image_type'] == 'video'){ ?>
                             <div class="ss_model_images ss_nft_marketplace_images">
                                 <div class="ss_nft_middles">
-                                <video width="670" height="500" controls>
-                                    <source src="images/nft_info_image/<?= $fenft['image'] ?>" type="video/mp4">
-                                </video>
+                                    <video width="670" height="500" controls>
+                                        <source src="images/nft_info_image/<?= $fenft['image'] ?>" type="video/mp4">
+                                    </video>
                                 </div>
                             </div>
                             <?php } else if($fenft['image_type'] == 'audio'){ ?>
@@ -55,7 +55,7 @@
                 <div class="col-lg-9 align-self-center">
                     <div class="ss_blog_details_des">
                         <h2> <?= $fenft['name'] ?> </h2>
-                        <h5> <?= $fenft['price'] ?> <?= $fenft['price_type'] ?> <span> ($58.64) </span></h5>
+                        <h5> <?= $fenft['price'] ?> USD <span> ($58.64) </span></h5>
                         <p><?= $fenft['description'] ?></p>
                         <ul>
                             <li>

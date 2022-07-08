@@ -206,7 +206,7 @@
                         <h5><?= $feinfo['name'] ?></h5>
                         <div class="d-flex bd-highlight">
                             <div class=" flex-grow-1 bd-highlight">
-                                <p> <?= $feinfo['price'] ?> <?= $feinfo['price_type'] ?>
+                                <p> <?= $feinfo['price'] ?> USD
                                     <?php
                                     if (!empty($_SESSION['userid'])) { ?>
                                     <span> ($58.64) </span>
@@ -300,7 +300,7 @@
                         <h5><?= $feinfo1['name'] ?></span></h5>
                         <div class="d-flex bd-highlight">
                             <div class=" flex-grow-1 bd-highlight">
-                                <p> <?= $feinfo1['price'] ?> <?= $feinfo1['price_type'] ?>
+                                <p> <?= $feinfo1['price'] ?> USD
                                     <?php
                                     if (!empty($_SESSION['userid'])) { ?>
                                     <span> ($58.64) </span>
@@ -474,8 +474,7 @@ $(document).ready(function() {
                         'images/planethopper-TV-logo.png');
                 }
                 $('#nft_marketing_name').html(data.name);
-                $('#nft_marketing_price').html(data.price + " " + data.price_type +
-                    " <span> ($58.64) </span>");
+                $('#nft_marketing_price').html(data.price + " USD <span> ($58.64) </span>");
                 $('#nft_marketing_description').html(data.description);
                 $('#nft_marketing_sale_id').html(data.sale_id);
                 $('#nft_marketing_collection').html(data.collection_name);

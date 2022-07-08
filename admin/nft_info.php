@@ -126,9 +126,9 @@
                     </div>
                     <div class="row mb-1">
                         <div class="col">
-                            <label for="selectPriceType" class="form-label">Select Price Type:</label>
+                            <label for="selectPriceType" class="form-label">Select Assets Type:</label>
                             <select class="form-control" name="selectPriceType" id="selectPriceType">
-                                <option value="">Select Price Type</option>
+                                <option value="">Select Assets Type</option>
                                 <?php while ($feprice_type = $price_type->fetch(PDO::FETCH_ASSOC)) { ?>
                                 <option value="<?= $feprice_type['price_type'] ?>"><?= $feprice_type['price_type'] ?>
                                 </option>
