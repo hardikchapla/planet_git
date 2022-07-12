@@ -1137,7 +1137,7 @@
     }
 
     .verticle_middle {
-        top: -36px;
+        top: 0px;
     }
 
     .ss_mobiles_block {
@@ -1382,6 +1382,12 @@
   .ss_musi .ss_pod_contents{
     padding-top: 30px;
   }
+
+    .cc-banner-image-size {
+        overflow: hidden;
+        height: auto!important;
+    }
+
 }
 
 @media (min-width: 480px) and (max-width: 767px) {
@@ -2424,6 +2430,12 @@
   .ss_musi .ss_pod_contents{
     padding-top: 30px;
   }
+
+    .cc-banner-image-size {
+        overflow: hidden;
+        height: auto!important;
+    }
+
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
