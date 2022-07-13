@@ -162,13 +162,13 @@
             <div class="item">
                 <div class="ss_product">
                     <div class="images">
-                        <div class="ss_vertical_align_middle">
+                        <div class="ss_vertical_align_middle ss_images_products">
                             <?php if($feinfo['image_type'] == 'image'){ ?>
                             <img src="images/nft_info_image/<?= $feinfo['image'] ?>" alt="images" />
                             <?php } else if($feinfo['image_type'] == 'gif'){ ?>
                             <img src="images/nft_info_image/<?= $feinfo['image'] ?>" alt="images" />
                             <?php } else if($feinfo['image_type'] == 'video'){ ?>
-                            <video width="400" height="530" controls>
+                            <video width="100%" height="530" controls>
                                 <source src="images/nft_info_image/<?= $feinfo['image'] ?>" type="video/mp4">
                             </video>
                             <?php } else if($feinfo['image_type'] == 'audio'){ ?>
@@ -256,13 +256,13 @@
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="ss_product">
                     <div class="images">
-                        <div class="ss_vertical_align_middle">
+                        <div class="ss_vertical_align_middle ss_images_products">
                             <?php if($feinfo1['image_type'] == 'image'){ ?>
                             <img src="images/nft_info_image/<?= $feinfo1['image'] ?>" alt="images" />
                             <?php } else if($feinfo1['image_type'] == 'gif'){ ?>
                             <img src="images/nft_info_image/<?= $feinfo1['image'] ?>" alt="images" />
                             <?php } else if($feinfo1['image_type'] == 'video'){ ?>
-                            <video width="400" height="530" controls>
+                            <video width="100%" height="530" controls>
                                 <source src="images/nft_info_image/<?= $feinfo1['image'] ?>" type="video/mp4">
                             </video>
                             <?php } else if($feinfo1['image_type'] == 'audio'){ ?>
