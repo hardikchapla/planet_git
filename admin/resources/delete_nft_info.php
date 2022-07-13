@@ -1,6 +1,7 @@
 <?php
 	header('Content-type: application/json; charset=UTF-8');
 	$response = array();
+
 	if ($_POST['nft_info_id']) 
 	{
 		include '../../inc/connection/connection.php';

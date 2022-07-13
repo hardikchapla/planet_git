@@ -2,6 +2,7 @@
 	include '../../inc/connection/connection.php';
     require_once '../../inc/helper/constant.php';
     require_once '../../inc/helper/core_function.php';
+	
 	if(isset($_POST["nft_info_id"]))
 	{
 		$reoutput = array();

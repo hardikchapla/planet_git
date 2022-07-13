@@ -32,6 +32,7 @@ $(document).ready(function() {
             type: "POST",
         },
     });
+
     $(document).on("click", ".updateNFTInfo", function() {
         var nft_info_id = $(this).attr("id");
         showLoading();

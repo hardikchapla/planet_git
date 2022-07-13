@@ -2,7 +2,6 @@
     include '../../inc/connection/connection.php';
     require_once '../../inc/helper/constant.php';
     require_once '../../inc/helper/core_function.php';
-
     if($_REQUEST['action'] == 'Add'){
         $reoutput = array();
         $nft_info_name = addslashes($_REQUEST['nft_info_name']);

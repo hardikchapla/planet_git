@@ -81,6 +81,7 @@
         </div>
     </div>
 </div>
+
 <!-- END: Content-->
 <div class="modal fade text-left" id="updateNFTInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel33"
     aria-hidden="true">
