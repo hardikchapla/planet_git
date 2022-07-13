@@ -45,6 +45,7 @@ $(document).ready(function() {
             success: function(data) {
                 hideLoading();
                 $("#old_nft_info_image").val(data.nft_info_image);
+                $("#old_nft_info_thumbnail").val(data.nft_info_thumbnail);
                 $("#old_nft_info_image_type").val(data.nft_info_image_type);
                 $("#selectCollections").select2("val", data.selectCollections);
                 $("#selectCategory").select2("val", data.selectCategory);

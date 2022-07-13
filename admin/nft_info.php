@@ -96,6 +96,16 @@
                 <div class="modal-body">
                     <div class="row mb-1">
                         <div class="col">
+                            <label>Thumbnail: </label>
+                            <div class="form-group">
+                                <input type="file" name="nft_info_thumbnail" id="nft_info_thumbnail"
+                                    placeholder="select file" class="form-control">
+                                <input type="hidden" name="old_nft_info_thumbnail" id="old_nft_info_thumbnail">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-1">
+                        <div class="col">
                             <label>Image: </label>
                             <div class="form-group">
                                 <input type="file" name="nft_info_image" id="nft_info_image" placeholder="select file"

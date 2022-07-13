@@ -15,6 +15,7 @@
 		if ($stmt) 
 		{
             @unlink('../../images/nft_info_image/'.$fepodcast['image']);
+            @unlink('../../images/nft_info_image/'.$fepodcast['thumbnail']);
 			$response['success']  = 'success';
 			$response['message'] = 'Asset Listing deleted successfully';
 		} else {
