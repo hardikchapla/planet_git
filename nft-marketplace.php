@@ -172,7 +172,7 @@
                                 <source src="images/nft_info_image/<?= $feinfo['image'] ?>" type="video/mp4">
                             </video>
                             <?php } else if($feinfo['image_type'] == 'audio'){ ?>
-                            <img src="images/nft_info_image/<?= $feinfo1['thumbnail'] ?>" alt="images"
+                            <img src="images/nft_info_image/<?= $feinfo['thumbnail'] ?>" alt="images"
                                 class="audio_thumbnail" />
                             <audio controls poster='images/planethopper-TV-logo.png'>
                                 <source src="images/nft_info_image/<?= $feinfo['image'] ?>" type="audio/mpeg">
