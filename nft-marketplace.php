@@ -168,7 +168,7 @@
                             <?php } else if($feinfo['image_type'] == 'gif'){ ?>
                             <img src="images/nft_info_image/<?= $feinfo['image'] ?>" alt="images" />
                             <?php } else if($feinfo['image_type'] == 'video'){ ?>
-                            <video width="400" height="530" controls>
+                            <video width="100%" height="400" controls>
                                 <source src="images/nft_info_image/<?= $feinfo['image'] ?>" type="video/mp4">
                             </video>
                             <?php } else if($feinfo['image_type'] == 'audio'){ ?>
@@ -262,7 +262,7 @@
                             <?php } else if($feinfo1['image_type'] == 'gif'){ ?>
                             <img src="images/nft_info_image/<?= $feinfo1['image'] ?>" alt="images" />
                             <?php } else if($feinfo1['image_type'] == 'video'){ ?>
-                            <video width="400" height="530" controls>
+                            <video width="100%" height="400" controls>
                                 <source src="images/nft_info_image/<?= $feinfo1['image'] ?>" type="video/mp4">
                             </video>
                             <?php } else if($feinfo1['image_type'] == 'audio'){ ?>
