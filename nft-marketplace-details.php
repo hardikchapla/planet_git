@@ -17,7 +17,7 @@
                                 <img src="images/nft_info_image/<?= $fenft['image'] ?>" alt="details" />
                             </div>
                             <?php } else if($fenft['image_type'] == 'gif'){ ?>
-                            <div class="ss_model_images ss_nft_marketplace_images">
+                            <div class="ss_model_images ss_vertical_align_middle">
                                 <img src="images/nft_info_image/<?= $fenft['image'] ?>" alt="details" />
                             </div>
                             <?php } else if($fenft['image_type'] == 'video'){ ?>
