@@ -8913,3 +8913,7 @@ form .error {
     display: table-cell;
     vertical-align: middle;
 }
+
+.audio_thumbnail {
+    height: 355px;
+}

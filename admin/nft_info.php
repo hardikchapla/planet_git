@@ -107,7 +107,7 @@
                     </div>
                     <div class="row mb-1">
                         <div class="col">
-                            <label>Image: </label>
+                            <label>Image/Video/Gif/Audio: </label>
                             <div class="form-group">
                                 <input type="file" name="nft_info_image" id="nft_info_image" placeholder="select file"
                                     class="form-control">

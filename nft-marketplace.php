@@ -172,6 +172,8 @@
                                 <source src="images/nft_info_image/<?= $feinfo['image'] ?>" type="video/mp4">
                             </video>
                             <?php } else if($feinfo['image_type'] == 'audio'){ ?>
+                            <img src="images/nft_info_image/<?= $feinfo1['thumbnail'] ?>" alt="images"
+                                class="audio_thumbnail" />
                             <audio controls poster='images/planethopper-TV-logo.png'>
                                 <source src="images/nft_info_image/<?= $feinfo['image'] ?>" type="audio/mpeg">
                             </audio>
@@ -266,16 +268,18 @@
                                 <source src="images/nft_info_image/<?= $feinfo1['image'] ?>" type="video/mp4">
                             </video>
                             <?php } else if($feinfo1['image_type'] == 'audio'){ ?>
+                            <img src="images/nft_info_image/<?= $feinfo1['thumbnail'] ?>" alt="images"
+                                class="audio_thumbnail" />
                             <audio controls poster='images/planethopper-TV-logo.png'>
                                 <source src="images/nft_info_image/<?= $feinfo1['image'] ?>" type="audio/mpeg">
                             </audio>
                             <?php } else { ?>
                             <img src="images/planethopper-TV-logo.png" alt="images" />
                             <?php } ?>
-                            <!-- <?php if(empty($feinfo1['image']) || $feinfo1['image_type'] != 'image'){ ?>
-                            <img src="images/planethopper-TV-logo.png" alt="images" />
+                            <!-- <?php if(!empty($feinfo1['thumbnail']) || $feinfo1['image_type'] == 'audio'){ ?>
+                            <img src="images/nft_info_image/<?= $feinfo1['thumbnail'] ?>" alt="images" />
                             <?php } else { ?>
-                            <img src="images/nft_info_image/<?= $feinfo1['image'] ?>" alt="images" />
+                            <img src="images/planethopper-TV-logo.png" alt="images" />
                             <?php } ?> -->
                             <?php if($feinfo1['duration'] <= 10){ ?>
                             <div class="ss_tabgs ss_tabgs_green">
