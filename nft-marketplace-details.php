@@ -29,7 +29,9 @@
                                 </div>
                             </div>
                             <?php } else if($fenft['image_type'] == 'audio'){ ?>
-                            <div class="ss_model_images audioPlayer ss_nft_marketplace_images">
+                            <div class="ss_model_images  ss_nft_marketplace_images">
+                                <img src="images/nft_info_image/<?= $fenft['thumbnail'] ?>" alt="images"
+                                    class="audio_thumbnail_details" />
                                 <audio controls poster='images/planethopper-TV-logo.png'>
                                     <source src="images/nft_info_image/<?= $fenft['image'] ?>" type="audio/mpeg">
                                 </audio>

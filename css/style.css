@@ -8917,3 +8917,7 @@ form .error {
 .audio_thumbnail {
     height: 355px;
 }
+
+.audio_thumbnail_details {
+    height: 465px !important;
+}
