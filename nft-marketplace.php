@@ -7,17 +7,17 @@
    $listing = $db->query("SELECT * FROM phtv_nft_listing ORDER BY id DESC LIMIT 4");
    $logos = $db->query("SELECT * FROM phtv_nft_logos");
    if(!empty($category_id) && !empty($collection_id)){
-        $nft_info = $db->query("SELECT * FROM phtv_nft_info WHERE category_id = '$category_id' AND collection_id = '$collection_id'");
-        $nft_info1 = $db->query("SELECT * FROM phtv_nft_info WHERE category_id = '$category_id' AND collection_id = '$collection_id'");
+        $nft_info = $db->query("SELECT * FROM phtv_nft_info WHERE category_id = '$category_id' AND collection_id = '$collection_id' ORDER BY id DESC LIMIT 6");
+        $nft_info1 = $db->query("SELECT * FROM phtv_nft_info WHERE category_id = '$category_id' AND collection_id = '$collection_id' ORDER BY id DESC");
    } elseif (!empty($category_id)) {
-        $nft_info = $db->query("SELECT * FROM phtv_nft_info WHERE category_id = '$category_id'");
-        $nft_info1 = $db->query("SELECT * FROM phtv_nft_info WHERE category_id = '$category_id'");
+        $nft_info = $db->query("SELECT * FROM phtv_nft_info WHERE category_id = '$category_id' ORDER BY id DESC LIMIT 6");
+        $nft_info1 = $db->query("SELECT * FROM phtv_nft_info WHERE category_id = '$category_id' ORDER BY id DESC");
    } elseif (!empty($collection_id)) {
-        $nft_info = $db->query("SELECT * FROM phtv_nft_info WHERE collection_id = '$collection_id'");
-        $nft_info1 = $db->query("SELECT * FROM phtv_nft_info WHERE collection_id = '$collection_id'");
+        $nft_info = $db->query("SELECT * FROM phtv_nft_info WHERE collection_id = '$collection_id' ORDER BY id DESC LIMIT 6");
+        $nft_info1 = $db->query("SELECT * FROM phtv_nft_info WHERE collection_id = '$collection_id' ORDER BY id DESC");
    } else {
-        $nft_info = $db->query("SELECT * FROM phtv_nft_info");
-        $nft_info1 = $db->query("SELECT * FROM phtv_nft_info");   
+        $nft_info = $db->query("SELECT * FROM phtv_nft_info ORDER BY id DESC LIMIT 6");
+        $nft_info1 = $db->query("SELECT * FROM phtv_nft_info ORDER BY id DESC");   
    }
 ?>
 
