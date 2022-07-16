@@ -32,7 +32,14 @@ $(document).ready(function() {
             type: "POST",
         },
     });
-
+    $(document).on("click", "#add_new_nft_info", function() {
+        $('#updateNFTInfoForm')[0].reset();
+        $("#nft_info_description").val('');
+        nft_info_description.setData('');
+        $("#selectCollections").val('').trigger('change');
+        $("#selectCategory").val('').trigger('change');
+        $("#nft_info_form_title").html("Add Asset Listing");
+    });
     $(document).on("click", ".updateNFTInfo", function() {
         var nft_info_id = $(this).attr("id");
         showLoading();
@@ -114,7 +121,8 @@ $(document).ready(function() {
                     .done(function(response) {
                         if (response.success == "success") {
                             toastr.options.onHidden = function() {
-                                window.location.href = "nft_info";
+                                // window.location.href = "nft_info";
+                                $("#nft_info_list").DataTable().ajax.reload();
                                 hideLoading();
                             };
                             toastr.success(response.message).delay(1000).fadeOut(1000);
@@ -260,7 +268,15 @@ $(document).ready(function() {
                     output = jQuery.parseJSON(output);
                     if (output.success == "success") {
                         toastr.options.onHidden = function() {
-                            window.location.href = "nft_info";
+                            // window.location.href = "nft_info";
+                            $('.close').click();
+                            $("#nft_info_list").DataTable().ajax.reload();
+                            $('#updateNFTInfoForm')[0].reset();
+                            $("#nft_info_description").val('');
+                            nft_info_description.setData('');
+                            $("#selectCollections").val('').trigger('change');
+                            $("#selectCategory").val('').trigger('change');
+                            $("#nft_info_form_title").html("Add Asset Listing");
                             hideLoading();
                         };
                         toastr.success(output.message).delay(1000).fadeOut(1000);

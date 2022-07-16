@@ -31,7 +31,7 @@
                         <div class="card">
                             <div class="card-header">
                                 <h4 class="card-title">Asset Listing List</h4>
-                                <div class="card-title"><button type="button" data-toggle="modal"
+                                <div class="card-title"><button type="button" id="add_new_nft_info" data-toggle="modal"
                                         data-target="#updateNFTInfo" class="btn btn-success text-white">Add
                                         New</button></div>
                             </div>
