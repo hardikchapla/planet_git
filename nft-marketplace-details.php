@@ -162,19 +162,18 @@
             <div class="col-lg-3">
                 <div class="price_history_box">
                     Suggested Price
-                    0.60 WAX($0.17)
+                    0.60 USD($0.17)
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="price_history_box">
-                    Min
-                    0.01 WAX($0.00)
+                    Min 0.01 USD($0.00)
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="price_history_box">
                     Max
-                    50.00 WAX($14.26)
+                    50.00 USD($14.26)
                 </div>
             </div>
             <div class="col-lg-3">
@@ -235,8 +234,8 @@
                                 <thead>
                                     <tr>
                                         <th>Event</th>
-                                        <th>Unit Price</th>
-                                        <th>Quantity</th>
+                                        <th>Asset Price</th>
+                                        <th>Quantity sold or traded</th>
                                         <th>From</th>
                                         <th>To</th>
                                         <th> Date</th>
