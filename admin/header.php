@@ -109,6 +109,12 @@
     if($cur_page == 'earn_rewards'){
         $titleName = 'Earn Rewards';
     }
+    if($cur_page == 'p_h_cinema_type'){
+        $titleName = 'P. H. Cinema Type';
+    }
+    if($cur_page == 'p_h_cinema_categories'){
+        $titleName = 'P. H. Cinema Categories';
+    }
    
     $admin = $db->query("SELECT * FROM phtv_admin WHERE id = 1");
     $feadmin = $admin->fetch();
@@ -534,6 +540,27 @@
                             <a class="d-flex align-items-center" href="high_voltage_episode">
                                 <i class="bx bx-right-arrow-alt"></i>
                                 <span class="menu-item text-truncate" data-i18n="1 column">High Voltage Episode</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" nav-item <?php if($cur_page_main == 'p_h_cinema') {echo 'active';} ?>">
+                    <a href="#">
+                        <i class="fa fa-film" aria-hidden="true"></i>
+                        <span class="menu-title text-truncate" data-i18n="Starter kit">P. H. CInema</span>
+                    </a>
+                    <ul class="menu-content">
+                        <li class="<?php if($cur_page == 'p_h_cinema_type') {echo 'active';} ?>">
+                            <a class="d-flex align-items-center" href="p_h_cinema_type">
+                                <i class="bx bx-right-arrow-alt"></i>
+                                <span class="menu-item text-truncate" data-i18n="1 column">P. H. Cinema Types</span>
+                            </a>
+                        </li>
+                        <li class="<?php if($cur_page == 'p_h_cinema_categories') {echo 'active';} ?>">
+                            <a class="d-flex align-items-center" href="p_h_cinema_categories">
+                                <i class="bx bx-right-arrow-alt"></i>
+                                <span class="menu-item text-truncate" data-i18n="1 column">P. H. Cinema
+                                    Categories</span>
                             </a>
                         </li>
                     </ul>
