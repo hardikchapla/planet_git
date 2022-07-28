@@ -115,6 +115,9 @@
     if($cur_page == 'p_h_cinema_categories'){
         $titleName = 'P. H. Cinema Categories';
     }
+    if($cur_page == 'p_h_cinema'){
+        $titleName = 'P. H. Cinema';
+    }
    
     $admin = $db->query("SELECT * FROM phtv_admin WHERE id = 1");
     $feadmin = $admin->fetch();
@@ -561,6 +564,12 @@
                                 <i class="bx bx-right-arrow-alt"></i>
                                 <span class="menu-item text-truncate" data-i18n="1 column">P. H. Cinema
                                     Categories</span>
+                            </a>
+                        </li>
+                        <li class="<?php if($cur_page == 'p_h_cinema') {echo 'active';} ?>">
+                            <a class="d-flex align-items-center" href="p_h_cinema">
+                                <i class="bx bx-right-arrow-alt"></i>
+                                <span class="menu-item text-truncate" data-i18n="1 column">P. H. Cinema</span>
                             </a>
                         </li>
                     </ul>

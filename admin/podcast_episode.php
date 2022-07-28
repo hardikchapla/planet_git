@@ -104,10 +104,10 @@
                     </div>
                     <div class="row mb-1">
                         <div class="col">
-                            <label>Title: </label>
+                            <label>Description: </label>
                             <div class="form-group mb-0">
                                 <input type="text" name="podcast_episode_description" id="podcast_episode_description"
-                                       placeholder="Enter podcast episode description" class="form-control">
+                                    placeholder="Enter podcast episode description" class="form-control">
                             </div>
                         </div>
                     </div>
