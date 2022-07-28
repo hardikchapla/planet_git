@@ -1807,12 +1807,12 @@ a:hover {
 }
 
 .ss_product .images {
-    min-height: 400px;
+    /* min-height: 400px; */
     position: relative;
     overflow: hidden;
     object-fit: cover;
     width: 100%;
-    height: 400px;
+    /* height: 400px; */
     border: 1px solid rgba(119, 119, 119, 0.5);
     display: table;
     text-align: center;
@@ -8920,4 +8920,18 @@ form .error {
 
 .audio_thumbnail_details {
     height: 465px !important;
+}
+
+.ss_product .images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ss_vertical_align_middle audio{
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    margin: 36px auto;
+    width: 80%;
 }
