@@ -14,6 +14,7 @@
 		foreach($result as $row)
 		{
 			$reoutput["cinema_poster_file"] = $row["poster"];
+			$reoutput["cinema_name"] = $row["name"];
 			$reoutput["cinema_description"] = $row["description"];
 			$reoutput["selectCategory"] = $row["category_id"];
 			$reoutput["selectTypes"] = explode(',',$row["cinema_types"]);

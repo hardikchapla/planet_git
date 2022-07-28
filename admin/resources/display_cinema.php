@@ -2,7 +2,7 @@
 	include('../../inc/connection/connection.php');
 error_reporting(0);
 	$reoutput = array();
-	$query = "SELECT a.*,b.name FROM phtv_cinema a, phtv_cinema_categories b WHERE a.category_id = b.id";
+	$query = "SELECT a.*,b.name as category_name FROM phtv_cinema a, phtv_cinema_categories b WHERE a.category_id = b.id";
 	$statement = $db->query($query);
 	$result = $statement->fetchAll();
 	$data = array();
@@ -21,6 +21,7 @@ error_reporting(0);
 		$sub_array[] = $i;
 		$sub_array[] = $image;
 		$sub_array[] = $row["name"];
+		$sub_array[] = $row["category_name"];
 		$sub_array[] = $fetypes["types"];
 		$sub_array[] = $row["year"];
 		$sub_array[] = $row["age"];

@@ -39,6 +39,7 @@
                                             <tr>
                                                 <th>No.</th>
                                                 <th>Poster</th>
+                                                <th>Name</th>
                                                 <th>Category</th>
                                                 <th>Types</th>
                                                 <th>Year</th>
@@ -53,6 +54,7 @@
                                             <tr>
                                                 <th>No.</th>
                                                 <th>Poster</th>
+                                                <th>Name</th>
                                                 <th>Category</th>
                                                 <th>Types</th>
                                                 <th>Year</th>
@@ -95,6 +97,15 @@
                                 <input type="file" name="cinema_poster_file" id="cinema_poster_file"
                                     placeholder="select file" class="form-control">
                                 <input type="hidden" name="old_cinema_poster_file" id="old_cinema_poster_file">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-1">
+                        <div class="col">
+                            <label>Name: </label>
+                            <div class="form-group mb-0">
+                                <input type="text" name="cinema_name" id="cinema_name" placeholder="Enter Cinema Name"
+                                    class="form-control">
                             </div>
                         </div>
                     </div>

@@ -5,6 +5,7 @@
 
     if($_REQUEST['action'] == 'Add'){
         $reoutput = array();
+        $cinema_name = addslashes($_REQUEST['cinema_name']);
         $cinema_description = addslashes($_REQUEST['cinema_description']);
         $selectCategory = $_REQUEST['selectCategory'];
         $selectTypes = implode(',',$_REQUEST['selectTypes']);
@@ -21,7 +22,7 @@
             $photo = rand(1000,1000000).$file; 
             $path = '../../images/poster/'.$photo;
             move_uploaded_file($tmp,$path);
-            $statement = $db->query("INSERT INTO phtv_cinema SET `category_id` = '$selectCategory',`cinema_types` = '$selectTypes', `year` = '$cinema_year', `age` = '$cinema_age', `total_season` = '$cinema_total_season', `poster` = '$photo', `trailer_link` = '$cinema_trailer_link', `description` = '$cinema_description', `created_at` = '$created'");
+            $statement = $db->query("INSERT INTO phtv_cinema SET `name` = '$cinema_name',`category_id` = '$selectCategory',`cinema_types` = '$selectTypes', `year` = '$cinema_year', `age` = '$cinema_age', `total_season` = '$cinema_total_season', `poster` = '$photo', `trailer_link` = '$cinema_trailer_link', `description` = '$cinema_description', `created_at` = '$created'");
             if(!empty($statement))
             {
                 $reoutput['success'] = 'success';
@@ -41,6 +42,7 @@
     if($_REQUEST['action'] == 'Edit'){
         $reoutput = array();
         $cinema_id = $_REQUEST['cinema_id'];
+        $cinema_name = addslashes($_REQUEST['cinema_name']);
         $cinema_description = addslashes($_REQUEST['cinema_description']);
         $selectCategory = $_REQUEST['selectCategory'];
         $selectTypes = implode(',',$_REQUEST['selectTypes']);
@@ -65,7 +67,7 @@
         {
             $photo = $_REQUEST['old_cinema_poster_file'];
         }
-        $statement = $db->query("UPDATE phtv_cinema SET `category_id` = '$selectCategory',`cinema_types` = '$selectTypes', `year` = '$cinema_year', `age` = '$cinema_age', `total_season` = '$cinema_total_season', `poster` = '$photo', `trailer_link` = '$cinema_trailer_link', `description` = '$cinema_description' WHERE id = '$cinema_id'");
+        $statement = $db->query("UPDATE phtv_cinema SET `name` = '$cinema_name', `category_id` = '$selectCategory',`cinema_types` = '$selectTypes', `year` = '$cinema_year', `age` = '$cinema_age', `total_season` = '$cinema_total_season', `poster` = '$photo', `trailer_link` = '$cinema_trailer_link', `description` = '$cinema_description' WHERE id = '$cinema_id'");
         if(!empty($statement))
         {
             $reoutput['success'] = 'success';
