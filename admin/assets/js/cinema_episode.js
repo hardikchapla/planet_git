@@ -1,11 +1,11 @@
 // Loader
-let cinema_description;
+let cinema_episode_descriptions;
 
 ClassicEditor
-    .create(document.querySelector('#cinema_description'))
-    .then(cinema_description_editor => {
+    .create(document.querySelector('#cinema_episode_descriptions'))
+    .then(cinema_episode_descriptions_editor => {
         // Store it in more "global" context.
-        cinema_description = cinema_description_editor;
+        cinema_episode_descriptions = cinema_episode_descriptions_editor;
     })
     .catch(error => {
         console.error(error);
@@ -20,50 +20,48 @@ function hideLoading() {
 }
 
 $(document).ready(function() {
-    var dataTable = $('#p_h_cinema').DataTable({
+    var dataTable = $('#p_h_cinema_episode').DataTable({
         "ajax": {
-            url: "resources/display_cinema",
+            url: "resources/display_cinema_episode",
             type: "POST"
         }
     });
-    $(document).on('click', '.viewCinemaDescriptionModel', function() {
+    $(document).on('click', '.viewCinemaEpisodeDescriptionModel', function() {
         var description = $(this).attr("id");
-        $('#viewCinemaDescription').html(description);
+        $('#viewCinemaEpisodeDescription').html(description);
     });
-    $(document).on('click', '.updateCinema', function() {
-        var cinema_id = $(this).attr("id");
+    $(document).on('click', '.updateCinemaEpisode', function() {
+        var cinema_episode_id = $(this).attr("id");
         showLoading();
         $.ajax({
-            url: "resources/update_cinema",
+            url: "resources/update_cinema_episode",
             method: "POST",
             data: {
-                cinema_id: cinema_id
+                cinema_episode_id: cinema_episode_id
             },
             dataType: "json",
             success: function(data) {
                 hideLoading();
-                $('#old_cinema_poster_file').val(data.cinema_poster_file);
-                $('#cinema_name').val(data.cinema_name);
-                $('#cinema_description').val(data.cinema_description);
-                $('#cinema_year').val(data.cinema_year);
-                $('#cinema_age').val(data.cinema_age);
-                $('#cinema_trailer_link').val(data.cinema_trailer_link);
-                $('#cinema_total_season').val(data.cinema_total_season);
-                cinema_description.setData(data.cinema_description);
-                $('#selectCategory').select2("val", data.selectCategory);
-                $("#selectTypes").val(data.selectTypes).trigger('change');
-                $('#cinema_id').val(cinema_id);
+                $('#old_cinema_episode_poster_file').val(data.cinema_episode_poster_file);
+                $('#cinema_episode_descriptions').val(data.cinema_episode_descriptions);
+                cinema_episode_descriptions.setData(data.cinema_episode_descriptions);
+                $('#cinema_episode_title').val(data.cinema_episode_title);
+                $('#cinema_episode_season').val(data.cinema_episode_season);
+                $('#cinema_episode_video_link').val(data.cinema_episode_video_link);
+                $('#cinema_episode_time').val(data.cinema_episode_time);
+                $('#selectCinema').select2("val", data.selectCinema);
+                $('#cinema_episode_id').val(cinema_episode_id);
                 $('#action').val("Edit");
-                $('#cinema_form_title').html("Update Cinema");
+                $('#cinema_episode_form_title').html("Update Cinema Episode");
             }
         })
     });
-    $(document).on('click', '.deleteCinema', function(e) {
-        var cinema_id = $(this).attr("id");
+    $(document).on('click', '.deleteCinemaEpisode', function(e) {
+        var cinema_episode_id = $(this).attr("id");
         e.preventDefault();
         Swal.fire({
             title: 'Are you sure?',
-            text: 'You will not be able to recover this cinema!',
+            text: 'You will not be able to recover this cinema episode!',
             type: "warning",
             showCancelButton: true,
             confirmButtonClass: 'btn-danger',
@@ -73,15 +71,15 @@ $(document).ready(function() {
             if (result.isConfirmed) {
                 showLoading();
                 $.ajax({
-                        url: 'resources/delete_cinema',
+                        url: 'resources/delete_cinema_episode',
                         type: 'POST',
-                        data: 'cinema_id=' + cinema_id,
+                        data: 'cinema_episode_id=' + cinema_episode_id,
                         dataType: 'json'
                     })
                     .done(function(response) {
                         if (response.success == 'success') {
                             toastr.options.onHidden = function() {
-                                window.location.href = 'p_h_cinema';
+                                window.location.href = 'p_h_cinema_episode';
                                 hideLoading();
                             }
                             toastr.success(response.message).delay(1000).fadeOut(1000);
@@ -98,62 +96,56 @@ $(document).ready(function() {
             }
         });
     });
-    $("#updateCinemaForm").validate({
+    $("#updateCinemaEpisodeForm").validate({
         rules: {
-            selectCategory: {
+            cinema_episode_title: {
                 required: true,
             },
-            cinema_description: {
+            cinema_episode_descriptions: {
                 required: true,
                 minlength: 10
             },
-            selectTypes: {
+            selectCinema: {
                 required: true,
             },
-            cinema_year: {
+            cinema_episode_season: {
                 required: true,
             },
-            cinema_age: {
+            cinema_episode_time: {
                 required: true,
             },
-            cinema_total_season: {
-                required: true,
-            },
-            cinema_trailer_link: {
+            cinema_episode_video_link: {
                 required: true,
             }
         },
         messages: {
-            selectCategory: {
-                required: "Please provide a cinema category"
+            cinema_episode_title: {
+                required: "Please provide a cinema episode title"
             },
-            cinema_description: {
+            cinema_episode_descriptions: {
                 required: "Please enter cinema description",
                 minlength: "Please enter minimum 10 characters"
             },
-            selectTypes: {
-                required: "Please select types"
+            selectCinema: {
+                required: "Please select cinema"
             },
-            cinema_year: {
-                required: "Please enter year"
+            cinema_episode_season: {
+                required: "Please enter episode season"
             },
-            cinema_age: {
-                required: "Please enter age",
+            cinema_episode_time: {
+                required: "Please enter episode time",
             },
-            cinema_total_season: {
-                required: "Please enter total season",
-            },
-            cinema_trailer_link: {
-                required: "Please enter trailer link",
+            cinema_episode_video_link: {
+                required: "Please enter episode video link",
             }
         },
         submitHandler: function(form) {
-            var formdata = new FormData(document.getElementById('updateCinemaForm'));
-            var cinema_poster_file = $('#cinema_poster_file').get(0).files[0];
-            formdata.append('cinema_poster_file', cinema_poster_file);
+            var formdata = new FormData(document.getElementById('updateCinemaEpisodeForm'));
+            var cinema_episode_poster_file = $('#cinema_episode_poster_file').get(0).files[0];
+            formdata.append('cinema_episode_poster_file', cinema_episode_poster_file);
             showLoading();
             $.ajax({
-                url: 'resources/add_cinema_submit',
+                url: 'resources/add_cinema_episode_submit',
                 type: 'POST',
                 data: formdata,
                 contentType: false,
@@ -162,7 +154,7 @@ $(document).ready(function() {
                     output = jQuery.parseJSON(output);
                     if (output.success == 'success') {
                         toastr.options.onHidden = function() {
-                            window.location.href = 'p_h_cinema';
+                            window.location.href = 'p_h_cinema_episode';
                             hideLoading();
                         }
                         toastr.success(output.message).delay(1000).fadeOut(1000);
