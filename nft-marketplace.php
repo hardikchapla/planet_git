@@ -401,17 +401,7 @@
                             <div class="owl-carousel owl-theme" id="ss_slider_details">
                                 <div class="item">
                                     <div class="ss_model_images">
-                                        <img class="nft_marketing_image" src="images/details_model.jpg" alt="details" />
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="ss_model_images">
-                                        <img class="nft_marketing_image" src="images/details_model.jpg" alt="details" />
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="ss_model_images">
-                                        <img class="nft_marketing_image" src="images/details_model.jpg" alt="details" />
+                                        <!-- <img class="nft_marketing_image" src="images/details_model.jpg" alt="details" /> -->
                                     </div>
                                 </div>
                             </div>
@@ -471,8 +461,27 @@ $(document).ready(function() {
             dataType: "json",
             success: function(data) {
                 if (data.image_type == 'image') {
-                    $('.nft_marketing_image').attr('src', 'images/nft_info_image/' + data
-                        .image);
+                    $('.ss_model_images').html(
+                        '<img class="nft_marketing_image" src="images/nft_info_image/' +
+                        data.image + '" alt="details" />'
+                    );
+                } else if (data.image_type == 'gif') {
+                    $('.ss_model_images').html(
+                        '<img class="nft_marketing_image" src="images/nft_info_image/' +
+                        data.image + '" alt="details" />'
+                    );
+                } else if (data.image_type == 'video') {
+                    $('.ss_model_images').html(
+                        '<video width="100%" height="400" controls><source src="images/nft_info_image/' +
+                        data.image + '" type="video/mp4"></video>'
+                    );
+                } else if (data.image_type == 'audio') {
+                    $('.ss_model_images').html(
+                        '<img src="images/nft_info_image/' +
+                        data.thumbnail +
+                        '" alt="images"class="audio_thumbnail" /><audio controls poster="images/planethopper-TV-logo.png"><source src="images/nft_info_image/' +
+                        data.image + '" type="audio/mpeg"></audio>'
+                    );
                 } else {
                     $('.nft_marketing_image').attr('src',
                         'images/planethopper-TV-logo.png');
